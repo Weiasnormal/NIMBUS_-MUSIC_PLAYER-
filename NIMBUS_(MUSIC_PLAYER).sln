@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIMBUS_(MUSIC_PLAYER)", "NIMBUS_(MUSIC_PLAYER).csproj", "{3AA8B9E7-1B97-41EE-83BF-E0103565297F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AA8B9E7-1B97-41EE-83BF-E0103565297F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA8B9E7-1B97-41EE-83BF-E0103565297F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA8B9E7-1B97-41EE-83BF-E0103565297F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA8B9E7-1B97-41EE-83BF-E0103565297F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F45CF0C9-73EE-4347-806D-6B52011E3C93}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\bin\Debug\NIMBUS_(MUSIC_PLAYER).exe.config
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\bin\Debug\NIMBUS_(MUSIC_PLAYER).exe
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\bin\Debug\NIMBUS_(MUSIC_PLAYER).pdb
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\bin\Debug\Guna.UI2.dll
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS_(MUSIC_PLAYER).csproj.AssemblyReference.cache
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS__MUSIC_PLAYER_.Form1.resources
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS__MUSIC_PLAYER_.Properties.Resources.resources
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS_(MUSIC_PLAYER).csproj.GenerateResource.cache
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS_(MUSIC_PLAYER).csproj.CoreCompileInputs.cache
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS_(.91FD127B.Up2Date
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS_(MUSIC_PLAYER).exe
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_(MUSIC_PLAYER)\obj\Debug\NIMBUS_(MUSIC_PLAYER).pdb

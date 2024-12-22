@@ -93,7 +93,7 @@
             this.QueueButton.Location = new System.Drawing.Point(0, 359);
             this.QueueButton.Name = "QueueButton";
             this.QueueButton.ShadowDecoration.Parent = this.QueueButton;
-            this.QueueButton.Size = new System.Drawing.Size(330, 65);
+            this.QueueButton.Size = new System.Drawing.Size(313, 65);
             this.QueueButton.TabIndex = 8;
             // 
             // PlaylistButton

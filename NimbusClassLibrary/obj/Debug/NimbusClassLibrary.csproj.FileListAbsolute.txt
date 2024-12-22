@@ -38,3 +38,27 @@ D:\repos\Nimbus\NimbusClassLibrary\bin\Debug\System.Numerics.Vectors.xml
 D:\repos\Nimbus\NimbusClassLibrary\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\repos\Nimbus\NimbusClassLibrary\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\repos\Nimbus\NimbusClassLibrary\obj\Debug\NimbusCl.2BAC0584.Up2Date
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\NimbusClassLibrary.dll.config
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\NimbusClassLibrary.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\NimbusClassLibrary.pdb
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.Buffers.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.Memory.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\Google.Protobuf.pdb
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\Google.Protobuf.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\MySql.Data.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\bin\Debug\System.IO.Pipelines.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\obj\Debug\NimbusClassLibrary.csproj.AssemblyReference.cache
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\obj\Debug\NimbusClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\obj\Debug\NimbusCl.2BAC0584.Up2Date
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\obj\Debug\NimbusClassLibrary.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\NimbusClassLibrary\obj\Debug\NimbusClassLibrary.pdb

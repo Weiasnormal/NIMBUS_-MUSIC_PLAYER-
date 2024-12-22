@@ -54,16 +54,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AllSongPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllSongPanel.Designer.cs">
+      <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoritePanelcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FavoritePanelcs.Designer.cs">
+      <DependentUpon>FavoritePanelcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HorizontalSongs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HorizontalSongs.Designer.cs">
+      <DependentUpon>HorizontalSongs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderMusicPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeaderMusicPlayer.Designer.cs">
+      <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowPlaying.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NowPlaying.Designer.cs">
+      <DependentUpon>NowPlaying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlaylistPanel.Designer.cs">
+      <DependentUpon>PlaylistPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="QueuePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueuePanel.Designer.cs">
+      <DependentUpon>QueuePanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllSongPanel.resx">
+      <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoritePanelcs.resx">
+      <DependentUpon>FavoritePanelcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorizontalSongs.resx">
+      <DependentUpon>HorizontalSongs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderMusicPlayer.resx">
+      <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NowPlaying.resx">
+      <DependentUpon>NowPlaying.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistPanel.resx">
+      <DependentUpon>PlaylistPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +135,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QueuePanel.resx">
+      <DependentUpon>QueuePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,6 +183,87 @@
       <Project>{d7bd8328-fc91-4b0b-a12a-cfb6415759c1}</Project>
       <Name>NimbusClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SVG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\All Songs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter Dropdown %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter Dropdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter Dropdown %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Song Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 169.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Your Queue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Midnight Session.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

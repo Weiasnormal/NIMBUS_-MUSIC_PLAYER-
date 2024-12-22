@@ -54,11 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddtoPlaylist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddtoPlaylist.Designer.cs">
+      <DependentUpon>AddtoPlaylist.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllSongPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AllSongPanel.Designer.cs">
       <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkbox_Playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Checkbox_Playlist.Designer.cs">
+      <DependentUpon>Checkbox_Playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePlaylist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreatePlaylist.Designer.cs">
+      <DependentUpon>CreatePlaylist.cs</DependentUpon>
     </Compile>
     <Compile Include="FavoritePanelcs.cs">
       <SubType>UserControl</SubType>
@@ -104,8 +122,17 @@
     <Compile Include="QueuePanel.Designer.cs">
       <DependentUpon>QueuePanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddtoPlaylist.resx">
+      <DependentUpon>AddtoPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllSongPanel.resx">
       <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkbox_Playlist.resx">
+      <DependentUpon>Checkbox_Playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatePlaylist.resx">
+      <DependentUpon>CreatePlaylist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FavoritePanelcs.resx">
       <DependentUpon>FavoritePanelcs.cs</DependentUpon>
@@ -264,6 +291,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Midnight Session.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\state3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Button %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Button %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add to playlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Choose a Playlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name Your Mix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Button %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Button %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

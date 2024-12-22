@@ -30,13 +30,13 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SortDropdwn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.AlbumDropdwn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.ArtistDropdwn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AllSonglbl = new System.Windows.Forms.PictureBox();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.AlbumDropdwn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.ArtistDropdwn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllSonglbl)).BeginInit();
@@ -52,7 +52,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.SortDropdwn);
+            this.panel1.Controls.Add(this.guna2ImageButton3);
             this.panel1.Controls.Add(this.AlbumDropdwn);
             this.panel1.Controls.Add(this.ArtistDropdwn);
             this.panel1.Controls.Add(this.guna2ImageButton2);
@@ -61,42 +61,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1495, 50);
             this.panel1.TabIndex = 2;
-            // 
-            // SortDropdwn
-            // 
-            this.SortDropdwn.CheckedState.Parent = this.SortDropdwn;
-            this.SortDropdwn.HoverState.Parent = this.SortDropdwn;
-            this.SortDropdwn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Filter_Dropdown__2_;
-            this.SortDropdwn.ImageSize = new System.Drawing.Size(200, 32);
-            this.SortDropdwn.Location = new System.Drawing.Point(1295, 15);
-            this.SortDropdwn.Name = "SortDropdwn";
-            this.SortDropdwn.PressedState.Parent = this.SortDropdwn;
-            this.SortDropdwn.Size = new System.Drawing.Size(200, 32);
-            this.SortDropdwn.TabIndex = 4;
-            // 
-            // AlbumDropdwn
-            // 
-            this.AlbumDropdwn.CheckedState.Parent = this.AlbumDropdwn;
-            this.AlbumDropdwn.HoverState.Parent = this.AlbumDropdwn;
-            this.AlbumDropdwn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Filter_Dropdown__1_;
-            this.AlbumDropdwn.ImageSize = new System.Drawing.Size(200, 32);
-            this.AlbumDropdwn.Location = new System.Drawing.Point(1087, 15);
-            this.AlbumDropdwn.Name = "AlbumDropdwn";
-            this.AlbumDropdwn.PressedState.Parent = this.AlbumDropdwn;
-            this.AlbumDropdwn.Size = new System.Drawing.Size(200, 32);
-            this.AlbumDropdwn.TabIndex = 3;
-            // 
-            // ArtistDropdwn
-            // 
-            this.ArtistDropdwn.CheckedState.Parent = this.ArtistDropdwn;
-            this.ArtistDropdwn.HoverState.Parent = this.ArtistDropdwn;
-            this.ArtistDropdwn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Filter_Dropdown;
-            this.ArtistDropdwn.ImageSize = new System.Drawing.Size(200, 32);
-            this.ArtistDropdwn.Location = new System.Drawing.Point(877, 15);
-            this.ArtistDropdwn.Name = "ArtistDropdwn";
-            this.ArtistDropdwn.PressedState.Parent = this.ArtistDropdwn;
-            this.ArtistDropdwn.Size = new System.Drawing.Size(200, 32);
-            this.ArtistDropdwn.TabIndex = 2;
             // 
             // guna2ImageButton2
             // 
@@ -140,6 +104,43 @@
             this.AllSonglbl.TabIndex = 0;
             this.AllSonglbl.TabStop = false;
             // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.CheckedState.Parent = this.guna2ImageButton3;
+            this.guna2ImageButton3.HoverState.Parent = this.guna2ImageButton3;
+            this.guna2ImageButton3.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Filter_Dropdown__2_;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(200, 32);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(1295, 18);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.state3;
+            this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
+            this.guna2ImageButton3.Size = new System.Drawing.Size(200, 32);
+            this.guna2ImageButton3.TabIndex = 9;
+            // 
+            // AlbumDropdwn
+            // 
+            this.AlbumDropdwn.CheckedState.Parent = this.AlbumDropdwn;
+            this.AlbumDropdwn.HoverState.Parent = this.AlbumDropdwn;
+            this.AlbumDropdwn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Filter_Dropdown__1_;
+            this.AlbumDropdwn.ImageSize = new System.Drawing.Size(200, 32);
+            this.AlbumDropdwn.Location = new System.Drawing.Point(1091, 18);
+            this.AlbumDropdwn.Name = "AlbumDropdwn";
+            this.AlbumDropdwn.PressedState.Parent = this.AlbumDropdwn;
+            this.AlbumDropdwn.Size = new System.Drawing.Size(200, 32);
+            this.AlbumDropdwn.TabIndex = 8;
+            // 
+            // ArtistDropdwn
+            // 
+            this.ArtistDropdwn.CheckedState.Parent = this.ArtistDropdwn;
+            this.ArtistDropdwn.HoverState.Parent = this.ArtistDropdwn;
+            this.ArtistDropdwn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Filter_Dropdown;
+            this.ArtistDropdwn.ImageSize = new System.Drawing.Size(200, 32);
+            this.ArtistDropdwn.Location = new System.Drawing.Point(886, 18);
+            this.ArtistDropdwn.Name = "ArtistDropdwn";
+            this.ArtistDropdwn.PressedState.Parent = this.ArtistDropdwn;
+            this.ArtistDropdwn.Size = new System.Drawing.Size(200, 32);
+            this.ArtistDropdwn.TabIndex = 7;
+            // 
             // AllSongPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,9 +167,9 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2ImageButton ArtistDropdwn;
-        private Guna.UI2.WinForms.Guna2ImageButton SortDropdwn;
-        private Guna.UI2.WinForms.Guna2ImageButton AlbumDropdwn;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton AlbumDropdwn;
+        private Guna.UI2.WinForms.Guna2ImageButton ArtistDropdwn;
     }
 }

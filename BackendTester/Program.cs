@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NimbusClassLibrary.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,15 @@ namespace BackendTester
     {
         static void Main(string[] args)
         {
-            data.Data.DbConnect dbConnect = new data.Data.DbConnect();
-            Console.WriteLine("Connected");
+            
+            data.Controller.SongController controller = new data.Controller.SongController();
 
-            Console.ReadLine(); 
+            foreach (Song s in controller.GetAllSongs())
+            {
+                Console.WriteLine(s);
+            }
+
+            Console.ReadKey();
         }
     }
 }

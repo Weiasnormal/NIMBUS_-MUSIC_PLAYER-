@@ -94,7 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DbConnect.cs" />
-    <Compile Include="Model\Song.cs" />
+    <Compile Include="Models\Artist.cs" />
+    <Compile Include="Models\Playlist.cs" />
+    <Compile Include="Models\Song.cs" />
     <Compile Include="test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

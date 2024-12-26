@@ -106,6 +106,7 @@
     <Compile Include="Controller\SongController.cs" />
     <Compile Include="Data\DbConnect.cs" />
     <Compile Include="Data\DBContext.cs" />
+    <Compile Include="Helpers\Return.cs" />
     <Compile Include="Model\Artist.cs" />
     <Compile Include="Model\Playlist.cs" />
     <Compile Include="Model\PlaylistSongs.cs" />

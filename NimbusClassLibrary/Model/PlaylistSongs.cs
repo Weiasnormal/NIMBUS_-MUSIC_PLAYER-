@@ -1,4 +1,4 @@
-﻿using NimbusClassLibrary.Models;
+﻿using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +9,8 @@ namespace NimbusClassLibrary.Model
 {
     public class PlaylistSongs
     {
-        public int Id { get; set; }
-        public Playlist Playlist { get; set; }
-        public Song Song { get; set; }
+        public int Id { get; set; } = 0;
+        public Playlist Playlist { get; set; } = new Playlist();
+        public Song Song { get; set; } = new Song();
     }
 }

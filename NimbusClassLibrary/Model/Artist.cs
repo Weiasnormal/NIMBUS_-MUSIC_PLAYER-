@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace NimbusClassLibrary.Models
+namespace NimbusClassLibrary.Model
 {
     public class Artist
     {
-        public int Id { get; set; }
-        public string Display_Name { get; set; }
-        public bool IsFollowed { get; set; }
-        public bool IsFavorite { get; set; }
-        public byte[] Profile_Pic { get; set; }
+        public int Id { get; set; } = 0;
+        public string Display_Name { get; set; } = string.Empty;
+        public bool IsFollowed { get; set; } = false;
+        public bool IsFavorite { get; set; } = false;
+        public byte[] Profile_Pic { get; set; } = new byte[0];
 
         public override string ToString()
         {

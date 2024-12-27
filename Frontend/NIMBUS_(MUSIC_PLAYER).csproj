@@ -134,6 +134,12 @@
     <Compile Include="HeaderMusicPlayer.Designer.cs">
       <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Miniplayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Miniplayer.Designer.cs">
+      <DependentUpon>Miniplayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="NowPlaying.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeaderMusicPlayer.resx">
       <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miniplayer.resx">
+      <DependentUpon>Miniplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NowPlaying.resx">
       <DependentUpon>NowPlaying.cs</DependentUpon>
@@ -479,6 +488,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DarkDrpDown - Copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIni Player_BlackBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

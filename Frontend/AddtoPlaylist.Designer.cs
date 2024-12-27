@@ -61,6 +61,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__4_;
             this.pictureBox2.Location = new System.Drawing.Point(310, 9);
             this.pictureBox2.Name = "pictureBox2";
@@ -89,6 +90,7 @@
             this.guna2GradientButton1.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.CheckedState.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2GradientButton1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton1.CustomImages.ImageSize = new System.Drawing.Size(18, 18);
             this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
@@ -120,6 +122,7 @@
             this.guna2GradientButton2.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.CheckedState.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2GradientButton2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton2.CustomImages.ImageSize = new System.Drawing.Size(18, 18);
             this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;

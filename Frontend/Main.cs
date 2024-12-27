@@ -139,11 +139,16 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnSidebar_Artists.Image = Properties.Resources.DarkArtistImage;
             btnSidebar_Queue.Image = Properties.Resources.Darkqueueimage;
             btnSidebar_Playlist.Image = Properties.Resources.DarkPlaylistimage;
-            pictureBox2.Image = Properties.Resources.Vector__7_;
-            pictureBox3.Image = Properties.Resources.DarkDrpDown___Copy1;
-            pictureBox4.Image = Properties.Resources.DarkDrpDown;
+            btnAddaPlaylist.Image = Properties.Resources.Vector__7_;
+            guna2PictureBox3.Image = Properties.Resources.DarkDrpDown___Copy1;
+            guna2PictureBox2.Image = Properties.Resources.DarkDrpDown;
 
             panel3.BackColor = Color.WhiteSmoke;
+        }
+
+        private void btnAddaPlaylist_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

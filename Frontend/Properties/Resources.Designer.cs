@@ -643,6 +643,16 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MIni_Player_BlackBG {
+            get {
+                object obj = ResourceManager.GetObject("MIni Player_BlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Name_Your_Mix {
             get {
                 object obj = ResourceManager.GetObject("Name Your Mix", resourceCulture);

@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using NimbusClassLibrary.Data;
 using NimbusClassLibrary.Helpers;
+using NimbusClassLibrary.Interfaces;
 using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace NimbusClassLibrary.Controller
 {
-    public class SongController
+    public class SongController<t> : IController<t> where t : Song
     {
         MySqlConnection conn;
         DbConnect db;
@@ -21,16 +22,17 @@ namespace NimbusClassLibrary.Controller
             db = DbConnect.Instance;
             conn = db.GetConnection();
         }
-        public IEnumerable<Song> GetAllSongs()
+        public T GetSingle<T>(int id) where T : t
         {
-            return DBContext.songs.ToList();
+            return (T)DBContext.songs.SingleOrDefault(s => s.Id == id) ;
         }
-        public Song GetSong(int id)
+        public IEnumerable<T> GetCollection<T>() where T : t
         {
-            return DBContext.songs.SingleOrDefault(s => s.Id == id);
+            return DBContext.songs as IEnumerable<T>;
         }
-        public bool CreateSong(Song song)
+        public bool Create<T>(T t)
         {
+            Song song = t as Song;
             DBContext.songs.Add(song);
 
             MySqlCommand command = conn.CreateCommand();
@@ -44,8 +46,9 @@ namespace NimbusClassLibrary.Controller
             int res = command.ExecuteNonQuery();
             return Return.OK(res);
         }
-        public bool UpdateSong(Song song)
+        public bool Update<T>(T t)
         {
+            Song song = t as Song;
             DBContext.songs.Remove(DBContext.songs.FirstOrDefault(i => i.Id == song.Id));
             DBContext.songs.Add(song);
 
@@ -63,8 +66,9 @@ namespace NimbusClassLibrary.Controller
             int res = command.ExecuteNonQuery();
             return Return.OK(res);
         }
-        public bool DeleteSong(Song song)
+        public bool Delete<T>(T t)
         {
+            Song song = t as Song;
             DBContext.songs.Remove(DBContext.songs.FirstOrDefault(i => i.Id == song.Id));
 
             MySqlCommand command = conn.CreateCommand();

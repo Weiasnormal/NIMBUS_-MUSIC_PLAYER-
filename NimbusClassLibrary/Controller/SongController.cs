@@ -30,7 +30,7 @@ namespace NimbusClassLibrary.Controller
         {
             return DBContext.songs as IEnumerable<T>;
         }
-        public bool Create<T>(T t)
+        public bool Create<T>(T t) where T : t
         {
             Song song = t as Song;
             DBContext.songs.Add(song);
@@ -46,7 +46,7 @@ namespace NimbusClassLibrary.Controller
             int res = command.ExecuteNonQuery();
             return Return.OK(res);
         }
-        public bool Update<T>(T t)
+        public bool Update<T>(T t) where T : t
         {
             Song song = t as Song;
             DBContext.songs.Remove(DBContext.songs.FirstOrDefault(i => i.Id == song.Id));
@@ -66,7 +66,7 @@ namespace NimbusClassLibrary.Controller
             int res = command.ExecuteNonQuery();
             return Return.OK(res);
         }
-        public bool Delete<T>(T t)
+        public bool Delete<T>(T t) where T : t
         {
             Song song = t as Song;
             DBContext.songs.Remove(DBContext.songs.FirstOrDefault(i => i.Id == song.Id));

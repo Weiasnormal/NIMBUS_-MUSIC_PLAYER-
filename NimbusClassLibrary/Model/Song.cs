@@ -1,4 +1,4 @@
-﻿using NimbusClassLibrary.Models;
+﻿using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ namespace NimbusClassLibrary.Model
 {
     public class Song
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public bool IsFavorite { get; set; }
-        public string File_Path { get; set; }
-        public Artist Artist { get; set; }
+        public int Id { get; set; } = 0;
+        public string Title { get; set; } = string.Empty;
+        public bool IsFavorite { get; set; } = false;
+        public string File_Path { get; set; } = string.Empty;
+        public Artist Artist { get; set; } = new Artist();
 
         public override string ToString()
         {

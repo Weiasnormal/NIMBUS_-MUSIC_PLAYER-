@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using NimbusClassLibrary.Model;
-using NimbusClassLibrary.Models;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -31,8 +30,6 @@ namespace NimbusClassLibrary.Data
                 conn.ConnectionString = connString;
 
                 conn.Open();
-
-
 
                 GetAllArtists();
                 GetAllPlaylists();
@@ -151,7 +148,7 @@ namespace NimbusClassLibrary.Data
             }
             reader.Close();
         }
-        private static async void GetAllPlaylistSongs()
+        private static void GetAllPlaylistSongs()
         {
 
             MySqlCommand mySqlCommand = new MySqlCommand
@@ -160,7 +157,7 @@ namespace NimbusClassLibrary.Data
                     "FROM Playlist_Songs"
                 , conn);
 
-            DbDataReader reader = await mySqlCommand.ExecuteReaderAsync();
+            DbDataReader reader = mySqlCommand.ExecuteReader();
 
             while (reader.Read())
             {
@@ -175,6 +172,7 @@ namespace NimbusClassLibrary.Data
 
                 DBContext.playlistSongs.Add(playlistsongs);
             }
+            reader.Close();
         }
         #endregion
     }

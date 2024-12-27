@@ -1,5 +1,4 @@
 ﻿using NimbusClassLibrary.Model;
-using NimbusClassLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,8 +15,5 @@ namespace NimbusClassLibrary.Data
         public static ICollection<Artist> artists = new List<Artist>();
         public static ICollection<Playlist> playlists = new List<Playlist>();
         public static ICollection<PlaylistSongs> playlistSongs = new List<PlaylistSongs>();
-
-
-
     }
 }

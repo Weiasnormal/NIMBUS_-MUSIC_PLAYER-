@@ -133,6 +133,9 @@
   <data name="Dashboard Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_Menu_Remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Menu_Remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Nimbus_LightLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nimbus_LightLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +153,12 @@
   </data>
   <data name="Icon_Favorites1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Favorites1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Menu_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Menu_Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Resize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Midnight Session" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Midnight Session.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,9 +247,6 @@
   <data name="Name Your Mix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Name Your Mix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Filter Dropdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Filter Dropdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icon_Dropdown_Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Dropdown_Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -249,6 +255,9 @@
   </data>
   <data name="Group (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Menu_AddtoPlaylist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Menu_AddtoPlaylist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,8 +316,8 @@
   <data name="Sidebar Placeholder (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_Artists" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_Artists.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Filter Dropdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Filter Dropdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,10 +328,13 @@
   <data name="Ellipse 10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_Artists" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Artists.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sidebar Placeholder (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_Resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_Resize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_Menu_AddtoFavorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Menu_AddtoFavorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

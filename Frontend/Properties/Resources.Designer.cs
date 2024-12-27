@@ -373,9 +373,49 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Menu_AddtoFavorites {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Menu_AddtoFavorites", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Menu_AddtoPlaylist {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Menu_AddtoPlaylist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_Menu_AddtoQueue {
             get {
                 object obj = ResourceManager.GetObject("Icon_Menu_AddtoQueue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Menu_Delete {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Menu_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Menu_Remove {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Menu_Remove", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

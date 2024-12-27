@@ -30,14 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Playlistlbl = new System.Windows.Forms.PictureBox();
             this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.AlbumDropdwn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.ArtistDropdwn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Playlistlbl = new System.Windows.Forms.PictureBox();
+            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Playlistlbl)).BeginInit();
@@ -45,12 +45,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guna2ImageButton4);
             this.panel1.Controls.Add(this.guna2ImageButton3);
             this.panel1.Controls.Add(this.AlbumDropdwn);
             this.panel1.Controls.Add(this.ArtistDropdwn);
             this.panel1.Controls.Add(this.Menubtn);
             this.panel1.Controls.Add(this.guna2ImageButton2);
-            this.panel1.Controls.Add(this.guna2ImageButton1);
             this.panel1.Location = new System.Drawing.Point(40, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1495, 50);
@@ -63,60 +63,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1495, 784);
             this.flowLayoutPanel1.TabIndex = 10;
-            // 
-            // Menubtn
-            // 
-            this.Menubtn.CheckedState.Parent = this.Menubtn;
-            this.Menubtn.HoverState.Parent = this.Menubtn;
-            this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
-            this.Menubtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.Menubtn.Location = new System.Drawing.Point(122, 9);
-            this.Menubtn.Name = "Menubtn";
-            this.Menubtn.PressedState.Parent = this.Menubtn;
-            this.Menubtn.Size = new System.Drawing.Size(51, 33);
-            this.Menubtn.TabIndex = 6;
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(65, 9);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
-            this.guna2ImageButton2.TabIndex = 1;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Pause;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(48, 48);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(3, -2);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(52, 51);
-            this.guna2ImageButton1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Song_Table;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1495, 51);
-            this.panel2.TabIndex = 0;
-            // 
-            // Playlistlbl
-            // 
-            this.Playlistlbl.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Midnight_Session;
-            this.Playlistlbl.Location = new System.Drawing.Point(40, 18);
-            this.Playlistlbl.Name = "Playlistlbl";
-            this.Playlistlbl.Size = new System.Drawing.Size(545, 65);
-            this.Playlistlbl.TabIndex = 9;
-            this.Playlistlbl.TabStop = false;
             // 
             // guna2ImageButton3
             // 
@@ -155,6 +101,61 @@
             this.ArtistDropdwn.Size = new System.Drawing.Size(200, 32);
             this.ArtistDropdwn.TabIndex = 7;
             // 
+            // Menubtn
+            // 
+            this.Menubtn.CheckedState.Parent = this.Menubtn;
+            this.Menubtn.HoverState.Parent = this.Menubtn;
+            this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
+            this.Menubtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.Menubtn.Location = new System.Drawing.Point(122, 9);
+            this.Menubtn.Name = "Menubtn";
+            this.Menubtn.PressedState.Parent = this.Menubtn;
+            this.Menubtn.Size = new System.Drawing.Size(51, 33);
+            this.Menubtn.TabIndex = 6;
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(65, 9);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
+            this.guna2ImageButton2.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Song_Table;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1495, 51);
+            this.panel2.TabIndex = 0;
+            // 
+            // Playlistlbl
+            // 
+            this.Playlistlbl.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Midnight_Session;
+            this.Playlistlbl.Location = new System.Drawing.Point(40, 18);
+            this.Playlistlbl.Name = "Playlistlbl";
+            this.Playlistlbl.Size = new System.Drawing.Size(545, 65);
+            this.Playlistlbl.TabIndex = 9;
+            this.Playlistlbl.TabStop = false;
+            // 
+            // guna2ImageButton4
+            // 
+            this.guna2ImageButton4.CheckedState.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Pause;
+            this.guna2ImageButton4.CheckedState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Play;
+            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(48, 48);
+            this.guna2ImageButton4.Location = new System.Drawing.Point(0, -5);
+            this.guna2ImageButton4.Name = "guna2ImageButton4";
+            this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.Size = new System.Drawing.Size(58, 58);
+            this.guna2ImageButton4.TabIndex = 15;
+            // 
             // PlaylistPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,7 +178,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox Playlistlbl;
@@ -185,5 +185,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
         private Guna.UI2.WinForms.Guna2ImageButton AlbumDropdwn;
         private Guna.UI2.WinForms.Guna2ImageButton ArtistDropdwn;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
     }
 }

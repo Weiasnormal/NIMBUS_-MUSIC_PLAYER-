@@ -33,15 +33,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Downloads\PcWonderland.com_Guna_UI_Framework_Ultimate_2-20241221T082618Z-001\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Downloads\PcWonderland.com_Guna_UI_Framework_Ultimate_2-20241221T082618Z-001\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -321,6 +325,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Dashboard Button %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nimbus_LightLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nimbus_DarkLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Theme4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_AddButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportButton_Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportButton_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Songs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Albums.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default_Artist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Artists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Queue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Playlists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_AddPlaylist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Dropdown_Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Dropdown_Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default_Album.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

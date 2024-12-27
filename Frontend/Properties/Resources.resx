@@ -121,6 +121,15 @@
   <data name="Ellipse 13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Nimbus_DarkLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nimbus_DarkLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Dropdown_Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Dropdown_Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image 171" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 171.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Vector (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,11 +139,20 @@
   <data name="Dashboard Button (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Button (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_Playlists" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Playlists.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Your Queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Your Queue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vector (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sidebar Placeholder (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +160,17 @@
   <data name="state3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\state3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sidebar Placeholder (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder (6)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sidebar Placeholder (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder (5)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Songs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Songs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Midnight Session" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Midnight Session.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +199,14 @@
   <data name="Dashboard Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Favorite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Favorite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Theme4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Theme4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Filter Dropdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Filter Dropdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Queue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,14 +217,20 @@
   <data name="All Songs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\All Songs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Group (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Filter Dropdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Filter Dropdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_Artists" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Artists.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search Bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search Bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Default_Artist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Default_Artist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dashboard Button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dashboard Button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +238,17 @@
   <data name="Ellipse 10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Nimbus_LightLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nimbus_LightLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sidebar Placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImportButton_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportButton_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Albums" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Albums.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectangle 167 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 167 (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,17 +262,26 @@
   <data name="Rectangle 167 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 167 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 171" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 171.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Favorite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Favorite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dashboard Button (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dashboard Button (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Group (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Name Your Mix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Name Your Mix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dashboard Button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dashboard Button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Default_Album" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Default_Album.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Filter Dropdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Filter Dropdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search Bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search Bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Dropdown_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Dropdown_Open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dashboard Button (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Button (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,16 +292,25 @@
   <data name="Song Table" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Song Table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_AddButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_AddButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vector (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_AddPlaylist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_AddPlaylist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImportButton_Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportButton_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Filter Dropdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Filter Dropdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Playlist Dropdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Playlist Dropdown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dashboard Button (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dashboard Button (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_Pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

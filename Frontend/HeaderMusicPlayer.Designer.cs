@@ -36,6 +36,7 @@
             this.BGthemed = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ScarletThemed = new Guna.UI2.WinForms.Guna2PictureBox();
             this.WhiteThemed = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BlackThemed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGthemed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScarletThemed)).BeginInit();
@@ -144,12 +145,22 @@
             this.WhiteThemed.TabIndex = 5;
             this.WhiteThemed.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(812, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Hindi na to kailangan burahiin na";
+            // 
             // HeaderMusicPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Rectangle_167__2_;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.WhiteThemed);
             this.Controls.Add(this.ScarletThemed);
             this.Controls.Add(this.BGthemed);
@@ -163,6 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ScarletThemed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WhiteThemed)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -175,5 +187,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox BGthemed;
         private Guna.UI2.WinForms.Guna2PictureBox ScarletThemed;
         private Guna.UI2.WinForms.Guna2PictureBox WhiteThemed;
+        private System.Windows.Forms.Label label1;
     }
 }

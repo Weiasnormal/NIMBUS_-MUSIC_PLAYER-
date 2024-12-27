@@ -1,4 +1,5 @@
-﻿using NimbusClassLibrary.Model;
+﻿using NimbusClassLibrary.Interfaces;
+using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NimbusClassLibrary.Model
 {
-    public class Playlist
+    public class Playlist : IModel
     {
         public int Id { get; set; } = 0;
         public string Name { get; set; } = string.Empty;

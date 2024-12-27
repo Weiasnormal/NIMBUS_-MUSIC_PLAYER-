@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NimbusClassLibrary.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Xml.Linq;
 
 namespace NimbusClassLibrary.Model
 {
-    public class Artist
+    public class Artist : IModel
     {
         public int Id { get; set; } = 0;
         public string Display_Name { get; set; } = string.Empty;

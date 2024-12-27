@@ -71,7 +71,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Theme2_Click(object sender, EventArgs e)
         {
-            ApplyWhiteTheme();
+            ApplyWhiteTheme();//This will apply the white theme
         }
         private void ApplyWhiteTheme()
         {
@@ -84,17 +84,17 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
 
         private void UpdateControlTheme(Control.ControlCollection controls)
-        {
+        {   //This change the theme of the controls recursively
             foreach (Control control in controls)
             {
                 if (control is Panel panel)
                 {
-                    panel.BackColor = Color.LightGray; 
+                    panel.BackColor = Color.White; 
                     UpdateControlTheme(panel.Controls); 
                 }
                 else if (control is Button button)
                 {
-                    button.BackColor = Color.WhiteSmoke; 
+                    button.BackColor = Color.White; 
                     button.ForeColor = Color.Black;
                     
                 }
@@ -109,17 +109,41 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
                 else if (control is UserControl userControl)
                 {
-                    userControl.BackColor = Color.LightGray; 
+                    userControl.BackColor = Color.White; 
                     userControl.ForeColor = Color.Black; 
                 }
             }
+            //It will update the theme of the specific controls
             btnSidebar_Songs.ForeColor = Color.Black;
             btnSidebar_Favorites.ForeColor = Color.Black;
             btnSidebar_Albums.ForeColor = Color.Black;
             btnSidebar_Artists.ForeColor = Color.Black;
             btnSidebar_Queue.ForeColor = Color.Black;
             btnSidebar_Playlist.ForeColor = Color.Black;
+
+            SearchBar.FillColor = Color.White;
+            SearchBar.ForeColor = Color.Black;
+            guna2GradientButton4.ForeColor = Color.White;
+            guna2GradientButton4.FillColor = Color.Black;
+            guna2GradientButton4.FillColor2 = Color.Black;
+            guna2GradientButton4.Image = Properties.Resources.Iconaddbuttonwhite;
+            guna2ControlBox1.IconColor = Color.Black;
+            guna2ControlBox1.BackColor = Color.White;
+            guna2ControlBox2.IconColor = Color.Black;
+            guna2ControlBox2.BackColor = Color.White;
+
             pictureBox1.Image = Properties.Resources.Nimbus_DarkLogo;
+            btnSidebar_Songs.Image = Properties.Resources.DarkSongimage;
+            btnSidebar_Favorites.Image = Properties.Resources.DarkFavoritesimage;
+            btnSidebar_Albums.Image = Properties.Resources.DarkAlmbumimage;
+            btnSidebar_Artists.Image = Properties.Resources.DarkArtistImage;
+            btnSidebar_Queue.Image = Properties.Resources.Darkqueueimage;
+            btnSidebar_Playlist.Image = Properties.Resources.DarkPlaylistimage;
+            pictureBox2.Image = Properties.Resources.Vector__7_;
+            pictureBox3.Image = Properties.Resources.DarkDrpDown___Copy1;
+            pictureBox4.Image = Properties.Resources.DarkDrpDown;
+
+            panel3.BackColor = Color.WhiteSmoke;
         }
     }
 }

@@ -345,7 +345,6 @@
             // 
             // guna2GradientButton2
             // 
-            this.guna2GradientButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;

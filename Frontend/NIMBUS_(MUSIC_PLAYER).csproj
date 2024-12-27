@@ -447,5 +447,38 @@
   <ItemGroup>
     <None Include="Resources\Icon_Menu_AddtoFavorites.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkSongimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkFavoritesimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkAlmbumimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkArtistImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Darkqueueimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkPlaylistimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconaddbuttonwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkDrpDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkDrpDown - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkDrpDown - Copy1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

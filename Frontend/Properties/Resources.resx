@@ -124,6 +124,9 @@
   <data name="Vector (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DarkSongimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkSongimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_Favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,8 +136,8 @@
   <data name="Dashboard Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_Menu_Remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_Menu_Remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DarkDrpDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkDrpDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Nimbus_LightLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nimbus_LightLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,6 +163,9 @@
   <data name="Icon_Resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Resize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DarkDrpDown - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkDrpDown - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Midnight Session" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Midnight Session.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,11 +178,20 @@
   <data name="Sidebar Placeholder (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder (6)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_Menu_Remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Menu_Remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Add to playlist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add to playlist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DarkFavoritesimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkFavoritesimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Default_Album" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Default_Album.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DarkPlaylistimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkPlaylistimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Songs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Songs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -195,6 +210,9 @@
   </data>
   <data name="Vector (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vector (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -216,6 +234,9 @@
   </data>
   <data name="Icon_AddButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_AddButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DarkAlmbumimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkAlmbumimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Theme4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Theme4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,6 +283,9 @@
   <data name="Group (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Darkqueueimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Darkqueueimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_Pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -276,6 +300,9 @@
   </data>
   <data name="Dashboard Button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconaddbuttonwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconaddbuttonwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,8 +334,8 @@
   <data name="Ellipse 13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_Queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_Queue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DarkArtistImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkArtistImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Favorite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Favorite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,8 +346,14 @@
   <data name="Filter Dropdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Filter Dropdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_Queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Queue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Vector (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Menu_AddtoFavorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Menu_AddtoFavorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,7 +367,7 @@
   <data name="Sidebar Placeholder (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Placeholder (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_Menu_AddtoFavorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_Menu_AddtoFavorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DarkDrpDown - Copy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkDrpDown - Copy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -39,9 +39,10 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Sidebar = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -52,10 +53,11 @@
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1.SuspendLayout();
             this.Sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -269,14 +271,6 @@
             this.Sidebar.Size = new System.Drawing.Size(347, 767);
             this.Sidebar.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 93);
-            this.panel1.TabIndex = 11;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -284,6 +278,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(317, 100);
             this.panel2.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(344, 93);
+            this.panel1.TabIndex = 11;
             // 
             // panel3
             // 
@@ -294,6 +296,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1616, 133);
             this.panel3.TabIndex = 11;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.guna2GradientButton2);
+            this.panel4.Location = new System.Drawing.Point(349, 96);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1269, 672);
+            this.panel4.TabIndex = 12;
             // 
             // pictureBox4
             // 
@@ -542,12 +552,38 @@
             this.SearchBar.TabIndex = 6;
             this.SearchBar.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // panel4
+            // guna2GradientButton2
             // 
-            this.panel4.Location = new System.Drawing.Point(349, 96);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1269, 672);
-            this.panel4.TabIndex = 12;
+            this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton2.BorderRadius = 10;
+            this.guna2GradientButton2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2GradientButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton2.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton2.CheckedState.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton2.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton2.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton2.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Albums;
+            this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton2.ImageOffset = new System.Drawing.Point(20, 0);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(339, 130);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Size = new System.Drawing.Size(327, 65);
+            this.guna2GradientButton2.TabIndex = 14;
+            this.guna2GradientButton2.Text = "Albums";
+            this.guna2GradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton2.TextOffset = new System.Drawing.Point(30, 0);
             // 
             // Main
             // 
@@ -571,6 +607,7 @@
             this.Sidebar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -605,6 +642,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
     }
 }
 

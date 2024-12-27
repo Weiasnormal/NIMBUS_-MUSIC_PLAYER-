@@ -64,11 +64,23 @@
     <Compile Include="AddtoPlaylist.Designer.cs">
       <DependentUpon>AddtoPlaylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlbumsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlbumsPanel.Designer.cs">
+      <DependentUpon>AlbumsPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllSongPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AllSongPanel.Designer.cs">
       <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArtistsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ArtistsPanel.Designer.cs">
+      <DependentUpon>ArtistsPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Checkbox_Playlist.cs">
       <SubType>UserControl</SubType>
@@ -208,12 +220,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Rectangle 167 %282%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NimbusClassLibrary\NimbusClassLibrary.csproj">
-      <Project>{d7bd8328-fc91-4b0b-a12a-cfb6415759c1}</Project>
-      <Name>NimbusClassLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image 171.png" />
@@ -382,6 +388,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon_Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Menu_AddtoQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Menu_RemovePlaylist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NimbusClassLibrary\NimbusClassLibrary.csproj">
+      <Project>{d7bd8328-fc91-4b0b-a12a-cfb6415759c1}</Project>
+      <Name>NimbusClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

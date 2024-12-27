@@ -35,3 +35,7 @@ D:\repos\Nimbus\BackendTester\bin\Debug\K4os.Compression.LZ4.xml
 D:\repos\Nimbus\BackendTester\bin\Debug\System.IO.Pipelines.xml
 D:\repos\Nimbus\BackendTester\bin\Debug\K4os.Hash.xxHash.xml
 D:\repos\Nimbus\BackendTester\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.csproj.AssemblyReference.cache
+C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.csproj.CoreCompileInputs.cache
+C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.exe
+C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.pdb

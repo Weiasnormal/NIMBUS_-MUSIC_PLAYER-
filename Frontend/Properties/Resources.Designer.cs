@@ -363,6 +363,26 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Menu_AddtoQueue {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Menu_AddtoQueue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Menu_RemovePlaylist {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Menu_RemovePlaylist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_Pause {
             get {
                 object obj = ResourceManager.GetObject("Icon_Pause", resourceCulture);

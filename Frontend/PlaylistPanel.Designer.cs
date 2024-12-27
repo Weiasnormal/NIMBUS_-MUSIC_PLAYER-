@@ -31,20 +31,22 @@
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Playlistlbl = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDuration = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Playlistlbl)).BeginInit();
+            this.lblPlaylistName = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Dropdown_Sort
@@ -163,43 +165,6 @@
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 18;
             // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.CheckedState.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Pause;
-            this.guna2ImageButton4.CheckedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Play;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(48, 48);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(41, 88);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Size = new System.Drawing.Size(58, 58);
-            this.guna2ImageButton4.TabIndex = 15;
-            // 
-            // Menubtn
-            // 
-            this.Menubtn.CheckedState.Parent = this.Menubtn;
-            this.Menubtn.HoverState.Parent = this.Menubtn;
-            this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
-            this.Menubtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.Menubtn.Location = new System.Drawing.Point(163, 102);
-            this.Menubtn.Name = "Menubtn";
-            this.Menubtn.PressedState.Parent = this.Menubtn;
-            this.Menubtn.Size = new System.Drawing.Size(51, 33);
-            this.Menubtn.TabIndex = 6;
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(106, 102);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
-            this.guna2ImageButton2.TabIndex = 1;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -207,24 +172,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1495, 727);
             this.flowLayoutPanel1.TabIndex = 10;
-            // 
-            // Playlistlbl
-            // 
-            this.Playlistlbl.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Midnight_Session;
-            this.Playlistlbl.Location = new System.Drawing.Point(40, 18);
-            this.Playlistlbl.Name = "Playlistlbl";
-            this.Playlistlbl.Size = new System.Drawing.Size(545, 65);
-            this.Playlistlbl.TabIndex = 9;
-            this.Playlistlbl.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Song_Table;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.Location = new System.Drawing.Point(40, 220);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1479, 51);
-            this.panel3.TabIndex = 1;
             // 
             // lblTitle
             // 
@@ -239,8 +186,7 @@
             // 
             // lblArtist
             // 
-            this.lblArtist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblArtist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblArtist.AutoSize = true;
             this.lblArtist.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArtist.ForeColor = System.Drawing.Color.White;
@@ -300,46 +246,175 @@
             this.lblDuration.TabIndex = 2;
             this.lblDuration.Text = "Duration";
             // 
+            // lblPlaylistName
+            // 
+            this.lblPlaylistName.AutoSize = true;
+            this.lblPlaylistName.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaylistName.ForeColor = System.Drawing.Color.White;
+            this.lblPlaylistName.Location = new System.Drawing.Point(35, 26);
+            this.lblPlaylistName.Name = "lblPlaylistName";
+            this.lblPlaylistName.Size = new System.Drawing.Size(311, 55);
+            this.lblPlaylistName.TabIndex = 5;
+            this.lblPlaylistName.Text = "Playlist Name";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.Controls.Add(this.guna2GradientButton1);
+            this.guna2Panel1.Controls.Add(this.guna2GradientButton4);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(169, 141);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(242, 114);
+            this.guna2Panel1.TabIndex = 23;
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.BorderRadius = 10;
+            this.guna2GradientButton1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2GradientButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton1.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton1.CheckedState.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton1.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_RemovePlaylist;
+            this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton1.ImageOffset = new System.Drawing.Point(20, 0);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(9, 61);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(223, 45);
+            this.guna2GradientButton1.TabIndex = 23;
+            this.guna2GradientButton1.Text = "Delete playlist";
+            this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton1.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // guna2GradientButton4
+            // 
+            this.guna2GradientButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton4.BorderRadius = 10;
+            this.guna2GradientButton4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2GradientButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton4.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton4.CheckedState.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton4.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton4.CheckedState.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton4.CustomImages.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton4.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientButton4.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton4.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton4.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton4.HoverState.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoQueue;
+            this.guna2GradientButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton4.ImageOffset = new System.Drawing.Point(20, 0);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(9, 10);
+            this.guna2GradientButton4.Name = "guna2GradientButton4";
+            this.guna2GradientButton4.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.Size = new System.Drawing.Size(223, 45);
+            this.guna2GradientButton4.TabIndex = 22;
+            this.guna2GradientButton4.Text = "Add to Queue";
+            this.guna2GradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton4.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // guna2ImageButton4
+            // 
+            this.guna2ImageButton4.CheckedState.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Pause;
+            this.guna2ImageButton4.CheckedState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Play;
+            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(48, 48);
+            this.guna2ImageButton4.Location = new System.Drawing.Point(41, 88);
+            this.guna2ImageButton4.Name = "guna2ImageButton4";
+            this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.Size = new System.Drawing.Size(58, 58);
+            this.guna2ImageButton4.TabIndex = 15;
+            // 
+            // Menubtn
+            // 
+            this.Menubtn.CheckedState.Parent = this.Menubtn;
+            this.Menubtn.HoverState.Parent = this.Menubtn;
+            this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
+            this.Menubtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.Menubtn.Location = new System.Drawing.Point(163, 102);
+            this.Menubtn.Name = "Menubtn";
+            this.Menubtn.PressedState.Parent = this.Menubtn;
+            this.Menubtn.Size = new System.Drawing.Size(51, 33);
+            this.Menubtn.TabIndex = 6;
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(106, 102);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
+            this.guna2ImageButton2.TabIndex = 1;
+            // 
             // PlaylistPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.lblPlaylistName);
             this.Controls.Add(this.Dropdown_Sort);
             this.Controls.Add(this.Dropdown_Album);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Dropdown_Artist);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.guna2ImageButton4);
             this.Controls.Add(this.Menubtn);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2ImageButton2);
-            this.Controls.Add(this.Playlistlbl);
             this.Name = "PlaylistPanel";
             this.Size = new System.Drawing.Size(1572, 863);
-            ((System.ComponentModel.ISupportInitialize)(this.Playlistlbl)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox Playlistlbl;
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblArtist;
         private System.Windows.Forms.Label lblAlbum;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblDuration;
+        private System.Windows.Forms.Label lblPlaylistName;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
     }
 }

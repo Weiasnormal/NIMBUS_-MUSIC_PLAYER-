@@ -68,5 +68,58 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
 
         }
+
+        private void Theme2_Click(object sender, EventArgs e)
+        {
+            ApplyWhiteTheme();
+        }
+        private void ApplyWhiteTheme()
+        {
+            
+            this.BackColor = Color.White;
+            this.ForeColor = Color.Black;
+
+            
+            UpdateControlTheme(this.Controls);
+        }
+
+        private void UpdateControlTheme(Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                if (control is Panel panel)
+                {
+                    panel.BackColor = Color.LightGray; 
+                    UpdateControlTheme(panel.Controls); 
+                }
+                else if (control is Button button)
+                {
+                    button.BackColor = Color.WhiteSmoke; 
+                    button.ForeColor = Color.Black;
+                    
+                }
+                else if (control is Label label)
+                {
+                    label.ForeColor = Color.Black; 
+                }
+                else if (control is TextBox textBox)
+                {
+                    textBox.BackColor = Color.White; 
+                    textBox.ForeColor = Color.Black; 
+                }
+                else if (control is UserControl userControl)
+                {
+                    userControl.BackColor = Color.LightGray; 
+                    userControl.ForeColor = Color.Black; 
+                }
+            }
+            btnSidebar_Songs.ForeColor = Color.Black;
+            btnSidebar_Favorites.ForeColor = Color.Black;
+            btnSidebar_Albums.ForeColor = Color.Black;
+            btnSidebar_Artists.ForeColor = Color.Black;
+            btnSidebar_Queue.ForeColor = Color.Black;
+            btnSidebar_Playlist.ForeColor = Color.Black;
+            pictureBox1.Image = Properties.Resources.Nimbus_DarkLogo;
+        }
     }
 }

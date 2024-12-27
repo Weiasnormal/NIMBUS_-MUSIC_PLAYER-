@@ -162,6 +162,7 @@
             this.Theme2.ShadowDecoration.Parent = this.Theme2;
             this.Theme2.Size = new System.Drawing.Size(31, 31);
             this.Theme2.TabIndex = 15;
+            this.Theme2.Click += new System.EventHandler(this.Theme2_Click);
             // 
             // guna2GradientButton1
             // 
@@ -599,6 +600,7 @@
             this.btnSidebar_Songs.Text = "Songs";
             this.btnSidebar_Songs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Songs.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnSidebar_Songs.ForeColorChanged += new System.EventHandler(this.Theme2_Click);
             this.btnSidebar_Songs.Click += new System.EventHandler(this.btnSidebar_Songs_Click);
             // 
             // panel3

@@ -36,6 +36,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Downloads\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
@@ -64,6 +67,12 @@
     <Compile Include="AddtoPlaylist.Designer.cs">
       <DependentUpon>AddtoPlaylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlbumPlaceholder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlbumPlaceholder.Designer.cs">
+      <DependentUpon>AlbumPlaceholder.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlbumsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +84,12 @@
     </Compile>
     <Compile Include="AllSongPanel.Designer.cs">
       <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArtistPlaceholder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ArtistPlaceholder.Designer.cs">
+      <DependentUpon>ArtistPlaceholder.cs</DependentUpon>
     </Compile>
     <Compile Include="ArtistsPanel.cs">
       <SubType>UserControl</SubType>
@@ -94,6 +109,7 @@
     <Compile Include="CreatePlaylist.Designer.cs">
       <DependentUpon>CreatePlaylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashboardNavigation.cs" />
     <Compile Include="FavoritePanelcs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +134,12 @@
     <Compile Include="HeaderMusicPlayer.Designer.cs">
       <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Miniplayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Miniplayer.Designer.cs">
+      <DependentUpon>Miniplayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="NowPlaying.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,8 +163,20 @@
     <EmbeddedResource Include="AddtoPlaylist.resx">
       <DependentUpon>AddtoPlaylist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlbumPlaceholder.resx">
+      <DependentUpon>AlbumPlaceholder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlbumsPanel.resx">
+      <DependentUpon>AlbumsPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllSongPanel.resx">
       <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtistPlaceholder.resx">
+      <DependentUpon>ArtistPlaceholder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtistsPanel.resx">
+      <DependentUpon>ArtistsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checkbox_Playlist.resx">
       <DependentUpon>Checkbox_Playlist.cs</DependentUpon>
@@ -161,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeaderMusicPlayer.resx">
       <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miniplayer.resx">
+      <DependentUpon>Miniplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NowPlaying.resx">
       <DependentUpon>NowPlaying.cs</DependentUpon>
@@ -400,6 +437,60 @@
       <Project>{d7bd8328-fc91-4b0b-a12a-cfb6415759c1}</Project>
       <Name>NimbusClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Favorites1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Menu_AddtoPlaylist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Menu_Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Menu_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Menu_AddtoFavorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkSongimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkFavoritesimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkAlmbumimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkArtistImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Darkqueueimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkPlaylistimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconaddbuttonwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkDrpDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkDrpDown - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkDrpDown - Copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIni Player_BlackBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

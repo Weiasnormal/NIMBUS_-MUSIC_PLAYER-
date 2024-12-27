@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
-    public partial class FavoritePanel : UserControl
+    public partial class AlbumPlaceholder : UserControl
     {
-        public FavoritePanel()
+        public AlbumPlaceholder()
         {
             InitializeComponent();
         }

@@ -39,3 +39,73 @@ C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\Backend
 C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.csproj.CoreCompileInputs.cache
 C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.exe
 C:\Users\Joko\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.pdb
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BackendTester.exe.config
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BackendTester.exe
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BackendTester.pdb
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\NimbusClassLibrary.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\MySql.Data.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\Google.Protobuf.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\ZstdSharp.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Memory.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Buffers.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\NimbusClassLibrary.pdb
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\NimbusClassLibrary.dll.config
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\MySql.Data.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\Google.Protobuf.pdb
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\Google.Protobuf.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Memory.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Buffers.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Joko\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.csproj.CopyComplete
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BackendTester.exe.config
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BackendTester.exe
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BackendTester.pdb
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\NimbusClassLibrary.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\MySql.Data.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\Google.Protobuf.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\ZstdSharp.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Memory.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Buffers.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.IO.Pipelines.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\NimbusClassLibrary.pdb
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\NimbusClassLibrary.dll.config
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\MySql.Data.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\Google.Protobuf.pdb
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\Google.Protobuf.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Memory.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Buffers.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.IO.Pipelines.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.csproj.AssemblyReference.cache
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.csproj.CoreCompileInputs.cache
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendT.C1D8F97C.Up2Date
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.exe
+C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.pdb

@@ -48,6 +48,7 @@
             this.TimePlayed = new System.Windows.Forms.Label();
             this.TimeSong = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SoundIcon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -278,6 +279,16 @@
             this.pictureBox10.TabIndex = 8;
             this.pictureBox10.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(231, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Pwede na ito burahin mamaya";
+            // 
             // NowPlaying
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,6 +296,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Rectangle_167__2_;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.SongTimePanel);
             this.Controls.Add(this.PlayPanel);
@@ -332,5 +344,6 @@
         private Guna.UI2.WinForms.Guna2TrackBar VolumeBar;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private System.Windows.Forms.Label label1;
     }
 }

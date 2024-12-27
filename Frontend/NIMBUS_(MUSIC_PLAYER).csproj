@@ -94,6 +94,7 @@
     <Compile Include="CreatePlaylist.Designer.cs">
       <DependentUpon>CreatePlaylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashboardNavigation.cs" />
     <Compile Include="FavoritePanelcs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,8 +142,14 @@
     <EmbeddedResource Include="AddtoPlaylist.resx">
       <DependentUpon>AddtoPlaylist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlbumsPanel.resx">
+      <DependentUpon>AlbumsPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllSongPanel.resx">
       <DependentUpon>AllSongPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtistsPanel.resx">
+      <DependentUpon>ArtistsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checkbox_Playlist.resx">
       <DependentUpon>Checkbox_Playlist.cs</DependentUpon>
@@ -400,6 +407,12 @@
       <Project>{d7bd8328-fc91-4b0b-a12a-cfb6415759c1}</Project>
       <Name>NimbusClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Favorites1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Resize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

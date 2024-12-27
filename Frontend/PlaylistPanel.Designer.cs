@@ -38,11 +38,12 @@
             this.lblNumber = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDuration = new System.Windows.Forms.Label();
-            this.lblPlaylistName = new System.Windows.Forms.Label();
+            this.lblPlaylistNamePanel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2.SuspendLayout();
@@ -84,7 +85,7 @@
             this.Dropdown_Sort.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
             this.Dropdown_Sort.ItemsAppearance.SelectedFont = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Sort.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_Sort.Location = new System.Drawing.Point(1336, 102);
+            this.Dropdown_Sort.Location = new System.Drawing.Point(1039, 81);
             this.Dropdown_Sort.Name = "Dropdown_Sort";
             this.Dropdown_Sort.ShadowDecoration.Parent = this.Dropdown_Sort;
             this.Dropdown_Sort.Size = new System.Drawing.Size(200, 36);
@@ -121,7 +122,7 @@
             this.Dropdown_Album.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
             this.Dropdown_Album.ItemsAppearance.SelectedFont = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Album.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_Album.Location = new System.Drawing.Point(1128, 102);
+            this.Dropdown_Album.Location = new System.Drawing.Point(828, 81);
             this.Dropdown_Album.Name = "Dropdown_Album";
             this.Dropdown_Album.ShadowDecoration.Parent = this.Dropdown_Album;
             this.Dropdown_Album.Size = new System.Drawing.Size(200, 36);
@@ -158,7 +159,7 @@
             this.Dropdown_Artist.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
             this.Dropdown_Artist.ItemsAppearance.SelectedFont = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Artist.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_Artist.Location = new System.Drawing.Point(920, 102);
+            this.Dropdown_Artist.Location = new System.Drawing.Point(615, 81);
             this.Dropdown_Artist.Name = "Dropdown_Artist";
             this.Dropdown_Artist.ShadowDecoration.Parent = this.Dropdown_Artist;
             this.Dropdown_Artist.Size = new System.Drawing.Size(200, 36);
@@ -168,9 +169,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(40, 201);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 193);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1495, 727);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1196, 486);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // lblTitle
@@ -190,7 +191,7 @@
             this.lblArtist.AutoSize = true;
             this.lblArtist.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArtist.ForeColor = System.Drawing.Color.White;
-            this.lblArtist.Location = new System.Drawing.Point(446, 14);
+            this.lblArtist.Location = new System.Drawing.Point(353, 14);
             this.lblArtist.Name = "lblArtist";
             this.lblArtist.Size = new System.Drawing.Size(65, 25);
             this.lblArtist.TabIndex = 3;
@@ -202,7 +203,7 @@
             this.lblAlbum.AutoSize = true;
             this.lblAlbum.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlbum.ForeColor = System.Drawing.Color.White;
-            this.lblAlbum.Location = new System.Drawing.Point(845, 14);
+            this.lblAlbum.Location = new System.Drawing.Point(674, 14);
             this.lblAlbum.Name = "lblAlbum";
             this.lblAlbum.Size = new System.Drawing.Size(74, 25);
             this.lblAlbum.TabIndex = 1;
@@ -223,15 +224,16 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Controls.Add(this.lblDuration);
             this.panel2.Controls.Add(this.lblNumber);
             this.panel2.Controls.Add(this.lblArtist);
             this.panel2.Controls.Add(this.lblAlbum);
-            this.panel2.Location = new System.Drawing.Point(40, 144);
+            this.panel2.Location = new System.Drawing.Point(43, 136);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1495, 51);
+            this.panel2.Size = new System.Drawing.Size(1195, 51);
             this.panel2.TabIndex = 2;
             // 
             // lblDuration
@@ -240,22 +242,22 @@
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuration.ForeColor = System.Drawing.Color.White;
-            this.lblDuration.Location = new System.Drawing.Point(1260, 14);
+            this.lblDuration.Location = new System.Drawing.Point(982, 14);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(94, 25);
             this.lblDuration.TabIndex = 2;
             this.lblDuration.Text = "Duration";
             // 
-            // lblPlaylistName
+            // lblPlaylistNamePanel
             // 
-            this.lblPlaylistName.AutoSize = true;
-            this.lblPlaylistName.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlaylistName.ForeColor = System.Drawing.Color.White;
-            this.lblPlaylistName.Location = new System.Drawing.Point(35, 26);
-            this.lblPlaylistName.Name = "lblPlaylistName";
-            this.lblPlaylistName.Size = new System.Drawing.Size(311, 55);
-            this.lblPlaylistName.TabIndex = 5;
-            this.lblPlaylistName.Text = "Playlist Name";
+            this.lblPlaylistNamePanel.AutoSize = true;
+            this.lblPlaylistNamePanel.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaylistNamePanel.ForeColor = System.Drawing.Color.White;
+            this.lblPlaylistNamePanel.Location = new System.Drawing.Point(33, 6);
+            this.lblPlaylistNamePanel.Name = "lblPlaylistNamePanel";
+            this.lblPlaylistNamePanel.Size = new System.Drawing.Size(311, 55);
+            this.lblPlaylistNamePanel.TabIndex = 5;
+            this.lblPlaylistNamePanel.Text = "Playlist Name";
             // 
             // guna2Panel1
             // 
@@ -263,11 +265,72 @@
             this.guna2Panel1.Controls.Add(this.guna2GradientButton1);
             this.guna2Panel1.Controls.Add(this.guna2GradientButton4);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(169, 141);
+            this.guna2Panel1.Location = new System.Drawing.Point(172, 118);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(242, 114);
             this.guna2Panel1.TabIndex = 23;
+            // 
+            // guna2GradientButton2
+            // 
+            this.guna2GradientButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.CustomImages.CheckedImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Pause;
+            this.guna2GradientButton2.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Play;
+            this.guna2GradientButton2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2GradientButton2.CustomImages.ImageOffset = new System.Drawing.Point(0, -10);
+            this.guna2GradientButton2.CustomImages.ImageSize = new System.Drawing.Size(38, 38);
+            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.FillColor = System.Drawing.Color.Empty;
+            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Empty;
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton2.Location = new System.Drawing.Point(43, 73);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Size = new System.Drawing.Size(51, 51);
+            this.guna2GradientButton2.TabIndex = 24;
+            this.guna2GradientButton2.TextOffset = new System.Drawing.Point(15, 0);
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.AutoRoundedCorners = true;
+            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SearchBar.BorderColor = System.Drawing.Color.White;
+            this.SearchBar.BorderRadius = 19;
+            this.SearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchBar.DefaultText = "";
+            this.SearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.SearchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.SearchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchBar.DisabledState.Parent = this.SearchBar;
+            this.SearchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchBar.FillColor = System.Drawing.Color.Transparent;
+            this.SearchBar.FocusedState.BorderColor = System.Drawing.Color.White;
+            this.SearchBar.FocusedState.Parent = this.SearchBar;
+            this.SearchBar.ForeColor = System.Drawing.Color.Silver;
+            this.SearchBar.HoverState.BorderColor = System.Drawing.Color.White;
+            this.SearchBar.HoverState.Parent = this.SearchBar;
+            this.SearchBar.IconLeft = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.SVG;
+            this.SearchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.SearchBar.IconLeftSize = new System.Drawing.Size(15, 15);
+            this.SearchBar.Location = new System.Drawing.Point(935, 21);
+            this.SearchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.PasswordChar = '\0';
+            this.SearchBar.PlaceholderForeColor = System.Drawing.Color.White;
+            this.SearchBar.PlaceholderText = "Search";
+            this.SearchBar.SelectedText = "";
+            this.SearchBar.ShadowDecoration.Parent = this.SearchBar;
+            this.SearchBar.Size = new System.Drawing.Size(304, 40);
+            this.SearchBar.TabIndex = 25;
+            this.SearchBar.TextOffset = new System.Drawing.Point(20, 0);
             // 
             // guna2GradientButton1
             // 
@@ -335,26 +398,14 @@
             this.guna2GradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton4.TextOffset = new System.Drawing.Point(30, 0);
             // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.CheckedState.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Pause;
-            this.guna2ImageButton4.CheckedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Play;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(48, 48);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(41, 88);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Size = new System.Drawing.Size(58, 58);
-            this.guna2ImageButton4.TabIndex = 15;
-            // 
             // Menubtn
             // 
             this.Menubtn.CheckedState.Parent = this.Menubtn;
+            this.Menubtn.HoverState.ImageSize = new System.Drawing.Size(25, 25);
             this.Menubtn.HoverState.Parent = this.Menubtn;
             this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
-            this.Menubtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.Menubtn.Location = new System.Drawing.Point(163, 102);
+            this.Menubtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.Menubtn.Location = new System.Drawing.Point(165, 81);
             this.Menubtn.Name = "Menubtn";
             this.Menubtn.PressedState.Parent = this.Menubtn;
             this.Menubtn.Size = new System.Drawing.Size(51, 33);
@@ -363,10 +414,11 @@
             // guna2ImageButton2
             // 
             this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(25, 25);
             this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(106, 102);
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(106, 82);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
             this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
@@ -377,19 +429,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.SearchBar);
+            this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.lblPlaylistName);
+            this.Controls.Add(this.lblPlaylistNamePanel);
             this.Controls.Add(this.Dropdown_Sort);
             this.Controls.Add(this.Dropdown_Album);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Dropdown_Artist);
-            this.Controls.Add(this.guna2ImageButton4);
             this.Controls.Add(this.Menubtn);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2ImageButton2);
             this.Name = "PlaylistPanel";
-            this.Size = new System.Drawing.Size(1572, 863);
+            this.Size = new System.Drawing.Size(1272, 685);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
@@ -402,7 +454,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
@@ -412,9 +463,11 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblDuration;
-        private System.Windows.Forms.Label lblPlaylistName;
+        private System.Windows.Forms.Label lblPlaylistNamePanel;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2TextBox SearchBar;
     }
 }

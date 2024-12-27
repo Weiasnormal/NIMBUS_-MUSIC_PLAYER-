@@ -363,6 +363,16 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Favorites1 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Favorites1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_Menu_AddtoQueue {
             get {
                 object obj = ResourceManager.GetObject("Icon_Menu_AddtoQueue", resourceCulture);
@@ -416,6 +426,16 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         internal static System.Drawing.Bitmap Icon_Queue {
             get {
                 object obj = ResourceManager.GetObject("Icon_Queue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Resize {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Resize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

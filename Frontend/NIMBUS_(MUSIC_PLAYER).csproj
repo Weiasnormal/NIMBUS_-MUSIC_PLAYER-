@@ -492,5 +492,8 @@
   <ItemGroup>
     <None Include="Resources\MIni Player_BlackBG.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient Background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

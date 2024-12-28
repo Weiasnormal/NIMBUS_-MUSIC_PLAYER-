@@ -193,11 +193,11 @@
             // lblQueuePanel
             // 
             this.lblQueuePanel.AutoSize = true;
-            this.lblQueuePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQueuePanel.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQueuePanel.ForeColor = System.Drawing.Color.White;
             this.lblQueuePanel.Location = new System.Drawing.Point(33, 6);
             this.lblQueuePanel.Name = "lblQueuePanel";
-            this.lblQueuePanel.Size = new System.Drawing.Size(144, 46);
+            this.lblQueuePanel.Size = new System.Drawing.Size(162, 55);
             this.lblQueuePanel.TabIndex = 28;
             this.lblQueuePanel.Text = "Queue";
             // 

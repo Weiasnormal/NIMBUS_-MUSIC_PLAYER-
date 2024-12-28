@@ -16,7 +16,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Nimbus());
         }
     }
 }

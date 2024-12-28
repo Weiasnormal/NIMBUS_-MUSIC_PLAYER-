@@ -11,16 +11,16 @@ using NimbusClassLibrary;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
-    public partial class Main : Form
+    public partial class Nimbus : Form
     {
         static DashboardNavigation dashboardNavigation;
-        public Main()
+        public Nimbus()
         {
             InitializeComponent();
             Initialize_Navigation_Controls();
             // test test = new test();
             // MessageBox.Show(test.test1());
-            
+
         }
         private void Initialize_Navigation_Controls()
         {
@@ -69,10 +69,62 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         }
 
+        private void Theme1_Click(object sender, EventArgs e)
+        {
+            ApplyDarkTheme();
+        }
+
         private void Theme2_Click(object sender, EventArgs e)
         {
             ApplyWhiteTheme();//This will apply the white theme
         }
+
+        private void Theme3_Click(object sender, EventArgs e)
+        {
+            ApplyBlueTheme();
+        }
+
+        private void Theme4_Click(object sender, EventArgs e)
+        {
+            ApplyGradientTheme();
+        }
+     
+        private void ApplyDarkTheme()
+        {
+            var BGColor = Color.FromArgb(18, 18, 18);
+            var Color1 = Color.FromArgb(39, 39, 39);
+            var NowPlayingColor = Color.FromArgb(26, 26, 26);
+
+
+            this.BackColor = BGColor;
+            this.ForeColor = Color.White;
+            panel3.BackColor = NowPlayingColor;
+            btnSidebar_Songs.CheckedState.FillColor = Color1;
+            btnSidebar_Songs.CheckedState.FillColor2 = Color1;
+            btnSidebar_Favorites.CheckedState.FillColor = Color1;
+            btnSidebar_Favorites.CheckedState.FillColor2 = Color1;
+            btnSidebar_Albums.CheckedState.FillColor = Color1;
+            btnSidebar_Albums.CheckedState.FillColor2 = Color1;
+            btnSidebar_Artists.CheckedState.FillColor = Color1;
+            btnSidebar_Artists.CheckedState.FillColor2 = Color1;
+            btnSidebar_Queue.CheckedState.FillColor = Color1;
+            btnSidebar_Queue.CheckedState.FillColor2 = Color1;
+
+            btnSidebar_Songs.HoverState.FillColor = Color1;
+            btnSidebar_Songs.HoverState.FillColor2 = Color1;
+            btnSidebar_Favorites.HoverState.FillColor = Color1;
+            btnSidebar_Favorites.HoverState.FillColor2 = Color1;
+            btnSidebar_Albums.HoverState.FillColor = Color1;
+            btnSidebar_Albums.HoverState.FillColor2 = Color1;
+            btnSidebar_Artists.HoverState.FillColor = Color1;
+            btnSidebar_Artists.HoverState.FillColor2 = Color1;
+            btnSidebar_Queue.HoverState.FillColor = Color1;
+            btnSidebar_Queue.HoverState.FillColor2 = Color1;
+
+            SearchBar.FillColor = Color1;
+
+        }
+
         private void ApplyWhiteTheme()
         {
             
@@ -80,17 +132,91 @@ namespace NIMBUS__MUSIC_PLAYER_
             this.ForeColor = Color.Black;
 
             
-            UpdateControlTheme(this.Controls);
+            UpdateControlWhiteTheme(this.Controls);
         }
 
-        private void UpdateControlTheme(Control.ControlCollection controls)
+        private void ApplyBlueTheme()
+        {
+            var BGColor = Color.FromArgb(21, 28, 33);
+            var Color1 = Color.FromArgb(27, 40, 50);
+            var NowPlayingColor = Color.FromArgb(35, 43, 50);
+
+
+            this.BackColor = BGColor;
+            this.ForeColor = Color.White;
+            panel3.BackColor = NowPlayingColor;
+            btnSidebar_Songs.CheckedState.FillColor = Color1;
+            btnSidebar_Songs.CheckedState.FillColor2 = Color1;
+            btnSidebar_Favorites.CheckedState.FillColor = Color1;
+            btnSidebar_Favorites.CheckedState.FillColor2 = Color1;
+            btnSidebar_Albums.CheckedState.FillColor = Color1;
+            btnSidebar_Albums.CheckedState.FillColor2 = Color1;
+            btnSidebar_Artists.CheckedState.FillColor = Color1;
+            btnSidebar_Artists.CheckedState.FillColor2 = Color1;
+            btnSidebar_Queue.CheckedState.FillColor = Color1;
+            btnSidebar_Queue.CheckedState.FillColor2 = Color1;
+
+            btnSidebar_Songs.HoverState.FillColor = Color1;
+            btnSidebar_Songs.HoverState.FillColor2 = Color1;
+            btnSidebar_Favorites.HoverState.FillColor = Color1;
+            btnSidebar_Favorites.HoverState.FillColor2 = Color1;
+            btnSidebar_Albums.HoverState.FillColor = Color1;
+            btnSidebar_Albums.HoverState.FillColor2 = Color1;
+            btnSidebar_Artists.HoverState.FillColor = Color1;
+            btnSidebar_Artists.HoverState.FillColor2 = Color1;
+            btnSidebar_Queue.HoverState.FillColor = Color1;
+            btnSidebar_Queue.HoverState.FillColor2 = Color1;
+
+            SearchBar.FillColor = Color1;
+
+        }
+
+        private void ApplyGradientTheme()
+        {
+            var BGColor = Color.FromArgb(21, 28, 33);
+            var Color1 = Color.FromArgb(27, 40, 50);
+            var Gradient1 = Color.FromArgb(69, 5, 87);
+            var Gradient2 = Color.FromArgb(138, 6, 35);
+            var NowPlayingColor = Color.FromArgb(35, 43, 50);
+
+
+            Nimbus.ActiveForm.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.gradient_Background;
+            this.ForeColor = Color.White;
+            panel3.BackColor = NowPlayingColor;
+            btnSidebar_Songs.CheckedState.FillColor = Color1;
+            btnSidebar_Songs.CheckedState.FillColor2 = Color1;
+            btnSidebar_Favorites.CheckedState.FillColor = Color1;
+            btnSidebar_Favorites.CheckedState.FillColor2 = Color1;
+            btnSidebar_Albums.CheckedState.FillColor = Color1;
+            btnSidebar_Albums.CheckedState.FillColor2 = Color1;
+            btnSidebar_Artists.CheckedState.FillColor = Color1;
+            btnSidebar_Artists.CheckedState.FillColor2 = Color1;
+            btnSidebar_Queue.CheckedState.FillColor = Color1;
+            btnSidebar_Queue.CheckedState.FillColor2 = Color1;
+
+            btnSidebar_Songs.HoverState.FillColor = Color1;
+            btnSidebar_Songs.HoverState.FillColor2 = Color1;
+            btnSidebar_Favorites.HoverState.FillColor = Color1;
+            btnSidebar_Favorites.HoverState.FillColor2 = Color1;
+            btnSidebar_Albums.HoverState.FillColor = Color1;
+            btnSidebar_Albums.HoverState.FillColor2 = Color1;
+            btnSidebar_Artists.HoverState.FillColor = Color1;
+            btnSidebar_Artists.HoverState.FillColor2 = Color1;
+            btnSidebar_Queue.HoverState.FillColor = Color1;
+            btnSidebar_Queue.HoverState.FillColor2 = Color1;
+
+            SearchBar.FillColor = Color1;
+
+        }
+
+        private void UpdateControlWhiteTheme(Control.ControlCollection controls)
         {   //This change the theme of the controls recursively
             foreach (Control control in controls)
             {
                 if (control is Panel panel)
                 {
-                    panel.BackColor = Color.White; 
-                    UpdateControlTheme(panel.Controls); 
+                    panel.BackColor = Color.White;
+                    UpdateControlWhiteTheme(panel.Controls); 
                 }
                 else if (control is Button button)
                 {
@@ -145,10 +271,11 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             panel3.BackColor = Color.WhiteSmoke;
         }
-
+      
         private void btnAddaPlaylist_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

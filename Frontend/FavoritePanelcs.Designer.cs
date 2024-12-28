@@ -84,11 +84,11 @@
             // lblFavoritesPanel
             // 
             this.lblFavoritesPanel.AutoSize = true;
-            this.lblFavoritesPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFavoritesPanel.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFavoritesPanel.ForeColor = System.Drawing.Color.White;
             this.lblFavoritesPanel.Location = new System.Drawing.Point(33, 6);
             this.lblFavoritesPanel.Name = "lblFavoritesPanel";
-            this.lblFavoritesPanel.Size = new System.Drawing.Size(192, 46);
+            this.lblFavoritesPanel.Size = new System.Drawing.Size(214, 55);
             this.lblFavoritesPanel.TabIndex = 28;
             this.lblFavoritesPanel.Text = "Favorites";
             // 

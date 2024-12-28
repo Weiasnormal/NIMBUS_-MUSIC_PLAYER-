@@ -35,7 +35,7 @@
             this.lblAllSongsPanel = new System.Windows.Forms.Label();
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.DetailPanel = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.DetailPanel.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,11 +159,11 @@
             // lblAllSongsPanel
             // 
             this.lblAllSongsPanel.AutoSize = true;
-            this.lblAllSongsPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllSongsPanel.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAllSongsPanel.ForeColor = System.Drawing.Color.White;
             this.lblAllSongsPanel.Location = new System.Drawing.Point(33, 6);
             this.lblAllSongsPanel.Name = "lblAllSongsPanel";
-            this.lblAllSongsPanel.Size = new System.Drawing.Size(199, 46);
+            this.lblAllSongsPanel.Size = new System.Drawing.Size(219, 55);
             this.lblAllSongsPanel.TabIndex = 28;
             this.lblAllSongsPanel.Text = "All Songs";
             // 
@@ -246,21 +246,21 @@
             this.Dropdown_Album.StartIndex = 0;
             this.Dropdown_Album.TabIndex = 32;
             // 
-            // panel2
+            // DetailPanel
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DetailPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Controls.Add(this.lblTitle);
-            this.panel2.Controls.Add(this.lblDuration);
-            this.panel2.Controls.Add(this.lblNumber);
-            this.panel2.Controls.Add(this.lblArtist);
-            this.panel2.Controls.Add(this.lblAlbum);
-            this.panel2.Location = new System.Drawing.Point(43, 136);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1197, 51);
-            this.panel2.TabIndex = 27;
+            this.DetailPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.DetailPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DetailPanel.Controls.Add(this.lblTitle);
+            this.DetailPanel.Controls.Add(this.lblDuration);
+            this.DetailPanel.Controls.Add(this.lblNumber);
+            this.DetailPanel.Controls.Add(this.lblArtist);
+            this.DetailPanel.Controls.Add(this.lblAlbum);
+            this.DetailPanel.Location = new System.Drawing.Point(43, 136);
+            this.DetailPanel.Name = "DetailPanel";
+            this.DetailPanel.Size = new System.Drawing.Size(1197, 51);
+            this.DetailPanel.TabIndex = 27;
             // 
             // lblTitle
             // 
@@ -545,7 +545,7 @@
             this.Controls.Add(this.lblAllSongsPanel);
             this.Controls.Add(this.Dropdown_Sort);
             this.Controls.Add(this.Dropdown_Album);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.DetailPanel);
             this.Controls.Add(this.Dropdown_Artist);
             this.Controls.Add(this.Menubtn);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -554,8 +554,8 @@
             this.Name = "AllSongPanel";
             this.Size = new System.Drawing.Size(1274, 687);
             this.guna2Panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.DetailPanel.ResumeLayout(false);
+            this.DetailPanel.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -570,7 +570,6 @@
         private System.Windows.Forms.Label lblAllSongsPanel;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblDuration;
         private System.Windows.Forms.Label lblNumber;
@@ -585,5 +584,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
+        private System.Windows.Forms.Panel DetailPanel;
     }
 }

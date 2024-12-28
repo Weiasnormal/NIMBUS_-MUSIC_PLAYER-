@@ -12,9 +12,18 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class AllSongPanel : UserControl
     {
+        public Panel detailPanel { get; set; }
         public AllSongPanel()
         {
             InitializeComponent();
+            detailPanel = this.DetailPanel;
         }
+
+        public void BlueTheme(Color color)
+        {
+            
+            DetailPanel.BackColor = color;
+            guna2Panel1.FillColor = color;
+        }      
     }
 }

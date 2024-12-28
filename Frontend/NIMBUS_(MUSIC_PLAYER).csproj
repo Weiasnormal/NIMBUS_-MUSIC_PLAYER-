@@ -495,5 +495,35 @@
   <ItemGroup>
     <None Include="Resources\gradient Background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrangePause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkMenu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

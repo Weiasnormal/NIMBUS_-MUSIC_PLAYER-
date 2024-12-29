@@ -11,6 +11,7 @@ using Guna.UI.WinForms;
 using Guna.UI2.HtmlRenderer.Adapters.Entities;
 using Guna.UI2.WinForms;
 using NimbusClassLibrary;
+using TagLib;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
@@ -101,11 +102,11 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.BackColor = Color.Transparent;
 
-            guna2GradientButton4.ForeColor = Color.Black;
-            guna2GradientButton4.FillColor = Color.White;
-            guna2GradientButton4.FillColor2 = Color.White;
+            btnImportMusic.ForeColor = Color.Black;
+            btnImportMusic.FillColor = Color.White;
+            btnImportMusic.FillColor2 = Color.White;
 
-            guna2GradientButton4.Image = Properties.Resources.Iconaddbuttonwhite;
+            btnImportMusic.Image = Properties.Resources.Iconaddbuttonwhite;
             btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
             btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
             btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
@@ -146,16 +147,16 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             SearchBar.FillColor = Color.White;
             SearchBar.ForeColor = Color.Black;
-            guna2GradientButton4.ForeColor = Color.White;
-            guna2GradientButton4.FillColor = Color.Black;
-            guna2GradientButton4.FillColor2 = Color.Black;
+            btnImportMusic.ForeColor = Color.White;
+            btnImportMusic.FillColor = Color.Black;
+            btnImportMusic.FillColor2 = Color.Black;
 
             guna2ControlBox1.IconColor = Color.Black;
             guna2ControlBox1.BackColor = Color.White;
             guna2ControlBox2.IconColor = Color.Black;
             guna2ControlBox2.BackColor = Color.White;
 
-            guna2GradientButton4.Image = Properties.Resources.Iconaddbuttonwhite;
+            btnImportMusic.Image = Properties.Resources.Iconaddbuttonwhite;
             pictureBox1.Image = Properties.Resources.Nimbus_DarkLogo;
             btnSidebar_Songs.Image = Properties.Resources.DarkSongimage;
             btnSidebar_Favorites.Image = Properties.Resources.DarkFavoritesimage;
@@ -230,11 +231,11 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.BackColor = Color.Transparent;
 
-            guna2GradientButton4.ForeColor = Color.Black;
-            guna2GradientButton4.FillColor = Color.White;
-            guna2GradientButton4.FillColor2 = Color.White;
+            btnImportMusic.ForeColor = Color.Black;
+            btnImportMusic.FillColor = Color.White;
+            btnImportMusic.FillColor2 = Color.White;
 
-            guna2GradientButton4.Image = Properties.Resources.Iconaddbuttonwhite;
+            btnImportMusic.Image = Properties.Resources.Iconaddbuttonwhite;
             btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
             btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
             btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
@@ -286,9 +287,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnSidebar_Queue.HoverState.FillColor = Color1;
             btnSidebar_Queue.HoverState.FillColor2 = Color1;
 
-            guna2GradientButton4.ForeColor = Color.Black;
-            guna2GradientButton4.FillColor = Color.White;
-            guna2GradientButton4.FillColor2 = Color.White;
+            btnImportMusic.ForeColor = Color.Black;
+            btnImportMusic.FillColor = Color.White;
+            btnImportMusic.FillColor2 = Color.White;
 
             SearchBar.FillColor = Color1;
 
@@ -298,7 +299,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.BackColor = Color.Transparent;
 
-            guna2GradientButton4.Image = Properties.Resources.Iconaddbuttonwhite;
+            btnImportMusic.Image = Properties.Resources.Iconaddbuttonwhite;
             btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
             btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
             btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
@@ -313,6 +314,49 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void TimeSong_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnImportMusic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "MP3 Files|*.mp3",
+                Multiselect = true,
+                Title = "Select MP3 Files"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ListView listView = this.Controls.Find("MP3ListView", true)[0] as ListView;
+                listView.Items.Clear();
+
+                foreach (string filePath in openFileDialog.FileNames)
+                {
+                    try
+                    {
+                        var file = TagLib.File.Create(filePath);
+                        string title = file.Tag.Title ?? "Unknown";
+                        string artist = file.Tag.FirstPerformer ?? "Unknown";
+                        string album = file.Tag.Album ?? "Unknown";
+                        string duration = file.Properties.Duration.ToString(@"mm\:ss");
+
+                        ListViewItem item = new ListViewItem(new[]
+                        {
+                            title,
+                            artist,
+                            album,
+                            duration,
+                            filePath
+                        });
+
+                        listView.Items.Add(item);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading file {filePath}: {ex.Message}");
+                    }
+                }
+            }
         }
     }
 }

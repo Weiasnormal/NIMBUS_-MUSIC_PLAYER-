@@ -128,7 +128,7 @@
             this.btnImportMusic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnImportMusic.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnImportMusic.ImageSize = new System.Drawing.Size(18, 18);
-            this.btnImportMusic.Location = new System.Drawing.Point(733, 26);
+            this.btnImportMusic.Location = new System.Drawing.Point(796, 26);
             this.btnImportMusic.Name = "btnImportMusic";
             this.btnImportMusic.PressedColor = System.Drawing.Color.Gray;
             this.btnImportMusic.ShadowDecoration.Parent = this.btnImportMusic;
@@ -158,7 +158,7 @@
             this.Theme4.ForeColor = System.Drawing.Color.White;
             this.Theme4.HoverState.Parent = this.Theme4;
             this.Theme4.ImageSize = new System.Drawing.Size(31, 31);
-            this.Theme4.Location = new System.Drawing.Point(1100, 32);
+            this.Theme4.Location = new System.Drawing.Point(1098, 32);
             this.Theme4.MaximumSize = new System.Drawing.Size(31, 31);
             this.Theme4.Name = "Theme4";
             this.Theme4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -184,12 +184,13 @@
             this.Theme2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Theme2.ForeColor = System.Drawing.Color.White;
             this.Theme2.HoverState.Parent = this.Theme2;
-            this.Theme2.Location = new System.Drawing.Point(1008, 32);
+            this.Theme2.Location = new System.Drawing.Point(1260, 0);
             this.Theme2.Name = "Theme2";
             this.Theme2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Theme2.ShadowDecoration.Parent = this.Theme2;
-            this.Theme2.Size = new System.Drawing.Size(31, 31);
+            this.Theme2.Size = new System.Drawing.Size(10, 10);
             this.Theme2.TabIndex = 15;
+            this.Theme2.Visible = false;
             this.Theme2.Click += new System.EventHandler(this.Theme2_Click);
             // 
             // Theme3
@@ -208,7 +209,7 @@
             this.Theme3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Theme3.ForeColor = System.Drawing.Color.White;
             this.Theme3.HoverState.Parent = this.Theme3;
-            this.Theme3.Location = new System.Drawing.Point(1054, 32);
+            this.Theme3.Location = new System.Drawing.Point(1058, 32);
             this.Theme3.Name = "Theme3";
             this.Theme3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Theme3.ShadowDecoration.Parent = this.Theme3;
@@ -233,7 +234,7 @@
             this.Theme1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Theme1.ForeColor = System.Drawing.Color.White;
             this.Theme1.HoverState.Parent = this.Theme1;
-            this.Theme1.Location = new System.Drawing.Point(961, 32);
+            this.Theme1.Location = new System.Drawing.Point(1015, 32);
             this.Theme1.Name = "Theme1";
             this.Theme1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Theme1.ShadowDecoration.Parent = this.Theme1;

@@ -15,10 +15,24 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class AllSongPanel : UserControl
     {
+        private Size originalFormSize; // Store the original size of the form
+
         public AllSongPanel()
         {
             InitializeComponent();
-            
+            // Capture the original size of the form
+            originalFormSize = this.Size;
+
+            // Attach the Resize event handler
+            this.Resize += AllSongPanel_Resize;
+
+            // Additional initialization for your panel and scrollbar
+            AllSongsPanel.AutoScroll = true;
+            AllSongsScrollbar.Scroll += (sender, e) =>
+            {
+                AllSongsPanel.VerticalScroll.Value = AllSongsScrollbar.Value;
+            };
+
 
             int numControls = AllSongsPanel.Controls.Count;
             AllSongsPanel.SuspendLayout();
@@ -40,6 +54,41 @@ namespace NIMBUS__MUSIC_PLAYER_
             // then update the form
             AllSongsPanel.PerformLayout();
         }
+
+        private void AllSongPanel_Resize(object sender, EventArgs e)
+        {
+            ResizeContents();
+        }
+
+        private void ResizeContents()
+        {
+            // Calculate scaling ratios
+            float xRatio = (float)this.Width / originalFormSize.Width;
+            float yRatio = (float)this.Height / originalFormSize.Height;
+
+            foreach (Control control in AllSongsPanel.Controls)
+            {
+                // Skip resizing the scrollbar if not needed
+                if (control == AllSongsScrollbar)
+                    continue;
+
+                // Calculate the new size and location for each control
+                int newX = (int)(control.Location.X * xRatio);
+                int newY = (int)(control.Location.Y * yRatio);
+                int newWidth = (int)(control.Width * xRatio);
+                int newHeight = (int)(control.Height * yRatio);
+
+                // Apply the new size and location
+                control.Location = new Point(newX, newY);
+                control.Size = new Size(newWidth, newHeight);
+            }
+
+            // Update the scrollbar height and position
+            AllSongsScrollbar.Height = AllSongsPanel.Height;
+            AllSongsScrollbar.Maximum = AllSongsPanel.VerticalScroll.Maximum;
+        }
+
+
 
         public Panel DetailsPanel
         {

@@ -83,6 +83,7 @@
             // 
             // Artistlbl
             // 
+            this.Artistlbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Artistlbl.AutoSize = true;
             this.Artistlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artistlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -94,6 +95,7 @@
             // 
             // Albumlbl
             // 
+            this.Albumlbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Albumlbl.AutoSize = true;
             this.Albumlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Albumlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -105,6 +107,7 @@
             // 
             // TotalTimelbl
             // 
+            this.TotalTimelbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TotalTimelbl.AutoSize = true;
             this.TotalTimelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalTimelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;

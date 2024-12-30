@@ -364,7 +364,8 @@
             // 
             // AllSongsPanel
             // 
-            this.AllSongsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.AllSongsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AllSongsPanel.Controls.Add(this.horizontalSongs1);
             this.AllSongsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;

@@ -299,7 +299,7 @@
             this.SongTab.Controls.Add(this.guna2GradientButton6);
             this.SongTab.Controls.Add(this.guna2GradientButton3);
             this.SongTab.Controls.Add(this.guna2GradientButton5);
-            this.SongTab.FillColor = System.Drawing.Color.Transparent;
+            this.SongTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.SongTab.Location = new System.Drawing.Point(410, 21);
             this.SongTab.Name = "SongTab";
             this.SongTab.ShadowDecoration.Parent = this.SongTab;
@@ -502,7 +502,7 @@
             this.MenuTabs.BorderRadius = 10;
             this.MenuTabs.Controls.Add(this.guna2GradientButton1);
             this.MenuTabs.Controls.Add(this.guna2GradientButton4);
-            this.MenuTabs.FillColor = System.Drawing.Color.Transparent;
+            this.MenuTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.MenuTabs.Location = new System.Drawing.Point(165, 120);
             this.MenuTabs.Name = "MenuTabs";
             this.MenuTabs.ShadowDecoration.Parent = this.MenuTabs;

@@ -43,22 +43,22 @@
             // SongNumlbl
             // 
             this.SongNumlbl.AutoSize = true;
-            this.SongNumlbl.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SongNumlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SongNumlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SongNumlbl.Location = new System.Drawing.Point(17, 17);
             this.SongNumlbl.Name = "SongNumlbl";
-            this.SongNumlbl.Size = new System.Drawing.Size(19, 25);
+            this.SongNumlbl.Size = new System.Drawing.Size(21, 22);
             this.SongNumlbl.TabIndex = 0;
             this.SongNumlbl.Text = "1";
             // 
             // Titlelbl
             // 
             this.Titlelbl.AutoSize = true;
-            this.Titlelbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titlelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Titlelbl.Location = new System.Drawing.Point(89, 14);
             this.Titlelbl.Name = "Titlelbl";
-            this.Titlelbl.Size = new System.Drawing.Size(68, 21);
+            this.Titlelbl.Size = new System.Drawing.Size(64, 18);
             this.Titlelbl.TabIndex = 1;
             this.Titlelbl.Text = "Havana";
             // 
@@ -84,33 +84,33 @@
             // Artistlbl
             // 
             this.Artistlbl.AutoSize = true;
-            this.Artistlbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Artistlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artistlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Artistlbl.Location = new System.Drawing.Point(347, 17);
             this.Artistlbl.Name = "Artistlbl";
-            this.Artistlbl.Size = new System.Drawing.Size(128, 21);
+            this.Artistlbl.Size = new System.Drawing.Size(122, 18);
             this.Artistlbl.TabIndex = 3;
             this.Artistlbl.Text = "Camila Cabello";
             // 
             // Albumlbl
             // 
             this.Albumlbl.AutoSize = true;
-            this.Albumlbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Albumlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Albumlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Albumlbl.Location = new System.Drawing.Point(661, 17);
             this.Albumlbl.Name = "Albumlbl";
-            this.Albumlbl.Size = new System.Drawing.Size(71, 21);
+            this.Albumlbl.Size = new System.Drawing.Size(67, 18);
             this.Albumlbl.TabIndex = 4;
             this.Albumlbl.Text = "No Title";
             // 
             // TotalTimelbl
             // 
             this.TotalTimelbl.AutoSize = true;
-            this.TotalTimelbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTimelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalTimelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TotalTimelbl.Location = new System.Drawing.Point(984, 17);
             this.TotalTimelbl.Name = "TotalTimelbl";
-            this.TotalTimelbl.Size = new System.Drawing.Size(42, 21);
+            this.TotalTimelbl.Size = new System.Drawing.Size(40, 18);
             this.TotalTimelbl.TabIndex = 5;
             this.TotalTimelbl.Text = "3:30";
             // 
@@ -132,6 +132,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.Menubtn);
             this.Controls.Add(this.TotalTimelbl);
@@ -140,7 +142,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SongNumlbl);
             this.Name = "HorizontalSongs";
-            this.Size = new System.Drawing.Size(1162, 59);
+            this.Size = new System.Drawing.Size(1162, 56);
             this.DoubleClick += new System.EventHandler(this.HorizontalSongs_DoubleClick);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

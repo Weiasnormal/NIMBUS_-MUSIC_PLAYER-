@@ -52,6 +52,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void btnSidebar_Playlist_Click(object sender, EventArgs e) => dashboardNavigation.Display(5);
 
         private void Theme1_Click(object sender, EventArgs e) => ApplyDarkTheme();
+
         //private void Theme2_Click(object sender, EventArgs e) => ApplyWhiteTheme();
         private void Theme3_Click(object sender, EventArgs e) => ApplyBlueTheme();
         private void Theme4_Click(object sender, EventArgs e) => ApplyGreenTheme();
@@ -104,20 +105,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.BackColor = Color.Transparent;
 
-            btnImportMusic.ForeColor = Color.Black;
-            btnImportMusic.FillColor = Color.White;
-            btnImportMusic.FillColor2 = Color.White;
-
             
-            btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
-            btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
-            btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
-            btnSidebar_Artists.Image = Properties.Resources.Icon_Artists;
-            btnSidebar_Queue.Image = Properties.Resources.Icon_Queue;
-            btnSidebar_Playlist.Image = Properties.Resources.Icon_Playlists;
-            btnAddaPlaylist.Image = Properties.Resources.Icon_AddPlaylist;
-            guna2PictureBox3.Image = Properties.Resources.Icon_Dropdown_Open;
-            guna2PictureBox2.Image = Properties.Resources.Icon_Dropdown_Close;
 
             foreach (Control control in ViewPanel.Controls)
             {
@@ -126,6 +114,18 @@ namespace NIMBUS__MUSIC_PLAYER_
                     allSongControl.DetailsPanel.BackColor = Color.FromArgb(49, 49, 49);
                     allSongControl.MenuTab.BackColor = Color.FromArgb(49, 49, 49);
                     allSongControl.SongMenu.BackColor = Color.FromArgb(49, 49, 49);
+                }
+                if  (control is QueuePanel queuePanel)
+                {
+                    queuePanel.DetailsPanel.BackColor = Color.FromArgb(49, 49, 49);
+                    queuePanel.MenuTab.BackColor = Color.FromArgb(49, 49, 49);
+                    queuePanel.SongMenu.BackColor = Color.FromArgb(49, 49, 49);
+                }
+                if (control is FavoritePanel favoritePanel)
+                {
+                    favoritePanel.DetailsPanel.BackColor = Color.FromArgb(49, 49, 49);
+                    favoritePanel.MenuTab.BackColor = Color.FromArgb(49, 49, 49);
+                    favoritePanel.SongMenu.BackColor = Color.FromArgb(49, 49, 49);
                 }
 
             }
@@ -245,20 +245,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.BackColor = Color.Transparent;
 
-            btnImportMusic.ForeColor = Color.Black;
-            btnImportMusic.FillColor = Color.White;
-            btnImportMusic.FillColor2 = Color.White;
-
-            
-            btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
-            btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
-            btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
-            btnSidebar_Artists.Image = Properties.Resources.Icon_Artists;
-            btnSidebar_Queue.Image = Properties.Resources.Icon_Queue;
-            btnSidebar_Playlist.Image = Properties.Resources.Icon_Playlists;
-            btnAddaPlaylist.Image = Properties.Resources.Icon_AddPlaylist;
-            guna2PictureBox3.Image = Properties.Resources.Icon_Dropdown_Open;
-            guna2PictureBox2.Image = Properties.Resources.Icon_Dropdown_Close;
+          
 
             foreach (Control control in ViewPanel.Controls)
             {
@@ -268,7 +255,18 @@ namespace NIMBUS__MUSIC_PLAYER_
                     allSongControl.MenuTab.BackColor = Color.FromArgb(35, 43, 50);
                     allSongControl.SongMenu.BackColor = Color.FromArgb(35, 43, 50);
                 }
-
+                if (control is QueuePanel queuePanel)
+                {
+                    queuePanel.DetailsPanel.BackColor = Color.FromArgb(35, 43, 50);
+                    queuePanel.MenuTab.BackColor = Color.FromArgb(35, 43, 50);
+                    queuePanel.SongMenu.BackColor = Color.FromArgb(35, 43, 50);
+                }
+                if (control is FavoritePanel favoritePanel)
+                {
+                    favoritePanel.DetailsPanel.BackColor = Color.FromArgb(35, 43, 50);
+                    favoritePanel.MenuTab.BackColor = Color.FromArgb(35, 43, 50);
+                    favoritePanel.SongMenu.BackColor = Color.FromArgb(35, 43, 50);
+                }
             }
         }
 
@@ -312,10 +310,6 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnSidebar_Queue.HoverState.FillColor = Color1;
             btnSidebar_Queue.HoverState.FillColor2 = Color1;
 
-            btnImportMusic.ForeColor = Color.Black;
-            btnImportMusic.FillColor = Color.White;
-            btnImportMusic.FillColor2 = Color.White;
-
             SearchBar.FillColor = Color1;
 
             pictureBox1.Image = Properties.Resources.Nimbus_LightLogo;
@@ -325,15 +319,6 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2ControlBox2.BackColor = Color.Transparent;
 
             
-            btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
-            btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
-            btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
-            btnSidebar_Artists.Image = Properties.Resources.Icon_Artists;
-            btnSidebar_Queue.Image = Properties.Resources.Icon_Queue;
-            btnSidebar_Playlist.Image = Properties.Resources.Icon_Playlists;
-            btnAddaPlaylist.Image = Properties.Resources.Icon_AddPlaylist;
-            guna2PictureBox3.Image = Properties.Resources.Icon_Dropdown_Open;
-            guna2PictureBox2.Image = Properties.Resources.Icon_Dropdown_Close;
 
             foreach (Control control in ViewPanel.Controls)
             {
@@ -343,7 +328,18 @@ namespace NIMBUS__MUSIC_PLAYER_
                     allSongControl.MenuTab.BackColor = Color.FromArgb(75, 90, 86);
                     allSongControl.SongMenu.BackColor = Color.FromArgb(75, 90, 86);
                 }
-
+                if (control is QueuePanel queuePanel)
+                {
+                    queuePanel.DetailsPanel.BackColor = Color.FromArgb(75, 90, 86);
+                    queuePanel.MenuTab.BackColor = Color.FromArgb(75, 90, 86);
+                    queuePanel.SongMenu.BackColor = Color.FromArgb(75, 90, 86);
+                }
+                if (control is FavoritePanel favoritePanel)
+                {
+                    favoritePanel.DetailsPanel.BackColor = Color.FromArgb(75, 90, 86);
+                    favoritePanel.MenuTab.BackColor = Color.FromArgb(75, 90, 86);
+                    favoritePanel.SongMenu.BackColor = Color.FromArgb(75, 90, 86);
+                }
             }
         }
 

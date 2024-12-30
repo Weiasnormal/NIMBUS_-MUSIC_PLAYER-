@@ -109,3 +109,4 @@ C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debu
 C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendT.C1D8F97C.Up2Date
 C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.exe
 C:\Users\ACER NITRO-PC\Source\Repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\obj\Debug\BackendTester.pdb
+C:\Users\ACER NITRO-PC\source\repos\NIMBUS_-MUSIC_PLAYER-\BackendTester\bin\Debug\AxInterop.WMPLib.dll

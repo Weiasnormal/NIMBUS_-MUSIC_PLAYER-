@@ -191,7 +191,6 @@
             this.Theme2.Size = new System.Drawing.Size(10, 10);
             this.Theme2.TabIndex = 15;
             this.Theme2.Visible = false;
-            
             // 
             // Theme3
             // 
@@ -611,7 +610,7 @@
             this.btnSidebar_Songs.TabIndex = 11;
             this.btnSidebar_Songs.Text = "Songs";
             this.btnSidebar_Songs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            
+            this.btnSidebar_Songs.TextOffset = new System.Drawing.Point(30, 0);
             this.btnSidebar_Songs.Click += new System.EventHandler(this.btnSidebar_Songs_Click);
             // 
             // panel3
@@ -887,8 +886,7 @@
             // 
             // ViewPanel
             // 
-            this.ViewPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ViewPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ViewPanel.BackColor = System.Drawing.Color.Transparent;
             this.ViewPanel.Location = new System.Drawing.Point(349, 99);

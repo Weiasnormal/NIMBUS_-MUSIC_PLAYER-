@@ -32,7 +32,7 @@
             this.lblFavoritesPanel = new System.Windows.Forms.Label();
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.DetailPanel = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.lblAlbum = new System.Windows.Forms.Label();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SongTab = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -48,12 +48,12 @@
             this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.MenuTabs = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.panel2.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.DetailPanel.SuspendLayout();
+            this.SongTab.SuspendLayout();
+            this.MenuTabs.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientButton2
@@ -84,11 +84,11 @@
             // lblFavoritesPanel
             // 
             this.lblFavoritesPanel.AutoSize = true;
-            this.lblFavoritesPanel.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFavoritesPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFavoritesPanel.ForeColor = System.Drawing.Color.White;
             this.lblFavoritesPanel.Location = new System.Drawing.Point(33, 6);
             this.lblFavoritesPanel.Name = "lblFavoritesPanel";
-            this.lblFavoritesPanel.Size = new System.Drawing.Size(214, 55);
+            this.lblFavoritesPanel.Size = new System.Drawing.Size(192, 46);
             this.lblFavoritesPanel.TabIndex = 28;
             this.lblFavoritesPanel.Text = "Favorites";
             // 
@@ -173,21 +173,21 @@
             this.Dropdown_Album.StartIndex = 0;
             this.Dropdown_Album.TabIndex = 32;
             // 
-            // panel2
+            // DetailPanel
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DetailPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Controls.Add(this.lblTitle);
-            this.panel2.Controls.Add(this.lblDuration);
-            this.panel2.Controls.Add(this.lblNumber);
-            this.panel2.Controls.Add(this.lblArtist);
-            this.panel2.Controls.Add(this.lblAlbum);
-            this.panel2.Location = new System.Drawing.Point(43, 136);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1197, 51);
-            this.panel2.TabIndex = 27;
+            this.DetailPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.DetailPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DetailPanel.Controls.Add(this.lblTitle);
+            this.DetailPanel.Controls.Add(this.lblDuration);
+            this.DetailPanel.Controls.Add(this.lblNumber);
+            this.DetailPanel.Controls.Add(this.lblArtist);
+            this.DetailPanel.Controls.Add(this.lblAlbum);
+            this.DetailPanel.Location = new System.Drawing.Point(43, 136);
+            this.DetailPanel.Name = "DetailPanel";
+            this.DetailPanel.Size = new System.Drawing.Size(1197, 51);
+            this.DetailPanel.TabIndex = 27;
             // 
             // lblTitle
             // 
@@ -292,19 +292,19 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1196, 486);
             this.flowLayoutPanel1.TabIndex = 30;
             // 
-            // guna2Panel2
+            // SongTab
             // 
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton7);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton6);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton3);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton5);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(539, 33);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(310, 215);
-            this.guna2Panel2.TabIndex = 38;
+            this.SongTab.BorderRadius = 10;
+            this.SongTab.Controls.Add(this.guna2GradientButton7);
+            this.SongTab.Controls.Add(this.guna2GradientButton6);
+            this.SongTab.Controls.Add(this.guna2GradientButton3);
+            this.SongTab.Controls.Add(this.guna2GradientButton5);
+            this.SongTab.FillColor = System.Drawing.Color.Transparent;
+            this.SongTab.Location = new System.Drawing.Point(539, 33);
+            this.SongTab.Name = "SongTab";
+            this.SongTab.ShadowDecoration.Parent = this.SongTab;
+            this.SongTab.Size = new System.Drawing.Size(310, 215);
+            this.SongTab.TabIndex = 38;
             // 
             // guna2GradientButton7
             // 
@@ -496,17 +496,17 @@
             this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
             this.guna2ImageButton2.TabIndex = 26;
             // 
-            // guna2Panel1
+            // MenuTabs
             // 
-            this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.Controls.Add(this.guna2GradientButton1);
-            this.guna2Panel1.Controls.Add(this.guna2GradientButton4);
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(165, 120);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(239, 114);
-            this.guna2Panel1.TabIndex = 39;
+            this.MenuTabs.BorderRadius = 10;
+            this.MenuTabs.Controls.Add(this.guna2GradientButton1);
+            this.MenuTabs.Controls.Add(this.guna2GradientButton4);
+            this.MenuTabs.FillColor = System.Drawing.Color.Transparent;
+            this.MenuTabs.Location = new System.Drawing.Point(165, 120);
+            this.MenuTabs.Name = "MenuTabs";
+            this.MenuTabs.ShadowDecoration.Parent = this.MenuTabs;
+            this.MenuTabs.Size = new System.Drawing.Size(239, 114);
+            this.MenuTabs.TabIndex = 39;
             // 
             // guna2GradientButton1
             // 
@@ -577,24 +577,24 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.MenuTabs);
+            this.Controls.Add(this.SongTab);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.lblFavoritesPanel);
             this.Controls.Add(this.Dropdown_Sort);
             this.Controls.Add(this.Dropdown_Album);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.DetailPanel);
             this.Controls.Add(this.Dropdown_Artist);
             this.Controls.Add(this.Menubtn);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2ImageButton2);
             this.Name = "FavoritePanel";
             this.Size = new System.Drawing.Size(1274, 687);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
+            this.DetailPanel.ResumeLayout(false);
+            this.DetailPanel.PerformLayout();
+            this.SongTab.ResumeLayout(false);
+            this.MenuTabs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,7 +607,7 @@
         private System.Windows.Forms.Label lblFavoritesPanel;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel DetailPanel;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblDuration;
         private System.Windows.Forms.Label lblNumber;
@@ -617,12 +617,12 @@
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel SongTab;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel MenuTabs;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
     }

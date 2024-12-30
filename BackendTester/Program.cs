@@ -13,25 +13,25 @@ namespace BackendTester
     {
         static void Main(string[] args)
         {
-            SongController controller = new SongController();
+            SongController<Song> controller = new SongController<Song>();
 
             Song song = new Song()
             {
-                Id = 1,
                 Title = "TestInsert2",
                 Artist = DBContext.artists.FirstOrDefault(i => i.Id == 0),
                 IsFavorite = true,
+                File_Path = "C:\\TestInsert2.mp3"
             };
 
             
 
             
-            string result = controller.UpdateSong(song) ? "Updated" : "Error Inserting";
+            string result = controller.Create(song) ? "Updated" : "Error Inserting";
             Console.WriteLine(result);
-            foreach (Song s in controller.GetAllSongs())
-            {
-                Console.WriteLine(s);
-            }
+            //foreach (Song s in controller.GetAllSongs())
+            //{
+            //    Console.WriteLine(s);
+            //}
 
             Console.ReadKey();
         }

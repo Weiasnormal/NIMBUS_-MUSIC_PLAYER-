@@ -11,6 +11,8 @@ using Guna.UI.WinForms;
 using Guna.UI2.HtmlRenderer.Adapters.Entities;
 using Guna.UI2.WinForms;
 using NimbusClassLibrary;
+using NimbusClassLibrary.Controller;
+using NimbusClassLibrary.Model;
 using TagLib;
 
 namespace NIMBUS__MUSIC_PLAYER_
@@ -316,44 +318,73 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         }
 
-        private void btnImportMusic_Click(object sender, EventArgs e)
+
+        private void Nimbus_Load(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog
-            {
-                Filter = "MP3 Files|*.mp3",
-                Multiselect = true,
-                Title = "Select MP3 Files"
-            };
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                ListView listView = this.Controls.Find("MP3ListView", true)[0] as ListView;
-                listView.Items.Clear();
+        }
 
-                foreach (string filePath in openFileDialog.FileNames)
+        private void btnImportMusic_Click_1(object sender, EventArgs e)
+        {
+            // Open a file dialog to let the user select multiple song files
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Music Files|*.mp3;*.wav;*.flac"; // Filter for music files
+                openFileDialog.Multiselect = true; // Allow multiple selections
+                openFileDialog.Title = "Import Music Files";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    try
-                    {
-                        var file = TagLib.File.Create(filePath);
-                        string title = file.Tag.Title ?? "Unknown";
-                        string artist = file.Tag.FirstPerformer ?? "Unknown";
-                        string album = file.Tag.Album ?? "Unknown";
-                        string duration = file.Properties.Duration.ToString(@"mm\:ss");
+                    // Get the selected file paths
+                    string[] filePaths = openFileDialog.FileNames;
 
-                        ListViewItem item = new ListViewItem(new[]
+                    // Initialize controllers
+                    SongController<Song> songController = new SongController<Song>();
+                    ArtistController artistController = new ArtistController();
+
+                    foreach (string filePath in filePaths)
+                    {
+                        try
                         {
-                            title,
-                            artist,
-                            album,
-                            duration,
-                            filePath
-                        });
+                            // Use TagLib to extract metadata
+                            var tagFile = TagLib.File.Create(filePath);
+                            string title = tagFile.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(filePath);
+                            string artistName = tagFile.Tag.FirstPerformer ?? "Unknown Artist";
 
-                        listView.Items.Add(item);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error loading file {filePath}: {ex.Message}");
+                            // Check if the artist exists or create a new one
+                            int artistId = artistController.GetArtistIdByName(artistName);
+                            if (artistId == 0)
+                            {
+                                Artist newArtist = new Artist { Display_Name = artistName };
+                                artistController.Create(newArtist);
+                                artistId = artistController.GetArtistIdByName(artistName);
+                            }
+
+                            // Create a new Song model
+                            Song newSong = new Song
+                            {
+                                Title = title,
+                                File_Path = filePath,
+                                Artist = new Artist { Id = artistId, Display_Name = artistName }
+                            };
+
+                            // Pass the song model to the SongController
+                            bool isCreated = songController.Create(newSong);
+
+                            // Provide feedback to the user
+                            if (isCreated)
+                            {
+                                MessageBox.Show($"Song '{newSong.Title}' by '{artistName}' imported successfully!", "Import Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Failed to import song '{newSong.Title}'.", "Import Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error importing file '{filePath}': {ex.Message}", "Import Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }

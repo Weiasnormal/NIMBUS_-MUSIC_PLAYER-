@@ -191,7 +191,7 @@
             this.Theme2.Size = new System.Drawing.Size(10, 10);
             this.Theme2.TabIndex = 15;
             this.Theme2.Visible = false;
-            this.Theme2.Click += new System.EventHandler(this.Theme2_Click);
+            
             // 
             // Theme3
             // 
@@ -340,6 +340,7 @@
             this.Sidebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Sidebar.BackColor = System.Drawing.Color.Transparent;
+            this.Sidebar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Sidebar.Controls.Add(this.guna2PictureBox2);
             this.Sidebar.Controls.Add(this.btnSidebar_Favorites);
             this.Sidebar.Controls.Add(this.guna2PictureBox3);
@@ -610,8 +611,7 @@
             this.btnSidebar_Songs.TabIndex = 11;
             this.btnSidebar_Songs.Text = "Songs";
             this.btnSidebar_Songs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSidebar_Songs.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnSidebar_Songs.ForeColorChanged += new System.EventHandler(this.Theme2_Click);
+            
             this.btnSidebar_Songs.Click += new System.EventHandler(this.btnSidebar_Songs_Click);
             // 
             // panel3

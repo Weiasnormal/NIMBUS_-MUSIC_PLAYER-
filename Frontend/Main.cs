@@ -52,9 +52,9 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void btnSidebar_Playlist_Click(object sender, EventArgs e) => dashboardNavigation.Display(5);
 
         private void Theme1_Click(object sender, EventArgs e) => ApplyDarkTheme();
-        private void Theme2_Click(object sender, EventArgs e) => ApplyWhiteTheme();
+        //private void Theme2_Click(object sender, EventArgs e) => ApplyWhiteTheme();
         private void Theme3_Click(object sender, EventArgs e) => ApplyBlueTheme();
-        private void Theme4_Click(object sender, EventArgs e) => ApplyGradientTheme();
+        private void Theme4_Click(object sender, EventArgs e) => ApplyGreenTheme();
 
         private void ApplyDarkTheme()
         {
@@ -108,7 +108,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnImportMusic.FillColor = Color.White;
             btnImportMusic.FillColor2 = Color.White;
 
-            btnImportMusic.Image = Properties.Resources.Iconaddbuttonwhite;
+            
             btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
             btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
             btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
@@ -119,21 +119,31 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2PictureBox3.Image = Properties.Resources.Icon_Dropdown_Open;
             guna2PictureBox2.Image = Properties.Resources.Icon_Dropdown_Close;
 
+            foreach (Control control in ViewPanel.Controls)
+            {
+                if (control is AllSongPanel allSongControl)
+                {
+                    allSongControl.DetailsPanel.BackColor = Color.FromArgb(49, 49, 49);
+                    allSongControl.MenuTab.BackColor = Color.FromArgb(49, 49, 49);
+                    allSongControl.SongMenu.BackColor = Color.FromArgb(49, 49, 49);
+                }
+
+            }
         }
 
-        private void ApplyWhiteTheme()
+        /*private void ApplyWhiteTheme()
         {
 
             this.BackColor = Color.White;
             this.ForeColor = Color.Black;
             var Color1 = Color.WhiteSmoke;
 
-            /*btnSidebar_Songs.ForeColor = Color.Black;
+            *//*btnSidebar_Songs.ForeColor = Color.Black;
             btnSidebar_Favorites.ForeColor = Color.Black;
             btnSidebar_Albums.ForeColor = Color.Black;
             btnSidebar_Artists.ForeColor = Color.Black;
             btnSidebar_Queue.ForeColor = Color.Black;
-            btnSidebar_Playlist.ForeColor = Color.Black;*/
+            btnSidebar_Playlist.ForeColor = Color.Black;*//*
 
 
             btnSidebar_Songs.CheckedState.FillColor = Color1;
@@ -178,12 +188,12 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             //pagka sinelect ang white theme nagiging dark icons lahat ng kasunod, need pang lagyan ng white icons yung iba para hinde masira
 
-            /* pictureBox7.Image = Properties.Resources.Dark1;
+            *//* pictureBox7.Image = Properties.Resources.Dark1;
              pictureBox5.Image = Properties.Resources.Dark4;
              pictureBox8.Image = Properties.Resources.Dark3;
              pictureBox6.Image = Properties.Resources.Dark2;
-             pictureBox9.Image = Properties.Resources.Dark5;*/
-        }
+             pictureBox9.Image = Properties.Resources.Dark5;*//*
+        }*/
 
         private void ApplyBlueTheme()
         {
@@ -195,12 +205,14 @@ namespace NIMBUS__MUSIC_PLAYER_
             this.BackColor = BGColor;
             this.ForeColor = Color.White;
 
-           /* btnSidebar_Songs.ForeColor = Color.White;
-            btnSidebar_Favorites.ForeColor = Color.White;
-            btnSidebar_Albums.ForeColor = Color.White;
-            btnSidebar_Artists.ForeColor = Color.White;
-            btnSidebar_Queue.ForeColor = Color.White;
-            btnSidebar_Playlist.ForeColor = Color.White;*/
+            /* btnSidebar_Songs.ForeColor = Color.White;
+             btnSidebar_Favorites.ForeColor = Color.White;
+             btnSidebar_Albums.ForeColor = Color.White;
+             btnSidebar_Artists.ForeColor = Color.White;
+             btnSidebar_Queue.ForeColor = Color.White;
+             btnSidebar_Playlist.ForeColor = Color.White;*/
+
+            
 
             panel3.BackColor = NowPlayingColor;
             btnSidebar_Songs.CheckedState.FillColor = Color1;
@@ -237,7 +249,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnImportMusic.FillColor = Color.White;
             btnImportMusic.FillColor2 = Color.White;
 
-            btnImportMusic.Image = Properties.Resources.Iconaddbuttonwhite;
+            
             btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
             btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
             btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
@@ -247,9 +259,20 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnAddaPlaylist.Image = Properties.Resources.Icon_AddPlaylist;
             guna2PictureBox3.Image = Properties.Resources.Icon_Dropdown_Open;
             guna2PictureBox2.Image = Properties.Resources.Icon_Dropdown_Close;
+
+            foreach (Control control in ViewPanel.Controls)
+            {
+                if (control is AllSongPanel allSongControl)
+                {
+                    allSongControl.DetailsPanel.BackColor = Color.FromArgb(35, 43, 50);
+                    allSongControl.MenuTab.BackColor = Color.FromArgb(35, 43, 50);
+                    allSongControl.SongMenu.BackColor = Color.FromArgb(35, 43, 50);
+                }
+
+            }
         }
 
-        private void ApplyGradientTheme()
+        private void ApplyGreenTheme()
         {
             var BGColor = Color.FromArgb(33, 40, 38);        
             var Color1 = Color.FromArgb(113, 135, 129);
@@ -301,7 +324,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.BackColor = Color.Transparent;
 
-            btnImportMusic.Image = Properties.Resources.Iconaddbuttonwhite;
+            
             btnSidebar_Songs.Image = Properties.Resources.Icon_Songs;
             btnSidebar_Favorites.Image = Properties.Resources.Icon_Favorites;
             btnSidebar_Albums.Image = Properties.Resources.Icon_Albums;
@@ -311,6 +334,17 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnAddaPlaylist.Image = Properties.Resources.Icon_AddPlaylist;
             guna2PictureBox3.Image = Properties.Resources.Icon_Dropdown_Open;
             guna2PictureBox2.Image = Properties.Resources.Icon_Dropdown_Close;
+
+            foreach (Control control in ViewPanel.Controls)
+            {
+                if (control is AllSongPanel allSongControl)
+                {
+                    allSongControl.DetailsPanel.BackColor = Color.FromArgb(75, 90, 86);
+                    allSongControl.MenuTab.BackColor = Color.FromArgb(75, 90, 86);
+                    allSongControl.SongMenu.BackColor = Color.FromArgb(75, 90, 86);
+                }
+
+            }
         }
 
         private void TimeSong_ValueChanged(object sender, EventArgs e)

@@ -43,7 +43,7 @@
             this.lblAlbum = new System.Windows.Forms.Label();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
             this.AllSongsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SongsMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -55,7 +55,7 @@
             this.guna2Panel1.SuspendLayout();
             this.DetailPanel.SuspendLayout();
             this.AllSongsPanel.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.SongsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientButton2
@@ -85,10 +85,11 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.Controls.Add(this.guna2GradientButton1);
             this.guna2Panel1.Controls.Add(this.guna2GradientButton4);
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2Panel1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Location = new System.Drawing.Point(269, 6);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
@@ -176,7 +177,7 @@
             this.Dropdown_Sort.Animated = true;
             this.Dropdown_Sort.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Dropdown_Sort.BackColor = System.Drawing.Color.Transparent;
-            this.Dropdown_Sort.BorderColor = System.Drawing.Color.Black;
+            this.Dropdown_Sort.BorderColor = System.Drawing.Color.Transparent;
             this.Dropdown_Sort.BorderRadius = 10;
             this.Dropdown_Sort.BorderThickness = 0;
             this.Dropdown_Sort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -218,7 +219,7 @@
             this.Dropdown_Album.Animated = true;
             this.Dropdown_Album.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Dropdown_Album.BackColor = System.Drawing.Color.Transparent;
-            this.Dropdown_Album.BorderColor = System.Drawing.Color.Black;
+            this.Dropdown_Album.BorderColor = System.Drawing.Color.Transparent;
             this.Dropdown_Album.BorderRadius = 10;
             this.Dropdown_Album.BorderThickness = 0;
             this.Dropdown_Album.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -264,6 +265,7 @@
             this.DetailPanel.Name = "DetailPanel";
             this.DetailPanel.Size = new System.Drawing.Size(1197, 51);
             this.DetailPanel.TabIndex = 27;
+            this.DetailPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DetailPanel_Paint);
             // 
             // lblTitle
             // 
@@ -329,7 +331,7 @@
             this.Dropdown_Artist.Animated = true;
             this.Dropdown_Artist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Dropdown_Artist.BackColor = System.Drawing.Color.Transparent;
-            this.Dropdown_Artist.BorderColor = System.Drawing.Color.Black;
+            this.Dropdown_Artist.BorderColor = System.Drawing.Color.Transparent;
             this.Dropdown_Artist.BorderRadius = 10;
             this.Dropdown_Artist.BorderThickness = 0;
             this.Dropdown_Artist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -372,19 +374,20 @@
             this.AllSongsPanel.TabIndex = 30;
             this.AllSongsPanel.WrapContents = false;
             // 
-            // guna2Panel2
+            // SongsMenu
             // 
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton7);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton6);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton3);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton5);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(931, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(249, 215);
-            this.guna2Panel2.TabIndex = 39;
+            this.SongsMenu.BorderColor = System.Drawing.Color.Gray;
+            this.SongsMenu.BorderRadius = 10;
+            this.SongsMenu.Controls.Add(this.guna2GradientButton7);
+            this.SongsMenu.Controls.Add(this.guna2GradientButton6);
+            this.SongsMenu.Controls.Add(this.guna2GradientButton3);
+            this.SongsMenu.Controls.Add(this.guna2GradientButton5);
+            this.SongsMenu.FillColor = System.Drawing.Color.Transparent;
+            this.SongsMenu.Location = new System.Drawing.Point(931, 0);
+            this.SongsMenu.Name = "SongsMenu";
+            this.SongsMenu.ShadowDecoration.Parent = this.SongsMenu;
+            this.SongsMenu.Size = new System.Drawing.Size(249, 215);
+            this.SongsMenu.TabIndex = 39;
             // 
             // guna2GradientButton7
             // 
@@ -561,6 +564,7 @@
             // horizontalSongs1
             // 
             this.horizontalSongs1.BackColor = System.Drawing.Color.Transparent;
+            this.horizontalSongs1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.horizontalSongs1.Location = new System.Drawing.Point(3, 3);
             this.horizontalSongs1.Name = "horizontalSongs1";
             this.horizontalSongs1.Size = new System.Drawing.Size(1192, 57);
@@ -571,7 +575,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.SongsMenu);
             this.Controls.Add(this.AllSongsScrollbar);
             this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.guna2Panel1);
@@ -590,7 +594,7 @@
             this.DetailPanel.ResumeLayout(false);
             this.DetailPanel.PerformLayout();
             this.AllSongsPanel.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
+            this.SongsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,7 +617,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
         private System.Windows.Forms.FlowLayoutPanel AllSongsPanel;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel SongsMenu;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;

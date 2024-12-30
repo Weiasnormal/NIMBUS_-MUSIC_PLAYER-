@@ -14,7 +14,6 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class AllSongPanel : UserControl
     {
-        public Panel detailPanel { get; set; }
         public AllSongPanel()
         {
             InitializeComponent();
@@ -41,6 +40,24 @@ namespace NIMBUS__MUSIC_PLAYER_
             AllSongsPanel.PerformLayout();
         }
 
+        public Panel DetailsPanel
+        {
+            get { return DetailPanel; }
+        }
+
+        public Panel MenuTab
+        {
+            get { return guna2Panel1; }
+        }
+
+        public Panel SongMenu
+        {
+            get { return SongsMenu; }
+        }
+
+       
+
+
         public void loadSongs()
         {
             int songnum = 1;
@@ -52,6 +69,11 @@ namespace NIMBUS__MUSIC_PLAYER_
                 AllSongsPanel.Controls.Add(new HorizontalSongs(songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration));
                 songnum++;
             }
+        }
+
+        private void DetailPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

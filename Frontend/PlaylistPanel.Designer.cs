@@ -30,30 +30,30 @@
         {
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Dropdown_ArtistPlaylist = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.PanelFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.DetailPanel = new System.Windows.Forms.Panel();
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblPlaylistNamePanel = new System.Windows.Forms.Label();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SongsMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.MenuTab = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.panel2.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.DetailPanel.SuspendLayout();
+            this.SongsMenu.SuspendLayout();
+            this.MenuTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // Dropdown_Sort
@@ -135,50 +135,50 @@
             this.Dropdown_Album.StartIndex = 0;
             this.Dropdown_Album.TabIndex = 19;
             // 
-            // Dropdown_ArtistPlaylist
+            // Dropdown_Artist
             // 
-            this.Dropdown_ArtistPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dropdown_ArtistPlaylist.Animated = true;
-            this.Dropdown_ArtistPlaylist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Dropdown_ArtistPlaylist.BackColor = System.Drawing.Color.Transparent;
-            this.Dropdown_ArtistPlaylist.BorderColor = System.Drawing.Color.Black;
-            this.Dropdown_ArtistPlaylist.BorderRadius = 10;
-            this.Dropdown_ArtistPlaylist.BorderThickness = 0;
-            this.Dropdown_ArtistPlaylist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Dropdown_ArtistPlaylist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Dropdown_ArtistPlaylist.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.Dropdown_ArtistPlaylist.FocusedColor = System.Drawing.Color.Empty;
-            this.Dropdown_ArtistPlaylist.FocusedState.Parent = this.Dropdown_ArtistPlaylist;
-            this.Dropdown_ArtistPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dropdown_ArtistPlaylist.ForeColor = System.Drawing.Color.White;
-            this.Dropdown_ArtistPlaylist.FormattingEnabled = true;
-            this.Dropdown_ArtistPlaylist.HoverState.Parent = this.Dropdown_ArtistPlaylist;
-            this.Dropdown_ArtistPlaylist.ItemHeight = 30;
-            this.Dropdown_ArtistPlaylist.Items.AddRange(new object[] {
+            this.Dropdown_Artist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Dropdown_Artist.Animated = true;
+            this.Dropdown_Artist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Dropdown_Artist.BackColor = System.Drawing.Color.Transparent;
+            this.Dropdown_Artist.BorderColor = System.Drawing.Color.Black;
+            this.Dropdown_Artist.BorderRadius = 10;
+            this.Dropdown_Artist.BorderThickness = 0;
+            this.Dropdown_Artist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Dropdown_Artist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Dropdown_Artist.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.Dropdown_Artist.FocusedColor = System.Drawing.Color.Empty;
+            this.Dropdown_Artist.FocusedState.Parent = this.Dropdown_Artist;
+            this.Dropdown_Artist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dropdown_Artist.ForeColor = System.Drawing.Color.White;
+            this.Dropdown_Artist.FormattingEnabled = true;
+            this.Dropdown_Artist.HoverState.Parent = this.Dropdown_Artist;
+            this.Dropdown_Artist.ItemHeight = 30;
+            this.Dropdown_Artist.Items.AddRange(new object[] {
             "Artist:",
             "Yanni",
             "Mhartin"});
-            this.Dropdown_ArtistPlaylist.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.Dropdown_ArtistPlaylist.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dropdown_ArtistPlaylist.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.Dropdown_ArtistPlaylist.ItemsAppearance.Parent = this.Dropdown_ArtistPlaylist;
-            this.Dropdown_ArtistPlaylist.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
-            this.Dropdown_ArtistPlaylist.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dropdown_ArtistPlaylist.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_ArtistPlaylist.Location = new System.Drawing.Point(615, 81);
-            this.Dropdown_ArtistPlaylist.Name = "Dropdown_ArtistPlaylist";
-            this.Dropdown_ArtistPlaylist.ShadowDecoration.Parent = this.Dropdown_ArtistPlaylist;
-            this.Dropdown_ArtistPlaylist.Size = new System.Drawing.Size(200, 36);
-            this.Dropdown_ArtistPlaylist.StartIndex = 0;
-            this.Dropdown_ArtistPlaylist.TabIndex = 18;
+            this.Dropdown_Artist.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.Dropdown_Artist.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dropdown_Artist.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.Dropdown_Artist.ItemsAppearance.Parent = this.Dropdown_Artist;
+            this.Dropdown_Artist.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
+            this.Dropdown_Artist.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dropdown_Artist.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.Dropdown_Artist.Location = new System.Drawing.Point(615, 81);
+            this.Dropdown_Artist.Name = "Dropdown_Artist";
+            this.Dropdown_Artist.ShadowDecoration.Parent = this.Dropdown_Artist;
+            this.Dropdown_Artist.Size = new System.Drawing.Size(200, 36);
+            this.Dropdown_Artist.StartIndex = 0;
+            this.Dropdown_Artist.TabIndex = 18;
             // 
-            // flowLayoutPanel1
+            // PanelFlowLayout
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 193);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1196, 486);
-            this.flowLayoutPanel1.TabIndex = 10;
+            this.PanelFlowLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelFlowLayout.Location = new System.Drawing.Point(43, 193);
+            this.PanelFlowLayout.Name = "PanelFlowLayout";
+            this.PanelFlowLayout.Size = new System.Drawing.Size(1196, 486);
+            this.PanelFlowLayout.TabIndex = 10;
             // 
             // lblTitle
             // 
@@ -226,21 +226,21 @@
             this.lblNumber.TabIndex = 0;
             this.lblNumber.Text = "#";
             // 
-            // panel2
+            // DetailPanel
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DetailPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Controls.Add(this.lblTitle);
-            this.panel2.Controls.Add(this.lblDuration);
-            this.panel2.Controls.Add(this.lblNumber);
-            this.panel2.Controls.Add(this.lblArtist);
-            this.panel2.Controls.Add(this.lblAlbum);
-            this.panel2.Location = new System.Drawing.Point(43, 136);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1195, 51);
-            this.panel2.TabIndex = 2;
+            this.DetailPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.DetailPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DetailPanel.Controls.Add(this.lblTitle);
+            this.DetailPanel.Controls.Add(this.lblDuration);
+            this.DetailPanel.Controls.Add(this.lblNumber);
+            this.DetailPanel.Controls.Add(this.lblArtist);
+            this.DetailPanel.Controls.Add(this.lblAlbum);
+            this.DetailPanel.Location = new System.Drawing.Point(43, 136);
+            this.DetailPanel.Name = "DetailPanel";
+            this.DetailPanel.Size = new System.Drawing.Size(1195, 51);
+            this.DetailPanel.TabIndex = 2;
             // 
             // lblDuration
             // 
@@ -351,19 +351,19 @@
             this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
             this.guna2ImageButton2.TabIndex = 1;
             // 
-            // guna2Panel2
+            // SongsMenu
             // 
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton7);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton6);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton3);
-            this.guna2Panel2.Controls.Add(this.guna2GradientButton5);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(443, 30);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(310, 215);
-            this.guna2Panel2.TabIndex = 39;
+            this.SongsMenu.BorderRadius = 10;
+            this.SongsMenu.Controls.Add(this.guna2GradientButton7);
+            this.SongsMenu.Controls.Add(this.guna2GradientButton6);
+            this.SongsMenu.Controls.Add(this.guna2GradientButton3);
+            this.SongsMenu.Controls.Add(this.guna2GradientButton5);
+            this.SongsMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.SongsMenu.Location = new System.Drawing.Point(443, 30);
+            this.SongsMenu.Name = "SongsMenu";
+            this.SongsMenu.ShadowDecoration.Parent = this.SongsMenu;
+            this.SongsMenu.Size = new System.Drawing.Size(310, 215);
+            this.SongsMenu.TabIndex = 39;
             // 
             // guna2GradientButton7
             // 
@@ -498,17 +498,17 @@
             this.guna2GradientButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton5.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // guna2Panel1
+            // MenuTab
             // 
-            this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.Controls.Add(this.guna2GradientButton1);
-            this.guna2Panel1.Controls.Add(this.guna2GradientButton4);
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(165, 120);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(239, 114);
-            this.guna2Panel1.TabIndex = 40;
+            this.MenuTab.BorderRadius = 10;
+            this.MenuTab.Controls.Add(this.guna2GradientButton1);
+            this.MenuTab.Controls.Add(this.guna2GradientButton4);
+            this.MenuTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.MenuTab.Location = new System.Drawing.Point(165, 120);
+            this.MenuTab.Name = "MenuTab";
+            this.MenuTab.ShadowDecoration.Parent = this.MenuTab;
+            this.MenuTab.Size = new System.Drawing.Size(239, 114);
+            this.MenuTab.TabIndex = 40;
             // 
             // guna2GradientButton1
             // 
@@ -579,24 +579,24 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.MenuTab);
+            this.Controls.Add(this.SongsMenu);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.lblPlaylistNamePanel);
             this.Controls.Add(this.Dropdown_Sort);
             this.Controls.Add(this.Dropdown_Album);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.Dropdown_ArtistPlaylist);
+            this.Controls.Add(this.DetailPanel);
+            this.Controls.Add(this.Dropdown_Artist);
             this.Controls.Add(this.Menubtn);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.PanelFlowLayout);
             this.Controls.Add(this.guna2ImageButton2);
             this.Name = "PlaylistPanel";
             this.Size = new System.Drawing.Size(1272, 685);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
+            this.DetailPanel.ResumeLayout(false);
+            this.DetailPanel.PerformLayout();
+            this.SongsMenu.ResumeLayout(false);
+            this.MenuTab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,26 +604,26 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel PanelFlowLayout;
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
-        private Guna.UI2.WinForms.Guna2ComboBox Dropdown_ArtistPlaylist;
+        private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
         private System.Windows.Forms.Label lblArtist;
         private System.Windows.Forms.Label lblAlbum;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel DetailPanel;
         private System.Windows.Forms.Label lblDuration;
         private System.Windows.Forms.Label lblPlaylistNamePanel;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
         private Guna.UI2.WinForms.Guna2TextBox SearchBar;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel SongsMenu;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel MenuTab;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
     }

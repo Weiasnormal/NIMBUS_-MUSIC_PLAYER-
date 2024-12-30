@@ -59,8 +59,17 @@ namespace NIMBUS__MUSIC_PLAYER_
             PlaylistList.Visible = !PlaylistList.Visible;
         }
 
-        private void Theme1_Click(object sender, EventArgs e) => ApplyDarkTheme();
+        private void PlaylistList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (PlaylistList.SelectedItem != null)
+            {
+                dashboardNavigation.Display(5);
+            }
+        }
 
+
+
+        private void Theme1_Click(object sender, EventArgs e) => ApplyDarkTheme();
         //private void Theme2_Click(object sender, EventArgs e) => ApplyWhiteTheme();
         private void Theme3_Click(object sender, EventArgs e) => ApplyBlueTheme();
         private void Theme4_Click(object sender, EventArgs e) => ApplyGreenTheme();
@@ -82,13 +91,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             ShowAddPlaylist.Visible = false;
         }
 
-        private void PlaylistList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (PlaylistList.SelectedItem != null)
-            {
-                dashboardNavigation.Display(5);
-            }
-        }
+        
 
 
 
@@ -115,7 +118,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             this.BackColor = BGColor;
             this.ForeColor = Color.White;
 
-
+            PlaylistList.BackColor = BGColor;
+            PlaylistList.SelectedItem = Hover;
             panel3.BackColor = NowPlayingColor;
             btnSidebar_Songs.CheckedState.FillColor = Hover;
             btnSidebar_Songs.CheckedState.FillColor2 = Hover;
@@ -259,6 +263,34 @@ namespace NIMBUS__MUSIC_PLAYER_
                     artisitsPanel.Dropdown_Sorts.ItemsAppearance.SelectedBackColor = Hover;
                     artisitsPanel.SearchBars.FillColor = Hover;
                 }
+                if (control is PlaylistPanel playlistPanel)
+                {
+                    playlistPanel.DetailsPanel.BackColor = Color1;
+                    playlistPanel.MenuTabs.FillColor = Color1;
+                    playlistPanel.SongMenu.FillColor = Color1;
+                    playlistPanel.Dropdown_Artists.FillColor = Color1;
+                    playlistPanel.Dropdown_Artists.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Artists.ItemsAppearance.SelectedBackColor = Hover;
+                    playlistPanel.Dropdown_Albums.FillColor = Color1;
+                    playlistPanel.Dropdown_Albums.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Albums.ItemsAppearance.SelectedBackColor = Hover;
+                    playlistPanel.Dropdown_Sorts.FillColor = Color1;
+                    playlistPanel.Dropdown_Sorts.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Sorts.ItemsAppearance.SelectedBackColor = Hover;
+
+                    playlistPanel.btn1.HoverState.FillColor = Hover;
+                    playlistPanel.btn1.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn2.HoverState.FillColor = Hover;
+                    playlistPanel.btn2.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn3.HoverState.FillColor = Hover;
+                    playlistPanel.btn3.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn4.HoverState.FillColor = Hover;
+                    playlistPanel.btn4.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn5.HoverState.FillColor = Hover;
+                    playlistPanel.btn5.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn6.HoverState.FillColor = Hover;
+                    playlistPanel.btn6.HoverState.FillColor2 = Hover;
+                }
             }
         }
 
@@ -272,8 +304,8 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             this.BackColor = BGColor;
             this.ForeColor = Color.White;
-                     
 
+            PlaylistList.BackColor = BGColor;
             panel3.BackColor = NowPlayingColor;
             btnSidebar_Songs.CheckedState.FillColor = Hover;
             btnSidebar_Songs.CheckedState.FillColor2 = Hover;
@@ -417,6 +449,34 @@ namespace NIMBUS__MUSIC_PLAYER_
                     artisitsPanel.Dropdown_Sorts.ItemsAppearance.SelectedBackColor = Hover;
                     artisitsPanel.SearchBars.FillColor = Hover;
                 }
+                if (control is PlaylistPanel playlistPanel)
+                {
+                    playlistPanel.DetailsPanel.BackColor = Color1;
+                    playlistPanel.MenuTabs.FillColor = Color1;
+                    playlistPanel.SongMenu.FillColor = Color1;
+                    playlistPanel.Dropdown_Artists.FillColor = Color1;
+                    playlistPanel.Dropdown_Artists.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Artists.ItemsAppearance.SelectedBackColor = Hover;
+                    playlistPanel.Dropdown_Albums.FillColor = Color1;
+                    playlistPanel.Dropdown_Albums.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Albums.ItemsAppearance.SelectedBackColor = Hover;
+                    playlistPanel.Dropdown_Sorts.FillColor = Color1;
+                    playlistPanel.Dropdown_Sorts.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Sorts.ItemsAppearance.SelectedBackColor = Hover;
+
+                    playlistPanel.btn1.HoverState.FillColor = Hover;
+                    playlistPanel.btn1.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn2.HoverState.FillColor = Hover;
+                    playlistPanel.btn2.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn3.HoverState.FillColor = Hover;
+                    playlistPanel.btn3.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn4.HoverState.FillColor = Hover;
+                    playlistPanel.btn4.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn5.HoverState.FillColor = Hover;
+                    playlistPanel.btn5.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn6.HoverState.FillColor = Hover;
+                    playlistPanel.btn6.HoverState.FillColor2 = Hover;
+                }
             }
         }
 
@@ -430,13 +490,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             this.BackColor = BGColor;
             this.ForeColor = Color.White;
 
-            /* btnSidebar_Songs.ForeColor = Color.White;
-             btnSidebar_Favorites.ForeColor = Color.White;
-             btnSidebar_Albums.ForeColor = Color.White;
-             btnSidebar_Artists.ForeColor = Color.White;
-             btnSidebar_Queue.ForeColor = Color.White;
-             btnSidebar_Playlist.ForeColor = Color.White;*/
-
+            PlaylistList.BackColor = BGColor;
             panel3.BackColor = NowPlayingColor;
             btnSidebar_Songs.CheckedState.FillColor = Hover;
             btnSidebar_Songs.CheckedState.FillColor2 = Hover;
@@ -579,6 +633,34 @@ namespace NIMBUS__MUSIC_PLAYER_
                     artisitsPanel.Dropdown_Sorts.ItemsAppearance.BackColor = Color1;
                     artisitsPanel.Dropdown_Sorts.ItemsAppearance.SelectedBackColor = Hover;
                     artisitsPanel.SearchBars.FillColor = Hover;
+                }
+                if (control is PlaylistPanel playlistPanel)
+                {
+                    playlistPanel.DetailsPanel.BackColor = Color1;
+                    playlistPanel.MenuTabs.FillColor = Color1;
+                    playlistPanel.SongMenu.FillColor = Color1;
+                    playlistPanel.Dropdown_Artists.FillColor = Color1;
+                    playlistPanel.Dropdown_Artists.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Artists.ItemsAppearance.SelectedBackColor = Hover;
+                    playlistPanel.Dropdown_Albums.FillColor = Color1;
+                    playlistPanel.Dropdown_Albums.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Albums.ItemsAppearance.SelectedBackColor = Hover;
+                    playlistPanel.Dropdown_Sorts.FillColor = Color1;
+                    playlistPanel.Dropdown_Sorts.ItemsAppearance.BackColor = Color1;
+                    playlistPanel.Dropdown_Sorts.ItemsAppearance.SelectedBackColor = Hover;
+
+                    playlistPanel.btn1.HoverState.FillColor = Hover;
+                    playlistPanel.btn1.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn2.HoverState.FillColor = Hover;
+                    playlistPanel.btn2.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn3.HoverState.FillColor = Hover;
+                    playlistPanel.btn3.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn4.HoverState.FillColor = Hover;
+                    playlistPanel.btn4.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn5.HoverState.FillColor = Hover;
+                    playlistPanel.btn5.HoverState.FillColor2 = Hover;
+                    playlistPanel.btn6.HoverState.FillColor = Hover;
+                    playlistPanel.btn6.HoverState.FillColor2 = Hover;
                 }
             }
         }

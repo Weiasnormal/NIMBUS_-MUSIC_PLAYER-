@@ -355,6 +355,7 @@
             // PlaylistList
             // 
             this.PlaylistList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.PlaylistList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PlaylistList.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlaylistList.ForeColor = System.Drawing.Color.White;
             this.PlaylistList.FormattingEnabled = true;
@@ -368,7 +369,7 @@
             "dfgdfgd"});
             this.PlaylistList.Location = new System.Drawing.Point(75, 536);
             this.PlaylistList.Name = "PlaylistList";
-            this.PlaylistList.Size = new System.Drawing.Size(252, 67);
+            this.PlaylistList.Size = new System.Drawing.Size(252, 84);
             this.PlaylistList.TabIndex = 20;
             this.PlaylistList.SelectedIndexChanged += new System.EventHandler(this.PlaylistList_SelectedIndexChanged);
             // 

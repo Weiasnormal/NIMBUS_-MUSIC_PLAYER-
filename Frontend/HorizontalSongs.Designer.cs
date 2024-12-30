@@ -122,7 +122,7 @@
             this.Menubtn.HoverState.Parent = this.Menubtn;
             this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
             this.Menubtn.ImageSize = new System.Drawing.Size(25, 25);
-            this.Menubtn.Location = new System.Drawing.Point(1095, 14);
+            this.Menubtn.Location = new System.Drawing.Point(1091, 14);
             this.Menubtn.Name = "Menubtn";
             this.Menubtn.PressedState.Parent = this.Menubtn;
             this.Menubtn.Size = new System.Drawing.Size(51, 33);
@@ -140,7 +140,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SongNumlbl);
             this.Name = "HorizontalSongs";
-            this.Size = new System.Drawing.Size(1166, 59);
+            this.Size = new System.Drawing.Size(1162, 59);
+            this.DoubleClick += new System.EventHandler(this.HorizontalSongs_DoubleClick);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Songpic)).EndInit();

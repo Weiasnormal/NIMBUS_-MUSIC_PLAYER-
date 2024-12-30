@@ -251,9 +251,9 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void ApplyGradientTheme()
         {
-            var BGColor = Color.LightPink;
-            var Color1 = Color.MistyRose;
-            var NowPlayingColor = Color.MistyRose;
+            var BGColor = Color.FromArgb(33, 40, 38);        
+            var Color1 = Color.FromArgb(113, 135, 129);
+            var NowPlayingColor = Color.FromArgb(75, 90, 86);
 
 
             this.BackColor = BGColor;
@@ -350,6 +350,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                             var tagFile = TagLib.File.Create(filePath);
                             string title = tagFile.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(filePath);
                             string artistName = tagFile.Tag.FirstPerformer ?? "Unknown Artist";
+                            TimeSpan duration = tagFile.Properties.Duration;
 
                             // Check if the artist exists or create a new one
                             int artistId = artistController.GetArtistIdByName(artistName);
@@ -365,7 +366,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                             {
                                 Title = title,
                                 File_Path = filePath,
-                                Artist = new Artist { Id = artistId, Display_Name = artistName }
+                                Artist = new Artist { Id = artistId, Display_Name = artistName },
+                                Duration = duration
                             };
 
                             // Pass the song model to the SongController

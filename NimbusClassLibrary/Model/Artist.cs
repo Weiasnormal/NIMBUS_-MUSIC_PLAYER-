@@ -14,7 +14,7 @@ namespace NimbusClassLibrary.Model
         public string Display_Name { get; set; } = string.Empty;
         public bool IsFollowed { get; set; } = false;
         public bool IsFavorite { get; set; } = false;
-        public byte[] Profile_Pic { get; set; } = new byte[0];
+        public string Profile_Pic { get; set; } = string.Empty;
 
         public override string ToString()
         {

@@ -36,12 +36,13 @@ namespace NimbusClassLibrary.Controller
             DBContext.songs.Add(song);
 
             MySqlCommand command = conn.CreateCommand();
-            command.CommandText = "INSERT INTO Songs ( Title, IsFavorite, Artist_id, File_Path ) " +
-                "VALUES ( @Title, @IsFavorite, @Artist_id, @File_Path )";
+            command.CommandText = "INSERT INTO Songs ( Title, IsFavorite, Artist_id, File_Path, Duration ) " +
+                "VALUES ( @Title, @IsFavorite, @Artist_id, @File_Path, @Duration )";
             command.Parameters.Add("@Title", MySqlDbType.VarChar).Value = song.Title;
             command.Parameters.Add("@IsFavorite", MySqlDbType.Int16).Value = Convert.ToInt32(song.IsFavorite);
             command.Parameters.Add("@Artist_id", MySqlDbType.Int32).Value = song.Artist.Id;
             command.Parameters.Add("@File_Path", MySqlDbType.Text).Value = song.File_Path;
+            command.Parameters.Add("@Duration", MySqlDbType.VarChar).Value = song.Duration;
 
             int res = command.ExecuteNonQuery();
             return Return.OK(res);
@@ -55,13 +56,14 @@ namespace NimbusClassLibrary.Controller
             MySqlCommand command = conn.CreateCommand();
             command.CommandText = "UPDATE Songs SET " +
                                   "Title = @Title, IsFavorite = @IsFavorite, Artist_id = @Artist_id, " +
-                                  "File_Path = @File_Path " +
+                                  "File_Path = @File_Path, Duration = @Duration" +
                                   "WHERE ID = @Id";
             command.Parameters.Add("@Id", MySqlDbType.Int32).Value = song.Id;
             command.Parameters.Add("@Title", MySqlDbType.VarChar).Value = song.Title;
             command.Parameters.Add("@IsFavorite", MySqlDbType.Int16).Value = Convert.ToInt32(song.IsFavorite);
             command.Parameters.Add("@Artist_id", MySqlDbType.Int32).Value = song.Artist.Id;
             command.Parameters.Add("@File_Path", MySqlDbType.Text).Value = song.File_Path;
+            command.Parameters.Add("@Duration", MySqlDbType.VarChar).Value = song.Duration;
 
             int res = command.ExecuteNonQuery();
             return Return.OK(res);

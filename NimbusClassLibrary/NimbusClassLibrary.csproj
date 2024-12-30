@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ArtistController.cs" />
+    <Compile Include="Controller\PlaySongController.cs" />
     <Compile Include="Controller\SongController.cs" />
     <Compile Include="Data\DbConnect.cs" />
     <Compile Include="Data\DBContext.cs" />

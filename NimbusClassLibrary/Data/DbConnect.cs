@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,7 +93,8 @@ namespace NimbusClassLibrary.Data
                     Artist = DBContext.artists.FirstOrDefault
                     (i => i.Id == Convert.ToInt32(reader["Artist_id"]))
                 };
-
+                if (reader["Duration"] != DBNull.Value) 
+                    song.Duration = TimeSpan.ParseExact(reader["Duration"].ToString(), @"hh\:mm\:ss\.fffffff", null);
                 DBContext.songs.Add(song);
             }
             reader.Close();
@@ -116,7 +118,7 @@ namespace NimbusClassLibrary.Data
                     Display_Name = reader["Display_Name"].ToString(),
                     IsFollowed = reader["IsFollowed"].Equals ("1"),
                     IsFavorite = reader["IsFavorite"].Equals("1"),
-                    Profile_Pic = Encoding.ASCII.GetBytes(reader["Profile_Pic"].ToString())
+                    Profile_Pic = reader["Profile_Pic"].ToString()
                 };
 
                 DBContext.artists.Add(artist);

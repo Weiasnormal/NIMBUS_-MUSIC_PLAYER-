@@ -135,7 +135,7 @@
             this.btnImportMusic.Size = new System.Drawing.Size(200, 40);
             this.btnImportMusic.TabIndex = 0;
             this.btnImportMusic.Text = "Import Music";
-            this.btnImportMusic.Click += new System.EventHandler(this.btnImportMusic_Click);
+            this.btnImportMusic.Click += new System.EventHandler(this.btnImportMusic_Click_1);
             // 
             // Theme4
             // 
@@ -148,13 +148,12 @@
             this.Theme4.CheckedState.Parent = this.Theme4;
             this.Theme4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-            this.Theme4.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Theme4;
             this.Theme4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Theme4.CustomImages.ImageOffset = new System.Drawing.Point(0, 5);
             this.Theme4.CustomImages.ImageSize = new System.Drawing.Size(19, 21);
             this.Theme4.CustomImages.Parent = this.Theme4;
-            this.Theme4.FillColor = System.Drawing.Color.Transparent;
-            this.Theme4.FillColor2 = System.Drawing.Color.Transparent;
+            this.Theme4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(75)))), ((int)(((byte)(67)))));
+            this.Theme4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(75)))), ((int)(((byte)(67)))));
             this.Theme4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Theme4.ForeColor = System.Drawing.Color.White;
             this.Theme4.HoverState.Parent = this.Theme4;
@@ -180,6 +179,7 @@
             this.Theme2.CheckedState.Parent = this.Theme2;
             this.Theme2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme2.CustomImages.Parent = this.Theme2;
+            this.Theme2.Enabled = false;
             this.Theme2.FillColor = System.Drawing.Color.White;
             this.Theme2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Theme2.ForeColor = System.Drawing.Color.White;
@@ -460,11 +460,11 @@
             this.btnSidebar_Playlist.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Playlists;
             this.btnSidebar_Playlist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Playlist.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnSidebar_Playlist.Location = new System.Drawing.Point(20, 465);
+            this.btnSidebar_Playlist.Location = new System.Drawing.Point(10, 465);
             this.btnSidebar_Playlist.Name = "btnSidebar_Playlist";
             this.btnSidebar_Playlist.PressedColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Playlist.ShadowDecoration.Parent = this.btnSidebar_Playlist;
-            this.btnSidebar_Playlist.Size = new System.Drawing.Size(317, 65);
+            this.btnSidebar_Playlist.Size = new System.Drawing.Size(327, 65);
             this.btnSidebar_Playlist.TabIndex = 17;
             this.btnSidebar_Playlist.Text = "Playlist";
             this.btnSidebar_Playlist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

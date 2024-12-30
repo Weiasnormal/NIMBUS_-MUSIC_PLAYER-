@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NimbusClassLibrary.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,18 @@ namespace NIMBUS__MUSIC_PLAYER_
     {
         public HorizontalSongs()
         {
-            InitializeComponent();
+
         }
+        public HorizontalSongs(int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
+        {
+            InitializeComponent();
+            SongNumlbl.Text = songnum.ToString();
+            Titlelbl.Text = title;
+            Songpic.ImageLocation = thumbnail;
+            Artistlbl.Text = artist.Display_Name;
+            TotalTimelbl.Text = $"{duration.Minutes}:{duration.Seconds}";
+
+        }
+
     }
 }

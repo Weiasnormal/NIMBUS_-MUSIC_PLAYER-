@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NimbusClassLibrary.Controller;
+using NimbusClassLibrary.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,14 +18,40 @@ namespace NIMBUS__MUSIC_PLAYER_
         public AllSongPanel()
         {
             InitializeComponent();
-            detailPanel = this.DetailPanel;
+            
+
+            int numControls = AllSongsPanel.Controls.Count;
+            AllSongsPanel.SuspendLayout();
+            AllSongsPanel.Controls.Clear();
+            AllSongsPanel.AutoScroll = true;
+            AllSongsPanel.VerticalScroll.Visible = false;
+
+            loadSongs();
+
+            this.Dock = DockStyle.Right;
+            AllSongsScrollbar.Scroll += (sender, e) => { AllSongsPanel.VerticalScroll.Value = AllSongsScrollbar.Value; };
+            AllSongsScrollbar.Height = AllSongsPanel.Height;
+            AllSongsScrollbar.Visible = false;
+            
+            this.Controls.Add(AllSongsScrollbar);
+
+            AllSongsPanel.ResumeLayout();
+
+            // then update the form
+            AllSongsPanel.PerformLayout();
         }
 
-        public void BlueTheme(Color color)
+        public void loadSongs()
         {
-            
-            DetailPanel.BackColor = color;
-            guna2Panel1.FillColor = color;
-        }      
+            int songnum = 1;
+
+            SongController<Song> controller = new SongController<Song>();
+            List<Song> songs = (List<Song>)controller.GetCollection<Song>();
+            foreach(Song song in songs) 
+            {
+                AllSongsPanel.Controls.Add(new HorizontalSongs(songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration));
+                songnum++;
+            }
+        }
     }
 }

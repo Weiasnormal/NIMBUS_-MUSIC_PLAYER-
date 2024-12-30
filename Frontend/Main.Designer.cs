@@ -42,9 +42,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Sidebar = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PlaylistList = new System.Windows.Forms.ListBox();
             this.btnSidebar_Favorites = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAddaPlaylist = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSidebar_Playlist = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSidebar_Queue = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -73,13 +72,10 @@
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ShowAddPlaylist = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Sidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddaPlaylist)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -341,10 +337,8 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Sidebar.BackColor = System.Drawing.Color.Transparent;
             this.Sidebar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Sidebar.Controls.Add(this.listBox1);
-            this.Sidebar.Controls.Add(this.guna2PictureBox2);
+            this.Sidebar.Controls.Add(this.PlaylistList);
             this.Sidebar.Controls.Add(this.btnSidebar_Favorites);
-            this.Sidebar.Controls.Add(this.guna2PictureBox3);
             this.Sidebar.Controls.Add(this.btnAddaPlaylist);
             this.Sidebar.Controls.Add(this.btnSidebar_Playlist);
             this.Sidebar.Controls.Add(this.panel1);
@@ -358,17 +352,25 @@
             this.Sidebar.Size = new System.Drawing.Size(347, 784);
             this.Sidebar.TabIndex = 2;
             // 
-            // guna2PictureBox2
+            // PlaylistList
             // 
-            this.guna2PictureBox2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Dropdown_Open;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(310, 508);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(17, 10);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox2.TabIndex = 1;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
+            this.PlaylistList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.PlaylistList.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlaylistList.ForeColor = System.Drawing.Color.White;
+            this.PlaylistList.FormattingEnabled = true;
+            this.PlaylistList.ItemHeight = 21;
+            this.PlaylistList.Items.AddRange(new object[] {
+            "ffdf",
+            "dfgdfg",
+            "dgdfgf",
+            "gdfgdfgd",
+            "dfgdfgdfg",
+            "dfgdfgd"});
+            this.PlaylistList.Location = new System.Drawing.Point(75, 536);
+            this.PlaylistList.Name = "PlaylistList";
+            this.PlaylistList.Size = new System.Drawing.Size(252, 67);
+            this.PlaylistList.TabIndex = 20;
+            this.PlaylistList.SelectedIndexChanged += new System.EventHandler(this.PlaylistList_SelectedIndexChanged);
             // 
             // btnSidebar_Favorites
             // 
@@ -405,23 +407,11 @@
             this.btnSidebar_Favorites.TextOffset = new System.Drawing.Point(30, 0);
             this.btnSidebar_Favorites.Click += new System.EventHandler(this.btnSidebar_Favorites_Click);
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Dropdown_Close;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(310, 492);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 10);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox3.TabIndex = 2;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.UseTransparentBackground = true;
-            // 
             // btnAddaPlaylist
             // 
             this.btnAddaPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddaPlaylist.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_AddPlaylist;
-            this.btnAddaPlaylist.Location = new System.Drawing.Point(273, 492);
+            this.btnAddaPlaylist.Location = new System.Drawing.Point(256, 492);
             this.btnAddaPlaylist.Name = "btnAddaPlaylist";
             this.btnAddaPlaylist.ShadowDecoration.Parent = this.btnAddaPlaylist;
             this.btnAddaPlaylist.Size = new System.Drawing.Size(18, 19);
@@ -435,14 +425,17 @@
             // 
             this.btnSidebar_Playlist.BackColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Playlist.BorderRadius = 10;
-            this.btnSidebar_Playlist.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSidebar_Playlist.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnSidebar_Playlist.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Playlist.CheckedState.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSidebar_Playlist.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSidebar_Playlist.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnSidebar_Playlist.CheckedState.Parent = this.btnSidebar_Playlist;
             this.btnSidebar_Playlist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSidebar_Playlist.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSidebar_Playlist.CustomImages.CheckedImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Dropdown_Open;
+            this.btnSidebar_Playlist.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Dropdown_Close;
+            this.btnSidebar_Playlist.CustomImages.ImageOffset = new System.Drawing.Point(0, 5);
+            this.btnSidebar_Playlist.CustomImages.ImageSize = new System.Drawing.Size(15, 10);
             this.btnSidebar_Playlist.CustomImages.Parent = this.btnSidebar_Playlist;
             this.btnSidebar_Playlist.FillColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Playlist.FillColor2 = System.Drawing.Color.Transparent;
@@ -457,7 +450,7 @@
             this.btnSidebar_Playlist.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnSidebar_Playlist.Location = new System.Drawing.Point(10, 465);
             this.btnSidebar_Playlist.Name = "btnSidebar_Playlist";
-            this.btnSidebar_Playlist.PressedColor = System.Drawing.Color.Transparent;
+            this.btnSidebar_Playlist.PressedColor = System.Drawing.Color.Gray;
             this.btnSidebar_Playlist.ShadowDecoration.Parent = this.btnSidebar_Playlist;
             this.btnSidebar_Playlist.Size = new System.Drawing.Size(327, 65);
             this.btnSidebar_Playlist.TabIndex = 17;
@@ -465,6 +458,7 @@
             this.btnSidebar_Playlist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Playlist.TextOffset = new System.Drawing.Point(30, 0);
             this.btnSidebar_Playlist.UseTransparentBackground = true;
+            this.btnSidebar_Playlist.Click += new System.EventHandler(this.btnSidebar_Playlist_Click);
             // 
             // btnSidebar_Queue
             // 
@@ -901,25 +895,6 @@
             this.ShowAddPlaylist.TabIndex = 19;
             this.ShowAddPlaylist.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.ShowAddPlaylist_ControlRemoved);
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.listBox1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 21;
-            this.listBox1.Items.AddRange(new object[] {
-            "ffdf",
-            "dfgdfg",
-            "dgdfgf",
-            "gdfgdfgd",
-            "dfgdfgdfg",
-            "dfgdfgd"});
-            this.listBox1.Location = new System.Drawing.Point(75, 536);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(252, 67);
-            this.listBox1.TabIndex = 20;
-            // 
             // Nimbus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -944,8 +919,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Sidebar.ResumeLayout(false);
             this.Sidebar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddaPlaylist)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -1004,13 +977,11 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton btnImportMusic;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox btnAddaPlaylist;
         private Guna.UI2.WinForms.Guna2GradientButton btnSidebar_Playlist;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private System.Windows.Forms.Panel ShowAddPlaylist;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox PlaylistList;
     }
 }
 

@@ -28,6 +28,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             InitializeComponent();
             Initialize_Navigation_Controls();
             ShowAddPlaylist.Visible = false;
+            PlaylistList.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
 
@@ -53,7 +54,10 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void btnSidebar_Albums_Click(object sender, EventArgs e) => dashboardNavigation.Display(2);
         private void btnSidebar_Artists_Click(object sender, EventArgs e) => dashboardNavigation.Display(3);
         private void btnSidebar_Queue_Click(object sender, EventArgs e) => dashboardNavigation.Display(4);
-        private void btnSidebar_Playlist_Click(object sender, EventArgs e) => dashboardNavigation.Display(5);
+        private void btnSidebar_Playlist_Click(object sender, EventArgs e)
+        {
+            PlaylistList.Visible = !PlaylistList.Visible;
+        }
 
         private void Theme1_Click(object sender, EventArgs e) => ApplyDarkTheme();
 
@@ -77,6 +81,24 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             ShowAddPlaylist.Visible = false;
         }
+
+        private void PlaylistList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (PlaylistList.SelectedItem != null)
+            {
+                dashboardNavigation.Display(5);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -638,6 +660,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                     }
                 }
             }
-        }       
+        }
+
+        
     }
 }

@@ -1,22 +1,26 @@
-﻿using NimbusClassLibrary.Model;
+﻿using NimbusClassLibrary.Controller;
+using NimbusClassLibrary.Data;
+using NimbusClassLibrary.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class HorizontalSongs : UserControl
     {
+        private WindowsMediaPlayer player;
+        private string currentSongPath; // To keep track of the current song path
+
         public HorizontalSongs()
         {
-
+            InitializeComponent();
+            player = new WindowsMediaPlayer();
+            currentSongPath = string.Empty;
         }
+
         public HorizontalSongs(int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
         {
             InitializeComponent();
@@ -25,38 +29,107 @@ namespace NIMBUS__MUSIC_PLAYER_
             Songpic.ImageLocation = thumbnail;
             Artistlbl.Text = artist.Display_Name;
             TotalTimelbl.Text = $"{duration.Minutes}:{duration.Seconds}";
+            player = new WindowsMediaPlayer();
+            currentSongPath = string.Empty;
         }
 
-        private void HorizontalSongs_DoubleClick(object sender, EventArgs e)
+        public void HorizontalSongs_DoubleClick(object sender, EventArgs e)
         {
-            // how to get songId of the card??? hahaha
-            PlaySong(1);
+            // Get the song name from the label
+            string songName = Artistlbl.Text;
+
+            // Stop the current song if it's playing before starting the new song
+            StopAudio(); // Ensure that the current song stops immediately
+
+            // Use the PlaySong method to play the song based on the song name
+            PlaySong(songName);
         }
 
-        public void PlaySong(int songId)
+        public void PlaySong(string songName)
         {
-            try
+            // Instantiate the SongController
+            SongController<Song> songController = new SongController<Song>();
+
+            // Query the song using the song name
+            var song = DBContext.songs.FirstOrDefault(s => s.Artist.Display_Name == songName);
+
+            if (song != null)
             {
-                // Use the SongController to fetch the song based on songId
-                var songController = new NimbusClassLibrary.Controller.SongController<Song>();
-                var song = songController.GetSingle<Song>(songId); // Get the song using its ID
+                // Fetch the song ID from the database through the SongController
+                var fetchedSong = songController.GetSingle<Song>(song.Id);
 
-                if (song != null && !string.IsNullOrEmpty(song.File_Path))
+                if (fetchedSong != null)
                 {
-                    // Play the song using the file path
-                    WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
-                    player.URL = song.File_Path; // Set the MP3 file path
-                    player.controls.play(); // Start playing
+                    string filePath = fetchedSong.File_Path;
+
+                    // Only stop the current song if the new song is different
+                    if (filePath != currentSongPath)
+                    {
+                        // Stop the current song if another one is selected
+                        StopAudio();
+
+                        // Play the new song
+                        PlayAudio(filePath);
+                        currentSongPath = filePath; // Update the current song path
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Unable to find the song or the file path is invalid.");
+                    MessageBox.Show("Song not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred while playing the song: {ex.Message}");
+                MessageBox.Show("Song name not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private async void PlayAudio(string filePath)
+        {
+            // Check if the file exists before attempting to play it
+            if (FileExists(filePath))
+            {
+                // Play the audio asynchronously, ensuring it's on the UI thread
+                await Task.Run(() =>
+                {
+                    // Use Invoke to ensure this runs on the UI thread
+                    this.Invoke(new Action(() =>
+                    {
+                        // Stop any currently playing song before starting the new one
+                        player.URL = filePath;
+                        player.controls.play();
+                    }));
+                });
+            }
+            else
+            {
+                MessageBox.Show("File not found: " + filePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool FileExists(string filePath)
+        {
+            return System.IO.File.Exists(filePath);
+        }
+
+        private void StopAudio()
+        {
+            // Check if a song is currently playing
+            if (player.playState != WMPPlayState.wmppsStopped)
+            {
+                // Stop the audio
+                this.Invoke(new Action(() =>
+                {
+                    player.controls.stop();
+                    currentSongPath = string.Empty; // Reset the current song path after stopping
+                }));
+            }
+        }
+
+        // Optional: Handle form closing and stop audio if necessary
+        private void HorizontalSongs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StopAudio();
         }
     }
 }

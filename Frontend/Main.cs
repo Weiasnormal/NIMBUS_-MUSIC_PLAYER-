@@ -183,6 +183,10 @@ namespace NIMBUS__MUSIC_PLAYER_
                     favoritePanel.btn3.HoverState.FillColor2 = Hover;
                     favoritePanel.btn4.HoverState.FillColor = Hover;
                     favoritePanel.btn4.HoverState.FillColor2 = Hover;
+                    favoritePanel.btn5.HoverState.FillColor = Hover;
+                    favoritePanel.btn5.HoverState.FillColor2 = Hover;
+                    favoritePanel.btn6.HoverState.FillColor = Hover;
+                    favoritePanel.btn6.HoverState.FillColor2 = Hover;
                 }
                 if (control is AlbumsPanel albumsPanel)
                 {
@@ -337,6 +341,10 @@ namespace NIMBUS__MUSIC_PLAYER_
                     favoritePanel.btn3.HoverState.FillColor2 = Hover;
                     favoritePanel.btn4.HoverState.FillColor = Hover;
                     favoritePanel.btn4.HoverState.FillColor2 = Hover;
+                    favoritePanel.btn5.HoverState.FillColor = Hover;
+                    favoritePanel.btn5.HoverState.FillColor2 = Hover;
+                    favoritePanel.btn6.HoverState.FillColor = Hover;
+                    favoritePanel.btn6.HoverState.FillColor2 = Hover;
                 }
                 if (control is AlbumsPanel albumsPanel)
                 {
@@ -495,7 +503,11 @@ namespace NIMBUS__MUSIC_PLAYER_
                     favoritePanel.btn3.HoverState.FillColor = Hover;
                     favoritePanel.btn3.HoverState.FillColor2 = Hover;
                     favoritePanel.btn4.HoverState.FillColor = Hover;
-                    favoritePanel.btn4.HoverState.FillColor2 = Hover;    
+                    favoritePanel.btn4.HoverState.FillColor2 = Hover;
+                    favoritePanel.btn5.HoverState.FillColor = Hover;
+                    favoritePanel.btn5.HoverState.FillColor2 = Hover;
+                    favoritePanel.btn6.HoverState.FillColor = Hover;
+                    favoritePanel.btn6.HoverState.FillColor2 = Hover;
                 }
                 if (control is AlbumsPanel albumsPanel)
                 {

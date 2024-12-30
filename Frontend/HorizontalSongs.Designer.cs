@@ -56,7 +56,7 @@
             this.Titlelbl.AutoSize = true;
             this.Titlelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titlelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Titlelbl.Location = new System.Drawing.Point(89, 14);
+            this.Titlelbl.Location = new System.Drawing.Point(51, 14);
             this.Titlelbl.Name = "Titlelbl";
             this.Titlelbl.Size = new System.Drawing.Size(64, 18);
             this.Titlelbl.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.Titlelbl);
             this.panel1.Location = new System.Drawing.Point(76, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 50);
+            this.panel1.Size = new System.Drawing.Size(198, 50);
             this.panel1.TabIndex = 2;
             // 
             // Songpic

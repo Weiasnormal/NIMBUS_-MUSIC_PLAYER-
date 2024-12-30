@@ -45,7 +45,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSidebar_Favorites = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddaPlaylist = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSidebar_Playlist = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSidebar_Queue = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -73,6 +72,8 @@
             this.TitleSonglbl = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.ShowAddPlaylist = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,7 +109,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(349, 1);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1269, 96);
+            this.guna2Panel1.Size = new System.Drawing.Size(1269, 80);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnImportMusic
@@ -340,10 +341,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Sidebar.BackColor = System.Drawing.Color.Transparent;
             this.Sidebar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Sidebar.Controls.Add(this.listBox1);
             this.Sidebar.Controls.Add(this.guna2PictureBox2);
             this.Sidebar.Controls.Add(this.btnSidebar_Favorites);
             this.Sidebar.Controls.Add(this.guna2PictureBox3);
-            this.Sidebar.Controls.Add(this.panel2);
             this.Sidebar.Controls.Add(this.btnAddaPlaylist);
             this.Sidebar.Controls.Add(this.btnSidebar_Playlist);
             this.Sidebar.Controls.Add(this.panel1);
@@ -416,14 +417,6 @@
             this.guna2PictureBox3.TabStop = false;
             this.guna2PictureBox3.UseTransparentBackground = true;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Location = new System.Drawing.Point(10, 536);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 100);
-            this.panel2.TabIndex = 11;
-            // 
             // btnAddaPlaylist
             // 
             this.btnAddaPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -436,6 +429,7 @@
             this.btnAddaPlaylist.TabIndex = 0;
             this.btnAddaPlaylist.TabStop = false;
             this.btnAddaPlaylist.UseTransparentBackground = true;
+            this.btnAddaPlaylist.Click += new System.EventHandler(this.btnAddaPlaylist_Click);
             // 
             // btnSidebar_Playlist
             // 
@@ -898,12 +892,41 @@
             // 
             this.guna2DragControl2.TargetControl = this.guna2Panel1;
             // 
+            // ShowAddPlaylist
+            // 
+            this.ShowAddPlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.ShowAddPlaylist.Location = new System.Drawing.Point(864, 86);
+            this.ShowAddPlaylist.Name = "ShowAddPlaylist";
+            this.ShowAddPlaylist.Size = new System.Drawing.Size(93, 134);
+            this.ShowAddPlaylist.TabIndex = 19;
+            this.ShowAddPlaylist.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.ShowAddPlaylist_ControlRemoved);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.listBox1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Items.AddRange(new object[] {
+            "ffdf",
+            "dfgdfg",
+            "dgdfgf",
+            "gdfgdfgd",
+            "dfgdfgdfg",
+            "dfgdfgd"});
+            this.listBox1.Location = new System.Drawing.Point(75, 536);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(252, 67);
+            this.listBox1.TabIndex = 20;
+            // 
             // Nimbus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1620, 900);
+            this.Controls.Add(this.ShowAddPlaylist);
             this.Controls.Add(this.ViewPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.Sidebar);
@@ -959,7 +982,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnSidebar_Artists;
         private Guna.UI2.WinForms.Guna2GradientButton btnSidebar_Albums;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel ViewPanel;
         private Guna.UI2.WinForms.Guna2GradientButton btnSidebar_Favorites;
@@ -987,6 +1009,8 @@
         private Guna.UI2.WinForms.Guna2PictureBox btnAddaPlaylist;
         private Guna.UI2.WinForms.Guna2GradientButton btnSidebar_Playlist;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
+        private System.Windows.Forms.Panel ShowAddPlaylist;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

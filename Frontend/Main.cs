@@ -27,6 +27,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             InitializeComponent();
             Initialize_Navigation_Controls();
+            ShowAddPlaylist.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
 
@@ -59,6 +60,28 @@ namespace NIMBUS__MUSIC_PLAYER_
         //private void Theme2_Click(object sender, EventArgs e) => ApplyWhiteTheme();
         private void Theme3_Click(object sender, EventArgs e) => ApplyBlueTheme();
         private void Theme4_Click(object sender, EventArgs e) => ApplyGreenTheme();
+
+
+
+        private void btnAddaPlaylist_Click(object sender, EventArgs e)
+        {            
+            CreatePlaylist createPlaylist = new CreatePlaylist();
+            ShowAddPlaylist.Controls.Clear();
+            ShowAddPlaylist.Location = new Point(439, 154);
+            ShowAddPlaylist.Size = createPlaylist.Size;
+            ShowAddPlaylist.Controls.Add(new CreatePlaylist());
+            ShowAddPlaylist.Visible = true;
+        }
+
+        private void ShowAddPlaylist_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            ShowAddPlaylist.Visible = false;
+        }
+
+
+
+
+
 
         private void ApplyDarkTheme()
         {
@@ -615,6 +638,6 @@ namespace NIMBUS__MUSIC_PLAYER_
                     }
                 }
             }
-        }
+        }       
     }
 }

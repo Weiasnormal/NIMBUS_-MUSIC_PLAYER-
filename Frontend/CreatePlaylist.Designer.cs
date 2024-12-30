@@ -30,7 +30,7 @@
         {
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.CancelCreate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,37 +70,38 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2GradientButton1
+            // CancelCreate
             // 
-            this.guna2GradientButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GradientButton1.AutoRoundedCorners = true;
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 23;
-            this.guna2GradientButton1.BorderThickness = 1;
-            this.guna2GradientButton1.CheckedState.FillColor = System.Drawing.Color.Olive;
-            this.guna2GradientButton1.CheckedState.FillColor2 = System.Drawing.Color.Green;
-            this.guna2GradientButton1.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton1.CustomImages.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
-            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.Silver;
-            this.guna2GradientButton1.HoverState.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
-            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(93, 156);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(123, 48);
-            this.guna2GradientButton1.TabIndex = 7;
-            this.guna2GradientButton1.Text = "Cancel";
+            this.CancelCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelCreate.AutoRoundedCorners = true;
+            this.CancelCreate.BackColor = System.Drawing.Color.Transparent;
+            this.CancelCreate.BorderRadius = 23;
+            this.CancelCreate.BorderThickness = 1;
+            this.CancelCreate.CheckedState.FillColor = System.Drawing.Color.Olive;
+            this.CancelCreate.CheckedState.FillColor2 = System.Drawing.Color.Green;
+            this.CancelCreate.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelCreate.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.CancelCreate.CheckedState.Parent = this.CancelCreate;
+            this.CancelCreate.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CancelCreate.CustomImages.ImageSize = new System.Drawing.Size(18, 18);
+            this.CancelCreate.CustomImages.Parent = this.CancelCreate;
+            this.CancelCreate.FillColor = System.Drawing.Color.White;
+            this.CancelCreate.FillColor2 = System.Drawing.Color.White;
+            this.CancelCreate.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.CancelCreate.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.CancelCreate.HoverState.FillColor2 = System.Drawing.Color.Silver;
+            this.CancelCreate.HoverState.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelCreate.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.CancelCreate.HoverState.Parent = this.CancelCreate;
+            this.CancelCreate.Location = new System.Drawing.Point(93, 156);
+            this.CancelCreate.Name = "CancelCreate";
+            this.CancelCreate.PressedColor = System.Drawing.Color.Transparent;
+            this.CancelCreate.ShadowDecoration.Parent = this.CancelCreate;
+            this.CancelCreate.Size = new System.Drawing.Size(123, 48);
+            this.CancelCreate.TabIndex = 7;
+            this.CancelCreate.Text = "Cancel";
+            this.CancelCreate.Click += new System.EventHandler(this.CancelCreate_Click);
             // 
             // guna2GradientButton2
             // 
@@ -139,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.guna2GradientButton2);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.CancelCreate);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CreatePlaylist";
@@ -153,7 +154,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton CancelCreate;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
     }
 }

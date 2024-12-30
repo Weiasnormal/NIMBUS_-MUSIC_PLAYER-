@@ -84,7 +84,6 @@
             // 
             // Dropdown_Sort
             // 
-            this.Dropdown_Sort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Dropdown_Sort.Animated = true;
             this.Dropdown_Sort.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Dropdown_Sort.BackColor = System.Drawing.Color.Transparent;
@@ -126,7 +125,6 @@
             // 
             // Dropdown_Album
             // 
-            this.Dropdown_Album.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Dropdown_Album.Animated = true;
             this.Dropdown_Album.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Dropdown_Album.BackColor = System.Drawing.Color.Transparent;
@@ -163,7 +161,6 @@
             // 
             // Dropdown_Artist
             // 
-            this.Dropdown_Artist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Dropdown_Artist.Animated = true;
             this.Dropdown_Artist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Dropdown_Artist.BackColor = System.Drawing.Color.Transparent;

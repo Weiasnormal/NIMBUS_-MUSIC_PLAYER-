@@ -48,14 +48,15 @@
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.SongTab = new Guna.UI2.WinForms.Guna2Panel();
+            this.SongTabs = new Guna.UI2.WinForms.Guna2Panel();
             this.MenuTabs.SuspendLayout();
             this.DetailPanel.SuspendLayout();
-            this.SongTab.SuspendLayout();
+            this.SongTabs.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchBar
             // 
+            this.SearchBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBar.AutoRoundedCorners = true;
             this.SearchBar.BackColor = System.Drawing.Color.Transparent;
             this.SearchBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -119,7 +120,7 @@
             this.MenuTabs.BorderRadius = 10;
             this.MenuTabs.Controls.Add(this.guna2GradientButton1);
             this.MenuTabs.Controls.Add(this.guna2GradientButton4);
-            this.MenuTabs.FillColor = System.Drawing.Color.Transparent;
+            this.MenuTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.MenuTabs.ForeColor = System.Drawing.Color.Transparent;
             this.MenuTabs.Location = new System.Drawing.Point(172, 118);
             this.MenuTabs.Name = "MenuTabs";
@@ -183,7 +184,7 @@
             this.guna2GradientButton4.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton4.Location = new System.Drawing.Point(9, 10);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
-            this.guna2GradientButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.guna2GradientButton4.PressedColor = System.Drawing.Color.Empty;
             this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
             this.guna2GradientButton4.Size = new System.Drawing.Size(223, 45);
             this.guna2GradientButton4.TabIndex = 22;
@@ -194,11 +195,11 @@
             // lblQueuePanel
             // 
             this.lblQueuePanel.AutoSize = true;
-            this.lblQueuePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQueuePanel.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQueuePanel.ForeColor = System.Drawing.Color.White;
             this.lblQueuePanel.Location = new System.Drawing.Point(33, 6);
             this.lblQueuePanel.Name = "lblQueuePanel";
-            this.lblQueuePanel.Size = new System.Drawing.Size(144, 46);
+            this.lblQueuePanel.Size = new System.Drawing.Size(162, 55);
             this.lblQueuePanel.TabIndex = 28;
             this.lblQueuePanel.Text = "Queue";
             // 
@@ -490,25 +491,25 @@
             this.guna2GradientButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton5.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // SongTab
+            // SongTabs
             // 
-            this.SongTab.BorderRadius = 10;
-            this.SongTab.Controls.Add(this.guna2GradientButton3);
-            this.SongTab.Controls.Add(this.guna2GradientButton5);
-            this.SongTab.FillColor = System.Drawing.Color.Transparent;
-            this.SongTab.ForeColor = System.Drawing.Color.Transparent;
-            this.SongTab.Location = new System.Drawing.Point(474, 110);
-            this.SongTab.Name = "SongTab";
-            this.SongTab.ShadowDecoration.Parent = this.SongTab;
-            this.SongTab.Size = new System.Drawing.Size(284, 114);
-            this.SongTab.TabIndex = 35;
+            this.SongTabs.BorderRadius = 10;
+            this.SongTabs.Controls.Add(this.guna2GradientButton3);
+            this.SongTabs.Controls.Add(this.guna2GradientButton5);
+            this.SongTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.SongTabs.ForeColor = System.Drawing.Color.Transparent;
+            this.SongTabs.Location = new System.Drawing.Point(474, 110);
+            this.SongTabs.Name = "SongTabs";
+            this.SongTabs.ShadowDecoration.Parent = this.SongTabs;
+            this.SongTabs.Size = new System.Drawing.Size(284, 114);
+            this.SongTabs.TabIndex = 35;
             // 
             // QueuePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.SongTab);
+            this.Controls.Add(this.SongTabs);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.MenuTabs);
@@ -525,7 +526,7 @@
             this.MenuTabs.ResumeLayout(false);
             this.DetailPanel.ResumeLayout(false);
             this.DetailPanel.PerformLayout();
-            this.SongTab.ResumeLayout(false);
+            this.SongTabs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,6 +554,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
-        private Guna.UI2.WinForms.Guna2Panel SongTab;
+        private Guna.UI2.WinForms.Guna2Panel SongTabs;
     }
 }

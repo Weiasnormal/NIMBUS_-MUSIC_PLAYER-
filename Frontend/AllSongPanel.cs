@@ -1,4 +1,5 @@
-﻿using NimbusClassLibrary.Controller;
+﻿using Guna.UI2.WinForms;
+using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
@@ -45,17 +46,55 @@ namespace NIMBUS__MUSIC_PLAYER_
             get { return DetailPanel; }
         }
 
-        public Panel MenuTab
+        public Guna2Panel MenuTabs
         {
-            get { return guna2Panel1; }
+            get { return MenuTab; }
         }
 
-        public Panel SongMenu
+        public Guna2Panel SongMenu
         {
             get { return SongsMenu; }
         }
 
-       
+        public Guna2ComboBox Dropdown_Artists
+        {
+            get { return Dropdown_Artist; }
+        }
+        
+        public Guna2ComboBox Dropdown_Albums
+        {
+            get { return Dropdown_Album; }
+        }
+
+        public Guna2ComboBox Dropdown_Sorts
+        {
+            get { return Dropdown_Sort; }
+        }
+
+        public Guna2GradientButton btn1
+        {
+            get { return guna2GradientButton7; }
+        }
+        public Guna2GradientButton btn2
+        {
+            get { return guna2GradientButton6; }
+        }
+        public Guna2GradientButton btn3
+        {
+            get { return guna2GradientButton5; }
+        }
+        public Guna2GradientButton btn4
+        {
+            get { return guna2GradientButton4; }
+        }
+        public Guna2GradientButton btn5
+        {
+            get { return guna2GradientButton3; }
+        }
+        public Guna2GradientButton btn6
+        {
+            get { return guna2GradientButton1; }
+        }
 
 
         public void loadSongs()

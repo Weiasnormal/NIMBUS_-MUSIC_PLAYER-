@@ -30,7 +30,7 @@
         {
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Dropdown_ArtistPlaylist = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblArtist = new System.Windows.Forms.Label();
@@ -135,42 +135,42 @@
             this.Dropdown_Album.StartIndex = 0;
             this.Dropdown_Album.TabIndex = 19;
             // 
-            // Dropdown_Artist
+            // Dropdown_ArtistPlaylist
             // 
-            this.Dropdown_Artist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dropdown_Artist.Animated = true;
-            this.Dropdown_Artist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Dropdown_Artist.BackColor = System.Drawing.Color.Transparent;
-            this.Dropdown_Artist.BorderColor = System.Drawing.Color.Black;
-            this.Dropdown_Artist.BorderRadius = 10;
-            this.Dropdown_Artist.BorderThickness = 0;
-            this.Dropdown_Artist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Dropdown_Artist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Dropdown_Artist.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.Dropdown_Artist.FocusedColor = System.Drawing.Color.Empty;
-            this.Dropdown_Artist.FocusedState.Parent = this.Dropdown_Artist;
-            this.Dropdown_Artist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dropdown_Artist.ForeColor = System.Drawing.Color.White;
-            this.Dropdown_Artist.FormattingEnabled = true;
-            this.Dropdown_Artist.HoverState.Parent = this.Dropdown_Artist;
-            this.Dropdown_Artist.ItemHeight = 30;
-            this.Dropdown_Artist.Items.AddRange(new object[] {
+            this.Dropdown_ArtistPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Dropdown_ArtistPlaylist.Animated = true;
+            this.Dropdown_ArtistPlaylist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Dropdown_ArtistPlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.Dropdown_ArtistPlaylist.BorderColor = System.Drawing.Color.Black;
+            this.Dropdown_ArtistPlaylist.BorderRadius = 10;
+            this.Dropdown_ArtistPlaylist.BorderThickness = 0;
+            this.Dropdown_ArtistPlaylist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Dropdown_ArtistPlaylist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Dropdown_ArtistPlaylist.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.Dropdown_ArtistPlaylist.FocusedColor = System.Drawing.Color.Empty;
+            this.Dropdown_ArtistPlaylist.FocusedState.Parent = this.Dropdown_ArtistPlaylist;
+            this.Dropdown_ArtistPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dropdown_ArtistPlaylist.ForeColor = System.Drawing.Color.White;
+            this.Dropdown_ArtistPlaylist.FormattingEnabled = true;
+            this.Dropdown_ArtistPlaylist.HoverState.Parent = this.Dropdown_ArtistPlaylist;
+            this.Dropdown_ArtistPlaylist.ItemHeight = 30;
+            this.Dropdown_ArtistPlaylist.Items.AddRange(new object[] {
             "Artist:",
             "Yanni",
             "Mhartin"});
-            this.Dropdown_Artist.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.Dropdown_Artist.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dropdown_Artist.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.Dropdown_Artist.ItemsAppearance.Parent = this.Dropdown_Artist;
-            this.Dropdown_Artist.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
-            this.Dropdown_Artist.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dropdown_Artist.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_Artist.Location = new System.Drawing.Point(615, 81);
-            this.Dropdown_Artist.Name = "Dropdown_Artist";
-            this.Dropdown_Artist.ShadowDecoration.Parent = this.Dropdown_Artist;
-            this.Dropdown_Artist.Size = new System.Drawing.Size(200, 36);
-            this.Dropdown_Artist.StartIndex = 0;
-            this.Dropdown_Artist.TabIndex = 18;
+            this.Dropdown_ArtistPlaylist.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.Dropdown_ArtistPlaylist.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dropdown_ArtistPlaylist.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.Dropdown_ArtistPlaylist.ItemsAppearance.Parent = this.Dropdown_ArtistPlaylist;
+            this.Dropdown_ArtistPlaylist.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
+            this.Dropdown_ArtistPlaylist.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dropdown_ArtistPlaylist.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.Dropdown_ArtistPlaylist.Location = new System.Drawing.Point(615, 81);
+            this.Dropdown_ArtistPlaylist.Name = "Dropdown_ArtistPlaylist";
+            this.Dropdown_ArtistPlaylist.ShadowDecoration.Parent = this.Dropdown_ArtistPlaylist;
+            this.Dropdown_ArtistPlaylist.Size = new System.Drawing.Size(200, 36);
+            this.Dropdown_ArtistPlaylist.StartIndex = 0;
+            this.Dropdown_ArtistPlaylist.TabIndex = 18;
             // 
             // flowLayoutPanel1
             // 
@@ -359,7 +359,7 @@
             this.guna2Panel2.Controls.Add(this.guna2GradientButton3);
             this.guna2Panel2.Controls.Add(this.guna2GradientButton5);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(547, 43);
+            this.guna2Panel2.Location = new System.Drawing.Point(443, 30);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(310, 215);
@@ -587,7 +587,7 @@
             this.Controls.Add(this.Dropdown_Sort);
             this.Controls.Add(this.Dropdown_Album);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.Dropdown_Artist);
+            this.Controls.Add(this.Dropdown_ArtistPlaylist);
             this.Controls.Add(this.Menubtn);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2ImageButton2);
@@ -608,7 +608,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
-        private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
+        private Guna.UI2.WinForms.Guna2ComboBox Dropdown_ArtistPlaylist;
         private System.Windows.Forms.Label lblArtist;
         private System.Windows.Forms.Label lblAlbum;
         private System.Windows.Forms.Label lblNumber;

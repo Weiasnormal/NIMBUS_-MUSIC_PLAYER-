@@ -2,6 +2,7 @@
 using NimbusClassLibrary.Data;
 using NimbusClassLibrary.Model;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,9 +36,25 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         public void HorizontalSongs_DoubleClick(object sender, EventArgs e)
         {
+            var Highlighted = Color.FromArgb(82, 82, 82);
+            var Default = Color.Transparent;
+
+            // Ensure sender is a Control
+            if (sender is Control clickedControl)
+            {
+                // Reset the background color of all sibling controls to default
+                foreach (Control control in clickedControl.Parent.Controls)
+                {
+                    control.BackColor = Default;
+                }
+
+                // Highlight the double-clicked control
+                clickedControl.BackColor = Highlighted;
+            }
+
             // Get the song name from the label
             string songName = Artistlbl.Text;
-
+            
             // Stop the current song if it's playing before starting the new song
             StopAudio(); // Ensure that the current song stops immediately
 

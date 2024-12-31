@@ -1,4 +1,5 @@
-﻿using NimbusClassLibrary.Controller;
+﻿using NIMBUS__MUSIC_PLAYER_.Helper;
+using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Data;
 using NimbusClassLibrary.Model;
 using System;
@@ -20,6 +21,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             InitializeComponent();
             player = new WindowsMediaPlayer();
             currentSongPath = string.Empty;
+
+            // Attach double-click event
+            this.DoubleClick += HorizontalSongs_DoubleClick;
         }
 
         public HorizontalSongs(int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
@@ -51,6 +55,9 @@ namespace NIMBUS__MUSIC_PLAYER_
                 // Highlight the double-clicked control
                 clickedControl.BackColor = Highlighted;
             }
+
+            // Force all buttons into the Play state
+            PlayerState.ForcePlayState();
 
             // Get the song name from the label
             string songName = Artistlbl.Text;

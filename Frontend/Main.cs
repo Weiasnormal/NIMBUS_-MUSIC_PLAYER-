@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Guna.UI.WinForms;
 using Guna.UI2.HtmlRenderer.Adapters.Entities;
 using Guna.UI2.WinForms;
+using NIMBUS__MUSIC_PLAYER_.Helper;
 using NimbusClassLibrary;
 using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
@@ -32,6 +33,14 @@ namespace NIMBUS__MUSIC_PLAYER_
             // test test = new test();
             // MessageBox.Show(test.test1());
 
+            PlayerState.OnStateChanged += UpdatePlayPauseButton;
+
+            guna2GradientButton2.Click += (sender, e) =>
+            {
+                // Toggle the player state
+                PlayerState.IsPlaying = !PlayerState.IsPlaying;
+            };
+
         }
         private void Initialize_Navigation_Controls()
         {
@@ -44,7 +53,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 new QueuePanel(),
                 new PlaylistPanel()
             };
-
+            
             dashboardNavigation = new DashboardNavigation(list, ViewPanel);
             dashboardNavigation.Display(0);
         }
@@ -744,6 +753,15 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
-        
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void UpdatePlayPauseButton(bool isPlaying)
+        {
+            guna2GradientButton2.Checked = isPlaying ? true : false;
+            //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
+        }
     }
 }

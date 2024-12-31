@@ -1,4 +1,6 @@
-﻿using Guna.UI2.WinForms;
+﻿using Guna.UI.WinForms;
+using Guna.UI2.WinForms;
+using NIMBUS__MUSIC_PLAYER_.Helper;
 using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
 using System;
@@ -20,6 +22,16 @@ namespace NIMBUS__MUSIC_PLAYER_
         public AllSongPanel()
         {
             InitializeComponent();
+
+            // Subscribe to state changes
+            PlayerState.OnStateChanged += UpdatePlayPauseButton;
+
+            guna2GradientButton2.Click += (sender, e) =>
+            {
+                // Toggle the player state
+                PlayerState.IsPlaying = !PlayerState.IsPlaying;
+            };
+
             // Capture the original size of the form
             originalFormSize = this.Size;
 
@@ -162,6 +174,22 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void DetailPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            TogglePlayPause();
+        }
+
+        public void TogglePlayPause()
+        {
+           
+        }
+
+        private void UpdatePlayPauseButton(bool isPlaying)
+        {
+            guna2GradientButton2.Checked = isPlaying ? true : false;
+            //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
         }
     }
 }

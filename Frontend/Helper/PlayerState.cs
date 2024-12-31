@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NIMBUS__MUSIC_PLAYER_.Helper
+{
+    public static class PlayerState
+    {
+        private static bool _isPlaying;
+
+        public static bool IsPlaying
+        {
+            get => _isPlaying;
+            set
+            {
+                if (_isPlaying != value)
+                {
+                    _isPlaying = value;
+                    OnStateChanged?.Invoke(_isPlaying);
+                }
+            }
+        }
+
+        public static event Action<bool> OnStateChanged;
+
+        // Method to force the Play state
+        public static void ForcePlayState()
+        {
+            IsPlaying = false; // Set to false, then set to true to ensure proper notification
+            IsPlaying = true;
+        }
+    }
+}

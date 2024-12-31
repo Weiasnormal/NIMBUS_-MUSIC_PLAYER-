@@ -209,8 +209,9 @@
             // 
             this.artistPlaceholder1.BackColor = System.Drawing.Color.Transparent;
             this.artistPlaceholder1.Location = new System.Drawing.Point(3, 3);
+            this.artistPlaceholder1.Margin = new System.Windows.Forms.Padding(3, 3, 75, 60);
             this.artistPlaceholder1.Name = "artistPlaceholder1";
-            this.artistPlaceholder1.Size = new System.Drawing.Size(329, 285);
+            this.artistPlaceholder1.Size = new System.Drawing.Size(223, 285);
             this.artistPlaceholder1.TabIndex = 0;
             // 
             // ArtistsPanel

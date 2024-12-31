@@ -43,7 +43,6 @@
             this.lblAlbum = new System.Windows.Forms.Label();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
             this.AllSongsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.horizontalSongs1 = new NIMBUS__MUSIC_PLAYER_.HorizontalSongs();
             this.SongsMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -52,6 +51,7 @@
             this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.AllSongsScrollbar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.horizontalSongs1 = new NIMBUS__MUSIC_PLAYER_.HorizontalSongs();
             this.MenuTab.SuspendLayout();
             this.DetailPanel.SuspendLayout();
             this.AllSongsPanel.SuspendLayout();
@@ -90,13 +90,14 @@
             this.MenuTab.BorderRadius = 10;
             this.MenuTab.Controls.Add(this.guna2GradientButton1);
             this.MenuTab.Controls.Add(this.guna2GradientButton4);
-            this.MenuTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.MenuTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.MenuTab.Location = new System.Drawing.Point(269, 6);
             this.MenuTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuTab.Name = "MenuTab";
             this.MenuTab.ShadowDecoration.Parent = this.MenuTab;
             this.MenuTab.Size = new System.Drawing.Size(239, 114);
             this.MenuTab.TabIndex = 34;
+            this.MenuTab.UseTransparentBackground = true;
             // 
             // guna2GradientButton1
             // 
@@ -384,18 +385,6 @@
             this.AllSongsPanel.TabIndex = 30;
             this.AllSongsPanel.WrapContents = false;
             // 
-            // horizontalSongs1
-            // 
-            this.horizontalSongs1.AutoSize = true;
-            this.horizontalSongs1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.horizontalSongs1.BackColor = System.Drawing.Color.Transparent;
-            this.horizontalSongs1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.horizontalSongs1.Location = new System.Drawing.Point(3, 2);
-            this.horizontalSongs1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.horizontalSongs1.Name = "horizontalSongs1";
-            this.horizontalSongs1.Size = new System.Drawing.Size(1191, 58);
-            this.horizontalSongs1.TabIndex = 0;
-            // 
             // SongsMenu
             // 
             this.SongsMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -405,13 +394,14 @@
             this.SongsMenu.Controls.Add(this.guna2GradientButton6);
             this.SongsMenu.Controls.Add(this.guna2GradientButton3);
             this.SongsMenu.Controls.Add(this.guna2GradientButton5);
-            this.SongsMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.SongsMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.SongsMenu.Location = new System.Drawing.Point(931, 0);
             this.SongsMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SongsMenu.Name = "SongsMenu";
             this.SongsMenu.ShadowDecoration.Parent = this.SongsMenu;
             this.SongsMenu.Size = new System.Drawing.Size(249, 215);
             this.SongsMenu.TabIndex = 39;
+            this.SongsMenu.UseTransparentBackground = true;
             // 
             // guna2GradientButton7
             // 
@@ -522,6 +512,7 @@
             this.guna2GradientButton5.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton5.CheckedState.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton5.CheckedState.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.guna2GradientButton5.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton5.CustomImages.Parent = this.guna2GradientButton5;
             this.guna2GradientButton5.FillColor = System.Drawing.Color.Transparent;
@@ -583,7 +574,7 @@
             this.AllSongsScrollbar.HoverState.Parent = null;
             this.AllSongsScrollbar.LargeChange = 10;
             this.AllSongsScrollbar.Location = new System.Drawing.Point(1260, 135);
-            this.AllSongsScrollbar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AllSongsScrollbar.Margin = new System.Windows.Forms.Padding(5);
             this.AllSongsScrollbar.MouseWheelBarPartitions = 10;
             this.AllSongsScrollbar.Name = "AllSongsScrollbar";
             this.AllSongsScrollbar.PressedState.Parent = this.AllSongsScrollbar;
@@ -591,6 +582,18 @@
             this.AllSongsScrollbar.Size = new System.Drawing.Size(11, 542);
             this.AllSongsScrollbar.TabIndex = 1;
             this.AllSongsScrollbar.ThumbColor = System.Drawing.Color.White;
+            // 
+            // horizontalSongs1
+            // 
+            this.horizontalSongs1.AutoSize = true;
+            this.horizontalSongs1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.horizontalSongs1.BackColor = System.Drawing.Color.Transparent;
+            this.horizontalSongs1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.horizontalSongs1.Location = new System.Drawing.Point(3, 2);
+            this.horizontalSongs1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.horizontalSongs1.Name = "horizontalSongs1";
+            this.horizontalSongs1.Size = new System.Drawing.Size(1191, 58);
+            this.horizontalSongs1.TabIndex = 0;
             // 
             // AllSongPanel
             // 

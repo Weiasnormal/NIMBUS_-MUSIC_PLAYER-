@@ -120,13 +120,14 @@
             this.MenuTabs.BorderRadius = 10;
             this.MenuTabs.Controls.Add(this.guna2GradientButton1);
             this.MenuTabs.Controls.Add(this.guna2GradientButton4);
-            this.MenuTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.MenuTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.MenuTabs.ForeColor = System.Drawing.Color.Transparent;
             this.MenuTabs.Location = new System.Drawing.Point(172, 118);
             this.MenuTabs.Name = "MenuTabs";
             this.MenuTabs.ShadowDecoration.Parent = this.MenuTabs;
             this.MenuTabs.Size = new System.Drawing.Size(242, 114);
             this.MenuTabs.TabIndex = 34;
+            this.MenuTabs.UseTransparentBackground = true;
             // 
             // guna2GradientButton1
             // 
@@ -497,13 +498,14 @@
             this.SongTabs.BorderRadius = 10;
             this.SongTabs.Controls.Add(this.guna2GradientButton3);
             this.SongTabs.Controls.Add(this.guna2GradientButton5);
-            this.SongTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.SongTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.SongTabs.ForeColor = System.Drawing.Color.Transparent;
             this.SongTabs.Location = new System.Drawing.Point(474, 110);
             this.SongTabs.Name = "SongTabs";
             this.SongTabs.ShadowDecoration.Parent = this.SongTabs;
             this.SongTabs.Size = new System.Drawing.Size(284, 114);
             this.SongTabs.TabIndex = 35;
+            this.SongTabs.UseTransparentBackground = true;
             // 
             // QueuePanel
             // 

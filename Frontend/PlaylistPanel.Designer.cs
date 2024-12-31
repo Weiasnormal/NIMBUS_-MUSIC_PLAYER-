@@ -365,12 +365,12 @@
             this.SongsMenu.ShadowDecoration.Parent = this.SongsMenu;
             this.SongsMenu.Size = new System.Drawing.Size(310, 215);
             this.SongsMenu.TabIndex = 39;
+            this.SongsMenu.UseTransparentBackground = true;
             // 
             // guna2GradientButton7
             // 
             this.guna2GradientButton7.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton7.BorderRadius = 10;
-            this.guna2GradientButton7.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2GradientButton7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton7.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton7.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -404,7 +404,6 @@
             // 
             this.guna2GradientButton6.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton6.BorderRadius = 10;
-            this.guna2GradientButton6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2GradientButton6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton6.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton6.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -437,7 +436,6 @@
             // 
             this.guna2GradientButton3.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton3.BorderRadius = 10;
-            this.guna2GradientButton3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2GradientButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton3.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton3.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -470,7 +468,6 @@
             // 
             this.guna2GradientButton5.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton5.BorderRadius = 10;
-            this.guna2GradientButton5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2GradientButton5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton5.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientButton5.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -510,6 +507,7 @@
             this.MenuTab.ShadowDecoration.Parent = this.MenuTab;
             this.MenuTab.Size = new System.Drawing.Size(239, 114);
             this.MenuTab.TabIndex = 40;
+            this.MenuTab.UseTransparentBackground = true;
             // 
             // guna2GradientButton1
             // 

@@ -34,6 +34,8 @@
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.albumPlaceholder1 = new NIMBUS__MUSIC_PLAYER_.AlbumPlaceholder();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchBar
@@ -197,10 +199,19 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.albumPlaceholder1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 147);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1196, 538);
             this.flowLayoutPanel1.TabIndex = 37;
+            // 
+            // albumPlaceholder1
+            // 
+            this.albumPlaceholder1.BackColor = System.Drawing.Color.Transparent;
+            this.albumPlaceholder1.Location = new System.Drawing.Point(3, 3);
+            this.albumPlaceholder1.Name = "albumPlaceholder1";
+            this.albumPlaceholder1.Size = new System.Drawing.Size(220, 285);
+            this.albumPlaceholder1.TabIndex = 0;
             // 
             // AlbumsPanel
             // 
@@ -215,6 +226,7 @@
             this.Controls.Add(this.Dropdown_Artist);
             this.Name = "AlbumsPanel";
             this.Size = new System.Drawing.Size(1272, 685);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +240,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private AlbumPlaceholder albumPlaceholder1;
     }
 }

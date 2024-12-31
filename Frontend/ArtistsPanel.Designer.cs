@@ -34,6 +34,8 @@
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.artistPlaceholder1 = new NIMBUS__MUSIC_PLAYER_.ArtistPlaceholder();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblArtistPanel
@@ -49,6 +51,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.artistPlaceholder1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 147);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1196, 538);
@@ -202,6 +205,14 @@
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 38;
             // 
+            // artistPlaceholder1
+            // 
+            this.artistPlaceholder1.BackColor = System.Drawing.Color.Transparent;
+            this.artistPlaceholder1.Location = new System.Drawing.Point(3, 3);
+            this.artistPlaceholder1.Name = "artistPlaceholder1";
+            this.artistPlaceholder1.Size = new System.Drawing.Size(329, 285);
+            this.artistPlaceholder1.TabIndex = 0;
+            // 
             // ArtistsPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,6 +226,7 @@
             this.Controls.Add(this.lblArtistPanel);
             this.Name = "ArtistsPanel";
             this.Size = new System.Drawing.Size(1272, 685);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +239,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
+        private ArtistPlaceholder artistPlaceholder1;
     }
 }

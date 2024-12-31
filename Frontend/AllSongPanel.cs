@@ -52,8 +52,6 @@ namespace NIMBUS__MUSIC_PLAYER_
             AllSongsPanel.AutoScroll = true;
             AllSongsPanel.VerticalScroll.Visible = false;
 
-            loadSongs();
-
             this.Dock = DockStyle.Right;
             AllSongsScrollbar.Scroll += (sender, e) => { AllSongsPanel.VerticalScroll.Value = AllSongsScrollbar.Value; };
             AllSongsScrollbar.Height = AllSongsPanel.Height;
@@ -65,6 +63,17 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             // then update the form
             AllSongsPanel.PerformLayout();
+
+            MenuTab.Visible = false;
+            SongsMenu.Visible = false;
+
+            loadSongs();
+
+        }
+        private void UpdatePlayPauseButton(bool isPlaying)
+        {
+            guna2GradientButton2.Checked = isPlaying ? true : false;
+            //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
         }
 
         private void AllSongPanel_Resize(object sender, EventArgs e)
@@ -166,9 +175,13 @@ namespace NIMBUS__MUSIC_PLAYER_
             List<Song> songs = (List<Song>)controller.GetCollection<Song>();
             foreach(Song song in songs) 
             {
-                AllSongsPanel.Controls.Add(new HorizontalSongs(songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration));
+                var songControl = new HorizontalSongs(SongsMenu, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration);
+                songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
+                AllSongsPanel.Controls.Add(songControl);
+
                 songnum++;
             }
+
         }
 
         private void DetailPanel_Paint(object sender, PaintEventArgs e)
@@ -176,20 +189,28 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         }
 
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        private void Menubtn_Click(object sender, EventArgs e)
         {
-            TogglePlayPause();
+            MenuTab.Visible = !MenuTab.Visible;
         }
 
-        public void TogglePlayPause()
+        private void SongControl_MenuButtonClicked(object sender, EventArgs e)
         {
-           
-        }
+            /*if (!SongsMenu.Visible)
+            {
+                SongsMenu.Visible = true;
+            }
+            else
+            {
+                // Avoid hiding it unintentionally if it's already visible
+                SongsMenu.Visible = false;
+            }*/
+            // Handle the menu button click
+            //MessageBox.Show("Menu Button Clicked!");
+            SongsMenu.Visible = !SongsMenu.Visible; 
 
-        private void UpdatePlayPauseButton(bool isPlaying)
-        {
-            guna2GradientButton2.Checked = isPlaying ? true : false;
-            //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
+            //MessageBox.Show($"Menu button clicked from HorizontalSongs. SongsMenu visible: {SongsMenu.Visible}");
+
         }
     }
 }

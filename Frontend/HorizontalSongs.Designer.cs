@@ -130,6 +130,7 @@
             this.Menubtn.PressedState.Parent = this.Menubtn;
             this.Menubtn.Size = new System.Drawing.Size(51, 33);
             this.Menubtn.TabIndex = 30;
+            this.Menubtn.Click += new System.EventHandler(this.Menubtn_Click);
             // 
             // HorizontalSongs
             // 

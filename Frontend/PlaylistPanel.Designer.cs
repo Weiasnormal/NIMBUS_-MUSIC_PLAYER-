@@ -257,11 +257,11 @@
             // lblPlaylistNamePanel
             // 
             this.lblPlaylistNamePanel.AutoSize = true;
-            this.lblPlaylistNamePanel.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaylistNamePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlaylistNamePanel.ForeColor = System.Drawing.Color.White;
             this.lblPlaylistNamePanel.Location = new System.Drawing.Point(33, 6);
             this.lblPlaylistNamePanel.Name = "lblPlaylistNamePanel";
-            this.lblPlaylistNamePanel.Size = new System.Drawing.Size(311, 55);
+            this.lblPlaylistNamePanel.Size = new System.Drawing.Size(277, 46);
             this.lblPlaylistNamePanel.TabIndex = 5;
             this.lblPlaylistNamePanel.Text = "Playlist Name";
             // 
@@ -337,6 +337,7 @@
             this.Menubtn.PressedState.Parent = this.Menubtn;
             this.Menubtn.Size = new System.Drawing.Size(51, 33);
             this.Menubtn.TabIndex = 6;
+            this.Menubtn.Click += new System.EventHandler(this.Menubtn_Click);
             // 
             // guna2ImageButton2
             // 

@@ -63,6 +63,13 @@ namespace NIMBUS__MUSIC_PLAYER_
         public QueuePanel()
         {
             InitializeComponent();
+
+            MenuTabs.Visible = false;   
+        }
+
+        private void Menubtn_Click(object sender, EventArgs e)
+        {
+            MenuTabs.Visible = !MenuTabs.Visible;
         }
     }
 }

@@ -100,23 +100,6 @@ namespace NIMBUS__MUSIC_PLAYER_
             ShowAddPlaylist.Visible = false;
         }
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void ApplyDarkTheme()
         {
             var BGColor = Color.FromArgb(18, 18, 18);

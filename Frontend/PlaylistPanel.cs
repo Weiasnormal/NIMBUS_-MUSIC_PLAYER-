@@ -16,6 +16,8 @@ namespace NIMBUS__MUSIC_PLAYER_
         public PlaylistPanel()
         {
             InitializeComponent();
+
+            MenuTab.Visible = false;
         }
 
         public Panel DetailsPanel
@@ -71,6 +73,11 @@ namespace NIMBUS__MUSIC_PLAYER_
         public Guna2GradientButton btn6
         {
             get { return guna2GradientButton1; }
+        }
+
+        private void Menubtn_Click(object sender, EventArgs e)
+        {
+            MenuTab.Visible = !MenuTab.Visible;
         }
     }
 }

@@ -75,6 +75,13 @@ namespace NIMBUS__MUSIC_PLAYER_
         public FavoritePanel()
         {
             InitializeComponent();
+
+            MenuTabs.Visible = false;
+        }
+
+        private void Menubtn_Click(object sender, EventArgs e)
+        {
+            MenuTabs.Visible = !MenuTabs.Visible;
         }
     }
 }

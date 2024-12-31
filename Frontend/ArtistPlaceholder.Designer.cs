@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.TitleSonglbl = new System.Windows.Forms.Label();
+            this.AlbumPhoto = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlbumPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleSonglbl
@@ -48,32 +47,27 @@
             this.TitleSonglbl.Text = "Unknown Artist";
             this.TitleSonglbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // AlbumPhoto
+            // 
+            this.AlbumPhoto.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Default_Album;
+            this.AlbumPhoto.Location = new System.Drawing.Point(0, 0);
+            this.AlbumPhoto.Name = "AlbumPhoto";
+            this.AlbumPhoto.Size = new System.Drawing.Size(220, 220);
+            this.AlbumPhoto.TabIndex = 19;
+            this.AlbumPhoto.TabStop = false;
+            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel1.Controls.Add(this.guna2GradientButton2);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 55);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 54);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(220, 165);
-            this.guna2GradientPanel1.TabIndex = 18;
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(220, 168);
+            this.guna2GradientPanel1.TabIndex = 20;
             this.guna2GradientPanel1.UseTransparentBackground = true;
-            // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Default_Artist;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(220, 220);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 17;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
             // guna2GradientButton2
             // 
@@ -93,26 +87,27 @@
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
             this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(166, 111);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(166, 168);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
             this.guna2GradientButton2.PressedColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Size = new System.Drawing.Size(51, 51);
+            this.guna2GradientButton2.Size = new System.Drawing.Size(51, 54);
             this.guna2GradientButton2.TabIndex = 25;
             this.guna2GradientButton2.TextOffset = new System.Drawing.Point(15, 0);
+            this.guna2GradientButton2.UseTransparentBackground = true;
             // 
             // ArtistPlaceholder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Controls.Add(this.gunaCirclePictureBox1);
+            this.Controls.Add(this.AlbumPhoto);
             this.Controls.Add(this.TitleSonglbl);
             this.Name = "ArtistPlaceholder";
             this.Size = new System.Drawing.Size(220, 285);
-            this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlbumPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +115,7 @@
 
         #endregion
         private System.Windows.Forms.Label TitleSonglbl;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
+        private System.Windows.Forms.PictureBox AlbumPhoto;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
     }

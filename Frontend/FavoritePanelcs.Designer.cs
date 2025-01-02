@@ -44,7 +44,7 @@
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Menu_AddPlaylist = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -298,7 +298,7 @@
             this.SongTab.Controls.Add(this.guna2GradientButton7);
             this.SongTab.Controls.Add(this.guna2GradientButton6);
             this.SongTab.Controls.Add(this.guna2GradientButton3);
-            this.SongTab.Controls.Add(this.guna2GradientButton5);
+            this.SongTab.Controls.Add(this.Menu_AddPlaylist);
             this.SongTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.SongTab.Location = new System.Drawing.Point(410, 21);
             this.SongTab.Name = "SongTab";
@@ -404,37 +404,38 @@
             this.guna2GradientButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton3.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // guna2GradientButton5
+            // Menu_AddPlaylist
             // 
-            this.guna2GradientButton5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton5.BorderRadius = 10;
-            this.guna2GradientButton5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton5.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton5.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton5.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.CheckedState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton5.CustomImages.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton5.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton5.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton5.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.HoverState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoPlaylist;
-            this.guna2GradientButton5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton5.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2GradientButton5.Location = new System.Drawing.Point(7, 10);
-            this.guna2GradientButton5.Name = "guna2GradientButton5";
-            this.guna2GradientButton5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton5.ShadowDecoration.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Size = new System.Drawing.Size(298, 45);
-            this.guna2GradientButton5.TabIndex = 22;
-            this.guna2GradientButton5.Text = "Add to other playlist";
-            this.guna2GradientButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton5.TextOffset = new System.Drawing.Point(20, 0);
+            this.Menu_AddPlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.Menu_AddPlaylist.BorderRadius = 10;
+            this.Menu_AddPlaylist.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.Menu_AddPlaylist.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.Menu_AddPlaylist.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu_AddPlaylist.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.Menu_AddPlaylist.CheckedState.Parent = this.Menu_AddPlaylist;
+            this.Menu_AddPlaylist.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Menu_AddPlaylist.CustomImages.Parent = this.Menu_AddPlaylist;
+            this.Menu_AddPlaylist.FillColor = System.Drawing.Color.Transparent;
+            this.Menu_AddPlaylist.FillColor2 = System.Drawing.Color.Transparent;
+            this.Menu_AddPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu_AddPlaylist.ForeColor = System.Drawing.Color.White;
+            this.Menu_AddPlaylist.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.Menu_AddPlaylist.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.Menu_AddPlaylist.HoverState.ForeColor = System.Drawing.Color.White;
+            this.Menu_AddPlaylist.HoverState.Parent = this.Menu_AddPlaylist;
+            this.Menu_AddPlaylist.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoPlaylist;
+            this.Menu_AddPlaylist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Menu_AddPlaylist.ImageOffset = new System.Drawing.Point(10, 0);
+            this.Menu_AddPlaylist.Location = new System.Drawing.Point(7, 10);
+            this.Menu_AddPlaylist.Name = "Menu_AddPlaylist";
+            this.Menu_AddPlaylist.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.Menu_AddPlaylist.ShadowDecoration.Parent = this.Menu_AddPlaylist;
+            this.Menu_AddPlaylist.Size = new System.Drawing.Size(298, 45);
+            this.Menu_AddPlaylist.TabIndex = 22;
+            this.Menu_AddPlaylist.Text = "Add to other playlist";
+            this.Menu_AddPlaylist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Menu_AddPlaylist.TextOffset = new System.Drawing.Point(20, 0);
+            this.Menu_AddPlaylist.Click += new System.EventHandler(this.Menu_AddPlaylist_Click);
             // 
             // SearchBar
             // 
@@ -625,7 +626,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
+        private Guna.UI2.WinForms.Guna2GradientButton Menu_AddPlaylist;
         private Guna.UI2.WinForms.Guna2Panel MenuTabs;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;

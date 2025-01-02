@@ -17,6 +17,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         private WindowsMediaPlayer player;
         private string currentSongPath; // To keep track of the current song path
 
+        //private Form _addToPlaylistForm;
         private Guna2Panel SongsMenu;
         private string title;
         private string thumbnail;
@@ -35,7 +36,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             this.DoubleClick += HorizontalSongs_DoubleClick;
         }
 
-        public HorizontalSongs(Guna2Panel SongsMenu, int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
+        public HorizontalSongs( Guna2Panel SongsMenu, int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
         {
             InitializeComponent();
             this.SongsMenu = SongsMenu;
@@ -188,7 +189,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             MenuButtonClicked?.Invoke(this, EventArgs.Empty);
         }
-       
+        
 
     }
 }

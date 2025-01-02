@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WMPLib;
 
 namespace NIMBUS__MUSIC_PLAYER_.Helper
 {
@@ -31,5 +32,11 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
             IsPlaying = false; // Set to false, then set to true to ensure proper notification
             IsPlaying = true;
         }
+
+        #region Current Playing
+        public static WindowsMediaPlayer player = new WindowsMediaPlayer();
+        public static string currentSongPath = string.Empty; // To keep track of the current song path
+
+        #endregion
     }
 }

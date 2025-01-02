@@ -748,5 +748,11 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2GradientButton2.Checked = isPlaying ? true : false;
             //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
         }
+
+        private void Queuebtn_Click(object sender, EventArgs e)
+        {
+            btnSidebar_Queue_Click(sender, e);
+            btnSidebar_Queue.Checked = true;
+        }
     }
 }

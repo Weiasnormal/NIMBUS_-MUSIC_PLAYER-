@@ -376,7 +376,6 @@
             this.AllSongsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AllSongsPanel.Controls.Add(this.horizontalSongs1);
             this.AllSongsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.AllSongsPanel.Location = new System.Drawing.Point(45, 193);
             this.AllSongsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

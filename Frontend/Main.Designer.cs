@@ -56,7 +56,7 @@
             this.VolumeBar = new Guna.UI2.WinForms.Guna2TrackBar();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Queuebtn = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -80,7 +80,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Queuebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -305,7 +305,7 @@
             this.SearchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.SearchBar.IconLeftSize = new System.Drawing.Size(15, 15);
             this.SearchBar.Location = new System.Drawing.Point(21, 26);
-            this.SearchBar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SearchBar.Margin = new System.Windows.Forms.Padding(5);
             this.SearchBar.Name = "SearchBar";
             this.SearchBar.PasswordChar = '\0';
             this.SearchBar.PlaceholderForeColor = System.Drawing.Color.White;
@@ -631,7 +631,7 @@
             this.panel3.Controls.Add(this.VolumeBar);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox10);
-            this.panel3.Controls.Add(this.pictureBox9);
+            this.panel3.Controls.Add(this.Queuebtn);
             this.panel3.Controls.Add(this.pictureBox11);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.pictureBox12);
@@ -739,18 +739,19 @@
             this.pictureBox10.TabIndex = 14;
             this.pictureBox10.TabStop = false;
             // 
-            // pictureBox9
+            // Queuebtn
             // 
-            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__6_;
-            this.pictureBox9.Location = new System.Drawing.Point(1133, 58);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 18);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox9.TabIndex = 13;
-            this.pictureBox9.TabStop = false;
+            this.Queuebtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Queuebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Queuebtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__6_;
+            this.Queuebtn.Location = new System.Drawing.Point(1133, 58);
+            this.Queuebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Queuebtn.Name = "Queuebtn";
+            this.Queuebtn.Size = new System.Drawing.Size(24, 18);
+            this.Queuebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Queuebtn.TabIndex = 13;
+            this.Queuebtn.TabStop = false;
+            this.Queuebtn.Click += new System.EventHandler(this.Queuebtn_Click);
             // 
             // pictureBox11
             // 
@@ -963,7 +964,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Queuebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -1002,7 +1003,7 @@
         private System.Windows.Forms.Label EndTime;
         private System.Windows.Forms.Label TimePlayed;
         private Guna.UI2.WinForms.Guna2ProgressBar TimeSong;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox Queuebtn;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;

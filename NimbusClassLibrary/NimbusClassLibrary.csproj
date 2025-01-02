@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ArtistController.cs" />
+    <Compile Include="Controller\PlaylistController.cs" />
     <Compile Include="Controller\PlaySongController.cs" />
     <Compile Include="Controller\SongController.cs" />
     <Compile Include="Data\DbConnect.cs" />
@@ -143,9 +144,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />

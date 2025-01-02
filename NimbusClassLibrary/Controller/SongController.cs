@@ -24,7 +24,7 @@ namespace NimbusClassLibrary.Controller
         }
         public T GetSingle<T>(int id) where T : t
         {
-            return (T)DBContext.songs.SingleOrDefault(s => s.Id == id) ;
+            return (T)DBContext.songs.FirstOrDefault(s => s.Id == id) ;
         }
         public IEnumerable<T> GetCollection<T>() where T : t
         {

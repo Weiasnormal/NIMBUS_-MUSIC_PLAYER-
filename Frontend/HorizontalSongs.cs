@@ -67,10 +67,10 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
 
             // Force all buttons into the Play state
-            PlayerState.ForcePlayState();
+           //PlayerState.ForcePlayState();
 
             // Get the song name from the label
-            string songName = Artistlbl.Text;
+            string songName = Titlelbl.Text;
             
             // Stop the current song if it's playing before starting the new song
             StopAudio(); // Ensure that the current song stops immediately
@@ -85,7 +85,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             SongController<Song> songController = new SongController<Song>();
 
             // Query the song using the song name
-            var song = DBContext.songs.FirstOrDefault(s => s.Artist.Display_Name == songName);
+            var song = DBContext.songs.FirstOrDefault(s => s.Title.Equals(songName, StringComparison.OrdinalIgnoreCase));
 
             if (song != null)
             {
@@ -96,15 +96,22 @@ namespace NIMBUS__MUSIC_PLAYER_
                 {
                     string filePath = fetchedSong.File_Path;
 
-                    // Only stop the current song if the new song is different
-                    if (filePath != PlayerState.currentSongPath)
+                    // Check if the new song is different from the current one
+                    if (PlayerState.currentSongPath != filePath)
                     {
-                        // Stop the current song if another one is selected
+                        // Stop the current song before playing the new one
                         StopAudio();
+
+                        // Update the current song path
+                        PlayerState.currentSongPath = filePath;
 
                         // Play the new song
                         PlayAudio(filePath);
-                        PlayerState.currentSongPath = filePath; // Update the current song path
+                    }
+                    else
+                    {
+                        // If the same song is clicked again, restart it
+                        PlayAudio(filePath);
                     }
                 }
                 else
@@ -118,6 +125,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
+
+
         private async void PlayAudio(string filePath)
         {
             // Check if the file exists before attempting to play it
@@ -129,9 +138,14 @@ namespace NIMBUS__MUSIC_PLAYER_
                     // Use Invoke to ensure this runs on the UI thread
                     this.Invoke(new Action(() =>
                     {
-                        // Stop any currently playing song before starting the new one
+                        // Set the player's URL to the new file path
                         PlayerState.player.URL = filePath;
+
+                        // Start playback
                         PlayerState.player.controls.play();
+
+                        // Update the playing state
+                        PlayerState.IsPlaying = true;
                     }));
                 });
             }
@@ -141,24 +155,24 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
+
         private bool FileExists(string filePath)
         {
             return System.IO.File.Exists(filePath);
         }
 
         private void StopAudio()
+{
+    if (PlayerState.player.playState != WMPPlayState.wmppsStopped)
+    {
+        this.Invoke(new Action(() =>
         {
-            // Check if a song is currently playing
-            if (PlayerState.player.playState != WMPPlayState.wmppsStopped)
-            {
-                // Stop the audio
-                this.Invoke(new Action(() =>
-                {
-                    PlayerState.player.controls.stop();
-                    PlayerState.currentSongPath = string.Empty; // Reset the current song path after stopping
-                }));
-            }
-        }
+            PlayerState.player.controls.stop();
+            PlayerState.currentSongPath = string.Empty; // Reset current song path
+        }));
+    }
+}
+
 
         // Optional: Handle form closing and stop audio if necessary
         private void HorizontalSongs_FormClosing(object sender, FormClosingEventArgs e)

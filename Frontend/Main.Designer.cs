@@ -714,6 +714,7 @@
             this.VolumeBar.Size = new System.Drawing.Size(101, 27);
             this.VolumeBar.TabIndex = 9;
             this.VolumeBar.ThumbColor = System.Drawing.Color.White;
+            this.VolumeBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.VolumeBar_Scroll);
             // 
             // pictureBox8
             // 

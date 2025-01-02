@@ -101,7 +101,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             ShowAddPlaylist.Visible = false;
         }
-
+        #region Apply Dark Theme
         private void ApplyDarkTheme()
         {
             var BGColor = Color.FromArgb(18, 18, 18);
@@ -287,8 +287,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
-
-
+#endregion
+        #region Apply Blue Theme
         private void ApplyBlueTheme()
         {
             var BGColor = Color.FromArgb(21, 28, 33);
@@ -473,7 +473,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
-
+        #endregion
+        #region Apply Green Theme
         private void ApplyGreenTheme()
         {
             var BGColor = Color.FromArgb(33, 40, 38);        
@@ -658,6 +659,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
+        #endregion
 
         private void TimeSong_ValueChanged(object sender, EventArgs e)
         {
@@ -753,6 +755,12 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             btnSidebar_Queue_Click(sender, e);
             btnSidebar_Queue.Checked = true;
+        }
+
+        private void VolumeBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            PlayerState.SetVolume(VolumeBar.Value);
+            
         }
     }
 }

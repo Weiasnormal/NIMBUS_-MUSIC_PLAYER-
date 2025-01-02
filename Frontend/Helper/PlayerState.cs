@@ -34,9 +34,17 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         }
 
         #region Current Playing
+        /*public static WindowsMediaPlayer player { get; private set; } = new WindowsMediaPlayer();*/
         public static WindowsMediaPlayer player = new WindowsMediaPlayer();
         public static string currentSongPath = string.Empty; // To keep track of the current song path
 
+        #endregion
+
+        #region Player Volume
+        public static void SetVolume(int volume)
+        {
+            player.settings.volume = volume; // Range: 0-100
+        }
         #endregion
     }
 }

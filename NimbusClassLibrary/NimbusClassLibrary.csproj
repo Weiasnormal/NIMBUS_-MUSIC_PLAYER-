@@ -131,6 +131,7 @@
     <Compile Include="Controller\SongController.cs" />
     <Compile Include="Data\DbConnect.cs" />
     <Compile Include="Data\DBContext.cs" />
+    <Compile Include="Helpers\GlobalLibraries.cs" />
     <Compile Include="Helpers\Return.cs" />
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IModel.cs" />

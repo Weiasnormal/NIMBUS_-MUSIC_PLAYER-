@@ -9,16 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using NimbusClassLibrary;
+using NimbusClassLibrary.Model;
+using System.Threading;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class QueuePanel : UserControl
     {
+     
 
-        public Panel DetailsPanel
-        {
-            get { return DetailPanel; }
-        }
+        #region Theme Change
+        public Panel DetailsPanel { get { return DetailPanel; } }
         public Guna2Panel MenuTab
         {
             get { return MenuTabs; }            
@@ -59,17 +62,35 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             get { return guna2GradientButton4; }
         }
-
+        #endregion
         public QueuePanel()
         {
             InitializeComponent();
 
-            MenuTabs.Visible = false;   
+            MenuTabs.Visible = false;
+
+            Helper.Events.AddToQueue += QueuePanel_AddtoQueue;
+            
+        }
+
+        private void QueuePanel_AddtoQueue(object sender, EventArgs e)
+        {
+            int songnum = 1;
+            foreach (Song song in NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song)
+            {
+                flowpanelQueue.Invoke(new Action(() => {
+                    flowpanelQueue.Controls.Add(new HorizontalSongs(SongTabs, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration));
+                }));
+                songnum++;
+            }
+        
         }
 
         private void Menubtn_Click(object sender, EventArgs e)
         {
             MenuTabs.Visible = !MenuTabs.Visible;
         }
+
+
     }
 }

@@ -14,7 +14,16 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class HorizontalSongs : UserControl
     {
-        
+
+        public event Action PlayButtonClicked;
+        public event Action PauseButtonClicked;
+        public event Action<int> VolumeChanged;
+
+        public Guna2GradientButton Playbtn { get; private set; }
+        public Guna2GradientButton Pausebtn { get; private set; }
+        public Guna2TrackBar VolumeBar { get; private set; }
+
+
         private Control SongsMenu;
         private string title;
         private string thumbnail;
@@ -29,6 +38,19 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             // Attach double-click event
             this.DoubleClick += HorizontalSongs_DoubleClick;
+            if (Playbtn == null) Playbtn = new Guna2GradientButton { Text = "Pause" };
+            if (Pausebtn == null) Pausebtn = new Guna2GradientButton { Text = "Pause" };
+            if (VolumeBar == null) VolumeBar = new Guna2TrackBar { Minimum = 0, Maximum = 100, Value = 50 };
+
+            // Attach event handlers
+            Playbtn.Click += (sender, e) => PlayButtonClicked?.Invoke();
+            Pausebtn.Click += (sender, e) => PauseButtonClicked?.Invoke();
+            VolumeBar.Scroll += (sender, e) => VolumeChanged?.Invoke(VolumeBar.Value);
+
+            // Optionally add controls to the user control if not added via designer
+            Controls.Add(Playbtn);
+            Controls.Add(Pausebtn);
+            Controls.Add(VolumeBar);
         }
 
         public HorizontalSongs(Control SongsMenu, int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
@@ -48,6 +70,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         }
 
+        
         public void HorizontalSongs_DoubleClick(object sender, EventArgs e)
         {
             var Highlighted = Color.FromArgb(82, 82, 82);

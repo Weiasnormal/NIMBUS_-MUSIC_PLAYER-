@@ -51,8 +51,9 @@
             this.btnSidebar_Albums = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSidebar_Songs = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Playbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Pausebtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.VolumeBar = new Guna.UI2.WinForms.Guna2TrackBar();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -626,8 +627,9 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Controls.Add(this.Playbtn);
             this.panel3.Controls.Add(this.guna2GradientButton3);
-            this.panel3.Controls.Add(this.guna2GradientButton2);
+            this.panel3.Controls.Add(this.Pausebtn);
             this.panel3.Controls.Add(this.VolumeBar);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox10);
@@ -646,6 +648,34 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1616, 114);
             this.panel3.TabIndex = 11;
+            // 
+            // Playbtn
+            // 
+            this.Playbtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Playbtn.BackColor = System.Drawing.Color.Transparent;
+            this.Playbtn.CheckedState.Parent = this.Playbtn;
+            this.Playbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Playbtn.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Play;
+            this.Playbtn.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Playbtn.CustomImages.ImageOffset = new System.Drawing.Point(0, -15);
+            this.Playbtn.CustomImages.ImageSize = new System.Drawing.Size(45, 45);
+            this.Playbtn.CustomImages.Parent = this.Playbtn;
+            this.Playbtn.FillColor = System.Drawing.Color.Empty;
+            this.Playbtn.FillColor2 = System.Drawing.Color.Empty;
+            this.Playbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Playbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.Playbtn.HoverState.Parent = this.Playbtn;
+            this.Playbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Playbtn.Location = new System.Drawing.Point(787, 42);
+            this.Playbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Playbtn.Name = "Playbtn";
+            this.Playbtn.PressedColor = System.Drawing.Color.Transparent;
+            this.Playbtn.ShadowDecoration.Parent = this.Playbtn;
+            this.Playbtn.Size = new System.Drawing.Size(65, 62);
+            this.Playbtn.TabIndex = 17;
+            this.Playbtn.TextOffset = new System.Drawing.Point(15, 0);
+            this.Playbtn.UseTransparentBackground = true;
+            this.Playbtn.Click += new System.EventHandler(this.Playbtn_Click);
             // 
             // guna2GradientButton3
             // 
@@ -673,34 +703,33 @@
             this.guna2GradientButton3.TabIndex = 16;
             this.guna2GradientButton3.TextOffset = new System.Drawing.Point(15, 0);
             // 
-            // guna2GradientButton2
+            // Pausebtn
             // 
-            this.guna2GradientButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton2.CustomImages.CheckedImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Pause;
-            this.guna2GradientButton2.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Play;
-            this.guna2GradientButton2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2GradientButton2.CustomImages.ImageOffset = new System.Drawing.Point(0, -15);
-            this.guna2GradientButton2.CustomImages.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.Empty;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Empty;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
-            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(787, 42);
-            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Size = new System.Drawing.Size(65, 62);
-            this.guna2GradientButton2.TabIndex = 15;
-            this.guna2GradientButton2.TextOffset = new System.Drawing.Point(15, 0);
-            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
+            this.Pausebtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Pausebtn.BackColor = System.Drawing.Color.Transparent;
+            this.Pausebtn.CheckedState.Parent = this.Pausebtn;
+            this.Pausebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pausebtn.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Pause;
+            this.Pausebtn.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Pausebtn.CustomImages.ImageOffset = new System.Drawing.Point(0, -15);
+            this.Pausebtn.CustomImages.ImageSize = new System.Drawing.Size(45, 45);
+            this.Pausebtn.CustomImages.Parent = this.Pausebtn;
+            this.Pausebtn.FillColor = System.Drawing.Color.Empty;
+            this.Pausebtn.FillColor2 = System.Drawing.Color.Empty;
+            this.Pausebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pausebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.Pausebtn.HoverState.Parent = this.Pausebtn;
+            this.Pausebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Pausebtn.Location = new System.Drawing.Point(787, 42);
+            this.Pausebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pausebtn.Name = "Pausebtn";
+            this.Pausebtn.PressedColor = System.Drawing.Color.Transparent;
+            this.Pausebtn.ShadowDecoration.Parent = this.Pausebtn;
+            this.Pausebtn.Size = new System.Drawing.Size(65, 62);
+            this.Pausebtn.TabIndex = 15;
+            this.Pausebtn.TextOffset = new System.Drawing.Point(15, 0);
+            this.Pausebtn.UseTransparentBackground = true;
+            this.Pausebtn.Click += new System.EventHandler(this.Pausebtn_Click);
             // 
             // VolumeBar
             // 
@@ -1015,7 +1044,7 @@
         private System.Windows.Forms.PictureBox SoundIcon;
         private System.Windows.Forms.Label Artistlbl;
         private System.Windows.Forms.Label TitleSonglbl;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2GradientButton Pausebtn;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton btnImportMusic;
         private Guna.UI2.WinForms.Guna2PictureBox btnAddaPlaylist;
@@ -1023,6 +1052,7 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private System.Windows.Forms.Panel ShowAddPlaylist;
         private System.Windows.Forms.ListBox PlaylistList;
+        private Guna.UI2.WinForms.Guna2GradientButton Playbtn;
     }
 }
 

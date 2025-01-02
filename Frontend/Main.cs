@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AxWMPLib;
 using Guna.UI.WinForms;
 using Guna.UI2.HtmlRenderer.Adapters.Entities;
 using Guna.UI2.WinForms;
@@ -15,6 +16,7 @@ using NimbusClassLibrary;
 using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
 using TagLib;
+using WMPLib;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
@@ -22,20 +24,25 @@ namespace NIMBUS__MUSIC_PLAYER_
     {
         static DashboardNavigation dashboardNavigation;
 
+        private WindowsMediaPlayer player;
+        private HorizontalSongs currentSongControl;
+
         public IEnumerable<object> Buttons { get; private set; }
 
         public Nimbus()
         {
             InitializeComponent();
             Initialize_Navigation_Controls();
+            
             ShowAddPlaylist.Visible = false;
             PlaylistList.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
+            Pausebtn.Visible = false;
 
             PlayerState.OnStateChanged += UpdatePlayPauseButton;
 
-            guna2GradientButton2.Click += (sender, e) =>
+            Pausebtn.Click += (sender, e) =>
             {
                 // Toggle the player state
                 PlayerState.IsPlaying = !PlayerState.IsPlaying;
@@ -740,14 +747,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void UpdatePlayPauseButton(bool isPlaying)
         {
-            guna2GradientButton2.Checked = isPlaying ? true : false;
+            Pausebtn.Checked = isPlaying ? true : false;
             //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
         }
 
@@ -755,6 +757,20 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             btnSidebar_Queue_Click(sender, e);
             btnSidebar_Queue.Checked = true;
+        }
+
+        private void Playbtn_Click(object sender, EventArgs e)
+        {
+            Playbtn.Visible = false;
+            Pausebtn.Visible = true;
+            
+        }
+
+        private void Pausebtn_Click(object sender, EventArgs e)
+        {
+            Playbtn.Visible = true;
+            Pausebtn.Visible = false;
+            
         }
 
         private void VolumeBar_Scroll(object sender, ScrollEventArgs e)

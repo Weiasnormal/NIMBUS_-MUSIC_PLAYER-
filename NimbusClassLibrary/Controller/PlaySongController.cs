@@ -8,30 +8,23 @@ namespace NimbusClassLibrary.Controller
 {
     public class PlaySongController
     {
-        // Current queue of songs to be played (LinkedList)
-        public static LinkedList<Song> Playing_Song = new LinkedList<Song>();
-
-        // Stack to keep track of previously played songs
-        public static Stack<Song> Previous_Songs = new Stack<Song>();
-
         private Song _currentSong;
         private LinkedListNode<Song> _currentSongNode;
 
         public PlaySongController()
         {
-            LoadSongsFromDB();
+            //LoadSongsFromDB();
         }
-
         // Selects a song to play from the current queue
         public void SelectSong(Song song)
         {
-            if (song == null || !Playing_Song.Contains(song))
+            if (song == null || !Helpers.GlobalLibraries.Playing_Song.Contains(song))
             {
                 throw new Exception("Song not found in the current queue.");
             }
 
             _currentSong = song;
-            _currentSongNode = Playing_Song.Find(song);
+            _currentSongNode = Helpers.GlobalLibraries.Playing_Song.Find(song);
         }
 
         // Inserts a song into the stack of previously played songs
@@ -39,16 +32,16 @@ namespace NimbusClassLibrary.Controller
         {
             if (song != null)
             {
-                Previous_Songs.Push(song);
+                Helpers.GlobalLibraries.Previous_Songs.Push(song);
             }
         }
 
         // Retrieves the most recently played song from the stack
         public Song GetPreviousSong()
         {
-            if (Previous_Songs.Count > 0)
+            if (Helpers.GlobalLibraries.Previous_Songs.Count > 0)
             {
-                return Previous_Songs.Pop();
+                return Helpers.GlobalLibraries.Previous_Songs.Pop();
             }
             else
             {
@@ -86,7 +79,7 @@ namespace NimbusClassLibrary.Controller
             {
                 foreach (var song in DBContext.songs)
                 {
-                    Playing_Song.AddLast(song);
+                    Helpers.GlobalLibraries.Playing_Song.AddLast(song);
                 }
             }
             else
@@ -98,13 +91,13 @@ namespace NimbusClassLibrary.Controller
         // Returns the current queue as a list
         public List<Song> GetQueue()
         {
-            return Playing_Song.ToList();
+            return Helpers.GlobalLibraries.Playing_Song.ToList();
         }
 
         // Returns the stack of previous songs as a list
         public List<Song> GetPreviousSongs()
         {
-            return Previous_Songs.ToList();
+            return Helpers.GlobalLibraries.Previous_Songs.ToList();
         }
     }
 }

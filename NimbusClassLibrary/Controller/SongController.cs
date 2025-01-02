@@ -6,6 +6,7 @@ using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,10 @@ namespace NimbusClassLibrary.Controller
         public IEnumerable<T> GetCollection<T>() where T : t
         {
             return DBContext.songs as IEnumerable<T>;
+        }
+        public IEnumerable<Song> GetSongsByArtist<T>(Artist artist)
+        {
+            return DBContext.songs.Where(s => s.Artist == artist).ToList<Song>();
         }
         public bool Create<T>(T t) where T : t
         {

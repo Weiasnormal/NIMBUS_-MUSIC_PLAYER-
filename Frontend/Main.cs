@@ -76,10 +76,12 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
-
+        public void SwitchToPanel(int panelIndex)
+        {
+            dashboardNavigation.Display(panelIndex);
+        }
 
         private void Theme1_Click(object sender, EventArgs e) => ApplyDarkTheme();
-        //private void Theme2_Click(object sender, EventArgs e) => ApplyWhiteTheme();
         private void Theme3_Click(object sender, EventArgs e) => ApplyBlueTheme();
         private void Theme4_Click(object sender, EventArgs e) => ApplyGreenTheme();
 

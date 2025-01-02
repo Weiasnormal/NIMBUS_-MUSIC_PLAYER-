@@ -182,7 +182,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             MenuButtonClicked?.Invoke(this, EventArgs.Empty);
         }
-       
+        
 
     }
 }

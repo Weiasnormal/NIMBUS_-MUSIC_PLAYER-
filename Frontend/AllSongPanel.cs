@@ -69,6 +69,8 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             loadSongs();
 
+            Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
+
         }
         private void UpdatePlayPauseButton(bool isPlaying)
         {
@@ -143,37 +145,34 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         public Guna2GradientButton btn1
         {
-            get { return guna2GradientButton7; }
+            get { return Menu_DeleteSong; }
         }
         public Guna2GradientButton btn2
         {
-            get { return guna2GradientButton6; }
+            get { return Menu_AddQueue; }
         }
         public Guna2GradientButton btn3
         {
-            get { return guna2GradientButton5; }
+            get { return Menu_AddPlaylist; }
         }
         public Guna2GradientButton btn4
         {
             get { return guna2GradientButton4; }
         }
-        public Guna2GradientButton btn5
-        {
-            get { return guna2GradientButton3; }
-        }
-        public Guna2GradientButton btn6
-        {
-            get { return guna2GradientButton1; }
-        }
+        public Guna2GradientButton btn5 { get { return Menu_AddFvorites; }}
+        public Guna2GradientButton btn6 { get { return guna2GradientButton1; }}
 
-
+        private Form _addToPlaylistForm;
         public void loadSongs()
         {
             int songnum = 1;
 
             SongController<Song> controller = new SongController<Song>();
             List<Song> songs = (List<Song>)controller.GetCollection<Song>();
-            foreach(Song song in songs) 
+
+            //Form addToPlaylistForm = new AddtoPlaylist();
+
+            foreach (Song song in songs) 
             {
                 var songControl = new HorizontalSongs(SongsMenu, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration);
                 songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
@@ -212,5 +211,14 @@ namespace NIMBUS__MUSIC_PLAYER_
             //MessageBox.Show($"Menu button clicked from HorizontalSongs. SongsMenu visible: {SongsMenu.Visible}");
 
         }
+
+        private void Menu_AddPlaylist_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is Nimbus mainForm)
+            {
+                mainForm.SwitchToPanel(5);
+            }
+        }
+
     }
 }

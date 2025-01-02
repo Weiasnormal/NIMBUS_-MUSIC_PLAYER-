@@ -538,5 +538,14 @@
   <ItemGroup>
     <None Include="Resources\DarkMenu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Progress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inprogressimage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

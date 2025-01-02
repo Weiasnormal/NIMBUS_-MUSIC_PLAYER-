@@ -57,7 +57,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         public Guna2GradientButton btn3
         {
-            get { return guna2GradientButton5; }
+            get { return Menu_AddPlaylist; }
         }
         public Guna2GradientButton btn4
         {
@@ -77,11 +77,21 @@ namespace NIMBUS__MUSIC_PLAYER_
             InitializeComponent();
 
             MenuTabs.Visible = false;
+
+            Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
         }
 
         private void Menubtn_Click(object sender, EventArgs e)
         {
             MenuTabs.Visible = !MenuTabs.Visible;
+        }
+
+        private void Menu_AddPlaylist_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is Nimbus mainForm)
+            {
+                mainForm.SwitchToPanel(5);
+            }
         }
     }
 }

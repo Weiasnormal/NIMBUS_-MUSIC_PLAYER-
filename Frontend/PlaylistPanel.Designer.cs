@@ -31,7 +31,6 @@
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.PanelFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
@@ -40,17 +39,18 @@
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblPlaylistNamePanel = new System.Windows.Forms.Label();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SongsMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.MenuTab = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.MenuTab = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Menubtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.PanelFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.DetailPanel.SuspendLayout();
             this.SongsMenu.SuspendLayout();
             this.MenuTab.SuspendLayout();
@@ -172,14 +172,6 @@
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 18;
             // 
-            // PanelFlowLayout
-            // 
-            this.PanelFlowLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelFlowLayout.Location = new System.Drawing.Point(43, 193);
-            this.PanelFlowLayout.Name = "PanelFlowLayout";
-            this.PanelFlowLayout.Size = new System.Drawing.Size(1196, 486);
-            this.PanelFlowLayout.TabIndex = 10;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -290,68 +282,6 @@
             this.guna2GradientButton2.TabIndex = 24;
             this.guna2GradientButton2.TextOffset = new System.Drawing.Point(15, 0);
             // 
-            // SearchBar
-            // 
-            this.SearchBar.AutoRoundedCorners = true;
-            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
-            this.SearchBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SearchBar.BorderColor = System.Drawing.Color.White;
-            this.SearchBar.BorderRadius = 19;
-            this.SearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SearchBar.DefaultText = "";
-            this.SearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.SearchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.SearchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SearchBar.DisabledState.Parent = this.SearchBar;
-            this.SearchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SearchBar.FillColor = System.Drawing.Color.Transparent;
-            this.SearchBar.FocusedState.BorderColor = System.Drawing.Color.White;
-            this.SearchBar.FocusedState.Parent = this.SearchBar;
-            this.SearchBar.ForeColor = System.Drawing.Color.Silver;
-            this.SearchBar.HoverState.BorderColor = System.Drawing.Color.White;
-            this.SearchBar.HoverState.Parent = this.SearchBar;
-            this.SearchBar.IconLeft = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.SVG;
-            this.SearchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.SearchBar.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.SearchBar.Location = new System.Drawing.Point(935, 21);
-            this.SearchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SearchBar.Name = "SearchBar";
-            this.SearchBar.PasswordChar = '\0';
-            this.SearchBar.PlaceholderForeColor = System.Drawing.Color.White;
-            this.SearchBar.PlaceholderText = "Search";
-            this.SearchBar.SelectedText = "";
-            this.SearchBar.ShadowDecoration.Parent = this.SearchBar;
-            this.SearchBar.Size = new System.Drawing.Size(304, 40);
-            this.SearchBar.TabIndex = 25;
-            this.SearchBar.TextOffset = new System.Drawing.Point(20, 0);
-            // 
-            // Menubtn
-            // 
-            this.Menubtn.CheckedState.Parent = this.Menubtn;
-            this.Menubtn.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.Menubtn.HoverState.Parent = this.Menubtn;
-            this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
-            this.Menubtn.ImageSize = new System.Drawing.Size(25, 25);
-            this.Menubtn.Location = new System.Drawing.Point(165, 81);
-            this.Menubtn.Name = "Menubtn";
-            this.Menubtn.PressedState.Parent = this.Menubtn;
-            this.Menubtn.Size = new System.Drawing.Size(51, 33);
-            this.Menubtn.TabIndex = 6;
-            this.Menubtn.Click += new System.EventHandler(this.Menubtn_Click);
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(106, 82);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
-            this.guna2ImageButton2.TabIndex = 1;
-            // 
             // SongsMenu
             // 
             this.SongsMenu.BorderRadius = 10;
@@ -365,7 +295,84 @@
             this.SongsMenu.ShadowDecoration.Parent = this.SongsMenu;
             this.SongsMenu.Size = new System.Drawing.Size(310, 215);
             this.SongsMenu.TabIndex = 39;
-            this.SongsMenu.UseTransparentBackground = true;
+            this.SongsMenu.Visible = false;
+            // 
+            // MenuTab
+            // 
+            this.MenuTab.BorderRadius = 10;
+            this.MenuTab.Controls.Add(this.guna2GradientButton1);
+            this.MenuTab.Controls.Add(this.guna2GradientButton4);
+            this.MenuTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.MenuTab.Location = new System.Drawing.Point(165, 120);
+            this.MenuTab.Name = "MenuTab";
+            this.MenuTab.ShadowDecoration.Parent = this.MenuTab;
+            this.MenuTab.Size = new System.Drawing.Size(239, 114);
+            this.MenuTab.TabIndex = 40;
+            this.MenuTab.UseTransparentBackground = true;
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.BorderRadius = 10;
+            this.guna2GradientButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton1.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton1.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.guna2GradientButton1.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_RemovePlaylist;
+            this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton1.ImageOffset = new System.Drawing.Point(10, 0);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(9, 61);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(220, 45);
+            this.guna2GradientButton1.TabIndex = 23;
+            this.guna2GradientButton1.Text = "Delete playlist";
+            this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton1.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // guna2GradientButton4
+            // 
+            this.guna2GradientButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton4.BorderRadius = 10;
+            this.guna2GradientButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton4.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.guna2GradientButton4.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton4.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton4.CheckedState.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton4.CustomImages.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton4.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.guna2GradientButton4.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.guna2GradientButton4.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton4.HoverState.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoQueue;
+            this.guna2GradientButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton4.ImageOffset = new System.Drawing.Point(10, 0);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(9, 10);
+            this.guna2GradientButton4.Name = "guna2GradientButton4";
+            this.guna2GradientButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
+            this.guna2GradientButton4.Size = new System.Drawing.Size(220, 45);
+            this.guna2GradientButton4.TabIndex = 22;
+            this.guna2GradientButton4.Text = "Add to Queue";
+            this.guna2GradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientButton4.TextOffset = new System.Drawing.Point(20, 0);
             // 
             // guna2GradientButton7
             // 
@@ -496,82 +503,77 @@
             this.guna2GradientButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton5.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // MenuTab
+            // SearchBar
             // 
-            this.MenuTab.BorderRadius = 10;
-            this.MenuTab.Controls.Add(this.guna2GradientButton1);
-            this.MenuTab.Controls.Add(this.guna2GradientButton4);
-            this.MenuTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.MenuTab.Location = new System.Drawing.Point(165, 120);
-            this.MenuTab.Name = "MenuTab";
-            this.MenuTab.ShadowDecoration.Parent = this.MenuTab;
-            this.MenuTab.Size = new System.Drawing.Size(239, 114);
-            this.MenuTab.TabIndex = 40;
-            this.MenuTab.UseTransparentBackground = true;
+            this.SearchBar.AutoRoundedCorners = true;
+            this.SearchBar.BackColor = System.Drawing.Color.Transparent;
+            this.SearchBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SearchBar.BorderColor = System.Drawing.Color.White;
+            this.SearchBar.BorderRadius = 19;
+            this.SearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchBar.DefaultText = "";
+            this.SearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.SearchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.SearchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchBar.DisabledState.Parent = this.SearchBar;
+            this.SearchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SearchBar.FillColor = System.Drawing.Color.Transparent;
+            this.SearchBar.FocusedState.BorderColor = System.Drawing.Color.White;
+            this.SearchBar.FocusedState.Parent = this.SearchBar;
+            this.SearchBar.ForeColor = System.Drawing.Color.Silver;
+            this.SearchBar.HoverState.BorderColor = System.Drawing.Color.White;
+            this.SearchBar.HoverState.Parent = this.SearchBar;
+            this.SearchBar.IconLeft = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.SVG;
+            this.SearchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.SearchBar.IconLeftSize = new System.Drawing.Size(15, 15);
+            this.SearchBar.Location = new System.Drawing.Point(935, 21);
+            this.SearchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.PasswordChar = '\0';
+            this.SearchBar.PlaceholderForeColor = System.Drawing.Color.White;
+            this.SearchBar.PlaceholderText = "Search";
+            this.SearchBar.SelectedText = "";
+            this.SearchBar.ShadowDecoration.Parent = this.SearchBar;
+            this.SearchBar.Size = new System.Drawing.Size(304, 40);
+            this.SearchBar.TabIndex = 25;
+            this.SearchBar.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // guna2GradientButton1
+            // Menubtn
             // 
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 10;
-            this.guna2GradientButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton1.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton1.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_RemovePlaylist;
-            this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton1.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2GradientButton1.Location = new System.Drawing.Point(9, 61);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(220, 45);
-            this.guna2GradientButton1.TabIndex = 23;
-            this.guna2GradientButton1.Text = "Delete playlist";
-            this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton1.TextOffset = new System.Drawing.Point(20, 0);
+            this.Menubtn.CheckedState.Parent = this.Menubtn;
+            this.Menubtn.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.Menubtn.HoverState.Parent = this.Menubtn;
+            this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
+            this.Menubtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.Menubtn.Location = new System.Drawing.Point(165, 81);
+            this.Menubtn.Name = "Menubtn";
+            this.Menubtn.PressedState.Parent = this.Menubtn;
+            this.Menubtn.Size = new System.Drawing.Size(51, 33);
+            this.Menubtn.TabIndex = 6;
+            this.Menubtn.Click += new System.EventHandler(this.Menubtn_Click);
             // 
-            // guna2GradientButton4
+            // PanelFlowLayout
             // 
-            this.guna2GradientButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton4.BorderRadius = 10;
-            this.guna2GradientButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton4.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton4.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton4.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.CheckedState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton4.CustomImages.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton4.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton4.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton4.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.HoverState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoQueue;
-            this.guna2GradientButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton4.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2GradientButton4.Location = new System.Drawing.Point(9, 10);
-            this.guna2GradientButton4.Name = "guna2GradientButton4";
-            this.guna2GradientButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Size = new System.Drawing.Size(220, 45);
-            this.guna2GradientButton4.TabIndex = 22;
-            this.guna2GradientButton4.Text = "Add to Queue";
-            this.guna2GradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton4.TextOffset = new System.Drawing.Point(20, 0);
+            this.PanelFlowLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelFlowLayout.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Inprogressimage;
+            this.PanelFlowLayout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelFlowLayout.Location = new System.Drawing.Point(43, 193);
+            this.PanelFlowLayout.Name = "PanelFlowLayout";
+            this.PanelFlowLayout.Size = new System.Drawing.Size(1196, 486);
+            this.PanelFlowLayout.TabIndex = 10;
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(106, 82);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
+            this.guna2ImageButton2.TabIndex = 1;
             // 
             // PlaylistPanel
             // 

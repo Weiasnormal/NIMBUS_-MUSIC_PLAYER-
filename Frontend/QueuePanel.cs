@@ -28,7 +28,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         public Guna2Panel SongMenu
         {
-            get { return SongTabs; }
+            get { return SongsMenu; }
         }
         public Guna2TextBox SearchBars
         {
@@ -56,7 +56,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         public Guna2GradientButton btn3
         {
-            get { return guna2GradientButton5; }
+            get { return Menu_AddPlaylist; }
         }
         public Guna2GradientButton btn4
         {
@@ -67,30 +67,59 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             InitializeComponent();
 
-            MenuTabs.Visible = false;
+            MenuTabs.Visible = false;   
+            SongsMenu.Visible = false;
 
             Helper.Events.AddToQueue += QueuePanel_AddtoQueue;
-            
+
+            Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
         }
 
-        private void QueuePanel_AddtoQueue(object sender, EventArgs e)
+       /* private void QueuePanel_AddtoQueue(object sender, EventArgs e)
         {
             int songnum = 1;
             foreach (Song song in NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song)
             {
                 flowpanelQueue.Invoke(new Action(() => {
-                    flowpanelQueue.Controls.Add(new HorizontalSongs(SongTabs, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration));
+                    flowpanelQueue.Controls.Add(new HorizontalSongs(SongsMenu, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration));
                 }));
                 songnum++;
             }
         
+        }
+*/
+        private void QueuePanel_AddtoQueue(object sender, EventArgs e)
+        {
+            int songnum = 1;
+
+            foreach (Song song in NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song)
+            {
+                flowpanelQueue.Invoke(new Action(() =>
+                {   // created for the horizontal song control
+                    var songControl = new HorizontalSongs(SongsMenu, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration);
+                    songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
+                    flowpanelQueue.Controls.Add(songControl);
+                }));
+                songnum++;
+            }
         }
 
         private void Menubtn_Click(object sender, EventArgs e)
         {
             MenuTabs.Visible = !MenuTabs.Visible;
         }
+        private void SongControl_MenuButtonClicked(object sender, EventArgs e)
+        {
+            SongsMenu.Visible = !SongsMenu.Visible;
 
+        }
 
+        private void Menu_AddPlaylist_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is Nimbus mainForm)
+            {
+                mainForm.SwitchToPanel(5);
+            }
+        }
     }
 }

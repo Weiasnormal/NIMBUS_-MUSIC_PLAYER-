@@ -184,7 +184,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Menubtn_Click(object sender, EventArgs e)
         {
-            foreach (Control control in this.Parent.Controls)
+            /*foreach (Control control in this.Parent.Controls)
             {
                 if (control is Guna2Panel panel && panel.Name == "SongsMenu")
                 {
@@ -192,7 +192,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
             SongsMenu.Visible = !SongsMenu.Visible;
-            MessageBox.Show($"Menu button clicked. SongsMenu visible: {SongsMenu.Visible}");
+            MessageBox.Show($"Menu button clicked. SongsMenu visible: {SongsMenu.Visible}");*/
 
             MenuButtonClicked?.Invoke(this, EventArgs.Empty);
         }

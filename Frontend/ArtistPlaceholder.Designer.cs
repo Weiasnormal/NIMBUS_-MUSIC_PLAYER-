@@ -38,11 +38,11 @@
             // TitleSonglbl
             // 
             this.TitleSonglbl.AutoSize = true;
-            this.TitleSonglbl.Font = new System.Drawing.Font("Montserrat", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleSonglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleSonglbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TitleSonglbl.Location = new System.Drawing.Point(-5, 225);
             this.TitleSonglbl.Name = "TitleSonglbl";
-            this.TitleSonglbl.Size = new System.Drawing.Size(196, 30);
+            this.TitleSonglbl.Size = new System.Drawing.Size(173, 26);
             this.TitleSonglbl.TabIndex = 14;
             this.TitleSonglbl.Text = "Unknown Artist";
             this.TitleSonglbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,7 +83,7 @@
             this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
             this.guna2GradientButton2.FillColor = System.Drawing.Color.Empty;
             this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Empty;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
             this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -95,6 +95,7 @@
             this.guna2GradientButton2.TabIndex = 25;
             this.guna2GradientButton2.TextOffset = new System.Drawing.Point(15, 0);
             this.guna2GradientButton2.UseTransparentBackground = true;
+            this.guna2GradientButton2.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // ArtistPlaceholder
             // 

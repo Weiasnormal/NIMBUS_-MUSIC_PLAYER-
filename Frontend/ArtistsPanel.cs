@@ -15,26 +15,51 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class ArtistsPanel : UserControl
     {
+        ArtistController ArtistController;
         public ArtistsPanel()
         {
             InitializeComponent();
+            ArtistController = new ArtistController();
             loadSongs();
+            loadArtists();
         }
 
+        public void loadArtists()
+        {
+            Dropdown_Artist.Items.Clear();
+            Dropdown_Artist.Items.AddRange(ArtistController.GetCollection<Artist>().ToArray());
+            Dropdown_Artist.DisplayMember = "Display_Name";
+        }
         public void loadSongs()
         {
-            int songnum = 1;
+            FlowlayoutPanelArtist.Controls.Clear();
+            //int songnum = 1;
+            //List<Song> songs;
+            //SongController<Song> controller = new SongController<Song>();
+            //if (artist != null)
+            //{
+            //    songs = (List<Song>)controller.GetSongsByArtist<Song>(artist);
+            //}
+            //else
+            //{
+            //    songs = (List<Song>)controller.GetCollection<Song>();   
+            //}
 
-            SongController<Song> controller = new SongController<Song>();
-            List<Song> songs = (List<Song>)controller.GetCollection<Song>();
-            foreach (Song song in songs)
+            //foreach (Song song in songs)
+            //{
+            //    var songControl = new ArtistPlaceholder(song.Artist.Profile_Pic, song.Artist);
+            //    FlowlayoutPanelArtist.Controls.Add(songControl);
+
+            //    songnum++;
+            //}
+
+
+            List<Artist> artists = ArtistController.GetCollection<Artist>().ToList<Artist>();
+            foreach (Artist artist in artists)
             {
-                var songControl = new ArtistPlaceholder(song.Artist.Profile_Pic, song.Artist);
+                var songControl = new ArtistPlaceholder(artist);
                 FlowlayoutPanelArtist.Controls.Add(songControl);
-
-                songnum++;
             }
-
         }
 
 
@@ -55,6 +80,13 @@ namespace NIMBUS__MUSIC_PLAYER_
         public Guna2ComboBox Dropdown_Sorts
         {
             get { return Dropdown_Sort; }
+        }
+
+        private void Dropdown_Artist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Artist selected = (Artist)Dropdown_Artist.SelectedItem;
+
+            //loadSongs(selected);
         }
     }
 }

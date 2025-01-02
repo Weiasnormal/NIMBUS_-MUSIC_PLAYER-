@@ -14,10 +14,8 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class HorizontalSongs : UserControl
     {
-        private WindowsMediaPlayer player;
-        private string currentSongPath; // To keep track of the current song path
-
-        private Guna2Panel SongsMenu;
+        
+        private Control SongsMenu;
         private string title;
         private string thumbnail;
         private Artist artist;
@@ -28,14 +26,12 @@ namespace NIMBUS__MUSIC_PLAYER_
         public HorizontalSongs()
         {
             InitializeComponent();
-            player = new WindowsMediaPlayer();
-            currentSongPath = string.Empty;
 
             // Attach double-click event
             this.DoubleClick += HorizontalSongs_DoubleClick;
         }
 
-        public HorizontalSongs(Guna2Panel SongsMenu, int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
+        public HorizontalSongs(Control SongsMenu, int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
         {
             InitializeComponent();
             this.SongsMenu = SongsMenu;
@@ -49,8 +45,6 @@ namespace NIMBUS__MUSIC_PLAYER_
             Songpic.ImageLocation = thumbnail;
             Artistlbl.Text = artist.Display_Name;
             TotalTimelbl.Text = $"{duration.Minutes}:{duration.Seconds}";
-            player = new WindowsMediaPlayer();
-            currentSongPath = string.Empty;
 
         }
 
@@ -103,14 +97,14 @@ namespace NIMBUS__MUSIC_PLAYER_
                     string filePath = fetchedSong.File_Path;
 
                     // Only stop the current song if the new song is different
-                    if (filePath != currentSongPath)
+                    if (filePath != PlayerState.currentSongPath)
                     {
                         // Stop the current song if another one is selected
                         StopAudio();
 
                         // Play the new song
                         PlayAudio(filePath);
-                        currentSongPath = filePath; // Update the current song path
+                        PlayerState.currentSongPath = filePath; // Update the current song path
                     }
                 }
                 else
@@ -136,8 +130,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                     this.Invoke(new Action(() =>
                     {
                         // Stop any currently playing song before starting the new one
-                        player.URL = filePath;
-                        player.controls.play();
+                        PlayerState.player.URL = filePath;
+                        PlayerState.player.controls.play();
                     }));
                 });
             }
@@ -155,13 +149,13 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void StopAudio()
         {
             // Check if a song is currently playing
-            if (player.playState != WMPPlayState.wmppsStopped)
+            if (PlayerState.player.playState != WMPPlayState.wmppsStopped)
             {
                 // Stop the audio
                 this.Invoke(new Action(() =>
                 {
-                    player.controls.stop();
-                    currentSongPath = string.Empty; // Reset the current song path after stopping
+                    PlayerState.player.controls.stop();
+                    PlayerState.currentSongPath = string.Empty; // Reset the current song path after stopping
                 }));
             }
         }
@@ -176,15 +170,15 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Menubtn_Click(object sender, EventArgs e)
         {
-            /* foreach (Control control in this.Parent.Controls)
-             {
-                 if (control is Guna2Panel panel && panel.Name == "SongsMenu")
-                 {
-                     panel.Visible = false;  // Hide the SongMenu
-                 }
-             }*/
-            //SongsMenu.Visible = !SongsMenu.Visible;
-            //MessageBox.Show($"Menu button clicked. SongsMenu visible: {SongsMenu.Visible}");
+            foreach (Control control in this.Parent.Controls)
+            {
+                if (control is Guna2Panel panel && panel.Name == "SongsMenu")
+                {
+                    panel.Visible = false;  // Hide the SongMenu
+                }
+            }
+            SongsMenu.Visible = !SongsMenu.Visible;
+            MessageBox.Show($"Menu button clicked. SongsMenu visible: {SongsMenu.Visible}");
 
             MenuButtonClicked?.Invoke(this, EventArgs.Empty);
         }

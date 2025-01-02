@@ -126,6 +126,7 @@
     <Compile Include="FavoritePanelcs.Designer.cs">
       <DependentUpon>FavoritePanelcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Events.cs" />
     <Compile Include="Helper\PlayerState.cs" />
     <Compile Include="HorizontalSongs.cs">
       <SubType>UserControl</SubType>

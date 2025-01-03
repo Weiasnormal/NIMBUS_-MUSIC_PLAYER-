@@ -42,7 +42,7 @@
             this.flowFavorites = new System.Windows.Forms.FlowLayoutPanel();
             this.SongsMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.RemovefromFavorites = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Menu_AddPlaylist = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
@@ -303,7 +303,7 @@
             // 
             this.SongsMenu.BorderRadius = 10;
             this.SongsMenu.Controls.Add(this.guna2GradientButton7);
-            this.SongsMenu.Controls.Add(this.guna2GradientButton6);
+            this.SongsMenu.Controls.Add(this.RemovefromFavorites);
             this.SongsMenu.Controls.Add(this.guna2GradientButton3);
             this.SongsMenu.Controls.Add(this.Menu_AddPlaylist);
             this.SongsMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
@@ -348,39 +348,41 @@
             this.guna2GradientButton7.Text = "Delete Song";
             this.guna2GradientButton7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton7.TextOffset = new System.Drawing.Point(22, 0);
+            this.guna2GradientButton7.Click += new System.EventHandler(this.guna2GradientButton7_Click);
             // 
-            // guna2GradientButton6
+            // RemovefromFavorites
             // 
-            this.guna2GradientButton6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton6.BorderRadius = 10;
-            this.guna2GradientButton6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton6.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.guna2GradientButton6.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton6.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton6.CheckedState.Parent = this.guna2GradientButton6;
-            this.guna2GradientButton6.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton6.CustomImages.Parent = this.guna2GradientButton6;
-            this.guna2GradientButton6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton6.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton6.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton6.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton6.HoverState.Parent = this.guna2GradientButton6;
-            this.guna2GradientButton6.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_Remove;
-            this.guna2GradientButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton6.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2GradientButton6.Location = new System.Drawing.Point(7, 110);
-            this.guna2GradientButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GradientButton6.Name = "guna2GradientButton6";
-            this.guna2GradientButton6.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.guna2GradientButton6.ShadowDecoration.Parent = this.guna2GradientButton6;
-            this.guna2GradientButton6.Size = new System.Drawing.Size(299, 46);
-            this.guna2GradientButton6.TabIndex = 24;
-            this.guna2GradientButton6.Text = "Remove from this Playlist";
-            this.guna2GradientButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton6.TextOffset = new System.Drawing.Point(20, 0);
+            this.RemovefromFavorites.BackColor = System.Drawing.Color.Transparent;
+            this.RemovefromFavorites.BorderRadius = 10;
+            this.RemovefromFavorites.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.RemovefromFavorites.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.RemovefromFavorites.CheckedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemovefromFavorites.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.RemovefromFavorites.CheckedState.Parent = this.RemovefromFavorites;
+            this.RemovefromFavorites.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.RemovefromFavorites.CustomImages.Parent = this.RemovefromFavorites;
+            this.RemovefromFavorites.FillColor = System.Drawing.Color.Transparent;
+            this.RemovefromFavorites.FillColor2 = System.Drawing.Color.Transparent;
+            this.RemovefromFavorites.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemovefromFavorites.ForeColor = System.Drawing.Color.White;
+            this.RemovefromFavorites.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.RemovefromFavorites.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.RemovefromFavorites.HoverState.ForeColor = System.Drawing.Color.White;
+            this.RemovefromFavorites.HoverState.Parent = this.RemovefromFavorites;
+            this.RemovefromFavorites.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_Remove;
+            this.RemovefromFavorites.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.RemovefromFavorites.ImageOffset = new System.Drawing.Point(10, 0);
+            this.RemovefromFavorites.Location = new System.Drawing.Point(7, 110);
+            this.RemovefromFavorites.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RemovefromFavorites.Name = "RemovefromFavorites";
+            this.RemovefromFavorites.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.RemovefromFavorites.ShadowDecoration.Parent = this.RemovefromFavorites;
+            this.RemovefromFavorites.Size = new System.Drawing.Size(299, 46);
+            this.RemovefromFavorites.TabIndex = 24;
+            this.RemovefromFavorites.Text = "Remove from this Playlist";
+            this.RemovefromFavorites.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.RemovefromFavorites.TextOffset = new System.Drawing.Point(20, 0);
+            this.RemovefromFavorites.Click += new System.EventHandler(this.RemovefromFavorites_Click);
             // 
             // guna2GradientButton3
             // 
@@ -644,7 +646,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2Panel SongsMenu;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
+        private Guna.UI2.WinForms.Guna2GradientButton RemovefromFavorites;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton Menu_AddPlaylist;
         private Guna.UI2.WinForms.Guna2Panel MenuTabs;

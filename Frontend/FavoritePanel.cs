@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
@@ -54,7 +55,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         public Guna2GradientButton btn2
         {
-            get { return guna2GradientButton6; }
+            get { return RemovefromFavorites; }
         }
         public Guna2GradientButton btn3
         {
@@ -75,7 +76,8 @@ namespace NIMBUS__MUSIC_PLAYER_
         #endregion
 
         private HashSet<Song> favoriteSongs;
-
+        private object selectedSong;
+        SongController<Song> controller = new SongController<Song>();
         public FavoritePanel()
         {
             InitializeComponent();
@@ -139,29 +141,31 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void SongControl_MenuButtonClicked(object sender, EventArgs e)
         {
             SongsMenu.Visible = !SongsMenu.Visible;
+            selectedSong = sender;
         }
-        /* public void AddSongToFavorites(Song song)
-         {
-             if (favoriteSongs.Add(song)) // Adds only if not already in favorites
-             {
-                 song.IsFavorite = true; // Optionally update favorite status
-                 AddtoFavorite(); // Refresh the favorites display
-                 MessageBox.Show($"'{song.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             }
-             else
-             {
-                 MessageBox.Show("This song is already in your Favorites!", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             }
-         }
 
-         public void RemoveSongFromFavorites(Song song)
-         {
-             if (favoriteSongs.Remove(song)) // Removes only if present in favorites
-             {
-                 song.IsFavorite = false; // Optionally update favorite status
-                 AddtoFavorite(); // Refresh the favorites display
-                 MessageBox.Show($"'{song.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             }
-         }*/
+        private void RemovefromFavorites_Click(object sender, EventArgs e)
+        {
+            Song songTobeRemove = ((HorizontalSongs)selectedSong).Song;
+            // Set Favorites into true
+            songTobeRemove.IsFavorite = false;
+            SongsMenu.Visible = false;
+            MessageBox.Show($"'{songTobeRemove.Title}' has been Removed from the Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            flowFavorites.Controls.Clear();
+            AddtoFavorite();
+        }
+
+        private void guna2GradientButton7_Click(object sender, EventArgs e)
+        {
+            Song songTobeDeleted = ((HorizontalSongs)selectedSong).Song;
+
+            controller.Delete(((HorizontalSongs)selectedSong).Song);
+            SongsMenu.Visible = false;
+            MessageBox.Show($"'{songTobeDeleted.Title}' has been Deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            flowFavorites.Controls.Clear();
+            AddtoFavorite(); 
+        }
     }
 }

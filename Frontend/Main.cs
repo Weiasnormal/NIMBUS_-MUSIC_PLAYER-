@@ -13,6 +13,7 @@ using Guna.UI.WinForms;
 using Guna.UI2.HtmlRenderer.Adapters.Entities;
 using Guna.UI2.WinForms;
 using NIMBUS__MUSIC_PLAYER_.Helper;
+using NIMBUS__MUSIC_PLAYER_.Properties;
 using NimbusClassLibrary;
 using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
@@ -43,6 +44,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnSound_Open.Visible = false;
             VolumeBar.Visible = false;
             lblVolumePercent.Visible = false;
+            btnFavorite_Pressed.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
             Pausebtn.Visible = false;
@@ -225,6 +227,8 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             PlaylistList.BackColor = BGColor;
             PlaylistList.SelectedItem = Hover;
+            TimeSong.ProgressColor = Color.FromArgb(255, 128, 0);
+            TimeSong.ProgressColor2 = Color.FromArgb(255, 128, 0);
             panel3.BackColor = NowPlayingColor;
             btnSidebar_Songs.CheckedState.FillColor = Hover;
             btnSidebar_Songs.CheckedState.FillColor2 = Hover;
@@ -412,6 +416,10 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             PlaylistList.BackColor = BGColor;
             panel3.BackColor = NowPlayingColor;
+            TimeSong.ProgressColor = Color.FromArgb(172, 40, 79);
+            TimeSong.ProgressColor2 = Color.FromArgb(172, 40, 79);
+            ShufflebtnHighlight.CustomImages.Image = Resources.Icon_ShuffleBlue;
+            LoopbtnHighlight.CustomImages.Image = Resources.Icon_LoopBlue;
             btnSidebar_Songs.CheckedState.FillColor = Hover;
             btnSidebar_Songs.CheckedState.FillColor2 = Hover;
             btnSidebar_Favorites.CheckedState.FillColor = Hover;
@@ -598,6 +606,10 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             PlaylistList.BackColor = BGColor;
             panel3.BackColor = NowPlayingColor;
+            TimeSong.ProgressColor = Color.FromArgb(170, 136, 0);
+            TimeSong.ProgressColor2 = Color.FromArgb(170, 136, 0);
+            ShufflebtnHighlight.CustomImages.Image = Resources.Icon_ShuffleGreen;
+            LoopbtnHighlight.CustomImages.Image = Resources.Icon_LoopGreen;
             btnSidebar_Songs.CheckedState.FillColor = Hover;
             btnSidebar_Songs.CheckedState.FillColor2 = Hover;
             btnSidebar_Favorites.CheckedState.FillColor = Hover;
@@ -1004,6 +1016,18 @@ namespace NIMBUS__MUSIC_PLAYER_
             btnSound_Close.Visible = true;
             btnSound_Open.Visible = false;
             VolumeBar.Visible = false;
+        }
+
+        private void btnFavorite_Default_Click(object sender, EventArgs e)
+        {
+            btnFavorite_Default.Visible = false;
+            btnFavorite_Pressed.Visible = true;
+        }
+
+        private void btnFavorite_Pressed_Click(object sender, EventArgs e)
+        {
+            btnFavorite_Default.Visible = true;
+            btnFavorite_Pressed.Visible = false;
         }
     }
 }

@@ -563,6 +563,26 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_LoopBlue {
+            get {
+                object obj = ResourceManager.GetObject("Icon_LoopBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_LoopGreen {
+            get {
+                object obj = ResourceManager.GetObject("Icon_LoopGreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_LoopHighlight {
             get {
                 object obj = ResourceManager.GetObject("Icon_LoopHighlight", resourceCulture);
@@ -686,6 +706,26 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         internal static System.Drawing.Bitmap Icon_Shuffle {
             get {
                 object obj = ResourceManager.GetObject("Icon_Shuffle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ShuffleBlue {
+            get {
+                object obj = ResourceManager.GetObject("Icon_ShuffleBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ShuffleGreen {
+            get {
+                object obj = ResourceManager.GetObject("Icon_ShuffleGreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

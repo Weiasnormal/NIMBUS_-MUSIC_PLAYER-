@@ -568,5 +568,17 @@
   <ItemGroup>
     <None Include="Resources\Create a Playlist BG.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_LoopBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_LoopGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_ShuffleBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_ShuffleGreen.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

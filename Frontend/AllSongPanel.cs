@@ -229,5 +229,17 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             
         }
+
+        private void Menu_DeleteSong_Click(object sender, EventArgs e)
+        {
+
+            Song songTobeDeleted = ((HorizontalSongs)selectedSong).Song;
+
+            controller.Delete(((HorizontalSongs)selectedSong).Song);
+            MessageBox.Show($"'{songTobeDeleted.Title}' has been Deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            AllSongsPanel.Controls.Clear();
+            loadSongs();
+        }
     }
 }

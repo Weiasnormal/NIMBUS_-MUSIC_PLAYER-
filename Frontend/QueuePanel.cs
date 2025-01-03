@@ -71,6 +71,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             SongsMenu.Visible = false;
 
             Helper.Events.AddToQueue += QueuePanel_AddtoQueue;
+            
 
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
         }

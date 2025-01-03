@@ -37,6 +37,7 @@ namespace NimbusClassLibrary.Controller
         }
         public bool Create<T>(T t) where T : t
         {
+            conn.Open();
             Song song = t as Song;
             DBContext.songs.Add(song);
 
@@ -50,10 +51,12 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@Duration", MySqlDbType.VarChar).Value = song.Duration;
 
             int res = command.ExecuteNonQuery();
+            conn.Close();
             return Return.OK(res);
         }
         public bool Update<T>(T t) where T : t
         {
+            conn.Open();
             Song song = t as Song;
             DBContext.songs.Remove(DBContext.songs.FirstOrDefault(i => i.Id == song.Id));
             DBContext.songs.Add(song);
@@ -61,7 +64,7 @@ namespace NimbusClassLibrary.Controller
             MySqlCommand command = conn.CreateCommand();
             command.CommandText = "UPDATE Songs SET " +
                                   "Title = @Title, IsFavorite = @IsFavorite, Artist_id = @Artist_id, " +
-                                  "File_Path = @File_Path, Duration = @Duration" +
+                                  "File_Path = @File_Path, Duration = @Duration " +
                                   "WHERE ID = @Id";
             command.Parameters.Add("@Id", MySqlDbType.Int32).Value = song.Id;
             command.Parameters.Add("@Title", MySqlDbType.VarChar).Value = song.Title;
@@ -71,10 +74,12 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@Duration", MySqlDbType.VarChar).Value = song.Duration;
 
             int res = command.ExecuteNonQuery();
+            conn.Close();
             return Return.OK(res);
         }
         public bool Delete<T>(T t) where T : t
         {
+            conn.Open();
             Song song = t as Song;
             DBContext.songs.Remove(DBContext.songs.FirstOrDefault(i => i.Id == song.Id));
 
@@ -84,6 +89,7 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@Id", MySqlDbType.Int32).Value = song.Id;
 
             int res = command.ExecuteNonQuery();
+            conn.Close();
             return Return.OK(res);
         }
     }

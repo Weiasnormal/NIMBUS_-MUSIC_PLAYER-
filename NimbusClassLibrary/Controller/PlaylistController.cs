@@ -24,6 +24,7 @@ namespace NimbusClassLibrary.Controller
 
         public bool Create<T>(T t) where T : t
         {
+            conn.Open();
             Playlist playlist = t as Playlist;
             DBContext.playlists.Add(playlist);
 
@@ -34,11 +35,13 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@Thumbnail", MySqlDbType.VarChar).Value = Convert.ToInt32(playlist.Thumbnail);
 
             int res = command.ExecuteNonQuery();
+            conn.Close();
             return Return.OK(res);
         }
 
         public bool Delete<T>(T t) where T : t
         {
+            conn.Open();
             Playlist playlist = t as Playlist;
             DBContext.playlists.Remove(DBContext.playlists.FirstOrDefault(i => i.Id == playlist.Id));
 
@@ -48,6 +51,7 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@Id", MySqlDbType.Int32).Value = playlist.Id;
 
             int res = command.ExecuteNonQuery();
+            conn.Close ();
             return Return.OK(res);
         }
 
@@ -63,6 +67,7 @@ namespace NimbusClassLibrary.Controller
 
         public bool Update<T>(T t) where T : t
         {
+            conn.Open ();
             Playlist playlist = t as Playlist;
             DBContext.playlists.Remove(DBContext.playlists.FirstOrDefault(i => i.Id == playlist.Id));
             DBContext.playlists.Add(playlist);
@@ -76,6 +81,7 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@Thumbnail", MySqlDbType.Text).Value = playlist.Thumbnail;
 
             int res = command.ExecuteNonQuery();
+            conn.Close ();
             return Return.OK(res);
         }
     }

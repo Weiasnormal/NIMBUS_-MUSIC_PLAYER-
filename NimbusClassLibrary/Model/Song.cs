@@ -15,8 +15,7 @@ namespace NimbusClassLibrary.Model
         public bool IsFavorite { get; set; } = false;
         public string File_Path { get; set; } = string.Empty;
         public Artist Artist { get; set; } = new Artist();
-        public TimeSpan Duration { get; set; } = new TimeSpan();
-
+        public TimeSpan Duration { get; set; }
         public override string ToString()
         {
             return $"ID          : {Id} " +

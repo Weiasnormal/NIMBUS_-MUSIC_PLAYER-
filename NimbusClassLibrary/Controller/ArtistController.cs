@@ -32,6 +32,7 @@ namespace NimbusClassLibrary.Controller
 
         public bool Create<T>(T t) where T : Artist
         {
+            conn.Open();
             Artist artist = t as Artist;
 
             // Check if the artist already exists
@@ -52,6 +53,7 @@ namespace NimbusClassLibrary.Controller
 
             int res = command.ExecuteNonQuery();
 
+            conn.Close();
             if (res > 0)
             {
                 // Retrieve the auto-generated ID
@@ -61,12 +63,13 @@ namespace NimbusClassLibrary.Controller
                 DBContext.artists.Add(artist);
                 return true;
             }
-
+            
             return false;
         }
 
         public bool Update<T>(T t) where T : Artist
         {
+            conn.Open();
             Artist artist = t as Artist;
 
             // Update in-memory collection
@@ -84,11 +87,13 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@IsFavorite", MySqlDbType.Bit).Value = artist.IsFavorite;
 
             int res = command.ExecuteNonQuery();
+            conn.Close();
             return Return.OK(res);
         }
 
         public bool Delete<T>(T t) where T : Artist
         {
+            conn.Open();
             Artist artist = t as Artist;
 
             // Remove from in-memory collection
@@ -100,6 +105,7 @@ namespace NimbusClassLibrary.Controller
             command.Parameters.Add("@Id", MySqlDbType.Int32).Value = artist.Id;
 
             int res = command.ExecuteNonQuery();
+            conn.Close();
             return Return.OK(res);
         }
 

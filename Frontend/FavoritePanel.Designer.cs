@@ -39,7 +39,7 @@
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FavSongsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SongTab = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -284,13 +284,14 @@
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 31;
             // 
-            // flowLayoutPanel1
+            // FavSongsPanel
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(45, 193);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1196, 486);
-            this.flowLayoutPanel1.TabIndex = 30;
+            this.FavSongsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FavSongsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FavSongsPanel.Location = new System.Drawing.Point(45, 193);
+            this.FavSongsPanel.Name = "FavSongsPanel";
+            this.FavSongsPanel.Size = new System.Drawing.Size(1196, 486);
+            this.FavSongsPanel.TabIndex = 30;
             // 
             // SongTab
             // 
@@ -485,6 +486,7 @@
             this.Menubtn.PressedState.Parent = this.Menubtn;
             this.Menubtn.Size = new System.Drawing.Size(51, 33);
             this.Menubtn.TabIndex = 29;
+            this.Menubtn.Visible = false;
             this.Menubtn.Click += new System.EventHandler(this.Menubtn_Click);
             // 
             // guna2ImageButton2
@@ -512,6 +514,7 @@
             this.MenuTabs.Size = new System.Drawing.Size(239, 114);
             this.MenuTabs.TabIndex = 39;
             this.MenuTabs.UseTransparentBackground = true;
+            this.MenuTabs.Visible = false;
             // 
             // guna2GradientButton1
             // 
@@ -592,7 +595,7 @@
             this.Controls.Add(this.DetailPanel);
             this.Controls.Add(this.Dropdown_Artist);
             this.Controls.Add(this.Menubtn);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.FavSongsPanel);
             this.Controls.Add(this.guna2ImageButton2);
             this.Name = "FavoritePanel";
             this.Size = new System.Drawing.Size(1274, 687);
@@ -620,7 +623,7 @@
         private System.Windows.Forms.Label lblAlbum;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel FavSongsPanel;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2Panel SongTab;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;

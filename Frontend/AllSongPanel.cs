@@ -12,12 +12,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static NIMBUS__MUSIC_PLAYER_.HorizontalSongs;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class AllSongPanel : UserControl
     {
         private Size originalFormSize; // Store the original size of the form
+        private HorizontalSongs selectedSongControl;
+        public event EventHandler<AddToFavoritesEventArgs> AddToFavoritesClicked;
 
         public AllSongPanel()
         {
@@ -56,7 +59,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             AllSongsScrollbar.Scroll += (sender, e) => { AllSongsPanel.VerticalScroll.Value = AllSongsScrollbar.Value; };
             AllSongsScrollbar.Height = AllSongsPanel.Height;
             AllSongsScrollbar.Visible = false;
-            
+
             this.Controls.Add(AllSongsScrollbar);
 
             AllSongsPanel.ResumeLayout();
@@ -71,7 +74,9 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
 
+
         }
+
         private void UpdatePlayPauseButton(bool isPlaying)
         {
             guna2GradientButton2.Checked = isPlaying ? true : false;
@@ -132,7 +137,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             get { return Dropdown_Artist; }
         }
-        
+
         public Guna2ComboBox Dropdown_Albums
         {
             get { return Dropdown_Album; }
@@ -159,8 +164,8 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             get { return guna2GradientButton4; }
         }
-        public Guna2GradientButton btn5 { get { return Menu_AddFvorites; }}
-        public Guna2GradientButton btn6 { get { return guna2GradientButton1; }}
+        public Guna2GradientButton btn5 { get { return Menu_AddFvorites; } }
+        public Guna2GradientButton btn6 { get { return guna2GradientButton1; } }
 
         private Form _addToPlaylistForm;
         public void loadSongs()
@@ -172,15 +177,24 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             //Form addToPlaylistForm = new AddtoPlaylist();
 
-            foreach (Song song in songs) 
+            foreach (Song song in songs)
             {
                 var songControl = new HorizontalSongs(SongsMenu, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration);
                 songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
+                //songControl.AddToFavoritesClicked += SongControl_AddToFavoritesClicked;
+                //songControl.DeleteButtonClicked += SongControl_DeleteButtonClicked;
                 AllSongsPanel.Controls.Add(songControl);
 
                 songnum++;
             }
 
+        }
+
+        private void SongControl_AddToFavoritesClicked(object sender, HorizontalSongs.AddToFavoritesEventArgs e)
+        {
+            // Assuming FavoritePanel.Instance has a method AddSongToFavorites
+            FavoritePanel.Instance.AddSongToFavorites(e.Song);
+            MessageBox.Show($"'{e.Song.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void DetailPanel_Paint(object sender, PaintEventArgs e)
@@ -195,21 +209,11 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void SongControl_MenuButtonClicked(object sender, EventArgs e)
         {
-            /*if (!SongsMenu.Visible)
-            {
-                SongsMenu.Visible = true;
-            }
-            else
-            {
-                // Avoid hiding it unintentionally if it's already visible
-                SongsMenu.Visible = false;
-            }*/
-            // Handle the menu button click
-            //MessageBox.Show("Menu Button Clicked!");
-            SongsMenu.Visible = !SongsMenu.Visible; 
+            // Set the selected song control to the clicked song
+            selectedSongControl = (HorizontalSongs)sender;
 
-            //MessageBox.Show($"Menu button clicked from HorizontalSongs. SongsMenu visible: {SongsMenu.Visible}");
-
+            // Show the SongsMenu
+            SongsMenu.Visible = !SongsMenu.Visible;  // Toggle visibility
         }
 
         private void Menu_AddPlaylist_Click(object sender, EventArgs e)
@@ -217,6 +221,17 @@ namespace NIMBUS__MUSIC_PLAYER_
             if (this.FindForm() is Nimbus mainForm)
             {
                 mainForm.SwitchToPanel(5);
+            }
+        }
+
+        private void Menu_AddFvorites_Click(object sender, EventArgs e)
+        {
+            // Make sure the correct song is selected from HorizontalSongs
+            if (selectedSongControl != null)
+            {
+                var song = selectedSongControl.GetSongDetails();  // Get the song details from the selected HorizontalSongs control
+                FavoritePanel.Instance.AddSongToFavorites(song);  // Add the song to Favorites
+                MessageBox.Show($"'{song.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

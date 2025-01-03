@@ -502,6 +502,7 @@
             this.Menu_AddFvorites.Text = "Add to favorites";
             this.Menu_AddFvorites.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Menu_AddFvorites.TextOffset = new System.Drawing.Point(20, 0);
+            this.Menu_AddFvorites.Click += new System.EventHandler(this.Menu_AddFvorites_Click);
             // 
             // Menu_AddPlaylist
             // 

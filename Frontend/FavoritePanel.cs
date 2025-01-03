@@ -73,6 +73,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             get { return guna2GradientButton1; }
         }
         #endregion
+
+        private HashSet<Song> favoriteSongs;
+
         public FavoritePanel()
         {
             InitializeComponent();
@@ -82,6 +85,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
             Helper.Events.AddToFavorites += AddtoFavorite;
             Helper.Events.AddToFavorites();
+
+            favoriteSongs = new HashSet<Song>();
         }
 
         private void Menubtn_Click(object sender, EventArgs e)
@@ -102,13 +107,38 @@ namespace NIMBUS__MUSIC_PLAYER_
             flowFavorites.Controls.Clear();
 
             int songnum = 1;
+            
 
             foreach (Song song in NimbusClassLibrary.Data.DBContext.songs.Where(s => s.IsFavorite))
             {
                 flowFavorites.Controls.Add(new HorizontalSongs(flowFavorites, songnum, song));
+                //AddSongToFavorites(song);
                 songnum++;
             }
 
         }
+       /* public void AddSongToFavorites(Song song)
+        {
+            if (favoriteSongs.Add(song)) // Adds only if not already in favorites
+            {
+                song.IsFavorite = true; // Optionally update favorite status
+                AddtoFavorite(); // Refresh the favorites display
+                MessageBox.Show($"'{song.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("This song is already in your Favorites!", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public void RemoveSongFromFavorites(Song song)
+        {
+            if (favoriteSongs.Remove(song)) // Removes only if present in favorites
+            {
+                song.IsFavorite = false; // Optionally update favorite status
+                AddtoFavorite(); // Refresh the favorites display
+                MessageBox.Show($"'{song.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }*/
     }
 }

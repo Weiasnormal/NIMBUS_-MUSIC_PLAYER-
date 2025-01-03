@@ -217,7 +217,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             //MessageBox.Show($"Menu button clicked from HorizontalSongs. SongsMenu visible: {SongsMenu.Visible}");
 
             // Show the SongsMenu
-            SongsMenu.Visible = !SongsMenu.Visible;  // Toggle visibility
+            //SongsMenu.Visible = !SongsMenu.Visible;  // Toggle visibility
         }
 
         private void Menu_AddPlaylist_Click(object sender, EventArgs e)
@@ -239,6 +239,10 @@ namespace NIMBUS__MUSIC_PLAYER_
             controller.Update(songTobeChanged);
 
             Helper.Events.AddToFavorites();
+            MessageBox.Show($"'{songTobeChanged.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SongsMenu.Visible = false;
+
+            
         }
     }
 }

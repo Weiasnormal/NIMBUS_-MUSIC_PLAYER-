@@ -24,5 +24,20 @@ namespace NimbusClassLibrary.Model
                 $"\n File Path   : {File_Path}" +
                 $"\n Artist Name : {Artist.Display_Name}";
         }
+        /* public override bool Equals(object obj)
+         {
+             if (obj is Song other)
+             {
+                 return this.Title == other.Title; // Compare based on unique Id
+             }
+             return false;
+         }
+
+         public override int GetHashCode()
+         {
+             return Title.GetHashCode(); // Use the Id's hash code
+         }
+     }
+     // Ensure Songs are uniquely identified by their ID*/
     }
 }

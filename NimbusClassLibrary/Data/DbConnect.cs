@@ -40,6 +40,7 @@ namespace NimbusClassLibrary.Data
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Error in DbConnect: {ex.Message}");
                 throw new Exception(ex.Message);
             }
         }

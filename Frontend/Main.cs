@@ -35,7 +35,8 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             InitializeComponent();
             Initialize_Navigation_Controls();
-            
+
+            Helper.Events.UpdateMainUI += UpdateMainUI;
             ShowAddPlaylist.Visible = false;
             MiniplayerPanel.Visible = false;
             PlaylistList.Visible = false;
@@ -59,6 +60,14 @@ namespace NIMBUS__MUSIC_PLAYER_
             // Initialize ProgressBar
             TimeSong.Minimum = 0; // Start at 0
             TimeSong.Maximum = 100; // Progress will be in percentage
+        }
+        private void UpdateMainUI()
+        {
+            Song CurrentSong = PlayerState.CurrentSong.Value;
+
+            TitleSonglbl.Text = CurrentSong.Title;
+            Artistlbl.Text = CurrentSong.Artist.Display_Name;
+            
         }
         private void Initialize_Navigation_Controls()
         {
@@ -866,14 +875,18 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             PlayerState.StopSong();
             PlayerState.SetNextSong();
-            PlayerState.BackgroundWorker.RunWorkerAsync();
+            if(!PlayerState.BackgroundWorker.IsBusy)
+                PlayerState.BackgroundWorker.RunWorkerAsync();
+            Helper.Events.UpdateMainUI();
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             PlayerState.StopSong();
             PlayerState.SetPreviousSong();
-            PlayerState.BackgroundWorker.RunWorkerAsync();
+            if (!PlayerState.BackgroundWorker.IsBusy)
+                PlayerState.BackgroundWorker.RunWorkerAsync();
+            Helper.Events.UpdateMainUI();
         }
     }
 }

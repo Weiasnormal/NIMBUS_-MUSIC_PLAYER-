@@ -10,5 +10,6 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
     {
         public static Action<object,EventArgs> AddToQueue;
         public static Action AddToFavorites;
+        public static Action UpdateMainUI;
     }
 }

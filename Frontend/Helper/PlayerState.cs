@@ -59,7 +59,7 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         {
             SetNextSong();
 
-            _backgroundWorker.RunWorkerAsync();
+            BackgroundWorker.RunWorkerAsync();
         }
 
         private static void _backgroundWorker_DoWork(object sender, DoWorkEventArgs e)

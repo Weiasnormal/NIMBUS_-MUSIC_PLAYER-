@@ -3,6 +3,7 @@ using Guna.UI2.WinForms;
 using NIMBUS__MUSIC_PLAYER_.Helper;
 using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
+using Data = NimbusClassLibrary.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,8 @@ namespace NIMBUS__MUSIC_PLAYER_
     public partial class AllSongPanel : UserControl
     {
         private Size originalFormSize; // Store the original size of the form
-
+        private object selectedSong;
+        SongController<Song> controller = new SongController<Song>();
         public AllSongPanel()
         {
             InitializeComponent();
@@ -167,14 +169,14 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             int songnum = 1;
 
-            SongController<Song> controller = new SongController<Song>();
+            
             List<Song> songs = (List<Song>)controller.GetCollection<Song>();
 
             //Form addToPlaylistForm = new AddtoPlaylist();
 
             foreach (Song song in songs) 
             {
-                var songControl = new HorizontalSongs(SongsMenu, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration);
+                var songControl = new HorizontalSongs(SongsMenu, songnum, song);
                 songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
                 AllSongsPanel.Controls.Add(songControl);
 
@@ -206,8 +208,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             }*/
             // Handle the menu button click
             //MessageBox.Show("Menu Button Clicked!");
-            SongsMenu.Visible = !SongsMenu.Visible; 
-
+            SongsMenu.Visible = !SongsMenu.Visible;
+            selectedSong = sender;
             //MessageBox.Show($"Menu button clicked from HorizontalSongs. SongsMenu visible: {SongsMenu.Visible}");
 
         }
@@ -220,5 +222,17 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
+        private void Menu_AddFvorites_Click(object sender, EventArgs e)
+        {
+            HorizontalSongs Ssong = (HorizontalSongs)selectedSong;
+            Song songTobeChanged = Ssong.Song;
+
+            // Set Favorites into true
+            songTobeChanged.IsFavorite = true;
+
+            controller.Update(songTobeChanged);
+
+            Helper.Events.AddToFavorites();
+        }
     }
 }

@@ -16,10 +16,12 @@ namespace NIMBUS__MUSIC_PLAYER_
     {
         
         private Control SongsMenu;
-        private string title;
-        private string thumbnail;
-        private Artist artist;
-        private TimeSpan duration;
+        private Song _song;
+
+        public Song Song
+        {
+            get { return _song; }
+        }
 
         public event EventHandler MenuButtonClicked;
 
@@ -31,20 +33,17 @@ namespace NIMBUS__MUSIC_PLAYER_
             this.DoubleClick += HorizontalSongs_DoubleClick;
         }
 
-        public HorizontalSongs(Control SongsMenu, int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
+        public HorizontalSongs(Control SongsMenu, int songnum, Song song)
         {
             InitializeComponent();
             this.SongsMenu = SongsMenu;
-            this.title = title;
-            this.thumbnail = thumbnail;
-            this.artist = artist;
-            this.duration = duration;
+            _song = song;
 
             SongNumlbl.Text = songnum.ToString();
-            Titlelbl.Text = title;
-            Songpic.ImageLocation = thumbnail;
-            Artistlbl.Text = artist.Display_Name;
-            TotalTimelbl.Text = $"{duration.Minutes}:{duration.Seconds}";
+            Titlelbl.Text = _song.Title;
+            Songpic.ImageLocation = _song.Artist.Profile_Pic;
+            Artistlbl.Text = _song.Artist.Display_Name;
+            TotalTimelbl.Text = $"{song.Duration.Minutes}:{song.Duration.Seconds}";
 
         }
 

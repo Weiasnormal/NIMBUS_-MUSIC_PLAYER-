@@ -96,7 +96,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             {
                 flowpanelQueue.Invoke(new Action(() =>
                 {   // created for the horizontal song control
-                    var songControl = new HorizontalSongs(SongsMenu, songnum, song.Title, song.Artist.Profile_Pic, song.Artist, song.Duration);
+                    var songControl = new HorizontalSongs(SongsMenu, songnum, song);
                     songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
                     flowpanelQueue.Controls.Add(songControl);
                 }));

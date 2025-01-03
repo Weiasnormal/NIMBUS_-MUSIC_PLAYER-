@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class FavoritePanel : UserControl
     {
-
+        #region FrontEnd
         public Panel DetailsPanel
         {
             get { return DetailPanel; }
@@ -71,7 +72,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             get { return guna2GradientButton1; }
         }
-
+        #endregion
         public FavoritePanel()
         {
             InitializeComponent();
@@ -79,6 +80,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             MenuTabs.Visible = false;
 
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
+            Helper.Events.AddToFavorites += AddtoFavorite;
+            Helper.Events.AddToFavorites();
         }
 
         private void Menubtn_Click(object sender, EventArgs e)
@@ -92,6 +95,20 @@ namespace NIMBUS__MUSIC_PLAYER_
             {
                 mainForm.SwitchToPanel(5);
             }
+        }
+
+        private void AddtoFavorite()
+        {
+            flowFavorites.Controls.Clear();
+
+            int songnum = 1;
+
+            foreach(Song song in NimbusClassLibrary.Data.DBContext.songs.Where(s=>s.IsFavorite))
+            {
+                flowFavorites.Controls.Add(new HorizontalSongs(flowFavorites, songnum, song));
+                songnum++;
+            }
+            
         }
     }
 }

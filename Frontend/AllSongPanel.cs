@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static NIMBUS__MUSIC_PLAYER_.HorizontalSongs;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
@@ -58,7 +59,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             AllSongsScrollbar.Scroll += (sender, e) => { AllSongsPanel.VerticalScroll.Value = AllSongsScrollbar.Value; };
             AllSongsScrollbar.Height = AllSongsPanel.Height;
             AllSongsScrollbar.Visible = false;
-            
+
             this.Controls.Add(AllSongsScrollbar);
 
             AllSongsPanel.ResumeLayout();
@@ -73,7 +74,9 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
 
+
         }
+
         private void UpdatePlayPauseButton(bool isPlaying)
         {
             guna2GradientButton2.Checked = isPlaying ? true : false;
@@ -134,7 +137,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             get { return Dropdown_Artist; }
         }
-        
+
         public Guna2ComboBox Dropdown_Albums
         {
             get { return Dropdown_Album; }
@@ -161,8 +164,8 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             get { return guna2GradientButton4; }
         }
-        public Guna2GradientButton btn5 { get { return Menu_AddFvorites; }}
-        public Guna2GradientButton btn6 { get { return guna2GradientButton1; }}
+        public Guna2GradientButton btn5 { get { return Menu_AddFvorites; } }
+        public Guna2GradientButton btn6 { get { return guna2GradientButton1; } }
 
         private Form _addToPlaylistForm;
         public void loadSongs()
@@ -212,6 +215,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             selectedSong = sender;
             //MessageBox.Show($"Menu button clicked from HorizontalSongs. SongsMenu visible: {SongsMenu.Visible}");
 
+            // Show the SongsMenu
+            SongsMenu.Visible = !SongsMenu.Visible;  // Toggle visibility
         }
 
         private void Menu_AddPlaylist_Click(object sender, EventArgs e)

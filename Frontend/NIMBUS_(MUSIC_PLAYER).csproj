@@ -120,11 +120,11 @@
       <DependentUpon>CreatePlaylist.cs</DependentUpon>
     </Compile>
     <Compile Include="DashboardNavigation.cs" />
-    <Compile Include="FavoritePanelcs.cs">
+    <Compile Include="FavoritePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FavoritePanelcs.Designer.cs">
-      <DependentUpon>FavoritePanelcs.cs</DependentUpon>
+    <Compile Include="FavoritePanel.Designer.cs">
+      <DependentUpon>FavoritePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Events.cs" />
     <Compile Include="Helper\PlayerState.cs" />
@@ -197,8 +197,8 @@
     <EmbeddedResource Include="CreatePlaylist.resx">
       <DependentUpon>CreatePlaylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FavoritePanelcs.resx">
-      <DependentUpon>FavoritePanelcs.cs</DependentUpon>
+    <EmbeddedResource Include="FavoritePanel.resx">
+      <DependentUpon>FavoritePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HorizontalSongs.resx">
       <DependentUpon>HorizontalSongs.cs</DependentUpon>

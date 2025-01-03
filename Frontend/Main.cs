@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AxWMPLib;
 using Guna.UI.WinForms;
 using Guna.UI2.HtmlRenderer.Adapters.Entities;
 using Guna.UI2.WinForms;
@@ -15,6 +16,7 @@ using NimbusClassLibrary;
 using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
 using TagLib;
+using WMPLib;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
@@ -22,25 +24,40 @@ namespace NIMBUS__MUSIC_PLAYER_
     {
         static DashboardNavigation dashboardNavigation;
 
+        private WindowsMediaPlayer player;
+        private HorizontalSongs currentSongControl;
+
         public IEnumerable<object> Buttons { get; private set; }
+
+        private Timer timer;
 
         public Nimbus()
         {
             InitializeComponent();
             Initialize_Navigation_Controls();
+            
             ShowAddPlaylist.Visible = false;
             PlaylistList.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
+            Pausebtn.Visible = false;
 
             PlayerState.OnStateChanged += UpdatePlayPauseButton;
 
-            guna2GradientButton2.Click += (sender, e) =>
+            Pausebtn.Click += (sender, e) =>
             {
                 // Toggle the player state
                 PlayerState.IsPlaying = !PlayerState.IsPlaying;
             };
 
+            // Initialize Timer
+            timer = new Timer();
+            timer.Interval = 500; // Update every 500ms (half a second)
+            timer.Tick += timer1_Tick;
+
+            // Initialize ProgressBar
+            TimeSong.Minimum = 0; // Start at 0
+            TimeSong.Maximum = 100; // Progress will be in percentage
         }
         private void Initialize_Navigation_Controls()
         {
@@ -101,7 +118,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             ShowAddPlaylist.Visible = false;
         }
-
+        #region Apply Dark Theme
         private void ApplyDarkTheme()
         {
             var BGColor = Color.FromArgb(18, 18, 18);
@@ -287,8 +304,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
-
-
+#endregion
+        #region Apply Blue Theme
         private void ApplyBlueTheme()
         {
             var BGColor = Color.FromArgb(21, 28, 33);
@@ -473,7 +490,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
-
+        #endregion
+        #region Apply Green Theme
         private void ApplyGreenTheme()
         {
             var BGColor = Color.FromArgb(33, 40, 38);        
@@ -658,6 +676,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
+        #endregion
 
         private void TimeSong_ValueChanged(object sender, EventArgs e)
         {
@@ -738,14 +757,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void UpdatePlayPauseButton(bool isPlaying)
         {
-            guna2GradientButton2.Checked = isPlaying ? true : false;
+            Pausebtn.Checked = isPlaying ? true : false;
             //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
         }
 
@@ -753,6 +767,59 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             btnSidebar_Queue_Click(sender, e);
             btnSidebar_Queue.Checked = true;
+        }
+
+        private void Playbtn_Click(object sender, EventArgs e)
+        {
+            Playbtn.Visible = false;
+            Pausebtn.Visible = true;
+            
+        }
+
+        private void Pausebtn_Click(object sender, EventArgs e)
+        {
+            Playbtn.Visible = true;
+            Pausebtn.Visible = false;
+            
+        }
+
+        private void VolumeBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            PlayerState.SetVolume(VolumeBar.Value);
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Automatically update TimePlayed label
+            if (PlayerState.player.currentMedia != null)
+            {
+                double currentPosition = PlayerState.player.controls.currentPosition; // Current playback position
+                double duration = PlayerState.player.currentMedia.duration;          // Total duration
+                UpdateTimePlayed(currentPosition, duration);
+                UpdateProgressBar(currentPosition, duration);
+            }
+        }
+
+        private void UpdateTimePlayed(double current, double total)
+        {
+            // Format the current time and total duration
+            string currentTime = TimeSpan.FromSeconds(current).ToString(@"mm\:ss");
+            string totalTime = TimeSpan.FromSeconds(total).ToString(@"mm\:ss");
+
+            // Set the TimePlayed label text
+            TimePlayed.Text = $"{currentTime}";
+            EndTime.Text = $"{totalTime}";
+        }
+
+        private void UpdateProgressBar(double current, double total)
+        {
+            if (total > 0) // Avoid division by zero
+            {
+                // Calculate progress as a percentage
+                int progress = (int)((current / total) * 100);
+                TimeSong.Value = progress;
+            }
         }
     }
 }

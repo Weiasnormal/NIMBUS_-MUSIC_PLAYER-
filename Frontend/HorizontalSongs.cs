@@ -14,7 +14,16 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class HorizontalSongs : UserControl
     {
-        
+
+        public event Action PlayButtonClicked;
+        public event Action PauseButtonClicked;
+        public event Action<int> VolumeChanged;
+
+        public Guna2GradientButton Playbtn { get; private set; }
+        public Guna2GradientButton Pausebtn { get; private set; }
+        public Guna2TrackBar VolumeBar { get; private set; }
+
+
         private Control SongsMenu;
         private Song _song;
 
@@ -39,6 +48,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             this.SongsMenu = SongsMenu;
             _song = song;
 
+            
             SongNumlbl.Text = songnum.ToString();
             Titlelbl.Text = _song.Title;
             Songpic.ImageLocation = _song.Artist.Profile_Pic;
@@ -47,6 +57,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         }
 
+        
         public void HorizontalSongs_DoubleClick(object sender, EventArgs e)
         {
             var Highlighted = Color.FromArgb(82, 82, 82);
@@ -190,12 +201,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                     panel.Visible = false;  // Hide the SongMenu
                 }
             }
-            SongsMenu.Visible = !SongsMenu.Visible;
-            MessageBox.Show($"Menu button clicked. SongsMenu visible: {SongsMenu.Visible}");*/
-
-            MenuButtonClicked?.Invoke(this, EventArgs.Empty);
         }
-        
+       
 
     }
 }

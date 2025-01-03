@@ -821,5 +821,29 @@ namespace NIMBUS__MUSIC_PLAYER_
                 TimeSong.Value = progress;
             }
         }
+
+        private void Shufflebtn_Click(object sender, EventArgs e)
+        {
+            Shufflebtn.Visible = false;
+            ShufflebtnHighlight.Visible = true;
+        }
+
+        private void ShufflebtnHighlight_Click(object sender, EventArgs e)
+        {
+            Shufflebtn.Visible = true;
+            ShufflebtnHighlight.Visible = false;
+        }
+
+        private void Loopbtn_Click(object sender, EventArgs e)
+        {
+            Loopbtn.Visible = false;
+            LoopbtnHighlight.Visible = true;
+        }
+
+        private void LoopbtnHighlight_Click(object sender, EventArgs e)
+        {
+            Loopbtn.Visible = true;
+            LoopbtnHighlight.Visible = false;
+        }
     }
 }

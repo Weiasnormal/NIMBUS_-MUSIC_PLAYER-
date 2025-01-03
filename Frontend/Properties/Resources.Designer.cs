@@ -543,6 +543,26 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Loop {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Loop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_LoopHighlight {
+            get {
+                object obj = ResourceManager.GetObject("Icon_LoopHighlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_Menu_AddtoFavorites {
             get {
                 object obj = ResourceManager.GetObject("Icon_Menu_AddtoFavorites", resourceCulture);
@@ -646,6 +666,26 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         internal static System.Drawing.Bitmap Icon_Resize {
             get {
                 object obj = ResourceManager.GetObject("Icon_Resize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Shuffle {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Shuffle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ShuffleHighlight {
+            get {
+                object obj = ResourceManager.GetObject("Icon_ShuffleHighlight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

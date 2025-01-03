@@ -214,6 +214,9 @@
   <data name="Ellipse 12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_ShuffleHighlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_ShuffleHighlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dashboard Button (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Button (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -256,6 +259,9 @@
   <data name="Dark1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="All Songs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\All Songs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DarkAlmbumimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DarkAlmbumimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -273,6 +279,9 @@
   </data>
   <data name="Icon_Playlists" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Playlists.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_LoopHighlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_LoopHighlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,8 +343,8 @@
   <data name="Your Queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Your Queue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="All Songs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\All Songs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_Shuffle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Shuffle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dark2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -394,6 +403,9 @@
   <data name="Icon_Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Inprogressimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inprogressimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ellipse 10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -412,7 +424,7 @@
   <data name="Orange1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Orange1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Inprogressimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inprogressimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_Loop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Loop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

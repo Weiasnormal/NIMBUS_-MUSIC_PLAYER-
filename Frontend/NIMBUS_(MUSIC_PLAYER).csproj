@@ -548,5 +548,17 @@
   <ItemGroup>
     <None Include="Resources\Inprogressimage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_ShuffleHighlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_LoopHighlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Loop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -155,6 +155,46 @@ namespace NIMBUS__MUSIC_PLAYER_
             Artistlbl.Text = CurrentSong.Artist.Display_Name;
             
         }
+
+        private void RefreshProject()
+        {
+            try
+            {
+                // Reset Navigation
+                Initialize_Navigation_Controls();
+
+                // Reset Player State
+                 // Ensure this method clears current song, state, etc.
+                Playbtn.Visible = true;
+                Pausebtn.Visible = false;
+
+                // Reset Song and Artist Details
+                TitleSonglbl.Text = "-";
+                Artistlbl.Text = "-";
+
+                // Clear Playlist and Queue
+                PlaylistList.Items.Clear(); // Adjust based on your PlaylistList implementation
+                dashboardNavigation.Display(0); // Reset to the default panel (e.g., All Songs)
+
+                // Reset Progress and Timer
+                TimeSong.Value = 0;
+                TimePlayed.Text = "00:00";
+                EndTime.Text = "00:00";
+
+                // Hide Extra Elements
+                ShowAddPlaylist.Visible = false;
+                PlaylistList.Visible = false;
+
+                // Optionally Reload Data
+                // LoadAllSongs(); // If there's a method to reload songs from the source/database
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error refreshing the project: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void Initialize_Navigation_Controls()
         {
             UserControl[] list =
@@ -171,14 +211,42 @@ namespace NIMBUS__MUSIC_PLAYER_
             dashboardNavigation.Display(0);
         }
 
-        private void btnSidebar_Songs_Click(object sender, EventArgs e) => dashboardNavigation.Display(0);
-        private void btnSidebar_Favorites_Click(object sender, EventArgs e) => dashboardNavigation.Display(1);
-        private void btnSidebar_Albums_Click(object sender, EventArgs e) => dashboardNavigation.Display(2);
-        private void btnSidebar_Artists_Click(object sender, EventArgs e) => dashboardNavigation.Display(3);
-        private void btnSidebar_Queue_Click(object sender, EventArgs e) => dashboardNavigation.Display(4);
+        private void btnSidebar_Songs_Click(object sender, EventArgs e)
+        {
+            RefreshProject();
+            dashboardNavigation.Display(0);
+        }
+
+        private void btnSidebar_Favorites_Click(object sender, EventArgs e)
+        {
+            RefreshProject();
+            dashboardNavigation.Display(1);
+        }
+
+        private void btnSidebar_Albums_Click(object sender, EventArgs e)
+        {
+            RefreshProject();
+            dashboardNavigation.Display(2);
+        }
+
+        private void btnSidebar_Artists_Click(object sender, EventArgs e)
+        {
+            RefreshProject();
+            dashboardNavigation.Display(3);
+        }
+
+        private void btnSidebar_Queue_Click(object sender, EventArgs e)
+        {
+            RefreshProject();
+            dashboardNavigation.Display(4);
+        }
+
         private void btnSidebar_Playlist_Click(object sender, EventArgs e)
         {
+            RefreshProject();
             PlaylistList.Visible = !PlaylistList.Visible;
+            if (PlaylistList.Visible)
+                dashboardNavigation.Display(5);
         }
 
         private void PlaylistList_SelectedIndexChanged(object sender, EventArgs e)

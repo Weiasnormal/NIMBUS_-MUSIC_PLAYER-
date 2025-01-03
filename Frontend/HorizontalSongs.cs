@@ -83,111 +83,18 @@ namespace NIMBUS__MUSIC_PLAYER_
             string songName = Titlelbl.Text;
             
             // Stop the current song if it's playing before starting the new song
-            StopAudio(); // Ensure that the current song stops immediately
+            PlayerState.StopSong(); // Ensure that the current song stops immediately
 
             // Use the PlaySong method to play the song based on the song name
-            PlaySong(songName);
+            PlayerState.BackgroundWorker.CancelAsync();
+            Task.Run(()=>PlayerState.PlaySong(_song));
         }
-
-        public void PlaySong(string songName)
-        {
-            // Instantiate the SongController
-            SongController<Song> songController = new SongController<Song>();
-
-            // Query the song using the song name
-            var song = DBContext.songs.FirstOrDefault(s => s.Title.Equals(songName, StringComparison.OrdinalIgnoreCase));
-
-            if (song != null)
-            {
-                // Fetch the song ID from the database through the SongController
-                var fetchedSong = songController.GetSingle<Song>(song.Id);
-
-                if (fetchedSong != null)
-                {
-                    string filePath = fetchedSong.File_Path;
-
-                    // Check if the new song is different from the current one
-                    if (PlayerState.currentSongPath != filePath)
-                    {
-                        // Stop the current song before playing the new one
-                        StopAudio();
-
-                        // Update the current song path
-                        PlayerState.currentSongPath = filePath;
-
-                        // Play the new song
-                        PlayAudio(filePath);
-                    }
-                    else
-                    {
-                        // If the same song is clicked again, restart it
-                        PlayAudio(filePath);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Song not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Song name not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-
-        private async void PlayAudio(string filePath)
-        {
-            // Check if the file exists before attempting to play it
-            if (FileExists(filePath))
-            {
-                // Play the audio asynchronously, ensuring it's on the UI thread
-                await Task.Run(() =>
-                {
-                    // Use Invoke to ensure this runs on the UI thread
-                    this.Invoke(new Action(() =>
-                    {
-                        // Set the player's URL to the new file path
-                        PlayerState.player.URL = filePath;
-
-                        // Start playback
-                        PlayerState.player.controls.play();
-
-                        // Update the playing state
-                        PlayerState.IsPlaying = true;
-                    }));
-                });
-            }
-            else
-            {
-                MessageBox.Show("File not found: " + filePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private bool FileExists(string filePath)
-        {
-            return System.IO.File.Exists(filePath);
-        }
-
-        private void StopAudio()
-{
-    if (PlayerState.player.playState != WMPPlayState.wmppsStopped)
-    {
-        this.Invoke(new Action(() =>
-        {
-            PlayerState.player.controls.stop();
-            PlayerState.currentSongPath = string.Empty; // Reset current song path
-        }));
-    }
-}
 
 
         // Optional: Handle form closing and stop audio if necessary
         private void HorizontalSongs_FormClosing(object sender, FormClosingEventArgs e)
         {
-            StopAudio();
+            PlayerState.StopSong();
         }
 
         

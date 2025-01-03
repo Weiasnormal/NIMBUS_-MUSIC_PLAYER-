@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NIMBUS__MUSIC_PLAYER_.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Nimbus());
+
+            PlayerState.BackgroundWorker.RunWorkerAsync();
         }
     }
 }

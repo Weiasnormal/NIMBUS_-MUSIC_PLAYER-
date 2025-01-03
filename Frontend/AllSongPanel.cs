@@ -82,7 +82,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             guna2GradientButton2.Checked = isPlaying ? true : false;
             //guna2GradientButton2.Text = isPlaying ? "Pause" : "Play";
         }
-
+        #region Frontend
         private void AllSongPanel_Resize(object sender, EventArgs e)
         {
             ResizeContents();
@@ -117,7 +117,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
 
 
-
+        
         public Panel DetailsPanel
         {
             get { return DetailPanel; }
@@ -166,6 +166,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         public Guna2GradientButton btn5 { get { return Menu_AddFvorites; } }
         public Guna2GradientButton btn6 { get { return guna2GradientButton1; } }
+        #endregion
 
         private Form _addToPlaylistForm;
         public void loadSongs()

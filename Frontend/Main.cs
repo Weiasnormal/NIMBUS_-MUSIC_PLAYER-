@@ -773,20 +773,20 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             Playbtn.Visible = false;
             Pausebtn.Visible = true;
-            
+            PlayerState.player.controls.play();
         }
 
         private void Pausebtn_Click(object sender, EventArgs e)
         {
             Playbtn.Visible = true;
             Pausebtn.Visible = false;
+            PlayerState.player.controls.pause();
             
         }
 
         private void VolumeBar_Scroll(object sender, ScrollEventArgs e)
         {
             PlayerState.SetVolume(VolumeBar.Value);
-            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -820,6 +820,13 @@ namespace NIMBUS__MUSIC_PLAYER_
                 int progress = (int)((current / total) * 100);
                 TimeSong.Value = progress;
             }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            PlayerState.BackgroundWorker.CancelAsync();
+            PlayerState.SetNextSong();
+            PlayerState.BackgroundWorker.RunWorkerAsync();
         }
     }
 }

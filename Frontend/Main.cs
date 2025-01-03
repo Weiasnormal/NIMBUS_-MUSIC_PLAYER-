@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 using AxWMPLib;
 using Guna.UI.WinForms;
@@ -28,8 +29,8 @@ namespace NIMBUS__MUSIC_PLAYER_
         private HorizontalSongs currentSongControl;
         
         public IEnumerable<object> Buttons { get; private set; }
-
-        private Timer timer;
+        private System.Timers.Timer scrollTimer;
+        private System.Windows.Forms.Timer timer;
 
         public Nimbus()
         {
@@ -39,6 +40,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             Helper.Events.UpdateMainUI += UpdateMainUI;
             ShowAddPlaylist.Visible = false;
             PlaylistList.Visible = false;
+            btnSound_Open.Visible = false;
+            VolumeBar.Visible = false;
+            lblVolumePercent.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
             Pausebtn.Visible = false;
@@ -54,7 +58,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             #region Song Timer / Duration
             // Initialize Timer
-            timer = new Timer();
+            timer = new System.Windows.Forms.Timer();
             timer.Interval = 500; // Update every 500ms (half a second)
             timer.Tick += timer1_Tick;
 
@@ -877,7 +881,35 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void VolumeBar_Scroll(object sender, ScrollEventArgs e)
         {
             PlayerState.SetVolume(VolumeBar.Value);
+            lblVolumePercent.Text = VolumeBar.Value.ToString() + " %";
+            lblVolumePercent.Visible = true; // Show the label while scrolling
+
+            // Reset and start the timer
+            if (scrollTimer != null)
+            {
+                scrollTimer.Stop();
+                scrollTimer.Dispose();
+            }
+
+            scrollTimer = new System.Timers.Timer(100);
+            scrollTimer.Elapsed += HideVolumeLabel;
+            scrollTimer.AutoReset = false; // Ensure the timer only runs once
+            scrollTimer.Start();
         }
+
+        private void HideVolumeLabel(object sender, ElapsedEventArgs e)
+        {
+            if (lblVolumePercent.InvokeRequired)
+            {
+                lblVolumePercent.Invoke(new Action(() => lblVolumePercent.Visible = false));
+            }
+            else
+            {
+                lblVolumePercent.Visible = false;
+            }
+        }
+
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -958,6 +990,20 @@ namespace NIMBUS__MUSIC_PLAYER_
             if (!PlayerState.BackgroundWorker.IsBusy)
                 PlayerState.BackgroundWorker.RunWorkerAsync();
             Helper.Events.UpdateMainUI();
+        }
+
+        private void btnSound_Close_Click(object sender, EventArgs e)
+        {
+            btnSound_Close.Visible = false;
+            btnSound_Open.Visible = true;
+            VolumeBar.Visible = true;
+        }
+
+        private void btnSound_Open_Click(object sender, EventArgs e)
+        {
+            btnSound_Close.Visible = true;
+            btnSound_Open.Visible = false;
+            VolumeBar.Visible = false;
         }
     }
 }

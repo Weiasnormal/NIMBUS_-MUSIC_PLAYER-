@@ -201,23 +201,8 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void SongControl_MenuButtonClicked(object sender, EventArgs e)
         {
-            /*if (!SongsMenu.Visible)
-            {
-                SongsMenu.Visible = true;
-            }
-            else
-            {
-                // Avoid hiding it unintentionally if it's already visible
-                SongsMenu.Visible = false;
-            }*/
-            // Handle the menu button click
-            //MessageBox.Show("Menu Button Clicked!");
             SongsMenu.Visible = !SongsMenu.Visible;
             selectedSong = sender;
-            //MessageBox.Show($"Menu button clicked from HorizontalSongs. SongsMenu visible: {SongsMenu.Visible}");
-
-            // Show the SongsMenu
-            //SongsMenu.Visible = !SongsMenu.Visible;  // Toggle visibility
         }
 
         private void Menu_AddPlaylist_Click(object sender, EventArgs e)

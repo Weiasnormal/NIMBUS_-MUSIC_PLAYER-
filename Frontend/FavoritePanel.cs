@@ -27,7 +27,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         public Guna2Panel SongMenu
         {
-            get { return SongTab; }
+            get { return SongsMenu; }
         }
         public Guna2TextBox SearchBars
         {
@@ -87,6 +87,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             Helper.Events.AddToFavorites();
 
             favoriteSongs = new HashSet<Song>();
+
+            SongsMenu.Visible = false;
         }
 
         private void Menubtn_Click(object sender, EventArgs e)
@@ -104,41 +106,62 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void AddtoFavorite()
         {
+
+            if (!flowFavorites.IsHandleCreated)
+            {
+                flowFavorites.HandleCreated += (s, e) => AddtoFavorite();
+                return;
+            }
+
             flowFavorites.Controls.Clear();
 
             int songnum = 1;
-            
+
 
             foreach (Song song in NimbusClassLibrary.Data.DBContext.songs.Where(s => s.IsFavorite))
             {
-                flowFavorites.Controls.Add(new HorizontalSongs(flowFavorites, songnum, song));
-                //AddSongToFavorites(song);
+                flowFavorites.Invoke(new Action(() =>
+                {
+                    // Create an instance of HorizontalSongs
+                    var songControl = new HorizontalSongs(SongsMenu, songnum, song);
+
+                    // Subscribe to the MenuButtonClicked event
+                    songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
+
+                    // Add the song control to the flowFavorites panel
+                    flowFavorites.Controls.Add(songControl);
+                }));
                 songnum++;
-            }
 
-        }
-       /* public void AddSongToFavorites(Song song)
-        {
-            if (favoriteSongs.Add(song)) // Adds only if not already in favorites
-            {
-                song.IsFavorite = true; // Optionally update favorite status
-                AddtoFavorite(); // Refresh the favorites display
-                MessageBox.Show($"'{song.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("This song is already in your Favorites!", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        public void RemoveSongFromFavorites(Song song)
+        private void SongControl_MenuButtonClicked(object sender, EventArgs e)
         {
-            if (favoriteSongs.Remove(song)) // Removes only if present in favorites
-            {
-                song.IsFavorite = false; // Optionally update favorite status
-                AddtoFavorite(); // Refresh the favorites display
-                MessageBox.Show($"'{song.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }*/
+            SongsMenu.Visible = !SongsMenu.Visible;
+        }
+        /* public void AddSongToFavorites(Song song)
+         {
+             if (favoriteSongs.Add(song)) // Adds only if not already in favorites
+             {
+                 song.IsFavorite = true; // Optionally update favorite status
+                 AddtoFavorite(); // Refresh the favorites display
+                 MessageBox.Show($"'{song.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             }
+             else
+             {
+                 MessageBox.Show("This song is already in your Favorites!", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             }
+         }
+
+         public void RemoveSongFromFavorites(Song song)
+         {
+             if (favoriteSongs.Remove(song)) // Removes only if present in favorites
+             {
+                 song.IsFavorite = false; // Optionally update favorite status
+                 AddtoFavorite(); // Refresh the favorites display
+                 MessageBox.Show($"'{song.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             }
+         }*/
     }
 }

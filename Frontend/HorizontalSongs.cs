@@ -25,10 +25,12 @@ namespace NIMBUS__MUSIC_PLAYER_
 
 
         private Control SongsMenu;
-        private string title;
-        private string thumbnail;
-        private Artist artist;
-        private TimeSpan duration;
+        private Song _song;
+
+        public Song Song
+        {
+            get { return _song; }
+        }
 
         public event EventHandler MenuButtonClicked;
 
@@ -38,35 +40,20 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             // Attach double-click event
             this.DoubleClick += HorizontalSongs_DoubleClick;
-            if (Playbtn == null) Playbtn = new Guna2GradientButton { Text = "Pause" };
-            if (Pausebtn == null) Pausebtn = new Guna2GradientButton { Text = "Pause" };
-            if (VolumeBar == null) VolumeBar = new Guna2TrackBar { Minimum = 0, Maximum = 100, Value = 50 };
-
-            // Attach event handlers
-            Playbtn.Click += (sender, e) => PlayButtonClicked?.Invoke();
-            Pausebtn.Click += (sender, e) => PauseButtonClicked?.Invoke();
-            VolumeBar.Scroll += (sender, e) => VolumeChanged?.Invoke(VolumeBar.Value);
-
-            // Optionally add controls to the user control if not added via designer
-            Controls.Add(Playbtn);
-            Controls.Add(Pausebtn);
-            Controls.Add(VolumeBar);
         }
 
-        public HorizontalSongs(Control SongsMenu, int songnum, string title, string thumbnail, Artist artist, TimeSpan duration)
+        public HorizontalSongs(Control SongsMenu, int songnum, Song song)
         {
             InitializeComponent();
             this.SongsMenu = SongsMenu;
-            this.title = title;
-            this.thumbnail = thumbnail;
-            this.artist = artist;
-            this.duration = duration;
+            _song = song;
 
+            
             SongNumlbl.Text = songnum.ToString();
-            Titlelbl.Text = title;
-            Songpic.ImageLocation = thumbnail;
-            Artistlbl.Text = artist.Display_Name;
-            TotalTimelbl.Text = $"{duration.Minutes}:{duration.Seconds}";
+            Titlelbl.Text = _song.Title;
+            Songpic.ImageLocation = _song.Artist.Profile_Pic;
+            Artistlbl.Text = _song.Artist.Display_Name;
+            TotalTimelbl.Text = $"{song.Duration.Minutes}:{song.Duration.Seconds}";
 
         }
 
@@ -213,13 +200,9 @@ namespace NIMBUS__MUSIC_PLAYER_
                 {
                     panel.Visible = false;  // Hide the SongMenu
                 }
-            }
-            SongsMenu.Visible = !SongsMenu.Visible;
-            MessageBox.Show($"Menu button clicked. SongsMenu visible: {SongsMenu.Visible}");*/
-
-            MenuButtonClicked?.Invoke(this, EventArgs.Empty);
+            }*/
         }
-        
+       
 
     }
 }

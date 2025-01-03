@@ -36,7 +36,7 @@ namespace NimbusClassLibrary.Data
                 GetAllPlaylists();
                 GetAllSongs();
                 GetAllPlaylistSongs();
-                
+                conn.Close();
             }
             catch (Exception ex)
             {
@@ -88,7 +88,7 @@ namespace NimbusClassLibrary.Data
                 {
                     Id = Convert.ToInt32(reader["Id"]),
                     Title = reader["Title"].ToString(),
-                    IsFavorite = reader["IsFavorite"].Equals("1"),
+                    IsFavorite = reader["IsFavorite"].ToString() == "1",
                     File_Path = reader["File_Path"].ToString(),
                     Artist = DBContext.artists.FirstOrDefault
                     (i => i.Id == Convert.ToInt32(reader["Artist_id"]))
@@ -116,8 +116,8 @@ namespace NimbusClassLibrary.Data
                 {
                     Id = Convert.ToInt32(reader["Id"]),
                     Display_Name = reader["Display_Name"].ToString(),
-                    IsFollowed = reader["IsFollowed"].Equals ("1"),
-                    IsFavorite = reader["IsFavorite"].Equals("1"),
+                    IsFollowed = reader["IsFollowed"].ToString() == "1",
+                    IsFavorite = reader["IsFavorite"].ToString() == "1",
                     Profile_Pic = reader["Profile_Pic"].ToString()
                 };
 

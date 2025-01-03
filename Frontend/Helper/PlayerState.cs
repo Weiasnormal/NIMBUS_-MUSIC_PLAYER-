@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using WMPLib;
 
@@ -38,6 +39,14 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         public static WindowsMediaPlayer player = new WindowsMediaPlayer();
         public static string currentSongPath = string.Empty; // To keep track of the current song path
 
+        public static async Task PlayQueue(CancellationToken token)
+        {
+            if(token.IsCancellationRequested) return;
+            Task.WaitAny(Task.Run(() =>
+            {
+
+            }));
+        }
         #endregion
 
         #region Player Volume

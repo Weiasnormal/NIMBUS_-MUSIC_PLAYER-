@@ -56,7 +56,7 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
             while (player.playState != WMPPlayState.wmppsStopped &&
                        player.playState != WMPPlayState.wmppsReady)
             {
-                Thread.Sleep(100); // Polling every 100ms to check play state
+                Thread.Sleep(100);
             }
         }
 

@@ -51,6 +51,10 @@
             this.btnSidebar_Albums = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSidebar_Songs = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Loopbtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.LoopbtnHighlight = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Shufflebtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.ShufflebtnHighlight = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Playbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Pausebtn = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -59,17 +63,16 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Queuebtn = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.btnPrevious = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Miniplayerbtn = new System.Windows.Forms.PictureBox();
             this.SongTimePanel = new System.Windows.Forms.Panel();
             this.EndTime = new System.Windows.Forms.Label();
             this.TimePlayed = new System.Windows.Forms.Label();
             this.TimeSong = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.SoundIcon = new System.Windows.Forms.PictureBox();
             this.Artistlbl = new System.Windows.Forms.Label();
             this.TitleSonglbl = new System.Windows.Forms.Label();
+            this.MiniplayerPanel = new System.Windows.Forms.Panel();
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ShowAddPlaylist = new System.Windows.Forms.Panel();
@@ -84,11 +87,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Queuebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Miniplayerbtn)).BeginInit();
             this.SongTimePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +106,7 @@
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.SearchBar);
             this.guna2Panel1.Location = new System.Drawing.Point(262, 1);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(952, 65);
@@ -129,7 +130,7 @@
             this.btnImportMusic.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnImportMusic.ImageSize = new System.Drawing.Size(18, 18);
             this.btnImportMusic.Location = new System.Drawing.Point(598, 21);
-            this.btnImportMusic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImportMusic.Margin = new System.Windows.Forms.Padding(2);
             this.btnImportMusic.Name = "btnImportMusic";
             this.btnImportMusic.PressedColor = System.Drawing.Color.Gray;
             this.btnImportMusic.ShadowDecoration.Parent = this.btnImportMusic;
@@ -160,7 +161,7 @@
             this.Theme4.HoverState.Parent = this.Theme4;
             this.Theme4.ImageSize = new System.Drawing.Size(31, 31);
             this.Theme4.Location = new System.Drawing.Point(825, 26);
-            this.Theme4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Theme4.Margin = new System.Windows.Forms.Padding(2);
             this.Theme4.MaximumSize = new System.Drawing.Size(23, 25);
             this.Theme4.Name = "Theme4";
             this.Theme4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -187,7 +188,7 @@
             this.Theme2.ForeColor = System.Drawing.Color.White;
             this.Theme2.HoverState.Parent = this.Theme2;
             this.Theme2.Location = new System.Drawing.Point(946, 0);
-            this.Theme2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Theme2.Margin = new System.Windows.Forms.Padding(2);
             this.Theme2.Name = "Theme2";
             this.Theme2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Theme2.ShadowDecoration.Parent = this.Theme2;
@@ -212,7 +213,7 @@
             this.Theme3.ForeColor = System.Drawing.Color.White;
             this.Theme3.HoverState.Parent = this.Theme3;
             this.Theme3.Location = new System.Drawing.Point(795, 26);
-            this.Theme3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Theme3.Margin = new System.Windows.Forms.Padding(2);
             this.Theme3.Name = "Theme3";
             this.Theme3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Theme3.ShadowDecoration.Parent = this.Theme3;
@@ -238,7 +239,7 @@
             this.Theme1.ForeColor = System.Drawing.Color.White;
             this.Theme1.HoverState.Parent = this.Theme1;
             this.Theme1.Location = new System.Drawing.Point(762, 26);
-            this.Theme1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Theme1.Margin = new System.Windows.Forms.Padding(2);
             this.Theme1.Name = "Theme1";
             this.Theme1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Theme1.ShadowDecoration.Parent = this.Theme1;
@@ -258,7 +259,7 @@
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox2.Location = new System.Drawing.Point(862, 21);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
@@ -276,7 +277,7 @@
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(901, 21);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(43)))), ((int)(((byte)(28)))));
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -307,7 +308,7 @@
             this.SearchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.SearchBar.IconLeftSize = new System.Drawing.Size(15, 15);
             this.SearchBar.Location = new System.Drawing.Point(16, 21);
-            this.SearchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchBar.Margin = new System.Windows.Forms.Padding(4);
             this.SearchBar.Name = "SearchBar";
             this.SearchBar.PasswordChar = '\0';
             this.SearchBar.PlaceholderForeColor = System.Drawing.Color.White;
@@ -326,7 +327,7 @@
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(258, 76);
             this.panel1.TabIndex = 11;
@@ -336,7 +337,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Nimbus_LightLogo;
             this.pictureBox1.Location = new System.Drawing.Point(13, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -359,7 +360,7 @@
             this.Sidebar.Controls.Add(this.btnSidebar_Albums);
             this.Sidebar.Controls.Add(this.btnSidebar_Songs);
             this.Sidebar.Location = new System.Drawing.Point(2, 1);
-            this.Sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Sidebar.Margin = new System.Windows.Forms.Padding(2);
             this.Sidebar.Name = "Sidebar";
             this.Sidebar.ShadowDecoration.Parent = this.Sidebar;
             this.Sidebar.Size = new System.Drawing.Size(260, 637);
@@ -381,9 +382,9 @@
             "dfgdfgdfg",
             "dfgdfgd"});
             this.PlaylistList.Location = new System.Drawing.Point(56, 436);
-            this.PlaylistList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PlaylistList.Margin = new System.Windows.Forms.Padding(2);
             this.PlaylistList.Name = "PlaylistList";
-            this.PlaylistList.Size = new System.Drawing.Size(189, 45);
+            this.PlaylistList.Size = new System.Drawing.Size(197, 165);
             this.PlaylistList.TabIndex = 20;
             this.PlaylistList.SelectedIndexChanged += new System.EventHandler(this.PlaylistList_SelectedIndexChanged);
             // 
@@ -412,7 +413,7 @@
             this.btnSidebar_Favorites.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Favorites.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnSidebar_Favorites.Location = new System.Drawing.Point(8, 147);
-            this.btnSidebar_Favorites.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSidebar_Favorites.Margin = new System.Windows.Forms.Padding(2);
             this.btnSidebar_Favorites.Name = "btnSidebar_Favorites";
             this.btnSidebar_Favorites.PressedColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Favorites.ShadowDecoration.Parent = this.btnSidebar_Favorites;
@@ -428,7 +429,7 @@
             this.btnAddaPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddaPlaylist.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_AddPlaylist;
             this.btnAddaPlaylist.Location = new System.Drawing.Point(192, 400);
-            this.btnAddaPlaylist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddaPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddaPlaylist.Name = "btnAddaPlaylist";
             this.btnAddaPlaylist.ShadowDecoration.Parent = this.btnAddaPlaylist;
             this.btnAddaPlaylist.Size = new System.Drawing.Size(18, 19);
@@ -466,7 +467,7 @@
             this.btnSidebar_Playlist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Playlist.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnSidebar_Playlist.Location = new System.Drawing.Point(8, 378);
-            this.btnSidebar_Playlist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSidebar_Playlist.Margin = new System.Windows.Forms.Padding(2);
             this.btnSidebar_Playlist.Name = "btnSidebar_Playlist";
             this.btnSidebar_Playlist.PressedColor = System.Drawing.Color.Gray;
             this.btnSidebar_Playlist.ShadowDecoration.Parent = this.btnSidebar_Playlist;
@@ -503,7 +504,7 @@
             this.btnSidebar_Queue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Queue.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnSidebar_Queue.Location = new System.Drawing.Point(8, 320);
-            this.btnSidebar_Queue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSidebar_Queue.Margin = new System.Windows.Forms.Padding(2);
             this.btnSidebar_Queue.Name = "btnSidebar_Queue";
             this.btnSidebar_Queue.PressedColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Queue.ShadowDecoration.Parent = this.btnSidebar_Queue;
@@ -539,7 +540,7 @@
             this.btnSidebar_Artists.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Artists.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnSidebar_Artists.Location = new System.Drawing.Point(8, 262);
-            this.btnSidebar_Artists.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSidebar_Artists.Margin = new System.Windows.Forms.Padding(2);
             this.btnSidebar_Artists.Name = "btnSidebar_Artists";
             this.btnSidebar_Artists.PressedColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Artists.ShadowDecoration.Parent = this.btnSidebar_Artists;
@@ -575,7 +576,7 @@
             this.btnSidebar_Albums.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Albums.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnSidebar_Albums.Location = new System.Drawing.Point(8, 205);
-            this.btnSidebar_Albums.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSidebar_Albums.Margin = new System.Windows.Forms.Padding(2);
             this.btnSidebar_Albums.Name = "btnSidebar_Albums";
             this.btnSidebar_Albums.PressedColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Albums.ShadowDecoration.Parent = this.btnSidebar_Albums;
@@ -612,7 +613,7 @@
             this.btnSidebar_Songs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSidebar_Songs.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnSidebar_Songs.Location = new System.Drawing.Point(8, 89);
-            this.btnSidebar_Songs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSidebar_Songs.Margin = new System.Windows.Forms.Padding(2);
             this.btnSidebar_Songs.Name = "btnSidebar_Songs";
             this.btnSidebar_Songs.PressedColor = System.Drawing.Color.Transparent;
             this.btnSidebar_Songs.ShadowDecoration.Parent = this.btnSidebar_Songs;
@@ -628,6 +629,10 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Controls.Add(this.Loopbtn);
+            this.panel3.Controls.Add(this.LoopbtnHighlight);
+            this.panel3.Controls.Add(this.Shufflebtn);
+            this.panel3.Controls.Add(this.ShufflebtnHighlight);
             this.panel3.Controls.Add(this.Playbtn);
             this.panel3.Controls.Add(this.guna2GradientButton3);
             this.panel3.Controls.Add(this.Pausebtn);
@@ -636,19 +641,125 @@
             this.panel3.Controls.Add(this.pictureBox10);
             this.panel3.Controls.Add(this.Queuebtn);
             this.panel3.Controls.Add(this.pictureBox11);
-            this.panel3.Controls.Add(this.btnPrevious);
-            this.panel3.Controls.Add(this.pictureBox12);
-            this.panel3.Controls.Add(this.pictureBox7);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.Miniplayerbtn);
             this.panel3.Controls.Add(this.SongTimePanel);
-            this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.SoundIcon);
             this.panel3.Controls.Add(this.Artistlbl);
             this.panel3.Controls.Add(this.TitleSonglbl);
             this.panel3.Location = new System.Drawing.Point(2, 637);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1212, 93);
             this.panel3.TabIndex = 11;
+            // 
+            // Loopbtn
+            // 
+            this.Loopbtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Loopbtn.BackColor = System.Drawing.Color.Transparent;
+            this.Loopbtn.CheckedState.Parent = this.Loopbtn;
+            this.Loopbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Loopbtn.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Loop;
+            this.Loopbtn.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Loopbtn.CustomImages.Parent = this.Loopbtn;
+            this.Loopbtn.FillColor = System.Drawing.Color.Empty;
+            this.Loopbtn.FillColor2 = System.Drawing.Color.Empty;
+            this.Loopbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loopbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.Loopbtn.HoverState.Parent = this.Loopbtn;
+            this.Loopbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Loopbtn.Location = new System.Drawing.Point(764, 46);
+            this.Loopbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Loopbtn.Name = "Loopbtn";
+            this.Loopbtn.PressedColor = System.Drawing.Color.Transparent;
+            this.Loopbtn.ShadowDecoration.Parent = this.Loopbtn;
+            this.Loopbtn.Size = new System.Drawing.Size(28, 20);
+            this.Loopbtn.TabIndex = 23;
+            this.Loopbtn.TextOffset = new System.Drawing.Point(15, 0);
+            this.Loopbtn.UseTransparentBackground = true;
+            this.Loopbtn.Click += new System.EventHandler(this.Loopbtn_Click);
+            // 
+            // LoopbtnHighlight
+            // 
+            this.LoopbtnHighlight.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.LoopbtnHighlight.BackColor = System.Drawing.Color.Transparent;
+            this.LoopbtnHighlight.CheckedState.Parent = this.LoopbtnHighlight;
+            this.LoopbtnHighlight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoopbtnHighlight.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_LoopHighlight;
+            this.LoopbtnHighlight.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LoopbtnHighlight.CustomImages.Parent = this.LoopbtnHighlight;
+            this.LoopbtnHighlight.FillColor = System.Drawing.Color.Empty;
+            this.LoopbtnHighlight.FillColor2 = System.Drawing.Color.Empty;
+            this.LoopbtnHighlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoopbtnHighlight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.LoopbtnHighlight.HoverState.Parent = this.LoopbtnHighlight;
+            this.LoopbtnHighlight.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.LoopbtnHighlight.Location = new System.Drawing.Point(764, 46);
+            this.LoopbtnHighlight.Margin = new System.Windows.Forms.Padding(2);
+            this.LoopbtnHighlight.Name = "LoopbtnHighlight";
+            this.LoopbtnHighlight.PressedColor = System.Drawing.Color.Transparent;
+            this.LoopbtnHighlight.ShadowDecoration.Parent = this.LoopbtnHighlight;
+            this.LoopbtnHighlight.Size = new System.Drawing.Size(28, 20);
+            this.LoopbtnHighlight.TabIndex = 22;
+            this.LoopbtnHighlight.TextOffset = new System.Drawing.Point(15, 0);
+            this.LoopbtnHighlight.UseTransparentBackground = true;
+            this.LoopbtnHighlight.Click += new System.EventHandler(this.LoopbtnHighlight_Click);
+            // 
+            // Shufflebtn
+            // 
+            this.Shufflebtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Shufflebtn.BackColor = System.Drawing.Color.Transparent;
+            this.Shufflebtn.CheckedState.Parent = this.Shufflebtn;
+            this.Shufflebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Shufflebtn.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Shuffle;
+            this.Shufflebtn.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Shufflebtn.CustomImages.ImageOffset = new System.Drawing.Point(0, -5);
+            this.Shufflebtn.CustomImages.ImageSize = new System.Drawing.Size(28, 28);
+            this.Shufflebtn.CustomImages.Parent = this.Shufflebtn;
+            this.Shufflebtn.FillColor = System.Drawing.Color.Empty;
+            this.Shufflebtn.FillColor2 = System.Drawing.Color.Empty;
+            this.Shufflebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shufflebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.Shufflebtn.HoverState.Parent = this.Shufflebtn;
+            this.Shufflebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Shufflebtn.Location = new System.Drawing.Point(431, 46);
+            this.Shufflebtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Shufflebtn.Name = "Shufflebtn";
+            this.Shufflebtn.PressedColor = System.Drawing.Color.Transparent;
+            this.Shufflebtn.ShadowDecoration.Parent = this.Shufflebtn;
+            this.Shufflebtn.Size = new System.Drawing.Size(28, 21);
+            this.Shufflebtn.TabIndex = 21;
+            this.Shufflebtn.TextOffset = new System.Drawing.Point(15, 0);
+            this.Shufflebtn.UseTransparentBackground = true;
+            this.Shufflebtn.Click += new System.EventHandler(this.Shufflebtn_Click);
+            // 
+            // ShufflebtnHighlight
+            // 
+            this.ShufflebtnHighlight.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ShufflebtnHighlight.BackColor = System.Drawing.Color.Transparent;
+            this.ShufflebtnHighlight.CheckedState.Parent = this.ShufflebtnHighlight;
+            this.ShufflebtnHighlight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShufflebtnHighlight.CustomImages.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_ShuffleHighlight;
+            this.ShufflebtnHighlight.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ShufflebtnHighlight.CustomImages.ImageOffset = new System.Drawing.Point(0, -5);
+            this.ShufflebtnHighlight.CustomImages.ImageSize = new System.Drawing.Size(28, 28);
+            this.ShufflebtnHighlight.CustomImages.Parent = this.ShufflebtnHighlight;
+            this.ShufflebtnHighlight.FillColor = System.Drawing.Color.Empty;
+            this.ShufflebtnHighlight.FillColor2 = System.Drawing.Color.Empty;
+            this.ShufflebtnHighlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShufflebtnHighlight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
+            this.ShufflebtnHighlight.HoverState.Parent = this.ShufflebtnHighlight;
+            this.ShufflebtnHighlight.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ShufflebtnHighlight.Location = new System.Drawing.Point(431, 46);
+            this.ShufflebtnHighlight.Margin = new System.Windows.Forms.Padding(2);
+            this.ShufflebtnHighlight.Name = "ShufflebtnHighlight";
+            this.ShufflebtnHighlight.PressedColor = System.Drawing.Color.Transparent;
+            this.ShufflebtnHighlight.ShadowDecoration.Parent = this.ShufflebtnHighlight;
+            this.ShufflebtnHighlight.Size = new System.Drawing.Size(28, 21);
+            this.ShufflebtnHighlight.TabIndex = 20;
+            this.ShufflebtnHighlight.TextOffset = new System.Drawing.Point(15, 0);
+            this.ShufflebtnHighlight.UseTransparentBackground = true;
+            this.ShufflebtnHighlight.Click += new System.EventHandler(this.ShufflebtnHighlight_Click);
             // 
             // Playbtn
             // 
@@ -668,7 +779,7 @@
             this.Playbtn.HoverState.Parent = this.Playbtn;
             this.Playbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Playbtn.Location = new System.Drawing.Point(590, 34);
-            this.Playbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Playbtn.Margin = new System.Windows.Forms.Padding(2);
             this.Playbtn.Name = "Playbtn";
             this.Playbtn.PressedColor = System.Drawing.Color.Transparent;
             this.Playbtn.ShadowDecoration.Parent = this.Playbtn;
@@ -696,7 +807,7 @@
             this.guna2GradientButton3.HoverState.Parent = this.guna2GradientButton3;
             this.guna2GradientButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton3.Location = new System.Drawing.Point(355, 42);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.PressedColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
@@ -722,7 +833,7 @@
             this.Pausebtn.HoverState.Parent = this.Pausebtn;
             this.Pausebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Pausebtn.Location = new System.Drawing.Point(590, 34);
-            this.Pausebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pausebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Pausebtn.Name = "Pausebtn";
             this.Pausebtn.PressedColor = System.Drawing.Color.Transparent;
             this.Pausebtn.ShadowDecoration.Parent = this.Pausebtn;
@@ -739,7 +850,7 @@
             this.VolumeBar.FillColor = System.Drawing.Color.DarkGray;
             this.VolumeBar.HoverState.Parent = this.VolumeBar;
             this.VolumeBar.Location = new System.Drawing.Point(1058, 44);
-            this.VolumeBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VolumeBar.Margin = new System.Windows.Forms.Padding(2);
             this.VolumeBar.Name = "VolumeBar";
             this.VolumeBar.Size = new System.Drawing.Size(76, 22);
             this.VolumeBar.TabIndex = 9;
@@ -752,7 +863,7 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__3_;
             this.btnNext.Location = new System.Drawing.Point(689, 47);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(20, 20);
             this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -764,7 +875,7 @@
             // 
             this.pictureBox10.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Default_Album;
             this.pictureBox10.Location = new System.Drawing.Point(14, 19);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(56, 60);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -777,7 +888,7 @@
             this.Queuebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Queuebtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__6_;
             this.Queuebtn.Location = new System.Drawing.Point(850, 47);
-            this.Queuebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Queuebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Queuebtn.Name = "Queuebtn";
             this.Queuebtn.Size = new System.Drawing.Size(24, 18);
             this.Queuebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -791,51 +902,39 @@
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Resize;
             this.pictureBox11.Location = new System.Drawing.Point(1178, 47);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(15, 16);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 5;
             this.pictureBox11.TabStop = false;
             // 
-            // btnPrevious
+            // pictureBox5
             // 
-            this.btnPrevious.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnPrevious.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrevious.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__4_;
-            this.btnPrevious.Location = new System.Drawing.Point(516, 47);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(20, 20);
-            this.btnPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnPrevious.TabIndex = 9;
-            this.btnPrevious.TabStop = false;
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__4_;
+            this.pictureBox5.Location = new System.Drawing.Point(516, 47);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
             // 
-            // pictureBox12
+            // Miniplayerbtn
             // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox12.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__1_;
-            this.pictureBox12.Location = new System.Drawing.Point(1148, 47);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(20, 16);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 4;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__2_;
-            this.pictureBox7.Location = new System.Drawing.Point(434, 44);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
+            this.Miniplayerbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Miniplayerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Miniplayerbtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__1_;
+            this.Miniplayerbtn.Location = new System.Drawing.Point(1148, 47);
+            this.Miniplayerbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Miniplayerbtn.Name = "Miniplayerbtn";
+            this.Miniplayerbtn.Size = new System.Drawing.Size(20, 16);
+            this.Miniplayerbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Miniplayerbtn.TabIndex = 4;
+            this.Miniplayerbtn.TabStop = false;
+            this.Miniplayerbtn.Click += new System.EventHandler(this.Miniplayerbtn_Click);
             // 
             // SongTimePanel
             // 
@@ -844,7 +943,7 @@
             this.SongTimePanel.Controls.Add(this.TimePlayed);
             this.SongTimePanel.Controls.Add(this.TimeSong);
             this.SongTimePanel.Location = new System.Drawing.Point(331, 6);
-            this.SongTimePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SongTimePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SongTimePanel.Name = "SongTimePanel";
             this.SongTimePanel.Size = new System.Drawing.Size(570, 26);
             this.SongTimePanel.TabIndex = 13;
@@ -883,28 +982,15 @@
             this.TimeSong.FillColor = System.Drawing.Color.White;
             this.TimeSong.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.TimeSong.Location = new System.Drawing.Point(45, 12);
-            this.TimeSong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TimeSong.Margin = new System.Windows.Forms.Padding(2);
             this.TimeSong.Name = "TimeSong";
-            this.TimeSong.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(190)))), ((int)(((byte)(129)))));
-            this.TimeSong.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(190)))), ((int)(((byte)(129)))));
+            this.TimeSong.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.TimeSong.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.TimeSong.ShadowDecoration.Parent = this.TimeSong;
             this.TimeSong.Size = new System.Drawing.Size(480, 2);
             this.TimeSong.TabIndex = 0;
             this.TimeSong.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.TimeSong.ValueChanged += new System.EventHandler(this.TimeSong_ValueChanged);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__5_;
-            this.pictureBox6.Location = new System.Drawing.Point(769, 47);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
             // 
             // SoundIcon
             // 
@@ -912,7 +998,7 @@
             this.SoundIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SoundIcon.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group;
             this.SoundIcon.Location = new System.Drawing.Point(1032, 47);
-            this.SoundIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SoundIcon.Margin = new System.Windows.Forms.Padding(2);
             this.SoundIcon.Name = "SoundIcon";
             this.SoundIcon.Size = new System.Drawing.Size(20, 20);
             this.SoundIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -945,13 +1031,22 @@
             this.TitleSonglbl.Text = "HAVANA";
             this.TitleSonglbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // MiniplayerPanel
+            // 
+            this.MiniplayerPanel.Location = new System.Drawing.Point(886, 70);
+            this.MiniplayerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.MiniplayerPanel.Name = "MiniplayerPanel";
+            this.MiniplayerPanel.Size = new System.Drawing.Size(63, 51);
+            this.MiniplayerPanel.TabIndex = 24;
+            this.MiniplayerPanel.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.MiniplayerPanel_ControlRemoved);
+            // 
             // ViewPanel
             // 
             this.ViewPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ViewPanel.BackColor = System.Drawing.Color.Transparent;
             this.ViewPanel.Location = new System.Drawing.Point(262, 80);
-            this.ViewPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ViewPanel.Name = "ViewPanel";
             this.ViewPanel.Size = new System.Drawing.Size(952, 557);
             this.ViewPanel.TabIndex = 12;
@@ -964,7 +1059,7 @@
             // 
             this.ShowAddPlaylist.BackColor = System.Drawing.Color.Transparent;
             this.ShowAddPlaylist.Location = new System.Drawing.Point(648, 70);
-            this.ShowAddPlaylist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAddPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.ShowAddPlaylist.Name = "ShowAddPlaylist";
             this.ShowAddPlaylist.Size = new System.Drawing.Size(70, 109);
             this.ShowAddPlaylist.TabIndex = 19;
@@ -981,6 +1076,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1215, 731);
+            this.Controls.Add(this.MiniplayerPanel);
             this.Controls.Add(this.ShowAddPlaylist);
             this.Controls.Add(this.ViewPanel);
             this.Controls.Add(this.panel3);
@@ -988,7 +1084,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(750, 705);
             this.Name = "Nimbus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1007,12 +1103,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Queuebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Miniplayerbtn)).EndInit();
             this.SongTimePanel.ResumeLayout(false);
             this.SongTimePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundIcon)).EndInit();
             this.ResumeLayout(false);
 
@@ -1045,13 +1139,11 @@
         private System.Windows.Forms.Label TimePlayed;
         private Guna.UI2.WinForms.Guna2ProgressBar TimeSong;
         private System.Windows.Forms.PictureBox Queuebtn;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox btnPrevious;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox btnNext;
         private Guna.UI2.WinForms.Guna2TrackBar VolumeBar;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox Miniplayerbtn;
         private System.Windows.Forms.PictureBox SoundIcon;
         private System.Windows.Forms.Label Artistlbl;
         private System.Windows.Forms.Label TitleSonglbl;
@@ -1065,6 +1157,11 @@
         private System.Windows.Forms.ListBox PlaylistList;
         private Guna.UI2.WinForms.Guna2GradientButton Playbtn;
         public System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2GradientButton ShufflebtnHighlight;
+        private Guna.UI2.WinForms.Guna2GradientButton Shufflebtn;
+        private Guna.UI2.WinForms.Guna2GradientButton LoopbtnHighlight;
+        private Guna.UI2.WinForms.Guna2GradientButton Loopbtn;
+        private System.Windows.Forms.Panel MiniplayerPanel;
     }
 }
 

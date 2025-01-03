@@ -21,5 +21,10 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
 
         }
+
+        private void CloseMiniplayer_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+        }
     }
 }

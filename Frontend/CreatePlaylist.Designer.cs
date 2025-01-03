@@ -138,11 +138,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Create_a_Playlist_BG;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.CancelCreate);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "CreatePlaylist";
             this.Size = new System.Drawing.Size(465, 220);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

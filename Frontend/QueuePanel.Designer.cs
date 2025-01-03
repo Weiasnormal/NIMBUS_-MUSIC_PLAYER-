@@ -49,6 +49,7 @@
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Menu_AddPlaylist = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SongsMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.QueueScrollbar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.MenuTabs.SuspendLayout();
             this.DetailPanel.SuspendLayout();
             this.SongsMenu.SuspendLayout();
@@ -420,12 +421,16 @@
             // 
             // flowpanelQueue
             // 
-            this.flowpanelQueue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowpanelQueue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowpanelQueue.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowpanelQueue.Location = new System.Drawing.Point(45, 193);
             this.flowpanelQueue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowpanelQueue.Name = "flowpanelQueue";
             this.flowpanelQueue.Size = new System.Drawing.Size(1196, 486);
             this.flowpanelQueue.TabIndex = 30;
+            this.flowpanelQueue.WrapContents = false;
             // 
             // guna2ImageButton2
             // 
@@ -524,11 +529,29 @@
             this.SongsMenu.UseTransparentBackground = true;
             this.SongsMenu.Click += new System.EventHandler(this.Menubtn_Click);
             // 
+            // QueueScrollbar
+            // 
+            this.QueueScrollbar.AutoRoundedCorners = true;
+            this.QueueScrollbar.BorderRadius = 4;
+            this.QueueScrollbar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.QueueScrollbar.HoverState.Parent = null;
+            this.QueueScrollbar.LargeChange = 10;
+            this.QueueScrollbar.Location = new System.Drawing.Point(1260, 135);
+            this.QueueScrollbar.Margin = new System.Windows.Forms.Padding(5);
+            this.QueueScrollbar.MouseWheelBarPartitions = 10;
+            this.QueueScrollbar.Name = "QueueScrollbar";
+            this.QueueScrollbar.PressedState.Parent = this.QueueScrollbar;
+            this.QueueScrollbar.ScrollbarSize = 11;
+            this.QueueScrollbar.Size = new System.Drawing.Size(11, 542);
+            this.QueueScrollbar.TabIndex = 41;
+            this.QueueScrollbar.ThumbColor = System.Drawing.Color.White;
+            // 
             // QueuePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.QueueScrollbar);
             this.Controls.Add(this.SongsMenu);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.guna2GradientButton2);
@@ -576,5 +599,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton Menu_AddPlaylist;
         private Guna.UI2.WinForms.Guna2Panel SongsMenu;
+        private Guna.UI2.WinForms.Guna2VScrollBar QueueScrollbar;
     }
 }

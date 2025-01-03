@@ -51,6 +51,7 @@
             this.MenuTabs = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.FavoritesScrollbar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.DetailPanel.SuspendLayout();
             this.SongsMenu.SuspendLayout();
             this.MenuTabs.SuspendLayout();
@@ -291,13 +292,16 @@
             // 
             // flowFavorites
             // 
-            this.flowFavorites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowFavorites.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowFavorites.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowFavorites.Location = new System.Drawing.Point(43, 191);
             this.flowFavorites.Margin = new System.Windows.Forms.Padding(4);
             this.flowFavorites.Name = "flowFavorites";
-            this.flowFavorites.Size = new System.Drawing.Size(1198, 598);
+            this.flowFavorites.Size = new System.Drawing.Size(1196, 496);
             this.flowFavorites.TabIndex = 30;
+            this.flowFavorites.WrapContents = false;
             // 
             // SongsMenu
             // 
@@ -598,11 +602,29 @@
             this.guna2GradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton4.TextOffset = new System.Drawing.Point(20, 0);
             // 
+            // FavoritesScrollbar
+            // 
+            this.FavoritesScrollbar.AutoRoundedCorners = true;
+            this.FavoritesScrollbar.BorderRadius = 4;
+            this.FavoritesScrollbar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.FavoritesScrollbar.HoverState.Parent = null;
+            this.FavoritesScrollbar.LargeChange = 10;
+            this.FavoritesScrollbar.Location = new System.Drawing.Point(1260, 135);
+            this.FavoritesScrollbar.Margin = new System.Windows.Forms.Padding(5);
+            this.FavoritesScrollbar.MouseWheelBarPartitions = 10;
+            this.FavoritesScrollbar.Name = "FavoritesScrollbar";
+            this.FavoritesScrollbar.PressedState.Parent = this.FavoritesScrollbar;
+            this.FavoritesScrollbar.ScrollbarSize = 11;
+            this.FavoritesScrollbar.Size = new System.Drawing.Size(11, 542);
+            this.FavoritesScrollbar.TabIndex = 40;
+            this.FavoritesScrollbar.ThumbColor = System.Drawing.Color.White;
+            // 
             // FavoritePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.FavoritesScrollbar);
             this.Controls.Add(this.MenuTabs);
             this.Controls.Add(this.SongsMenu);
             this.Controls.Add(this.SearchBar);
@@ -652,5 +674,6 @@
         private Guna.UI2.WinForms.Guna2Panel MenuTabs;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
+        private Guna.UI2.WinForms.Guna2VScrollBar FavoritesScrollbar;
     }
 }

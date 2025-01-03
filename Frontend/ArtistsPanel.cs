@@ -22,6 +22,32 @@ namespace NIMBUS__MUSIC_PLAYER_
             ArtistController = new ArtistController();
             loadSongs();
             loadArtists();
+
+            // Additional initialization for your panel and scrollbar
+            FlowlayoutPanelArtist.AutoScroll = true;
+            ArtistsScrollbar.Scroll += (sender, e) =>
+            {
+                FlowlayoutPanelArtist.VerticalScroll.Value = ArtistsScrollbar.Value;
+            };
+
+
+            int numControls = FlowlayoutPanelArtist.Controls.Count;
+            FlowlayoutPanelArtist.SuspendLayout();
+            FlowlayoutPanelArtist.Controls.Clear();
+            FlowlayoutPanelArtist.AutoScroll = true;
+            FlowlayoutPanelArtist.VerticalScroll.Visible = false;
+
+            this.Dock = DockStyle.Right;
+            ArtistsScrollbar.Scroll += (sender, e) => { FlowlayoutPanelArtist.VerticalScroll.Value = ArtistsScrollbar.Value; };
+            ArtistsScrollbar.Height = FlowlayoutPanelArtist.Height;
+            ArtistsScrollbar.Visible = false;
+
+            this.Controls.Add(ArtistsScrollbar);
+
+            FlowlayoutPanelArtist   .ResumeLayout();
+
+            // then update the form
+            FlowlayoutPanelArtist.PerformLayout();
         }
 
         public void loadArtists()

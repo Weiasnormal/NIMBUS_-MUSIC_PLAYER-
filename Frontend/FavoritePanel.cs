@@ -75,6 +75,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         #endregion
 
+        private Size originalFormSize; // Store the original size of the form
         private HashSet<Song> favoriteSongs;
         private object selectedSong;
         SongController<Song> controller = new SongController<Song>();
@@ -91,7 +92,75 @@ namespace NIMBUS__MUSIC_PLAYER_
             favoriteSongs = new HashSet<Song>();
 
             SongsMenu.Visible = false;
+
+            // Capture the original size of the form
+            originalFormSize = this.Size;
+
+            // Attach the Resize event handler
+            this.Resize += AllSongPanel_Resize;
+
+            // Additional initialization for your panel and scrollbar
+            flowFavorites.AutoScroll = true;
+            FavoritesScrollbar.Scroll += (sender, e) =>
+            {
+                flowFavorites.VerticalScroll.Value = FavoritesScrollbar.Value;
+            };
+
+
+            int numControls = flowFavorites.Controls.Count;
+            flowFavorites.SuspendLayout();
+            flowFavorites.Controls.Clear();
+            flowFavorites.AutoScroll = true;
+            flowFavorites.VerticalScroll.Visible = false;
+
+            this.Dock = DockStyle.Right;
+            FavoritesScrollbar.Scroll += (sender, e) => { flowFavorites.VerticalScroll.Value = FavoritesScrollbar.Value; };
+            FavoritesScrollbar.Height = flowFavorites.Height;
+            FavoritesScrollbar.Visible = false;
+
+            this.Controls.Add(FavoritesScrollbar);
+
+            flowFavorites.ResumeLayout();
+
+            // then update the form
+            flowFavorites.PerformLayout();
+
         }
+
+        #region Frontend
+        private void AllSongPanel_Resize(object sender, EventArgs e)
+        {
+            ResizeContents();
+        }
+
+        private void ResizeContents()
+        {
+            // Calculate scaling ratios
+            float xRatio = (float)this.Width / originalFormSize.Width;
+            float yRatio = (float)this.Height / originalFormSize.Height;
+
+            foreach (Control control in flowFavorites.Controls)
+            {
+                // Skip resizing the scrollbar if not needed
+                if (control == FavoritesScrollbar)
+                    continue;
+
+                // Calculate the new size and location for each control
+                int newX = (int)(control.Location.X * xRatio);
+                int newY = (int)(control.Location.Y * yRatio);
+                int newWidth = (int)(control.Width * xRatio);
+                int newHeight = (int)(control.Height * yRatio);
+
+                // Apply the new size and location
+                control.Location = new Point(newX, newY);
+                control.Size = new Size(newWidth, newHeight);
+            }
+
+            // Update the scrollbar height and position
+            FavoritesScrollbar.Height = flowFavorites.Height;
+            FavoritesScrollbar.Maximum = flowFavorites.VerticalScroll.Maximum;
+        }  
+        #endregion
 
         private void Menubtn_Click(object sender, EventArgs e)
         {

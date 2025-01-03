@@ -71,6 +71,16 @@ namespace NIMBUS__MUSIC_PLAYER_
             Playbtn.Visible = true;
             Pausebtn.Visible = false;
             #endregion
+            #region Change .text/value of Artist and Song Title
+            // Subscribe to PlayerState's OnStateChanged event
+            PlayerState.OnStateChanged += PlayerState_OnStateChanged1;
+
+            TitleSonglbl.Text = "-";
+            Artistlbl.Text = "-";
+
+            // Initialize UI elements
+            UpdateSongDetails();
+            #endregion
         }
 
         #region Change to pause icon when a song card is clicked
@@ -92,6 +102,43 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             Playbtn.Visible = !isPlaying; // Play button is visible when not playing
             Pausebtn.Visible = isPlaying; // Pause button is visible when playing
+        }
+        #endregion
+        #region Change.text/value of Artist and Song Title
+        private void PlayerState_OnStateChanged1(bool isPlaying)
+        {
+            // Ensure updates happen on the UI thread
+            if (InvokeRequired)
+            {
+                Invoke(new Action(UpdateSongDetails));
+            }
+            else
+            {
+                UpdateSongDetails();
+            }
+        }
+
+        private void UpdateSongDetails()
+        {
+            try
+            {
+                var currentSong = PlayerState.CurrentSong?.Value;
+
+                if (currentSong != null)
+                {
+                    TitleSonglbl.Text = currentSong.Title; // Update the song title
+                    Artistlbl.Text = currentSong.Artist.Display_Name; // Update the artist name
+                }
+                else
+                {
+                    TitleSonglbl.Text = "-";
+                    Artistlbl.Text = "-";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating song details: {ex.Message}");
+            }
         }
         #endregion
 

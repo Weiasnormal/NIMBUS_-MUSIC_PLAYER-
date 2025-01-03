@@ -73,6 +73,7 @@
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ShowAddPlaylist = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -844,7 +845,7 @@
             this.SongTimePanel.Location = new System.Drawing.Point(441, 7);
             this.SongTimePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SongTimePanel.Name = "SongTimePanel";
-            this.SongTimePanel.Size = new System.Drawing.Size(753, 32);
+            this.SongTimePanel.Size = new System.Drawing.Size(760, 32);
             this.SongTimePanel.TabIndex = 13;
             // 
             // EndTime
@@ -853,7 +854,7 @@
             this.EndTime.AutoSize = true;
             this.EndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EndTime.Location = new System.Drawing.Point(719, 7);
+            this.EndTime.Location = new System.Drawing.Point(719, 8);
             this.EndTime.Name = "EndTime";
             this.EndTime.Size = new System.Drawing.Size(31, 16);
             this.EndTime.TabIndex = 9;
@@ -878,11 +879,11 @@
             this.TimeSong.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TimeSong.FillColor = System.Drawing.Color.White;
             this.TimeSong.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.TimeSong.Location = new System.Drawing.Point(53, 15);
+            this.TimeSong.Location = new System.Drawing.Point(60, 15);
             this.TimeSong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimeSong.Name = "TimeSong";
-            this.TimeSong.ProgressColor = System.Drawing.Color.White;
-            this.TimeSong.ProgressColor2 = System.Drawing.Color.Black;
+            this.TimeSong.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(190)))), ((int)(((byte)(129)))));
+            this.TimeSong.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(190)))), ((int)(((byte)(129)))));
             this.TimeSong.ShadowDecoration.Parent = this.TimeSong;
             this.TimeSong.Size = new System.Drawing.Size(640, 2);
             this.TimeSong.TabIndex = 0;
@@ -963,6 +964,11 @@
             this.ShowAddPlaylist.Size = new System.Drawing.Size(93, 134);
             this.ShowAddPlaylist.TabIndex = 19;
             this.ShowAddPlaylist.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.ShowAddPlaylist_ControlRemoved);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Nimbus
             // 
@@ -1053,6 +1059,7 @@
         private System.Windows.Forms.Panel ShowAddPlaylist;
         private System.Windows.Forms.ListBox PlaylistList;
         private Guna.UI2.WinForms.Guna2GradientButton Playbtn;
+        public System.Windows.Forms.Timer timer1;
     }
 }
 

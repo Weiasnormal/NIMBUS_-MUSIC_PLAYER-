@@ -29,6 +29,8 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         public IEnumerable<object> Buttons { get; private set; }
 
+        private Timer timer;
+
         public Nimbus()
         {
             InitializeComponent();
@@ -48,6 +50,14 @@ namespace NIMBUS__MUSIC_PLAYER_
                 PlayerState.IsPlaying = !PlayerState.IsPlaying;
             };
 
+            // Initialize Timer
+            timer = new Timer();
+            timer.Interval = 500; // Update every 500ms (half a second)
+            timer.Tick += timer1_Tick;
+
+            // Initialize ProgressBar
+            TimeSong.Minimum = 0; // Start at 0
+            TimeSong.Maximum = 100; // Progress will be in percentage
         }
         private void Initialize_Navigation_Controls()
         {
@@ -777,6 +787,39 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             PlayerState.SetVolume(VolumeBar.Value);
             
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Automatically update TimePlayed label
+            if (PlayerState.player.currentMedia != null)
+            {
+                double currentPosition = PlayerState.player.controls.currentPosition; // Current playback position
+                double duration = PlayerState.player.currentMedia.duration;          // Total duration
+                UpdateTimePlayed(currentPosition, duration);
+                UpdateProgressBar(currentPosition, duration);
+            }
+        }
+
+        private void UpdateTimePlayed(double current, double total)
+        {
+            // Format the current time and total duration
+            string currentTime = TimeSpan.FromSeconds(current).ToString(@"mm\:ss");
+            string totalTime = TimeSpan.FromSeconds(total).ToString(@"mm\:ss");
+
+            // Set the TimePlayed label text
+            TimePlayed.Text = $"{currentTime}";
+            EndTime.Text = $"{totalTime}";
+        }
+
+        private void UpdateProgressBar(double current, double total)
+        {
+            if (total > 0) // Avoid division by zero
+            {
+                // Calculate progress as a percentage
+                int progress = (int)((current / total) * 100);
+                TimeSong.Value = progress;
+            }
         }
     }
 }

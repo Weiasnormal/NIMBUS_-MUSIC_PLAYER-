@@ -53,7 +53,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             Titlelbl.Text = _song.Title;
             Songpic.ImageLocation = _song.Artist.Profile_Pic;
             Artistlbl.Text = _song.Artist.Display_Name;
-            TotalTimelbl.Text = $"{song.Duration.Minutes}:{song.Duration.Seconds}";
+            TotalTimelbl.Text = $"{song.Duration.Minutes:D2}:{song.Duration.Seconds:D2}";
 
         }
 

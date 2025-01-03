@@ -26,7 +26,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private WindowsMediaPlayer player;
         private HorizontalSongs currentSongControl;
-
+        
         public IEnumerable<object> Buttons { get; private set; }
 
         private Timer timer;

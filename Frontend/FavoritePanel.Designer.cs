@@ -293,10 +293,10 @@
             // 
             this.flowFavorites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.flowFavorites.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowFavorites.Location = new System.Drawing.Point(60, 238);
-            this.flowFavorites.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowFavorites.Location = new System.Drawing.Point(43, 191);
+            this.flowFavorites.Margin = new System.Windows.Forms.Padding(4);
             this.flowFavorites.Name = "flowFavorites";
-            this.flowFavorites.Size = new System.Drawing.Size(1595, 598);
+            this.flowFavorites.Size = new System.Drawing.Size(1198, 598);
             this.flowFavorites.TabIndex = 30;
             // 
             // SongsMenu
@@ -307,7 +307,7 @@
             this.SongsMenu.Controls.Add(this.guna2GradientButton3);
             this.SongsMenu.Controls.Add(this.Menu_AddPlaylist);
             this.SongsMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.SongsMenu.Location = new System.Drawing.Point(411, 21);
+            this.SongsMenu.Location = new System.Drawing.Point(776, 183);
             this.SongsMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SongsMenu.Name = "SongsMenu";
             this.SongsMenu.ShadowDecoration.Parent = this.SongsMenu;
@@ -474,7 +474,7 @@
             this.SearchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.SearchBar.IconLeftSize = new System.Drawing.Size(15, 15);
             this.SearchBar.Location = new System.Drawing.Point(935, 21);
-            this.SearchBar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SearchBar.Margin = new System.Windows.Forms.Padding(5);
             this.SearchBar.Name = "SearchBar";
             this.SearchBar.PasswordChar = '\0';
             this.SearchBar.PlaceholderForeColor = System.Drawing.Color.White;

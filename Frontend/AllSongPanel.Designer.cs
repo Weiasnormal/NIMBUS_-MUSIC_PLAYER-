@@ -375,10 +375,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AllSongsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.AllSongsPanel.Location = new System.Drawing.Point(45, 193);
+            this.AllSongsPanel.Location = new System.Drawing.Point(43, 191);
             this.AllSongsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AllSongsPanel.Name = "AllSongsPanel";
-            this.AllSongsPanel.Size = new System.Drawing.Size(1196, 494);
+            this.AllSongsPanel.Size = new System.Drawing.Size(1196, 496);
             this.AllSongsPanel.TabIndex = 30;
             this.AllSongsPanel.WrapContents = false;
             // 

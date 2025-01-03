@@ -33,9 +33,10 @@
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowLayoutPanelAlbum = new System.Windows.Forms.FlowLayoutPanel();
+            this.AlbumsScrollbar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.albumPlaceholder1 = new NIMBUS__MUSIC_PLAYER_.AlbumPlaceholder();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.FlowLayoutPanelAlbum.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchBar
@@ -197,13 +198,30 @@
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 31;
             // 
-            // flowLayoutPanel1
+            // FlowLayoutPanelAlbum
             // 
-            this.flowLayoutPanel1.Controls.Add(this.albumPlaceholder1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 147);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1196, 538);
-            this.flowLayoutPanel1.TabIndex = 37;
+            this.FlowLayoutPanelAlbum.Controls.Add(this.albumPlaceholder1);
+            this.FlowLayoutPanelAlbum.Location = new System.Drawing.Point(43, 135);
+            this.FlowLayoutPanelAlbum.Name = "FlowLayoutPanelAlbum";
+            this.FlowLayoutPanelAlbum.Size = new System.Drawing.Size(1196, 550);
+            this.FlowLayoutPanelAlbum.TabIndex = 37;
+            // 
+            // AlbumsScrollbar
+            // 
+            this.AlbumsScrollbar.AutoRoundedCorners = true;
+            this.AlbumsScrollbar.BorderRadius = 4;
+            this.AlbumsScrollbar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.AlbumsScrollbar.HoverState.Parent = null;
+            this.AlbumsScrollbar.LargeChange = 10;
+            this.AlbumsScrollbar.Location = new System.Drawing.Point(1260, 135);
+            this.AlbumsScrollbar.Margin = new System.Windows.Forms.Padding(5);
+            this.AlbumsScrollbar.MouseWheelBarPartitions = 10;
+            this.AlbumsScrollbar.Name = "AlbumsScrollbar";
+            this.AlbumsScrollbar.PressedState.Parent = this.AlbumsScrollbar;
+            this.AlbumsScrollbar.ScrollbarSize = 11;
+            this.AlbumsScrollbar.Size = new System.Drawing.Size(11, 542);
+            this.AlbumsScrollbar.TabIndex = 41;
+            this.AlbumsScrollbar.ThumbColor = System.Drawing.Color.White;
             // 
             // albumPlaceholder1
             // 
@@ -219,7 +237,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.AlbumsScrollbar);
+            this.Controls.Add(this.FlowLayoutPanelAlbum);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.lblAlbumspanel);
             this.Controls.Add(this.Dropdown_Sort);
@@ -227,7 +246,7 @@
             this.Controls.Add(this.Dropdown_Artist);
             this.Name = "AlbumsPanel";
             this.Size = new System.Drawing.Size(1272, 685);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.FlowLayoutPanelAlbum.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +259,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Sort;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Album;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanelAlbum;
         private AlbumPlaceholder albumPlaceholder1;
+        private Guna.UI2.WinForms.Guna2VScrollBar AlbumsScrollbar;
     }
 }

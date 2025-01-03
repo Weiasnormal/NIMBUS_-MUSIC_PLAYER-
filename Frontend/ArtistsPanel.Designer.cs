@@ -34,6 +34,7 @@
             this.Dropdown_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Album = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ArtistsScrollbar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.artistPlaceholder1 = new NIMBUS__MUSIC_PLAYER_.ArtistPlaceholder();
             this.FlowlayoutPanelArtist.SuspendLayout();
             this.SuspendLayout();
@@ -51,11 +52,16 @@
             // 
             // FlowlayoutPanelArtist
             // 
+            this.FlowlayoutPanelArtist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FlowlayoutPanelArtist.Controls.Add(this.artistPlaceholder1);
-            this.FlowlayoutPanelArtist.Location = new System.Drawing.Point(43, 147);
+            this.FlowlayoutPanelArtist.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FlowlayoutPanelArtist.Location = new System.Drawing.Point(43, 135);
             this.FlowlayoutPanelArtist.Name = "FlowlayoutPanelArtist";
-            this.FlowlayoutPanelArtist.Size = new System.Drawing.Size(1196, 538);
+            this.FlowlayoutPanelArtist.Size = new System.Drawing.Size(1196, 550);
             this.FlowlayoutPanelArtist.TabIndex = 42;
+            this.FlowlayoutPanelArtist.WrapContents = false;
             // 
             // SearchBar
             // 
@@ -205,6 +211,23 @@
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 38;
             // 
+            // ArtistsScrollbar
+            // 
+            this.ArtistsScrollbar.AutoRoundedCorners = true;
+            this.ArtistsScrollbar.BorderRadius = 4;
+            this.ArtistsScrollbar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.ArtistsScrollbar.HoverState.Parent = null;
+            this.ArtistsScrollbar.LargeChange = 10;
+            this.ArtistsScrollbar.Location = new System.Drawing.Point(1260, 135);
+            this.ArtistsScrollbar.Margin = new System.Windows.Forms.Padding(5);
+            this.ArtistsScrollbar.MouseWheelBarPartitions = 10;
+            this.ArtistsScrollbar.Name = "ArtistsScrollbar";
+            this.ArtistsScrollbar.PressedState.Parent = this.ArtistsScrollbar;
+            this.ArtistsScrollbar.ScrollbarSize = 11;
+            this.ArtistsScrollbar.Size = new System.Drawing.Size(11, 542);
+            this.ArtistsScrollbar.TabIndex = 43;
+            this.ArtistsScrollbar.ThumbColor = System.Drawing.Color.White;
+            // 
             // artistPlaceholder1
             // 
             this.artistPlaceholder1.BackColor = System.Drawing.Color.Transparent;
@@ -219,6 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.ArtistsScrollbar);
             this.Controls.Add(this.FlowlayoutPanelArtist);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.Dropdown_Sort);
@@ -242,5 +266,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
         private ArtistPlaceholder artistPlaceholder1;
         private System.Windows.Forms.FlowLayoutPanel FlowlayoutPanelArtist;
+        private Guna.UI2.WinForms.Guna2VScrollBar ArtistsScrollbar;
     }
 }

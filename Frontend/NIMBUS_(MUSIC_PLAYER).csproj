@@ -560,5 +560,8 @@
   <ItemGroup>
     <None Include="Resources\Icon_Loop.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create a Playlist BG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

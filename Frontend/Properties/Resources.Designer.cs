@@ -93,6 +93,16 @@ namespace NIMBUS__MUSIC_PLAYER_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Create_a_Playlist_BG {
+            get {
+                object obj = ResourceManager.GetObject("Create a Playlist BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dark {
             get {
                 object obj = ResourceManager.GetObject("Dark", resourceCulture);

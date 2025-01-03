@@ -74,6 +74,32 @@ namespace NIMBUS__MUSIC_PLAYER_
             
 
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
+
+            // Additional initialization for your panel and scrollbar
+            flowpanelQueue.AutoScroll = true;
+            QueueScrollbar.Scroll += (sender, e) =>
+            {
+                flowpanelQueue.VerticalScroll.Value = QueueScrollbar.Value;
+            };
+
+
+            int numControls = flowpanelQueue.Controls.Count;
+            flowpanelQueue.SuspendLayout();
+            flowpanelQueue.Controls.Clear();
+            flowpanelQueue  .AutoScroll = true;
+            flowpanelQueue  .VerticalScroll.Visible = false;
+
+            this.Dock = DockStyle.Right;
+            QueueScrollbar.Scroll += (sender, e) => { flowpanelQueue.VerticalScroll.Value = QueueScrollbar.Value; };
+            QueueScrollbar.Height =     flowpanelQueue.Height;
+            QueueScrollbar.Visible = false;
+
+            this.Controls.Add(QueueScrollbar);
+
+            flowpanelQueue.ResumeLayout();
+
+            // then update the form
+            flowpanelQueue.PerformLayout();
         }
 
        /* private void QueuePanel_AddtoQueue(object sender, EventArgs e)

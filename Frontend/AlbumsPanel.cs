@@ -16,6 +16,32 @@ namespace NIMBUS__MUSIC_PLAYER_
         public AlbumsPanel()
         {
             InitializeComponent();
+
+            // Additional initialization for your panel and scrollbar
+            FlowLayoutPanelAlbum.AutoScroll = true;
+            AlbumsScrollbar.Scroll += (sender, e) =>
+            {
+                FlowLayoutPanelAlbum.VerticalScroll.Value = AlbumsScrollbar.Value;
+            };
+
+
+            int numControls = FlowLayoutPanelAlbum.Controls.Count;
+            FlowLayoutPanelAlbum.SuspendLayout();
+            FlowLayoutPanelAlbum.Controls.Clear();
+            FlowLayoutPanelAlbum.AutoScroll = true;
+            FlowLayoutPanelAlbum.VerticalScroll.Visible = false;
+
+            this.Dock = DockStyle.Right;
+            AlbumsScrollbar.Scroll += (sender, e) => { FlowLayoutPanelAlbum.VerticalScroll.Value = AlbumsScrollbar.Value; };
+            AlbumsScrollbar.Height = FlowLayoutPanelAlbum.Height;
+            AlbumsScrollbar.Visible = false;
+
+            this.Controls.Add(AlbumsScrollbar);
+
+            FlowLayoutPanelAlbum.ResumeLayout();
+
+            // then update the form
+            FlowLayoutPanelAlbum.PerformLayout();
         }
 
         public Guna2TextBox SearchBars

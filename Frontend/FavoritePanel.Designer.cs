@@ -39,7 +39,7 @@
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
             this.Dropdown_Artist = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.FavSongsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowFavorites = new System.Windows.Forms.FlowLayoutPanel();
             this.SongTab = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -74,7 +74,7 @@
             this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
             this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton2.Location = new System.Drawing.Point(34, 59);
-            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
             this.guna2GradientButton2.PressedColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
@@ -132,7 +132,7 @@
             this.Dropdown_Sort.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Sort.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.Dropdown_Sort.Location = new System.Drawing.Point(781, 66);
-            this.Dropdown_Sort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dropdown_Sort.Margin = new System.Windows.Forms.Padding(2);
             this.Dropdown_Sort.Name = "Dropdown_Sort";
             this.Dropdown_Sort.ShadowDecoration.Parent = this.Dropdown_Sort;
             this.Dropdown_Sort.Size = new System.Drawing.Size(151, 36);
@@ -170,7 +170,7 @@
             this.Dropdown_Album.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Album.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.Dropdown_Album.Location = new System.Drawing.Point(622, 66);
-            this.Dropdown_Album.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dropdown_Album.Margin = new System.Windows.Forms.Padding(2);
             this.Dropdown_Album.Name = "Dropdown_Album";
             this.Dropdown_Album.ShadowDecoration.Parent = this.Dropdown_Album;
             this.Dropdown_Album.Size = new System.Drawing.Size(151, 36);
@@ -189,7 +189,7 @@
             this.DetailPanel.Controls.Add(this.lblArtist);
             this.DetailPanel.Controls.Add(this.lblAlbum);
             this.DetailPanel.Location = new System.Drawing.Point(32, 110);
-            this.DetailPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DetailPanel.Margin = new System.Windows.Forms.Padding(2);
             this.DetailPanel.Name = "DetailPanel";
             this.DetailPanel.Size = new System.Drawing.Size(898, 41);
             this.DetailPanel.TabIndex = 27;
@@ -288,21 +288,21 @@
             this.Dropdown_Artist.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Artist.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.Dropdown_Artist.Location = new System.Drawing.Point(463, 66);
-            this.Dropdown_Artist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dropdown_Artist.Margin = new System.Windows.Forms.Padding(2);
             this.Dropdown_Artist.Name = "Dropdown_Artist";
             this.Dropdown_Artist.ShadowDecoration.Parent = this.Dropdown_Artist;
             this.Dropdown_Artist.Size = new System.Drawing.Size(151, 36);
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 31;
             // 
-            // FavSongsPanel
+            // flowFavorites
             // 
-            this.FavSongsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FavSongsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.FavSongsPanel.Location = new System.Drawing.Point(45, 193);
-            this.FavSongsPanel.Name = "FavSongsPanel";
-            this.FavSongsPanel.Size = new System.Drawing.Size(1196, 486);
-            this.FavSongsPanel.TabIndex = 30;
+            this.flowFavorites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowFavorites.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowFavorites.Location = new System.Drawing.Point(45, 193);
+            this.flowFavorites.Name = "flowFavorites";
+            this.flowFavorites.Size = new System.Drawing.Size(1196, 486);
+            this.flowFavorites.TabIndex = 30;
             // 
             // SongTab
             // 
@@ -313,7 +313,7 @@
             this.SongTab.Controls.Add(this.Menu_AddPlaylist);
             this.SongTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.SongTab.Location = new System.Drawing.Point(308, 17);
-            this.SongTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SongTab.Margin = new System.Windows.Forms.Padding(2);
             this.SongTab.Name = "SongTab";
             this.SongTab.ShadowDecoration.Parent = this.SongTab;
             this.SongTab.Size = new System.Drawing.Size(232, 175);
@@ -344,7 +344,7 @@
             this.guna2GradientButton7.ImageOffset = new System.Drawing.Point(11, 0);
             this.guna2GradientButton7.ImageSize = new System.Drawing.Size(18, 20);
             this.guna2GradientButton7.Location = new System.Drawing.Point(5, 130);
-            this.guna2GradientButton7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton7.Name = "guna2GradientButton7";
             this.guna2GradientButton7.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.guna2GradientButton7.ShadowDecoration.Parent = this.guna2GradientButton7;
@@ -377,7 +377,7 @@
             this.guna2GradientButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton6.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton6.Location = new System.Drawing.Point(5, 89);
-            this.guna2GradientButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton6.Name = "guna2GradientButton6";
             this.guna2GradientButton6.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.guna2GradientButton6.ShadowDecoration.Parent = this.guna2GradientButton6;
@@ -410,7 +410,7 @@
             this.guna2GradientButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton3.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton3.Location = new System.Drawing.Point(5, 50);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
@@ -443,7 +443,7 @@
             this.Menu_AddPlaylist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Menu_AddPlaylist.ImageOffset = new System.Drawing.Point(10, 0);
             this.Menu_AddPlaylist.Location = new System.Drawing.Point(5, 8);
-            this.Menu_AddPlaylist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menu_AddPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.Menu_AddPlaylist.Name = "Menu_AddPlaylist";
             this.Menu_AddPlaylist.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.Menu_AddPlaylist.ShadowDecoration.Parent = this.Menu_AddPlaylist;
@@ -497,7 +497,7 @@
             this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
             this.Menubtn.ImageSize = new System.Drawing.Size(25, 25);
             this.Menubtn.Location = new System.Drawing.Point(124, 66);
-            this.Menubtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menubtn.Margin = new System.Windows.Forms.Padding(2);
             this.Menubtn.Name = "Menubtn";
             this.Menubtn.PressedState.Parent = this.Menubtn;
             this.Menubtn.Size = new System.Drawing.Size(38, 27);
@@ -513,7 +513,7 @@
             this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
             this.guna2ImageButton2.ImageSize = new System.Drawing.Size(25, 25);
             this.guna2ImageButton2.Location = new System.Drawing.Point(80, 67);
-            this.guna2ImageButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ImageButton2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
             this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Size = new System.Drawing.Size(38, 27);
@@ -526,7 +526,7 @@
             this.MenuTabs.Controls.Add(this.guna2GradientButton4);
             this.MenuTabs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.MenuTabs.Location = new System.Drawing.Point(124, 98);
-            this.MenuTabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MenuTabs.Margin = new System.Windows.Forms.Padding(2);
             this.MenuTabs.Name = "MenuTabs";
             this.MenuTabs.ShadowDecoration.Parent = this.MenuTabs;
             this.MenuTabs.Size = new System.Drawing.Size(179, 93);
@@ -557,7 +557,7 @@
             this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton1.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton1.Location = new System.Drawing.Point(7, 50);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
@@ -590,7 +590,7 @@
             this.guna2GradientButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton4.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2GradientButton4.Location = new System.Drawing.Point(7, 8);
-            this.guna2GradientButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
             this.guna2GradientButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
@@ -615,9 +615,9 @@
             this.Controls.Add(this.DetailPanel);
             this.Controls.Add(this.Dropdown_Artist);
             this.Controls.Add(this.Menubtn);
-            this.Controls.Add(this.FavSongsPanel);
+            this.Controls.Add(this.flowFavorites);
             this.Controls.Add(this.guna2ImageButton2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FavoritePanel";
             this.Size = new System.Drawing.Size(956, 558);
             this.DetailPanel.ResumeLayout(false);
@@ -644,7 +644,7 @@
         private System.Windows.Forms.Label lblAlbum;
         private Guna.UI2.WinForms.Guna2ComboBox Dropdown_Artist;
         private Guna.UI2.WinForms.Guna2ImageButton Menubtn;
-        private System.Windows.Forms.FlowLayoutPanel FavSongsPanel;
+        private System.Windows.Forms.FlowLayoutPanel flowFavorites;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2Panel SongTab;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;

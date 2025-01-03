@@ -1,5 +1,4 @@
 ﻿using Guna.UI2.WinForms;
-using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
@@ -15,21 +14,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class FavoritePanel : UserControl
     {
-        
-        private static FavoritePanel _instance;
-        private List<Song> favoriteSongs;
-        public FlowLayoutPanel FavSongList { get; private set; }
-        public static FavoritePanel Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new FavoritePanel();
-                }
-                return _instance;
-            }
-        }
+        #region FrontEnd
         public Panel DetailsPanel
         {
             get { return DetailPanel; }
@@ -87,20 +72,16 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             get { return guna2GradientButton1; }
         }
-
+        #endregion
         public FavoritePanel()
         {
             InitializeComponent();
 
-
             MenuTabs.Visible = false;
 
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
-            favoriteSongs = new List<Song>();
-
-            FavSongsPanel = new FlowLayoutPanel();
-            FavSongsPanel.Dock = DockStyle.Fill;
-            this.Controls.Add(FavSongsPanel);
+            Helper.Events.AddToFavorites += AddtoFavorite;
+            Helper.Events.AddToFavorites();
         }
 
         private void Menubtn_Click(object sender, EventArgs e)
@@ -115,54 +96,19 @@ namespace NIMBUS__MUSIC_PLAYER_
                 mainForm.SwitchToPanel(5);
             }
         }
-        /* public void AddSongToFavorites(Song song)
-         {
-             if (!favoriteSongs.Any(s => s.Id == song.Id)) // Avoid duplicates
-             {
-                 favoriteSongs.Add(song);
-                 // Add the song to the UI
-                 var songControl = new HorizontalSongs(null, favoriteSongs.Count, song.Title, song.File_Path, song.Artist, song.Duration);
-                 {
-                     Dock = DockStyle.Top;// Align songs neatly in the panel
-                 };      
-                 this.Controls.Add(songControl);
 
-                 MessageBox.Show($"'{song.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             }
-             else
-             {
-                 MessageBox.Show("Song is already in favorites.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             }
-         }*/
-        //private Control SongsMenu;
-        public void AddSongToFavorites(Song song)
+        private void AddtoFavorite()
         {
-            // Check if the song is already in favorites
-            if (favoriteSongs.Any(s => s.Title == song.Title))
+            flowFavorites.Controls.Clear();
+
+            int songnum = 1;
+
+            foreach (Song song in NimbusClassLibrary.Data.DBContext.songs.Where(s => s.IsFavorite))
             {
-                MessageBox.Show("This song is already in your favorites!", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                flowFavorites.Controls.Add(new HorizontalSongs(flowFavorites, songnum, song));
+                songnum++;
             }
 
-            // Add the song to the favoriteSongs list
-            favoriteSongs.Add(song);
-
-            // Create a new HorizontalSongs control for the song
-            var favoriteSongControl = new HorizontalSongs(FavSongsPanel, favoriteSongs.Count, song.Title, song.File_Path, song.Artist, song.Duration)
-            { 
-            Dock = DockStyle.Top// Align the song control neatly in the panel
-            };
-
-            // Add the song control to the panel (make sure it's added to the correct panel)
-            FavSongsPanel.Controls.Add(favoriteSongControl);
-
-            // Refresh the UI to show the new song
-            FavoritePanel.Instance.FavSongsPanel.Invalidate(); // This can be used to refresh the panel
-
-            // Display a success message
-            MessageBox.Show($"'{song.Title}' has been added to your Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
-
 }
-

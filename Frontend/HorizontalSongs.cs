@@ -200,7 +200,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 {
                     panel.Visible = false;  // Hide the SongMenu
                 }
-            }
+            }*/
         }
        
 

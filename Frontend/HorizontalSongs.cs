@@ -15,15 +15,6 @@ namespace NIMBUS__MUSIC_PLAYER_
     public partial class HorizontalSongs : UserControl
     {
 
-        public event Action PlayButtonClicked;
-        public event Action PauseButtonClicked;
-        public event Action<int> VolumeChanged;
-
-        public Guna2GradientButton Playbtn { get; private set; }
-        public Guna2GradientButton Pausebtn { get; private set; }
-        public Guna2TrackBar VolumeBar { get; private set; }
-
-
         private Control SongsMenu;
         private Song _song;
 

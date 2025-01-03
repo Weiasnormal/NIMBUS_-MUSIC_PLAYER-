@@ -63,7 +63,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Queuebtn = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnPrevious = new System.Windows.Forms.PictureBox();
             this.Miniplayerbtn = new System.Windows.Forms.PictureBox();
             this.SongTimePanel = new System.Windows.Forms.Panel();
             this.EndTime = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Queuebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Miniplayerbtn)).BeginInit();
             this.SongTimePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SoundIcon)).BeginInit();
@@ -641,7 +641,7 @@
             this.panel3.Controls.Add(this.pictureBox10);
             this.panel3.Controls.Add(this.Queuebtn);
             this.panel3.Controls.Add(this.pictureBox11);
-            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.btnPrevious);
             this.panel3.Controls.Add(this.Miniplayerbtn);
             this.panel3.Controls.Add(this.SongTimePanel);
             this.panel3.Controls.Add(this.SoundIcon);
@@ -909,18 +909,19 @@
             this.pictureBox11.TabIndex = 5;
             this.pictureBox11.TabStop = false;
             // 
-            // pictureBox5
+            // btnPrevious
             // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__4_;
-            this.pictureBox5.Location = new System.Drawing.Point(516, 47);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
+            this.btnPrevious.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnPrevious.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrevious.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__4_;
+            this.btnPrevious.Location = new System.Drawing.Point(516, 47);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(20, 20);
+            this.btnPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnPrevious.TabIndex = 9;
+            this.btnPrevious.TabStop = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // Miniplayerbtn
             // 
@@ -1103,7 +1104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Queuebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Miniplayerbtn)).EndInit();
             this.SongTimePanel.ResumeLayout(false);
             this.SongTimePanel.PerformLayout();
@@ -1139,7 +1140,7 @@
         private System.Windows.Forms.Label TimePlayed;
         private Guna.UI2.WinForms.Guna2ProgressBar TimeSong;
         private System.Windows.Forms.PictureBox Queuebtn;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox btnPrevious;
         private System.Windows.Forms.PictureBox btnNext;
         private Guna.UI2.WinForms.Guna2TrackBar VolumeBar;
         private System.Windows.Forms.PictureBox pictureBox11;

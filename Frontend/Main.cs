@@ -864,8 +864,15 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            PlayerState.BackgroundWorker.CancelAsync();
+            PlayerState.StopSong();
             PlayerState.SetNextSong();
+            PlayerState.BackgroundWorker.RunWorkerAsync();
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            PlayerState.StopSong();
+            PlayerState.SetPreviousSong();
             PlayerState.BackgroundWorker.RunWorkerAsync();
         }
     }

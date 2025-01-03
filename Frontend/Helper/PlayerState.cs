@@ -17,7 +17,21 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         {
             get 
             {
-                return NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.First;
+                if (NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.Count > 0)
+                    return NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.First;
+                throw new Exception("No Songs on Queue BULOK!");
+            }
+        }
+
+        public static Song PreviousSong
+        {
+            get
+            {
+
+                if (NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Count > 0)
+                    return NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Pop();
+                throw new Exception("No Previous Songs");
+
             }
         }
 
@@ -50,11 +64,16 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
 
         private static void _backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            if(NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.Count > 1) 
-                Task.Run(()=>PlaySong(CurrentSong.Value));
-
-            while (player.playState != WMPPlayState.wmppsStopped &&
-                       player.playState != WMPPlayState.wmppsReady)
+            try
+            {
+                Task.Run(() => PlaySong(CurrentSong.Value));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            while (player.playState != WMPPlayState.wmppsReady)
             {
                 Thread.Sleep(100);
             }
@@ -113,7 +132,10 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
             }
             BackgroundWorker.CancelAsync();
         }
-
+        public static void SetPreviousSong()
+        {
+            NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddFirst(NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Pop());
+        }
         public static async Task PlaySong(Song playsong)
         {
 

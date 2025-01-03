@@ -44,14 +44,14 @@
             this.Artistlbl = new System.Windows.Forms.Label();
             this.TitleSonglbl = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CloseMiniplayer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundIcon)).BeginInit();
             this.SongTimePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseMiniplayer)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientButton3
@@ -257,16 +257,17 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
-            // pictureBox2
+            // CloseMiniplayer
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__4_;
-            this.pictureBox2.Location = new System.Drawing.Point(310, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 26);
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
+            this.CloseMiniplayer.BackColor = System.Drawing.Color.Transparent;
+            this.CloseMiniplayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseMiniplayer.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__4_;
+            this.CloseMiniplayer.Location = new System.Drawing.Point(310, 10);
+            this.CloseMiniplayer.Name = "CloseMiniplayer";
+            this.CloseMiniplayer.Size = new System.Drawing.Size(27, 26);
+            this.CloseMiniplayer.TabIndex = 29;
+            this.CloseMiniplayer.TabStop = false;
+            this.CloseMiniplayer.Click += new System.EventHandler(this.CloseMiniplayer_Click);
             // 
             // Miniplayer
             // 
@@ -274,7 +275,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.MIni_Player_BlackBG;
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.CloseMiniplayer);
             this.Controls.Add(this.Artistlbl);
             this.Controls.Add(this.TitleSonglbl);
             this.Controls.Add(this.SongTimePanel);
@@ -295,7 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SoundIcon)).EndInit();
             this.SongTimePanel.ResumeLayout(false);
             this.SongTimePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseMiniplayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,6 +319,6 @@
         private System.Windows.Forms.Label Artistlbl;
         private System.Windows.Forms.Label TitleSonglbl;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox CloseMiniplayer;
     }
 }

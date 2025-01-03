@@ -37,6 +37,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             Initialize_Navigation_Controls();
             
             ShowAddPlaylist.Visible = false;
+            MiniplayerPanel.Visible = false;
             PlaylistList.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
@@ -844,6 +845,21 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             Loopbtn.Visible = true;
             LoopbtnHighlight.Visible = false;
+        }
+
+        private void Miniplayerbtn_Click(object sender, EventArgs e)
+        {  
+            Miniplayer miniplayer = new Miniplayer();
+            MiniplayerPanel.Controls.Clear();
+            MiniplayerPanel.Location = new Point(1277, 7);
+            MiniplayerPanel.Size = miniplayer.Size;
+            MiniplayerPanel.Controls.Add(new Miniplayer());
+            MiniplayerPanel.Visible = true;
+        }
+
+        private void MiniplayerPanel_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            MiniplayerPanel.Visible = false;
         }
     }
 }

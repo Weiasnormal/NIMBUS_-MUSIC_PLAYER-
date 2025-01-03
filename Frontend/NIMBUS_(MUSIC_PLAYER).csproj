@@ -36,11 +36,15 @@
     <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
       <HintPath>C:\Users\syefy\Downloads\drive-download-20241228T181017Z-001\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
@@ -57,6 +61,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -147,11 +152,11 @@
     <Compile Include="HeaderMusicPlayer.Designer.cs">
       <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Miniplayer.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="NimbusMiniplayer.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Miniplayer.Designer.cs">
-      <DependentUpon>Miniplayer.cs</DependentUpon>
+    <Compile Include="NimbusMiniplayer.Designer.cs">
+      <DependentUpon>NimbusMiniplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="NowPlaying.cs">
       <SubType>UserControl</SubType>
@@ -209,8 +214,8 @@
     <EmbeddedResource Include="HeaderMusicPlayer.resx">
       <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Miniplayer.resx">
-      <DependentUpon>Miniplayer.cs</DependentUpon>
+    <EmbeddedResource Include="NimbusMiniplayer.resx">
+      <DependentUpon>NimbusMiniplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NowPlaying.resx">
       <DependentUpon>NowPlaying.cs</DependentUpon>

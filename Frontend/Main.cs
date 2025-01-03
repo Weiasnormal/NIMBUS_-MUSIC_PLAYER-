@@ -38,7 +38,6 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             Helper.Events.UpdateMainUI += UpdateMainUI;
             ShowAddPlaylist.Visible = false;
-            MiniplayerPanel.Visible = false;
             PlaylistList.Visible = false;
             // test test = new test();
             // MessageBox.Show(test.test1());
@@ -857,18 +856,9 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
 
         private void Miniplayerbtn_Click(object sender, EventArgs e)
-        {  
-            Miniplayer miniplayer = new Miniplayer();
-            MiniplayerPanel.Controls.Clear();
-            MiniplayerPanel.Location = new Point(1277, 7);
-            MiniplayerPanel.Size = miniplayer.Size;
-            MiniplayerPanel.Controls.Add(new Miniplayer());
-            MiniplayerPanel.Visible = true;
-        }
-
-        private void MiniplayerPanel_ControlRemoved(object sender, ControlEventArgs e)
         {
-            MiniplayerPanel.Visible = false;
+            NimbusMiniplayer miniplayer = new NimbusMiniplayer();
+            miniplayer.Show();
         }
 
         private void btnNext_Click(object sender, EventArgs e)

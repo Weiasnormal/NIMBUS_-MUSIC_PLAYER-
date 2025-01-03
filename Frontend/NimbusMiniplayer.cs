@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
-    public partial class Miniplayer : UserControl
+    public partial class NimbusMiniplayer : Form
     {
-        public Miniplayer()
+        public NimbusMiniplayer()
         {
             InitializeComponent();
         }
 
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CloseMiniplayer_Click(object sender, EventArgs e)
         {
-            this.Parent.Controls.Remove(this);
+            this.Close();
         }
     }
 }

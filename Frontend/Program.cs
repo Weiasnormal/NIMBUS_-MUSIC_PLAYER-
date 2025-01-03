@@ -19,7 +19,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Nimbus());
 
-            PlayerState.BackgroundWorker.RunWorkerAsync();
+           // PlayerState.BackgroundWorker.RunWorkerAsync();
         }
     }
 }

@@ -137,7 +137,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating song details: {ex.Message}");
+                //MessageBox.Show($"Error updating song details: {ex.Message}");
             }
         }
         #endregion

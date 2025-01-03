@@ -36,7 +36,7 @@ namespace NimbusClassLibrary.Data
                 GetAllPlaylists();
                 GetAllSongs();
                 GetAllPlaylistSongs();
-                
+                conn.Close();
             }
             catch (Exception ex)
             {

@@ -221,13 +221,23 @@ namespace NIMBUS__MUSIC_PLAYER_
             // Set Favorites into true
             songTobeChanged.IsFavorite = true;
 
-            controller.Update(songTobeChanged);
+            // Log the change for debugging
+            Console.WriteLine($"Updating Song ID={songTobeChanged.Id}, IsFavorite={songTobeChanged.IsFavorite}");
 
-            Helper.Events.AddToFavorites();
-            MessageBox.Show($"'{songTobeChanged.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Call the update method
+            bool success = controller.Update(songTobeChanged);
+
+            if (success)
+            {
+                Helper.Events.AddToFavorites();
+                MessageBox.Show($"'{songTobeChanged.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Failed to add '{songTobeChanged.Title}' to Favorites.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             SongsMenu.Visible = false;
-
-            
         }
 
         private void Menu_DeleteSong_Click(object sender, EventArgs e)

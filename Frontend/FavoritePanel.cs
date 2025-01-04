@@ -216,13 +216,27 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void RemovefromFavorites_Click(object sender, EventArgs e)
         {
             Song songTobeRemove = ((HorizontalSongs)selectedSong).Song;
-            // Set Favorites into true
-            songTobeRemove.IsFavorite = false;
-            SongsMenu.Visible = false;
-            MessageBox.Show($"'{songTobeRemove.Title}' has been Removed from the Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            flowFavorites.Controls.Clear();
-            AddtoFavorite();
+            // Set IsFavorite to false
+            songTobeRemove.IsFavorite = false;
+
+            // Update the database using the controller
+            bool success = controller.Update(songTobeRemove);
+
+            if (success)
+            {
+                MessageBox.Show($"'{songTobeRemove.Title}' has been removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Refresh the Favorites view
+                flowFavorites.Controls.Clear();
+                AddtoFavorite();
+            }
+            else
+            {
+                MessageBox.Show($"Failed to remove '{songTobeRemove.Title}' from Favorites.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            SongsMenu.Visible = false;
         }
 
         private void guna2GradientButton7_Click(object sender, EventArgs e)

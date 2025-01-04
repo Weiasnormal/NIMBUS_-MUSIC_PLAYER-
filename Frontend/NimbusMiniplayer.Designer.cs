@@ -45,6 +45,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.Switchtomain = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.CloseMiniplayer)).BeginInit();
             this.SongTimePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SoundIcon)).BeginInit();
@@ -52,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Switchtomain)).BeginInit();
             this.SuspendLayout();
             // 
             // CloseMiniplayer
@@ -59,7 +61,7 @@
             this.CloseMiniplayer.BackColor = System.Drawing.Color.Transparent;
             this.CloseMiniplayer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseMiniplayer.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__4_;
-            this.CloseMiniplayer.Location = new System.Drawing.Point(295, 16);
+            this.CloseMiniplayer.Location = new System.Drawing.Point(300, 12);
             this.CloseMiniplayer.Name = "CloseMiniplayer";
             this.CloseMiniplayer.Size = new System.Drawing.Size(34, 26);
             this.CloseMiniplayer.TabIndex = 41;
@@ -70,11 +72,11 @@
             // 
             this.Artistlbl.AutoSize = true;
             this.Artistlbl.BackColor = System.Drawing.Color.Transparent;
-            this.Artistlbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Artistlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artistlbl.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Artistlbl.Location = new System.Drawing.Point(103, 62);
             this.Artistlbl.Name = "Artistlbl";
-            this.Artistlbl.Size = new System.Drawing.Size(127, 21);
+            this.Artistlbl.Size = new System.Drawing.Size(111, 18);
             this.Artistlbl.TabIndex = 40;
             this.Artistlbl.Text = "Camilla Cabello";
             this.Artistlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,11 +85,11 @@
             // 
             this.TitleSonglbl.AutoSize = true;
             this.TitleSonglbl.BackColor = System.Drawing.Color.Transparent;
-            this.TitleSonglbl.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleSonglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleSonglbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TitleSonglbl.Location = new System.Drawing.Point(109, 30);
             this.TitleSonglbl.Name = "TitleSonglbl";
-            this.TitleSonglbl.Size = new System.Drawing.Size(121, 32);
+            this.TitleSonglbl.Size = new System.Drawing.Size(114, 29);
             this.TitleSonglbl.TabIndex = 39;
             this.TitleSonglbl.Text = "HAVANA";
             this.TitleSonglbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,6 +279,20 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
+            // Switchtomain
+            // 
+            this.Switchtomain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Switchtomain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Switchtomain.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Resize;
+            this.Switchtomain.Location = new System.Drawing.Point(274, 14);
+            this.Switchtomain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Switchtomain.Name = "Switchtomain";
+            this.Switchtomain.Size = new System.Drawing.Size(20, 20);
+            this.Switchtomain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Switchtomain.TabIndex = 42;
+            this.Switchtomain.TabStop = false;
+            this.Switchtomain.Click += new System.EventHandler(this.Switchtomain_Click);
+            // 
             // NimbusMiniplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,6 +301,7 @@
             this.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.MIni_Player_BlackBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(346, 308);
+            this.Controls.Add(this.Switchtomain);
             this.Controls.Add(this.CloseMiniplayer);
             this.Controls.Add(this.Artistlbl);
             this.Controls.Add(this.TitleSonglbl);
@@ -310,6 +327,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Switchtomain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +351,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.PictureBox Switchtomain;
     }
 }

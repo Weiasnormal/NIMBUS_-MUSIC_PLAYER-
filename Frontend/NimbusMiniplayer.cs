@@ -12,6 +12,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 {
     public partial class NimbusMiniplayer : Form
     {
+        
         public NimbusMiniplayer()
         {
             InitializeComponent();
@@ -20,6 +21,15 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void CloseMiniplayer_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Switchtomain_Click(object sender, EventArgs e)
+        {
+            
+            Nimbus nimbus = new Nimbus();
+            nimbus.Show();
+            this.Hide();
+
         }
     }
 }

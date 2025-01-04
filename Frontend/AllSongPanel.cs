@@ -218,11 +218,17 @@ namespace NIMBUS__MUSIC_PLAYER_
             HorizontalSongs Ssong = (HorizontalSongs)selectedSong;
             Song songTobeChanged = Ssong.Song;
 
+            if(songTobeChanged.IsFavorite)
+            {
+                MessageBox.Show($"'{songTobeChanged.Title}' is already in Favorites!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Set Favorites into true
             songTobeChanged.IsFavorite = true;
 
             // Log the change for debugging
-            Console.WriteLine($"Updating Song ID={songTobeChanged.Id}, IsFavorite={songTobeChanged.IsFavorite}");
+            //MessageBox.Show($"Updating Song ID={songTobeChanged.Id}, IsFavorite={songTobeChanged.IsFavorite}");
 
             // Call the update method
             bool success = controller.Update(songTobeChanged);

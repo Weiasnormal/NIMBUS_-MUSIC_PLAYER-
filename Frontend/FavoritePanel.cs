@@ -79,7 +79,13 @@ namespace NIMBUS__MUSIC_PLAYER_
         private HashSet<Song> favoriteSongs;
         private object selectedSong;
         SongController<Song> controller = new SongController<Song>();
+
         private Nimbus _nimbus;
+        public FavoritePanel(Nimbus nimbus)
+        {
+            InitializeComponent();
+            _nimbus = nimbus;
+        }
         public FavoritePanel()
         {
             InitializeComponent();
@@ -226,6 +232,13 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             if (success)
             {
+                var nimbus = this.FindForm() as Nimbus;
+
+                if (nimbus != null)
+                {
+                    nimbus.InitializeFavoriteButton();
+                }
+
                 MessageBox.Show($"'{songTobeRemove.Title}' has been removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //_nimbus.RefreshFavoriteButton();
 

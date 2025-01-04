@@ -101,7 +101,6 @@ namespace NIMBUS__MUSIC_PLAYER_
             else
             {
                 // Handle the case where no song name is found
-                Console.WriteLine("No song name found to play.");
             }
         }
 

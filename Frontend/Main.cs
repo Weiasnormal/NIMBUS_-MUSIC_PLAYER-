@@ -38,6 +38,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             InitializeComponent();
             Initialize_Navigation_Controls();
+            InitializeFavoriteButton();
 
             Helper.Events.UpdateMainUI += UpdateMainUI;
             ShowAddPlaylist.Visible = false;
@@ -87,6 +88,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             // Initialize UI elements
             UpdateSongDetails();
             #endregion
+            var horizontalSongs = new HorizontalSongs(this);
+            this.Controls.Add(horizontalSongs);
         }
 
         #region Change to pause icon when a song card is clicked
@@ -1102,16 +1105,111 @@ namespace NIMBUS__MUSIC_PLAYER_
             VolumeBar.Visible = false;
         }
 
+        public void InitializeFavoriteButton()
+        {
+            try
+            {
+                // Get the currently playing song's file path from PlayerState
+                string playingSongPath = PlayerState.player.URL;
+
+                if (!string.IsNullOrEmpty(playingSongPath))
+                {
+                    // Use SongController to fetch the song by file path
+                    var songController = new SongController<Song>();
+                    Song currentSong = songController.GetCollection<Song>()
+                                          .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                    if (currentSong != null)
+                    {
+                        // Update button visibility based on the song's IsFavorite status
+                        btnFavorite_Default.Visible = !currentSong.IsFavorite;
+                        btnFavorite_Pressed.Visible = currentSong.IsFavorite;
+                        //MessageBox.Show($"{currentSong.IsFavorite} {currentSong.IsFavorite}");
+                    }
+                    else
+                    {
+                        // Hide both buttons if no song matches
+                        btnFavorite_Default.Visible = true;
+                        btnFavorite_Pressed.Visible = false;
+                    }
+                }
+                else
+                {
+                    // Hide both buttons if no song is playing
+                    btnFavorite_Default.Visible = true;
+                    btnFavorite_Pressed.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log or handle the exception as needed
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
         private void btnFavorite_Default_Click(object sender, EventArgs e)
         {
-            btnFavorite_Default.Visible = false;
-            btnFavorite_Pressed.Visible = true;
+            //InitializeFavoriteButton();
+            // Get the currently playing song's file path
+            string playingSongPath = PlayerState.player.URL;
+
+            if (!string.IsNullOrEmpty(playingSongPath))
+            {
+                var songController = new SongController<Song>();
+                Song currentSong = songController.GetCollection<Song>()
+                                      .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                if (currentSong != null)
+                {
+                    currentSong.IsFavorite = true;
+
+                    // Update the song in the database
+                    if (songController.Update(currentSong))
+                    {
+                        btnFavorite_Default.Visible = false;
+                        btnFavorite_Pressed.Visible = true;
+                        MessageBox.Show($"'{currentSong.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Failed to add '{currentSong.Title}' to Favorites.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
+
 
         private void btnFavorite_Pressed_Click(object sender, EventArgs e)
         {
-            btnFavorite_Default.Visible = true;
-            btnFavorite_Pressed.Visible = false;
+            //InitializeFavoriteButton();
+            // Get the currently playing song's file path
+            string playingSongPath = PlayerState.player.URL;
+
+            if (!string.IsNullOrEmpty(playingSongPath))
+            {
+                var songController = new SongController<Song>();
+                Song currentSong = songController.GetCollection<Song>()
+                                      .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                if (currentSong != null)
+                {
+                    currentSong.IsFavorite = false;
+
+                    // Update the song in the database
+                    if (songController.Update(currentSong))
+                    {
+                        btnFavorite_Default.Visible = true;
+                        btnFavorite_Pressed.Visible = false;
+                        MessageBox.Show($"'{currentSong.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Failed to remove '{currentSong.Title}' from Favorites.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
+
     }
 }

@@ -25,6 +25,14 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         public event EventHandler MenuButtonClicked;
 
+        private Nimbus _nimbus;
+
+        public HorizontalSongs(Nimbus nimbus)
+        {
+            InitializeComponent();
+            _nimbus = nimbus;  
+        }
+
         public HorizontalSongs()
         {
             InitializeComponent();
@@ -45,10 +53,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             Songpic.ImageLocation = _song.Artist.Profile_Pic;
             Artistlbl.Text = _song.Artist.Display_Name;
             TotalTimelbl.Text = $"{song.Duration.Minutes:D2}:{song.Duration.Seconds:D2}";
-
         }
 
-        
         public void HorizontalSongs_DoubleClick(object sender, EventArgs e)
         {
             var Highlighted = Color.FromArgb(82, 82, 82);
@@ -67,18 +73,35 @@ namespace NIMBUS__MUSIC_PLAYER_
                 clickedControl.BackColor = Highlighted;
             }
 
-            // Force all buttons into the Play state
-           //PlayerState.ForcePlayState();
-
             // Get the song name from the label
             string songName = Titlelbl.Text;
-            
-            // Stop the current song if it's playing before starting the new song
-            PlayerState.StopSong(); // Ensure that the current song stops immediately
 
-            // Use the PlaySong method to play the song based on the song name
-            PlayerState.BackgroundWorker.CancelAsync();
-            Task.Run(()=>PlayerState.PlaySong(_song));
+            // Verify if there is a song to play
+            if (!string.IsNullOrEmpty(songName))
+            {
+                // Stop the current song if it's playing before starting the new song
+                PlayerState.StopSong(); // Ensure that the current song stops immediately
+
+                // Update the current playing song URL synchronously
+                PlayerState.player.URL = _song.File_Path;
+
+                // Initialize the favorite button state
+                var nimbus = this.FindForm() as Nimbus;
+
+                if (nimbus != null)
+                {
+                    nimbus.InitializeFavoriteButton();
+                }
+
+                // Play the song asynchronously
+                PlayerState.BackgroundWorker.CancelAsync();
+                Task.Run(() => PlayerState.PlaySong(_song));
+            }
+            else
+            {
+                // Handle the case where no song name is found
+                Console.WriteLine("No song name found to play.");
+            }
         }
 
 

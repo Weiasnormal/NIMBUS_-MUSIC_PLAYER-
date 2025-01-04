@@ -1045,7 +1045,6 @@
             this.TimeSong.Size = new System.Drawing.Size(640, 4);
             this.TimeSong.TabIndex = 0;
             this.TimeSong.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.TimeSong.ValueChanged += new System.EventHandler(this.TimeSong_ValueChanged);
             // 
             // btnSound_Open
             // 

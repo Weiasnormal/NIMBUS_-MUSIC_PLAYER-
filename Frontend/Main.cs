@@ -70,6 +70,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             TimeSong.Minimum = 0; // Start at 0
             TimeSong.Maximum = 100; // Progress will be in percentage
             #endregion
+
             #region Change Play/Pause Button
             // Subscribe to the PlayerState's OnStateChanged event
             PlayerState.OnStateChanged += PlayerState_OnStateChanged;
@@ -78,6 +79,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             Playbtn.Visible = true;
             Pausebtn.Visible = false;
             #endregion
+
             #region Change .text/value of Artist and Song Title
             // Subscribe to PlayerState's OnStateChanged event
             PlayerState.OnStateChanged += PlayerState_OnStateChanged1;
@@ -88,6 +90,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             // Initialize UI elements
             UpdateSongDetails();
             #endregion
+
             var horizontalSongs = new HorizontalSongs(this);
             this.Controls.Add(horizontalSongs);
         }
@@ -113,6 +116,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             Pausebtn.Visible = isPlaying; // Pause button is visible when playing
         }
         #endregion
+
         #region Change.text/value of Artist and Song Title
         private void PlayerState_OnStateChanged1(bool isPlaying)
         {
@@ -184,45 +188,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             
         }
 
-        /*private void RefreshProject()
-        {
-            try
-            {
-                // Reset Navigation
-                Initialize_Navigation_Controls();
-
-                // Reset Player State
-                 // Ensure this method clears current song, state, etc.
-                Playbtn.Visible = true;
-                Pausebtn.Visible = false;
-
-                // Reset Song and Artist Details
-                TitleSonglbl.Text = "-";
-                Artistlbl.Text = "-";
-
-                // Clear Playlist and Queue
-                PlaylistList.Items.Clear(); // Adjust based on your PlaylistList implementation
-                dashboardNavigation.Display(0); // Reset to the default panel (e.g., All Songs)
-
-                // Reset Progress and Timer
-                TimeSong.Value = 0;
-                TimePlayed.Text = "00:00";
-                EndTime.Text = "00:00";
-
-                // Hide Extra Elements
-                ShowAddPlaylist.Visible = false;
-                PlaylistList.Visible = false;
-
-                // Optionally Reload Data
-                // LoadAllSongs(); // If there's a method to reload songs from the source/database
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error refreshing the project: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }*/
-
-
+        #region SidebarNavigation
         private void Initialize_Navigation_Controls()
         {
             UserControl[] list =
@@ -310,6 +276,9 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             ShowAddPlaylist.Visible = false;
         }
+
+#endregion
+
         #region Apply Dark Theme
         private void ApplyDarkTheme()
         {
@@ -499,6 +468,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 #endregion
+
         #region Apply Blue Theme
         private void ApplyBlueTheme()
         {
@@ -689,6 +659,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
         #endregion
+
         #region Apply Green Theme
         private void ApplyGreenTheme()
         {
@@ -880,17 +851,8 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         #endregion
 
-        private void TimeSong_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void Nimbus_Load(object sender, EventArgs e)
-        {
-
-        }
-
+   
+        #region ImportMusicButtonClick
         private void btnImportMusic_Click_1(object sender, EventArgs e)
         {
             // Open a file dialog to let the user select multiple song files
@@ -973,7 +935,9 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
+        #endregion
 
+        #region NowPlayingPanel
 
         private void UpdatePlayPauseButton(bool isPlaying)
         {
@@ -1132,6 +1096,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             VolumeBar.Visible = false;
         }
 
+        #endregion
+
+        #region FavoriteButtonFunction
         public void InitializeFavoriteButton()
         {
             try
@@ -1237,6 +1204,6 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
-
+        #endregion
     }
 }

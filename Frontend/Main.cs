@@ -157,7 +157,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             
         }
 
-        private void RefreshProject()
+        /*private void RefreshProject()
         {
             try
             {
@@ -193,7 +193,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             {
                 MessageBox.Show($"Error refreshing the project: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
 
 
         private void Initialize_Navigation_Controls()
@@ -214,37 +214,37 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void btnSidebar_Songs_Click(object sender, EventArgs e)
         {
-            RefreshProject();
+            Initialize_Navigation_Controls();
             dashboardNavigation.Display(0);
         }
 
         private void btnSidebar_Favorites_Click(object sender, EventArgs e)
         {
-            RefreshProject();
+            Initialize_Navigation_Controls();
             dashboardNavigation.Display(1);
         }
 
         private void btnSidebar_Albums_Click(object sender, EventArgs e)
         {
-            RefreshProject();
+            Initialize_Navigation_Controls();
             dashboardNavigation.Display(2);
         }
 
         private void btnSidebar_Artists_Click(object sender, EventArgs e)
         {
-            RefreshProject();
+            Initialize_Navigation_Controls();
             dashboardNavigation.Display(3);
         }
 
         private void btnSidebar_Queue_Click(object sender, EventArgs e)
         {
-            RefreshProject();
+            Initialize_Navigation_Controls();
             dashboardNavigation.Display(4);
         }
 
         private void btnSidebar_Playlist_Click(object sender, EventArgs e)
         {
-            RefreshProject();
+            Initialize_Navigation_Controls();
             PlaylistList.Visible = !PlaylistList.Visible;
             if (PlaylistList.Visible)
                 dashboardNavigation.Display(5);
@@ -931,6 +931,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                                 // Add the new song to the HashSet after successful insertion
                                 existingSongs.Add((newSong.Title, newSong.File_Path));
                                 MessageBox.Show($"Song '{newSong.Title}' by '{artistName}' imported successfully!", "Import Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Initialize_Navigation_Controls();
                             }
                             else
                             {

@@ -127,16 +127,33 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
         }
 
-        private void UpdateSongDetails()
+        public void UpdateSongDetails()
         {
             try
             {
-                var currentSong = PlayerState.CurrentSong?.Value;
+                // Get the current song's file path from the WMPLib player
+                string playingSongPath = PlayerState.player?.URL;
 
-                if (currentSong != null)
+                if (!string.IsNullOrEmpty(playingSongPath))
                 {
-                    TitleSonglbl.Text = currentSong.Title; // Update the song title
-                    Artistlbl.Text = currentSong.Artist.Display_Name; // Update the artist name
+                    // Use SongController to fetch the song details based on the file path
+                    var songController = new SongController<Song>();
+                    var currentSong = songController.GetCollection<Song>()
+                                         .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                    if (currentSong != null)
+                    {
+                        // Truncate title if it's longer than 12 characters
+                        TitleSonglbl.Text = TruncateText(currentSong.Title, 12);
+
+                        // Update the artist name
+                        Artistlbl.Text = currentSong.Artist?.Display_Name ?? "-";
+                    }
+                    else
+                    {
+                        TitleSonglbl.Text = "-";
+                        Artistlbl.Text = "-";
+                    }
                 }
                 else
                 {
@@ -146,8 +163,15 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
             catch (Exception ex)
             {
-                //MessageBox.Show($"Error updating song details: {ex.Message}");
+                // Handle exceptions gracefully (e.g., logging)
+                Console.WriteLine($"Error updating song details: {ex.Message}");
             }
+        }
+
+        private string TruncateText(string text, int maxLength)
+        {
+            if (string.IsNullOrEmpty(text)) return "-";
+            return text.Length > maxLength ? text.Substring(0, maxLength) + "..." : text;
         }
         #endregion
 

@@ -82,15 +82,16 @@ namespace NIMBUS__MUSIC_PLAYER_
                 // Stop the current song if it's playing before starting the new song
                 PlayerState.StopSong(); // Ensure that the current song stops immediately
 
-                // Update the current playing song URL synchronously
+                // Update the WMPLib player's URL synchronously
                 PlayerState.player.URL = _song.File_Path;
 
-                // Initialize the favorite button state
+                // Trigger the UI update
                 var nimbus = this.FindForm() as Nimbus;
 
                 if (nimbus != null)
                 {
                     nimbus.InitializeFavoriteButton();
+                    nimbus.UpdateSongDetails();
                 }
 
                 // Play the song asynchronously

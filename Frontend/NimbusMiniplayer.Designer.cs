@@ -93,12 +93,12 @@
             this.TitleSonglbl.BackColor = System.Drawing.Color.Transparent;
             this.TitleSonglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleSonglbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TitleSonglbl.Location = new System.Drawing.Point(86, 30);
+            this.TitleSonglbl.Location = new System.Drawing.Point(83, 30);
             this.TitleSonglbl.Name = "TitleSonglbl";
             this.TitleSonglbl.Size = new System.Drawing.Size(114, 29);
             this.TitleSonglbl.TabIndex = 39;
             this.TitleSonglbl.Text = "HAVANA";
-            this.TitleSonglbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TitleSonglbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SongTimePanel
             // 
@@ -239,7 +239,7 @@
             this.Switchtomain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Switchtomain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Switchtomain.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Resize;
-            this.Switchtomain.Location = new System.Drawing.Point(274, 14);
+            this.Switchtomain.Location = new System.Drawing.Point(268, 17);
             this.Switchtomain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Switchtomain.Name = "Switchtomain";
             this.Switchtomain.Size = new System.Drawing.Size(20, 20);

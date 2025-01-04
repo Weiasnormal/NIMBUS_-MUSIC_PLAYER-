@@ -79,6 +79,7 @@
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ShowAddPlaylist = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1208,6 +1209,7 @@
         private System.Windows.Forms.PictureBox btnSound_Close;
         private System.Windows.Forms.Label lblVolumePercent;
         private Guna.UI2.WinForms.Guna2GradientButton btnFavorite_Pressed;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }
 

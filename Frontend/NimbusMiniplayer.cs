@@ -1,4 +1,6 @@
 ﻿using NIMBUS__MUSIC_PLAYER_.Helper;
+using NimbusClassLibrary.Controller;
+using NimbusClassLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,29 +19,35 @@ namespace NIMBUS__MUSIC_PLAYER_
     {
         private System.Timers.Timer scrollTimer;
         private System.Windows.Forms.Timer timer;
+        private Nimbus Nimbus;
         public NimbusMiniplayer()
         {
             InitializeComponent();
+            Helper.Events.UpdateMainUI += UpdateMainUI;
 
             lblVolumePercent.Visible = false; // Hide the volume label by default
 
             timer = new System.Windows.Forms.Timer();
             timer.Interval = 500; // Update every 500ms (half a second)
-            timer.Tick += timer1_Tick;
+            timer.Tick += Timer_Tick; 
 
             // Initialize ProgressBar
             TimeSong.Minimum = 0; // Start at 0
             TimeSong.Maximum = 100; // Progress will be in percentage
 
             // Subscribe to the PlayerState's OnStateChanged event
-            PlayerState.OnStateChanged += PlayerState_OnStateChanged; 
+            PlayerState.OnStateChanged += PlayerState_OnStateChanged;
 
             // Initialize button states
             Playbtn.Visible = true;
             Pausebtn.Visible = false;
+
+            UpdateSongDetails();
+
+            InitializeFavoriteButton();
         }
 
-       
+        
 
         private void CloseMiniplayer_Click(object sender, EventArgs e)
         {
@@ -48,9 +56,8 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Switchtomain_Click(object sender, EventArgs e)
         {
-            
-            Nimbus nimbus = new Nimbus();
-            nimbus.Show();
+
+            Nimbus.Show();
             this.Hide();
 
         }
@@ -85,8 +92,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 lblVolumePercent.Visible = false;
             }
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             // Automatically update TimePlayed label
             if (PlayerState.player.currentMedia != null)
@@ -97,7 +103,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 UpdateProgressBar(currentPosition, duration);
             }
         }
-
+       
         private void UpdateTimePlayed(double current, double total)
         {
             // Format the current time and total duration
@@ -131,18 +137,35 @@ namespace NIMBUS__MUSIC_PLAYER_
                 UpdateSongDetails();
             }
         }
-       
 
-        private void UpdateSongDetails()
+
+        public void UpdateSongDetails()
         {
             try
             {
-                var currentSong = PlayerState.CurrentSong?.Value;
+                // Get the current song's file path from the WMPLib player
+                string playingSongPath = PlayerState.player?.URL;
 
-                if (currentSong != null)
+                if (!string.IsNullOrEmpty(playingSongPath))
                 {
-                    TitleSonglbl.Text = currentSong.Title; // Update the song title
-                    Artistlbl.Text = currentSong.Artist.Display_Name; // Update the artist name
+                    // Use SongController to fetch the song details based on the file path
+                    var songController = new SongController<Song>();
+                    var currentSong = songController.GetCollection<Song>()
+                                         .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                    if (currentSong != null)
+                    {
+                        // Truncate title if it's longer than 12 characters
+                        TitleSonglbl.Text = TruncateText(currentSong.Title, 12);
+
+                        // Update the artist name
+                        Artistlbl.Text = currentSong.Artist?.Display_Name ?? "-";
+                    }
+                    else
+                    {
+                        TitleSonglbl.Text = "-";
+                        Artistlbl.Text = "-";
+                    }
                 }
                 else
                 {
@@ -152,7 +175,125 @@ namespace NIMBUS__MUSIC_PLAYER_
             }
             catch (Exception ex)
             {
-                //MessageBox.Show($"Error updating song details: {ex.Message}");
+                // Handle exceptions gracefully (e.g., logging)
+                Console.WriteLine($"Error updating song details: {ex.Message}");
+            }
+        }
+
+        private string TruncateText(string text, int maxLength)
+        {
+            if (string.IsNullOrEmpty(text)) return "-";
+            return text.Length > maxLength ? text.Substring(0, maxLength) + "..." : text;
+        }
+
+        private void UpdateMainUI()
+        {
+            Song CurrentSong = PlayerState.CurrentSong.Value;
+
+            TitleSonglbl.Text = CurrentSong.Title;
+            Artistlbl.Text = CurrentSong.Artist.Display_Name;
+
+        }
+
+        public void InitializeFavoriteButton()
+        {
+            try
+            {
+                // Get the currently playing song's file path from PlayerState
+                string playingSongPath = PlayerState.player.URL;
+
+                if (!string.IsNullOrEmpty(playingSongPath))
+                {
+                    // Use SongController to fetch the song by file path
+                    var songController = new SongController<Song>();
+                    Song currentSong = songController.GetCollection<Song>()
+                                          .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                    if (currentSong != null)
+                    {
+                        // Update button visibility based on the song's IsFavorite status
+                        btnFavorite_Default.Visible = !currentSong.IsFavorite;
+                        btnFavorite_Pressed.Visible = currentSong.IsFavorite;
+                        //MessageBox.Show($"{currentSong.IsFavorite} {currentSong.IsFavorite}");
+                    }
+                    
+                }
+                else
+                {
+                    // Hide both buttons if no song is playing
+                    btnFavorite_Default.Visible = true;
+                    btnFavorite_Pressed.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log or handle the exception as needed
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnFavorite_Default_Click(object sender, EventArgs e)
+        {
+            //InitializeFavoriteButton();
+            // Get the currently playing song's file path
+            string playingSongPath = PlayerState.player.URL;
+
+            if (!string.IsNullOrEmpty(playingSongPath))
+            {
+                var songController = new SongController<Song>();
+                Song currentSong = songController.GetCollection<Song>()
+                                      .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                if (currentSong != null)
+                {
+                    currentSong.IsFavorite = true;
+
+                    // Update the song in the database
+                    if (songController.Update(currentSong))
+                    {
+                        btnFavorite_Default.Visible = false;
+                        btnFavorite_Pressed.Visible = true;
+                        MessageBox.Show($"'{currentSong.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       // Nimbus.RefreshFavoriteButton();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Failed to add '{currentSong.Title}' to Favorites.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+
+        private void btnFavorite_Pressed_Click(object sender, EventArgs e)
+        {
+            //InitializeFavoriteButton();
+            // Get the currently playing song's file path
+            string playingSongPath = PlayerState.player.URL;
+
+            if (!string.IsNullOrEmpty(playingSongPath))
+            {
+                var songController = new SongController<Song>();
+                Song currentSong = songController.GetCollection<Song>()
+                                      .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                if (currentSong != null)
+                {
+                    currentSong.IsFavorite = false;
+
+                    // Update the song in the database
+                    if (songController.Update(currentSong))
+                    {
+                        btnFavorite_Default.Visible = true;
+                        btnFavorite_Pressed.Visible = false;
+                        MessageBox.Show($"'{currentSong.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       // Nimbus.RefreshFavoriteButton();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Failed to remove '{currentSong.Title}' from Favorites.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }

@@ -40,6 +40,9 @@ namespace NIMBUS__MUSIC_PLAYER_
             Initialize_Navigation_Controls();
             InitializeFavoriteButton();
 
+            var horizontalSongs = new HorizontalSongs(this);
+            this.Controls.Add(horizontalSongs);
+
             Helper.Events.UpdateMainUI += UpdateMainUI;
             ShowAddPlaylist.Visible = false;
             PlaylistList.Visible = false;
@@ -47,8 +50,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             VolumeBar.Visible = false;
             lblVolumePercent.Visible = false;
             btnFavorite_Pressed.Visible = false;
-            // test test = new test();
-            // MessageBox.Show(test.test1());
+            
             Pausebtn.Visible = false;
 
             PlayerState.OnStateChanged += UpdatePlayPauseButton;
@@ -91,8 +93,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             UpdateSongDetails();
             #endregion
 
-            var horizontalSongs = new HorizontalSongs(this);
-            this.Controls.Add(horizontalSongs);
+            
         }
 
         #region Change to pause icon when a song card is clicked
@@ -177,7 +178,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             if (string.IsNullOrEmpty(text)) return "-";
             return text.Length > maxLength ? text.Substring(0, maxLength) + "..." : text;
         }
-        #endregion
+        
 
         private void UpdateMainUI()
         {
@@ -187,6 +188,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             Artistlbl.Text = CurrentSong.Artist.Display_Name;
             
         }
+        #endregion
 
         #region SidebarNavigation
         private void Initialize_Navigation_Controls()
@@ -277,7 +279,27 @@ namespace NIMBUS__MUSIC_PLAYER_
             ShowAddPlaylist.Visible = false;
         }
 
-#endregion
+        #endregion
+
+        public void RefreshFavoriteButton()
+        {
+            try
+            {
+                string playingSongPath = PlayerState.player.URL;
+
+                var songController = new SongController<Song>();
+                Song currentSong = songController.GetCollection<Song>()
+                                      .FirstOrDefault(s => s.File_Path == playingSongPath);
+
+                btnFavorite_Default.Visible = !currentSong.IsFavorite;
+                btnFavorite_Pressed.Visible = currentSong.IsFavorite;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error refreshing the project: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         #region Apply Dark Theme
         private void ApplyDarkTheme()
@@ -1122,17 +1144,13 @@ namespace NIMBUS__MUSIC_PLAYER_
                     }
                     else
                     {
-                        // Hide both buttons if no song matches
+                        // Hide both buttons if no song is playing
                         btnFavorite_Default.Visible = true;
                         btnFavorite_Pressed.Visible = false;
                     }
+
                 }
-                else
-                {
-                    // Hide both buttons if no song is playing
-                    btnFavorite_Default.Visible = true;
-                    btnFavorite_Pressed.Visible = false;
-                }
+                
             }
             catch (Exception ex)
             {
@@ -1164,6 +1182,9 @@ namespace NIMBUS__MUSIC_PLAYER_
                         btnFavorite_Default.Visible = false;
                         btnFavorite_Pressed.Visible = true;
                         MessageBox.Show($"'{currentSong.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //RefreshFavoriteButton();
+
+
                     }
                     else
                     {
@@ -1196,6 +1217,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                         btnFavorite_Default.Visible = true;
                         btnFavorite_Pressed.Visible = false;
                         MessageBox.Show($"'{currentSong.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //RefreshFavoriteButton();
                     }
                     else
                     {

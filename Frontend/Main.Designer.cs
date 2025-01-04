@@ -1013,9 +1013,9 @@
             this.EndTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.EndTime.Location = new System.Drawing.Point(719, 7);
             this.EndTime.Name = "EndTime";
-            this.EndTime.Size = new System.Drawing.Size(31, 16);
+            this.EndTime.Size = new System.Drawing.Size(38, 16);
             this.EndTime.TabIndex = 9;
-            this.EndTime.Text = "3:39";
+            this.EndTime.Text = "00:00";
             // 
             // TimePlayed
             // 
@@ -1025,9 +1025,9 @@
             this.TimePlayed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TimePlayed.Location = new System.Drawing.Point(3, 7);
             this.TimePlayed.Name = "TimePlayed";
-            this.TimePlayed.Size = new System.Drawing.Size(31, 16);
+            this.TimePlayed.Size = new System.Drawing.Size(38, 16);
             this.TimePlayed.TabIndex = 8;
-            this.TimePlayed.Text = "1:39";
+            this.TimePlayed.Text = "00:00";
             // 
             // TimeSong
             // 

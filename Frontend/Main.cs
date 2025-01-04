@@ -1094,8 +1094,10 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Miniplayerbtn_Click(object sender, EventArgs e)
         {
+            
             NimbusMiniplayer miniplayer = new NimbusMiniplayer();
             miniplayer.Show();
+            this.Hide();
         }
 
         private void btnNext_Click(object sender, EventArgs e)

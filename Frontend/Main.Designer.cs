@@ -1089,7 +1089,7 @@
             this.ViewPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ViewPanel.BackColor = System.Drawing.Color.Transparent;
-            this.ViewPanel.Location = new System.Drawing.Point(349, 98);
+            this.ViewPanel.Location = new System.Drawing.Point(352, 94);
             this.ViewPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ViewPanel.Name = "ViewPanel";
             this.ViewPanel.Size = new System.Drawing.Size(1269, 686);
@@ -1102,7 +1102,7 @@
             // ShowAddPlaylist
             // 
             this.ShowAddPlaylist.BackColor = System.Drawing.Color.Transparent;
-            this.ShowAddPlaylist.Location = new System.Drawing.Point(864, 86);
+            this.ShowAddPlaylist.Location = new System.Drawing.Point(836, 85);
             this.ShowAddPlaylist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ShowAddPlaylist.Name = "ShowAddPlaylist";
             this.ShowAddPlaylist.Size = new System.Drawing.Size(93, 134);

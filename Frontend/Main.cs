@@ -43,8 +43,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             var horizontalSongs = new HorizontalSongs(this);
             this.Controls.Add(horizontalSongs);
 
-            var favoritePanel = new FavoritePanel(this);
-            this.Controls.Add(favoritePanel);
+            //var favoritePanel = new FavoritePanel(this);
+            //this.Controls.Add(favoritePanel);
 
             Helper.Events.UpdateMainUI += UpdateMainUI;
             ShowAddPlaylist.Visible = false;

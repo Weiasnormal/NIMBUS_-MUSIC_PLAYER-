@@ -19,7 +19,7 @@ namespace NIMBUS__MUSIC_PLAYER_
     {
         private System.Timers.Timer scrollTimer;
         private System.Windows.Forms.Timer timer;
-        private Nimbus Nimbus;
+        
         public NimbusMiniplayer()
         {
             InitializeComponent();
@@ -56,14 +56,18 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Switchtomain_Click(object sender, EventArgs e)
         {
-            var nimbus = Application.OpenForms.OfType<Nimbus>().FirstOrDefault();
+            Nimbus nimbus = new Nimbus();
+            nimbus.Show();
+            this.Hide();
+
+            /*var nimbus = Application.OpenForms.OfType<Nimbus>().FirstOrDefault();
 
             if (nimbus != null)
             {
                 nimbus.Show(); 
                 nimbus.InitializeFavoriteButton();
                 this.Hide();   
-            }
+            }*/
         }
 
         private void VolumeBar_Scroll(object sender, ScrollEventArgs e)

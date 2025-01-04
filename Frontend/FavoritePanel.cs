@@ -131,7 +131,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             // then update the form
             flowFavorites.PerformLayout();
-
+            
         }
 
         #region Frontend

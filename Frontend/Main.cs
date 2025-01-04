@@ -16,6 +16,7 @@ using NIMBUS__MUSIC_PLAYER_.Helper;
 using NIMBUS__MUSIC_PLAYER_.Properties;
 using NimbusClassLibrary;
 using NimbusClassLibrary.Controller;
+using NimbusClassLibrary.Data;
 using NimbusClassLibrary.Model;
 using TagLib;
 using WMPLib;
@@ -881,6 +882,11 @@ namespace NIMBUS__MUSIC_PLAYER_
                     SongController<Song> songController = new SongController<Song>();
                     ArtistController artistController = new ArtistController();
 
+                    // Load all existing songs into a HashSet for quick lookup
+                    var existingSongs = new HashSet<(string Title, string FilePath)>(
+                        DBContext.songs.Select(s => (s.Title, s.File_Path))
+                    );
+
                     foreach (string filePath in filePaths)
                     {
                         try
@@ -890,6 +896,13 @@ namespace NIMBUS__MUSIC_PLAYER_
                             string title = tagFile.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(filePath);
                             string artistName = tagFile.Tag.FirstPerformer ?? "Unknown Artist";
                             TimeSpan duration = tagFile.Properties.Duration;
+
+                            // Check if the song already exists in the HashSet
+                            if (existingSongs.Contains((title, filePath)))
+                            {
+                                MessageBox.Show($"The song '{title}' already exists in the library.", "Duplicate Song", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                continue;
+                            }
 
                             // Check if the artist exists or create a new one
                             int artistId = artistController.GetArtistIdByName(artistName);
@@ -915,6 +928,8 @@ namespace NIMBUS__MUSIC_PLAYER_
                             // Provide feedback to the user
                             if (isCreated)
                             {
+                                // Add the new song to the HashSet after successful insertion
+                                existingSongs.Add((newSong.Title, newSong.File_Path));
                                 MessageBox.Show($"Song '{newSong.Title}' by '{artistName}' imported successfully!", "Import Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
@@ -930,6 +945,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                 }
             }
         }
+
 
         private void UpdatePlayPauseButton(bool isPlaying)
         {

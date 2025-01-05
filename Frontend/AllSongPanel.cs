@@ -14,10 +14,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static NIMBUS__MUSIC_PLAYER_.HorizontalSongs;
+using NIMBUS__MUSIC_PLAYER_.Interface;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
-    public partial class AllSongPanel : UserControl
+    public partial class AllSongPanel : UserControl, IRefresh
     {
         private Size originalFormSize; // Store the original size of the form
         private object selectedSong;
@@ -75,6 +76,10 @@ namespace NIMBUS__MUSIC_PLAYER_
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
 
 
+        }
+        public void RefreshPanel()
+        {
+            
         }
 
         private void UpdatePlayPauseButton(bool isPlaying)

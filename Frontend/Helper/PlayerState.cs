@@ -19,9 +19,14 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         {
             get 
             {
-                if (NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.Count > 0)
-                    return NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.First;
-                throw new Exception("Error on next", EmptyQueue);
+                if (NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.Count <= 0)
+                {
+                    Random random = new Random();
+                    int num = random.Next(NimbusClassLibrary.Data.DBContext.songs.Count()-1);
+                    NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddFirst(NimbusClassLibrary.Data.DBContext.songs[num]);
+                }
+
+                 return NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.First;
             }
         }
 
@@ -29,11 +34,13 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         {
             get
             {
-
-                if (NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Count > 0)
-                    return NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Pop();
-                throw new Exception("Error on previous", EmptyQueue);
-
+                if (NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Count <= 0)
+                {
+                    Random random = new Random();
+                    int num = random.Next(NimbusClassLibrary.Data.DBContext.songs.Count()-1);
+                    NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Push(NimbusClassLibrary.Data.DBContext.songs[num]);
+                }
+                return NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Pop();
             }
         }
 
@@ -124,6 +131,8 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         { 
             NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Push(CurrentSong.Value);
             NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.RemoveFirst();
+
+            BackgroundWorker.RunWorkerAsync();
         }
 
         public static void StopSong()
@@ -136,7 +145,8 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         }
         public static void SetPreviousSong()
         {
-            NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddFirst(NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Pop());
+            NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddFirst(PreviousSong);
+            BackgroundWorker.RunWorkerAsync();
         }
         public static async Task PlaySong(Song playsong)
         {

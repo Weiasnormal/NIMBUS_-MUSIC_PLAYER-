@@ -46,7 +46,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             //var favoritePanel = new FavoritePanel(this);
             //this.Controls.Add(favoritePanel);
-
+            PlayerState.player.DurationUnitChange += Player_DurationUnitChange;
             Helper.Events.UpdateMainUI += UpdateMainUI;
             ShowAddPlaylist.Visible = false;
             PlaylistList.Visible = false;
@@ -67,14 +67,11 @@ namespace NIMBUS__MUSIC_PLAYER_
 
 
             #region Song Timer / Duration
-            // Initialize Timer
-            timer = new System.Windows.Forms.Timer();
-            timer.Interval = 500; // Update every 500ms (half a second)
-            timer.Tick += timer1_Tick;
-
+            
+            double sample = PlayerState.player.controls.currentPosition;
             // Initialize ProgressBar
             TimeSong.Minimum = 0; // Start at 0
-            TimeSong.Maximum = 100; // Progress will be in percentage
+            TimeSong.Maximum = (int)Helper.PlayerState.CurrentSong.Value.Duration.TotalSeconds; // Progress will be in percentage
             #endregion
 
             #region Change Play/Pause Button
@@ -98,6 +95,11 @@ namespace NIMBUS__MUSIC_PLAYER_
             #endregion
 
             
+        }
+
+        private void Player_DurationUnitChange(int NewDurationUnit)
+        {
+            TimeSong.Value = NewDurationUnit;
         }
 
         #region Change to pause icon when a song card is clicked

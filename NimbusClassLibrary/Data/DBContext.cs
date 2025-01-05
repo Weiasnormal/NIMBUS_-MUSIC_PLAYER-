@@ -11,7 +11,7 @@ namespace NimbusClassLibrary.Data
 {
     public class DBContext
     {
-        public static ICollection<Song> songs = new List<Song>();
+        public static List<Song> songs = new List<Song>();
         public static ICollection<Artist> artists = new List<Artist>();
         public static ICollection<Playlist> playlists = new List<Playlist>();
         public static ICollection<PlaylistSongs> playlistSongs = new List<PlaylistSongs>();

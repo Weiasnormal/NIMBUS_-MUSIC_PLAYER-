@@ -41,7 +41,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             // Initialize button states
             Playbtn.Visible = true;
             Pausebtn.Visible = false;
-
+            
             UpdateSongDetails();
 
             InitializeFavoriteButton();

@@ -194,7 +194,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         #endregion
 
-        
+        #region RefreshPanelImplementation
         public class DashboardNavigation
         {
             private IRefresh[] refreshablePanels;
@@ -240,6 +240,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             int activePanelIndex = dashboardNavigation.CurrentPanelIndex;
             dashboardNavigation.RefreshPanel(activePanelIndex);
         }
+        #endregion
 
         #region SidebarNavigation
         private void Initialize_Navigation_Controls()
@@ -260,37 +261,37 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void btnSidebar_Songs_Click(object sender, EventArgs e)
         {
-            RefreshCurrentPanel();
+            Initialize_Navigation_Controls();
             dashboardNavigation.Display(0);
         }
 
         private void btnSidebar_Favorites_Click(object sender, EventArgs e)
         {
-            RefreshCurrentPanel();
+           // RefreshCurrentPanel();
             dashboardNavigation.Display(1);
         }
 
         private void btnSidebar_Albums_Click(object sender, EventArgs e)
         {
-            RefreshCurrentPanel();
+          //  RefreshCurrentPanel();
             dashboardNavigation.Display(2);
         }
 
         private void btnSidebar_Artists_Click(object sender, EventArgs e)
         {
-            RefreshCurrentPanel();
+          //  RefreshCurrentPanel();
             dashboardNavigation.Display(3);
         }
 
         private void btnSidebar_Queue_Click(object sender, EventArgs e)
         {
-            RefreshCurrentPanel();
+          //  RefreshCurrentPanel();
             dashboardNavigation.Display(4);
         }
 
         private void btnSidebar_Playlist_Click(object sender, EventArgs e)
         {
-            RefreshCurrentPanel();
+          //  RefreshCurrentPanel();
             PlaylistList.Visible = !PlaylistList.Visible;
             if (PlaylistList.Visible)
                 dashboardNavigation.Display(5);

@@ -139,7 +139,6 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         public void RefreshPanel()
         {
-
             AddtoFavorite();
         }
         #region Frontend
@@ -271,8 +270,11 @@ namespace NIMBUS__MUSIC_PLAYER_
             MessageBox.Show($"'{songTobeDeleted.Title}' has been Deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             flowFavorites.Controls.Clear();
-            AddtoFavorite(); 
-            RefreshPanel();
+            AddtoFavorite();
+
+            Nimbus nimbus = new Nimbus();
+            nimbus.UpdateSongDetails();
+
         }
     }
 }

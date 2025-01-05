@@ -13,6 +13,7 @@ using Guna.UI.WinForms;
 using Guna.UI2.HtmlRenderer.Adapters.Entities;
 using Guna.UI2.WinForms;
 using NIMBUS__MUSIC_PLAYER_.Helper;
+using NIMBUS__MUSIC_PLAYER_.Interface;
 using NIMBUS__MUSIC_PLAYER_.Properties;
 using NimbusClassLibrary;
 using NimbusClassLibrary.Controller;
@@ -193,6 +194,53 @@ namespace NIMBUS__MUSIC_PLAYER_
         }
         #endregion
 
+        
+        public class DashboardNavigation
+        {
+            private IRefresh[] refreshablePanels;
+            private Control viewPanel;
+            private UserControl[] panels;
+            public int CurrentPanelIndex { get; private set; }
+
+            public DashboardNavigation(UserControl[] panels, Control viewPanel)
+            {
+                this.panels = panels;
+                this.viewPanel = viewPanel;
+                this.refreshablePanels = panels.OfType<IRefresh>().ToArray();
+            }
+
+            public void Display(int panelIndex)
+            {
+                if (panelIndex < 0 || panelIndex >= panels.Length)
+                    return;
+
+                CurrentPanelIndex = panelIndex;
+                viewPanel.Controls.Clear();
+                viewPanel.Controls.Add(panels[panelIndex]);
+            }
+
+            public void RefreshPanel(int panelIndex)
+            {
+                if (panelIndex >= 0 && panelIndex < refreshablePanels.Length)
+                {
+                    refreshablePanels[panelIndex].RefreshPanel();
+                }
+            }
+            /*public void AllRefresh()
+            {
+                foreach (var panel in dashboardNavigation.refreshablePanels)
+                {
+                    panel.RefreshPanel();
+                }
+            }*/
+        }
+       
+        public void RefreshCurrentPanel()
+        {
+            int activePanelIndex = dashboardNavigation.CurrentPanelIndex;
+            dashboardNavigation.RefreshPanel(activePanelIndex);
+        }
+
         #region SidebarNavigation
         private void Initialize_Navigation_Controls()
         {
@@ -212,37 +260,37 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void btnSidebar_Songs_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
+            RefreshCurrentPanel();
             dashboardNavigation.Display(0);
         }
 
         private void btnSidebar_Favorites_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
+            RefreshCurrentPanel();
             dashboardNavigation.Display(1);
         }
 
         private void btnSidebar_Albums_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
+            RefreshCurrentPanel();
             dashboardNavigation.Display(2);
         }
 
         private void btnSidebar_Artists_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
+            RefreshCurrentPanel();
             dashboardNavigation.Display(3);
         }
 
         private void btnSidebar_Queue_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
+            RefreshCurrentPanel();
             dashboardNavigation.Display(4);
         }
 
         private void btnSidebar_Playlist_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
+            RefreshCurrentPanel();
             PlaylistList.Visible = !PlaylistList.Visible;
             if (PlaylistList.Visible)
                 dashboardNavigation.Display(5);
@@ -284,25 +332,6 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         #endregion
 
-        public void RefreshFavoriteButton()
-        {
-            try
-            {
-                string playingSongPath = PlayerState.player.URL;
-
-                var songController = new SongController<Song>();
-                Song currentSong = songController.GetCollection<Song>()
-                                      .FirstOrDefault(s => s.File_Path == playingSongPath);
-
-                btnFavorite_Default.Visible = !currentSong.IsFavorite;
-                btnFavorite_Pressed.Visible = currentSong.IsFavorite;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error refreshing the project: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         #region Apply Dark Theme
         private void ApplyDarkTheme()
@@ -1186,7 +1215,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                         btnFavorite_Pressed.Visible = true;
                         MessageBox.Show($"'{currentSong.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //RefreshFavoriteButton();
-
+                        RefreshCurrentPanel();
 
                     }
                     else
@@ -1221,6 +1250,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                         btnFavorite_Pressed.Visible = false;
                         MessageBox.Show($"'{currentSong.Title}' removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //RefreshFavoriteButton();
+                        RefreshCurrentPanel();
                     }
                     else
                     {

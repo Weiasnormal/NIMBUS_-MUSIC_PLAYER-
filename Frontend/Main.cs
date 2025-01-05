@@ -1117,20 +1117,12 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            PlayerState.StopSong();
             PlayerState.SetNextSong();
-            if(!PlayerState.BackgroundWorker.IsBusy)
-                PlayerState.BackgroundWorker.RunWorkerAsync();
-            Helper.Events.UpdateMainUI();
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            PlayerState.StopSong();
             PlayerState.SetPreviousSong();
-            if (!PlayerState.BackgroundWorker.IsBusy)
-                PlayerState.BackgroundWorker.RunWorkerAsync();
-            Helper.Events.UpdateMainUI();
         }
 
         private void btnSound_Close_Click(object sender, EventArgs e)

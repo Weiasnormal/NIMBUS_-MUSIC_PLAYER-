@@ -128,11 +128,14 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         }
 
         public static void SetNextSong()
-        { 
+        {
+            StopSong();
             NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Push(CurrentSong.Value);
             NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.RemoveFirst();
 
-            BackgroundWorker.RunWorkerAsync();
+            if (!BackgroundWorker.IsBusy)
+                BackgroundWorker.RunWorkerAsync();
+            Events.UpdateMainUI();
         }
 
         public static void StopSong()
@@ -145,8 +148,12 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
         }
         public static void SetPreviousSong()
         {
+            StopSong();
             NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddFirst(PreviousSong);
-            BackgroundWorker.RunWorkerAsync();
+
+            if (!BackgroundWorker.IsBusy)
+                BackgroundWorker.RunWorkerAsync();
+            Events.UpdateMainUI();
         }
         public static async Task PlaySong(Song playsong)
         {

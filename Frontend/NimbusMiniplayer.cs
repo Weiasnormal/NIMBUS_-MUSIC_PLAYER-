@@ -56,18 +56,18 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Switchtomain_Click(object sender, EventArgs e)
         {
-            Nimbus nimbus = new Nimbus();
+           /* Nimbus nimbus = new Nimbus();
             nimbus.Show();
             this.Hide();
-
-            /*var nimbus = Application.OpenForms.OfType<Nimbus>().FirstOrDefault();
+*/
+            var nimbus = Application.OpenForms.OfType<Nimbus>().FirstOrDefault();
 
             if (nimbus != null)
             {
                 nimbus.Show(); 
                 nimbus.InitializeFavoriteButton();
                 this.Hide();   
-            }*/
+            }
         }
 
         private void VolumeBar_Scroll(object sender, ScrollEventArgs e)

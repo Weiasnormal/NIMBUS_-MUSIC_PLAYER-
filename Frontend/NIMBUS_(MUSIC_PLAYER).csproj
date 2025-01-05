@@ -131,6 +131,7 @@
     <Compile Include="FavoritePanel.Designer.cs">
       <DependentUpon>FavoritePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Sort.cs" />
     <Compile Include="Helper\Events.cs" />
     <Compile Include="Helper\PlayerState.cs" />
     <Compile Include="Helper\SongEventArgs.cs" />

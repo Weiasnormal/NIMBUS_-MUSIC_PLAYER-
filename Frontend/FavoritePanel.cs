@@ -276,5 +276,17 @@ namespace NIMBUS__MUSIC_PLAYER_
             nimbus.UpdateSongDetails();
 
         }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            List<Song> songs = NimbusClassLibrary.Data.DBContext.songs.Where(s => s.IsFavorite).ToList();
+
+            foreach(Song song in songs)
+            {
+                NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddLast(song);
+            }
+
+            Helper.Events.AddToQueue(sender, e);
+        }
     }
 }

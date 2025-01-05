@@ -67,9 +67,10 @@
             this.CloseMiniplayer.BackColor = System.Drawing.Color.Transparent;
             this.CloseMiniplayer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseMiniplayer.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__4_;
-            this.CloseMiniplayer.Location = new System.Drawing.Point(300, 12);
+            this.CloseMiniplayer.Location = new System.Drawing.Point(225, 10);
+            this.CloseMiniplayer.Margin = new System.Windows.Forms.Padding(2);
             this.CloseMiniplayer.Name = "CloseMiniplayer";
-            this.CloseMiniplayer.Size = new System.Drawing.Size(34, 26);
+            this.CloseMiniplayer.Size = new System.Drawing.Size(26, 21);
             this.CloseMiniplayer.TabIndex = 41;
             this.CloseMiniplayer.TabStop = false;
             this.CloseMiniplayer.Click += new System.EventHandler(this.CloseMiniplayer_Click);
@@ -80,9 +81,10 @@
             this.Artistlbl.BackColor = System.Drawing.Color.Transparent;
             this.Artistlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artistlbl.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Artistlbl.Location = new System.Drawing.Point(112, 59);
+            this.Artistlbl.Location = new System.Drawing.Point(84, 48);
+            this.Artistlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Artistlbl.Name = "Artistlbl";
-            this.Artistlbl.Size = new System.Drawing.Size(111, 18);
+            this.Artistlbl.Size = new System.Drawing.Size(94, 15);
             this.Artistlbl.TabIndex = 40;
             this.Artistlbl.Text = "Camilla Cabello";
             this.Artistlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,9 +95,10 @@
             this.TitleSonglbl.BackColor = System.Drawing.Color.Transparent;
             this.TitleSonglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleSonglbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TitleSonglbl.Location = new System.Drawing.Point(83, 30);
+            this.TitleSonglbl.Location = new System.Drawing.Point(62, 24);
+            this.TitleSonglbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TitleSonglbl.Name = "TitleSonglbl";
-            this.TitleSonglbl.Size = new System.Drawing.Size(114, 29);
+            this.TitleSonglbl.Size = new System.Drawing.Size(96, 24);
             this.TitleSonglbl.TabIndex = 39;
             this.TitleSonglbl.Text = "HAVANA";
             this.TitleSonglbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,9 +110,10 @@
             this.SongTimePanel.Controls.Add(this.EndTime);
             this.SongTimePanel.Controls.Add(this.TimePlayed);
             this.SongTimePanel.Controls.Add(this.TimeSong);
-            this.SongTimePanel.Location = new System.Drawing.Point(29, 112);
+            this.SongTimePanel.Location = new System.Drawing.Point(22, 91);
+            this.SongTimePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SongTimePanel.Name = "SongTimePanel";
-            this.SongTimePanel.Size = new System.Drawing.Size(288, 44);
+            this.SongTimePanel.Size = new System.Drawing.Size(216, 36);
             this.SongTimePanel.TabIndex = 38;
             // 
             // EndTime
@@ -118,9 +122,10 @@
             this.EndTime.AutoSize = true;
             this.EndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EndTime.Location = new System.Drawing.Point(241, 23);
+            this.EndTime.Location = new System.Drawing.Point(181, 19);
+            this.EndTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EndTime.Name = "EndTime";
-            this.EndTime.Size = new System.Drawing.Size(38, 16);
+            this.EndTime.Size = new System.Drawing.Size(34, 13);
             this.EndTime.TabIndex = 9;
             this.EndTime.Text = "00:00";
             // 
@@ -130,9 +135,10 @@
             this.TimePlayed.AutoSize = true;
             this.TimePlayed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimePlayed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TimePlayed.Location = new System.Drawing.Point(15, 23);
+            this.TimePlayed.Location = new System.Drawing.Point(11, 19);
+            this.TimePlayed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TimePlayed.Name = "TimePlayed";
-            this.TimePlayed.Size = new System.Drawing.Size(38, 16);
+            this.TimePlayed.Size = new System.Drawing.Size(34, 13);
             this.TimePlayed.TabIndex = 8;
             this.TimePlayed.Text = "00:00";
             // 
@@ -143,11 +149,12 @@
             this.TimeSong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TimeSong.FillColor = System.Drawing.Color.White;
             this.TimeSong.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.TimeSong.Location = new System.Drawing.Point(18, 8);
+            this.TimeSong.Location = new System.Drawing.Point(14, 6);
+            this.TimeSong.Margin = new System.Windows.Forms.Padding(2);
             this.TimeSong.Name = "TimeSong";
             this.TimeSong.ProgressColor = System.Drawing.Color.White;
             this.TimeSong.ShadowDecoration.Parent = this.TimeSong;
-            this.TimeSong.Size = new System.Drawing.Size(254, 3);
+            this.TimeSong.Size = new System.Drawing.Size(190, 2);
             this.TimeSong.TabIndex = 0;
             this.TimeSong.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
@@ -158,9 +165,10 @@
             this.VolumeBar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.VolumeBar.FillColor = System.Drawing.Color.DarkGray;
             this.VolumeBar.HoverState.Parent = this.VolumeBar;
-            this.VolumeBar.Location = new System.Drawing.Point(64, 252);
+            this.VolumeBar.Location = new System.Drawing.Point(48, 205);
+            this.VolumeBar.Margin = new System.Windows.Forms.Padding(2);
             this.VolumeBar.Name = "VolumeBar";
-            this.VolumeBar.Size = new System.Drawing.Size(101, 27);
+            this.VolumeBar.Size = new System.Drawing.Size(76, 22);
             this.VolumeBar.TabIndex = 37;
             this.VolumeBar.ThumbColor = System.Drawing.Color.White;
             this.VolumeBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.VolumeBar_Scroll);
@@ -171,7 +179,8 @@
             this.SoundIcon.BackColor = System.Drawing.Color.Transparent;
             this.SoundIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SoundIcon.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group;
-            this.SoundIcon.Location = new System.Drawing.Point(30, 253);
+            this.SoundIcon.Location = new System.Drawing.Point(22, 206);
+            this.SoundIcon.Margin = new System.Windows.Forms.Padding(2);
             this.SoundIcon.Name = "SoundIcon";
             this.SoundIcon.Size = new System.Drawing.Size(20, 20);
             this.SoundIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -184,7 +193,8 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__3_;
-            this.pictureBox8.Location = new System.Drawing.Point(229, 191);
+            this.pictureBox8.Location = new System.Drawing.Point(172, 155);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(20, 20);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -197,7 +207,8 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__5_;
-            this.pictureBox6.Location = new System.Drawing.Point(295, 191);
+            this.pictureBox6.Location = new System.Drawing.Point(221, 155);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(20, 20);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -210,7 +221,8 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Vector__4_;
-            this.pictureBox5.Location = new System.Drawing.Point(90, 191);
+            this.pictureBox5.Location = new System.Drawing.Point(68, 155);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(20, 20);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -223,7 +235,8 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__2_;
-            this.pictureBox7.Location = new System.Drawing.Point(27, 187);
+            this.pictureBox7.Location = new System.Drawing.Point(20, 152);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(28, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -239,10 +252,10 @@
             this.Switchtomain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Switchtomain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Switchtomain.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Resize;
-            this.Switchtomain.Location = new System.Drawing.Point(268, 17);
-            this.Switchtomain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Switchtomain.Location = new System.Drawing.Point(201, 14);
+            this.Switchtomain.Margin = new System.Windows.Forms.Padding(2);
             this.Switchtomain.Name = "Switchtomain";
-            this.Switchtomain.Size = new System.Drawing.Size(20, 20);
+            this.Switchtomain.Size = new System.Drawing.Size(15, 16);
             this.Switchtomain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Switchtomain.TabIndex = 42;
             this.Switchtomain.TabStop = false;
@@ -254,9 +267,10 @@
             this.lblVolumePercent.AutoSize = true;
             this.lblVolumePercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVolumePercent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblVolumePercent.Location = new System.Drawing.Point(30, 234);
+            this.lblVolumePercent.Location = new System.Drawing.Point(22, 190);
+            this.lblVolumePercent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVolumePercent.Name = "lblVolumePercent";
-            this.lblVolumePercent.Size = new System.Drawing.Size(23, 16);
+            this.lblVolumePercent.Size = new System.Drawing.Size(23, 13);
             this.lblVolumePercent.TabIndex = 43;
             this.lblVolumePercent.Text = "    ";
             // 
@@ -277,15 +291,17 @@
             this.Playbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.Playbtn.HoverState.Parent = this.Playbtn;
             this.Playbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Playbtn.Location = new System.Drawing.Point(138, 173);
-            this.Playbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Playbtn.Location = new System.Drawing.Point(104, 141);
+            this.Playbtn.Margin = new System.Windows.Forms.Padding(2);
             this.Playbtn.Name = "Playbtn";
             this.Playbtn.PressedColor = System.Drawing.Color.Transparent;
             this.Playbtn.ShadowDecoration.Parent = this.Playbtn;
-            this.Playbtn.Size = new System.Drawing.Size(65, 62);
+            this.Playbtn.Size = new System.Drawing.Size(49, 50);
             this.Playbtn.TabIndex = 44;
             this.Playbtn.TextOffset = new System.Drawing.Point(15, 0);
             this.Playbtn.UseTransparentBackground = true;
+            this.Playbtn.Visible = false;
+            this.Playbtn.Click += new System.EventHandler(this.Playbtn_Click);
             // 
             // Pausebtn
             // 
@@ -304,15 +320,17 @@
             this.Pausebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.Pausebtn.HoverState.Parent = this.Pausebtn;
             this.Pausebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Pausebtn.Location = new System.Drawing.Point(138, 173);
-            this.Pausebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pausebtn.Location = new System.Drawing.Point(104, 141);
+            this.Pausebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Pausebtn.Name = "Pausebtn";
             this.Pausebtn.PressedColor = System.Drawing.Color.Transparent;
             this.Pausebtn.ShadowDecoration.Parent = this.Pausebtn;
-            this.Pausebtn.Size = new System.Drawing.Size(65, 62);
+            this.Pausebtn.Size = new System.Drawing.Size(49, 50);
             this.Pausebtn.TabIndex = 45;
             this.Pausebtn.TextOffset = new System.Drawing.Point(15, 0);
             this.Pausebtn.UseTransparentBackground = true;
+            this.Pausebtn.Visible = false;
+            this.Pausebtn.Click += new System.EventHandler(this.Pausebtn_Click);
             // 
             // timer1
             // 
@@ -341,12 +359,12 @@
             this.btnFavorite_Pressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.btnFavorite_Pressed.HoverState.Parent = this.btnFavorite_Pressed;
             this.btnFavorite_Pressed.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFavorite_Pressed.Location = new System.Drawing.Point(282, 253);
-            this.btnFavorite_Pressed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFavorite_Pressed.Location = new System.Drawing.Point(212, 206);
+            this.btnFavorite_Pressed.Margin = new System.Windows.Forms.Padding(2);
             this.btnFavorite_Pressed.Name = "btnFavorite_Pressed";
             this.btnFavorite_Pressed.PressedColor = System.Drawing.Color.Transparent;
             this.btnFavorite_Pressed.ShadowDecoration.Parent = this.btnFavorite_Pressed;
-            this.btnFavorite_Pressed.Size = new System.Drawing.Size(33, 32);
+            this.btnFavorite_Pressed.Size = new System.Drawing.Size(25, 26);
             this.btnFavorite_Pressed.TabIndex = 47;
             this.btnFavorite_Pressed.TextOffset = new System.Drawing.Point(15, 0);
             this.btnFavorite_Pressed.Click += new System.EventHandler(this.btnFavorite_Pressed_Click);
@@ -366,24 +384,24 @@
             this.btnFavorite_Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.btnFavorite_Default.HoverState.Parent = this.btnFavorite_Default;
             this.btnFavorite_Default.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFavorite_Default.Location = new System.Drawing.Point(284, 253);
-            this.btnFavorite_Default.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFavorite_Default.Location = new System.Drawing.Point(213, 206);
+            this.btnFavorite_Default.Margin = new System.Windows.Forms.Padding(2);
             this.btnFavorite_Default.Name = "btnFavorite_Default";
             this.btnFavorite_Default.PressedColor = System.Drawing.Color.Transparent;
             this.btnFavorite_Default.ShadowDecoration.Parent = this.btnFavorite_Default;
-            this.btnFavorite_Default.Size = new System.Drawing.Size(33, 32);
+            this.btnFavorite_Default.Size = new System.Drawing.Size(25, 26);
             this.btnFavorite_Default.TabIndex = 46;
             this.btnFavorite_Default.TextOffset = new System.Drawing.Point(15, 0);
             this.btnFavorite_Default.Click += new System.EventHandler(this.btnFavorite_Default_Click);
             // 
             // NimbusMiniplayer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.MIni_Player_BlackBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(346, 308);
+            this.ClientSize = new System.Drawing.Size(260, 250);
             this.Controls.Add(this.btnFavorite_Pressed);
             this.Controls.Add(this.btnFavorite_Default);
             this.Controls.Add(this.Pausebtn);
@@ -402,6 +420,7 @@
             this.Controls.Add(this.pictureBox7);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NimbusMiniplayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NimbusMiniplayer";

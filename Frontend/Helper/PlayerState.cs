@@ -66,9 +66,10 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
 
         private static void _backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            
             SetNextSong();
-
-            BackgroundWorker.RunWorkerAsync();
+            if(!BackgroundWorker.IsBusy)
+                BackgroundWorker.RunWorkerAsync();
         }
 
         private static void _backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -88,18 +89,14 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
             }
         }
 
-        private static bool _isPlaying;
+        private static bool _isPlaying = false;
 
         public static bool IsPlaying
         {
             get => _isPlaying;
             set
             {
-                if (_isPlaying != value)
-                {
-                    _isPlaying = value;
-                    OnStateChanged?.Invoke(_isPlaying);
-                }
+                _isPlaying = value;
             }
         }
 

@@ -27,27 +27,19 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             lblVolumePercent.Visible = false; // Hide the volume label by default
 
-            timer = new System.Windows.Forms.Timer();
-            timer.Interval = 500; // Update every 500ms (half a second)
-            timer.Tick += Timer_Tick; 
-
-            // Initialize ProgressBar
-            TimeSong.Minimum = 0; // Start at 0
-            TimeSong.Maximum = 100; // Progress will be in percentage
-
+            PlayerState.player.DurationUnitChange += Player_DurationUnitChange;
             // Subscribe to the PlayerState's OnStateChanged event
             PlayerState.OnStateChanged += PlayerState_OnStateChanged;
-
-            // Initialize button states
-            Playbtn.Visible = true;
-            Pausebtn.Visible = false;
-            
+            Helper.Events.UpdateMainUI();
             UpdateSongDetails();
 
             InitializeFavoriteButton();
         }
 
-        
+        private void Player_DurationUnitChange(int NewDurationUnit)
+        {
+            TimeSong.Value = NewDurationUnit;
+        }
 
         private void CloseMiniplayer_Click(object sender, EventArgs e)
         {
@@ -200,6 +192,12 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             TitleSonglbl.Text = CurrentSong.Title;
             Artistlbl.Text = CurrentSong.Artist.Display_Name;
+            Playbtn.Visible = !PlayerState.IsPlaying;
+            Pausebtn.Visible = PlayerState.IsPlaying;
+
+            // Initialize ProgressBar
+            TimeSong.Minimum = 0; // Start at 0
+            TimeSong.Maximum = (int)CurrentSong.Duration.TotalSeconds; // Progress will be in percentage
 
         }
 
@@ -303,6 +301,20 @@ namespace NIMBUS__MUSIC_PLAYER_
                     }
                 }
             }
+        }
+
+        private void Pausebtn_Click(object sender, EventArgs e)
+        {
+            PlayerState.IsPlaying = true;
+            Helper.Events.UpdateMainUI();
+            PlayerState.player.controls.pause();
+        }
+
+        private void Playbtn_Click(object sender, EventArgs e)
+        {
+            PlayerState.IsPlaying = false;
+            Helper.Events.UpdateMainUI();
+            PlayerState.player.controls.play();
         }
     }
 }

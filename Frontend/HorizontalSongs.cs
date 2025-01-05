@@ -93,7 +93,7 @@ namespace NIMBUS__MUSIC_PLAYER_
                     nimbus.InitializeFavoriteButton();
                     nimbus.UpdateSongDetails();
                 }
-
+                NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddFirst(_song);
                 // Play the song asynchronously
                 PlayerState.BackgroundWorker.CancelAsync();
                 Task.Run(() => PlayerState.PlaySong(_song));

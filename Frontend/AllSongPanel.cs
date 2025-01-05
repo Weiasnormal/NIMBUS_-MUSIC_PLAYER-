@@ -22,7 +22,10 @@ namespace NIMBUS__MUSIC_PLAYER_
     {
         private Size originalFormSize; // Store the original size of the form
         private object selectedSong;
+        private Artist selectedArtist;
+        private Sort selectedSort;
         SongController<Song> controller = new SongController<Song>();
+        ArtistController ArtistController = new ArtistController();
         public AllSongPanel()
         {
             InitializeComponent();
@@ -72,14 +75,23 @@ namespace NIMBUS__MUSIC_PLAYER_
             SongsMenu.Visible = false;
 
             loadSongs();
-
+            loadArtists();
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
-
+            
             //AllSongsPanel.Refresh();
         }
+
+        private void loadArtists()
+        {
+            object[] artists = ArtistController.GetCollection<Artist>().ToArray();
+            Dropdown_Artist.Items.Add(new Artist() { Display_Name = "Artist" });
+            Dropdown_Artist.Items.AddRange(artists);
+            Dropdown_Artist.DisplayMember = "Display_Name";
+            Dropdown_Artist.SelectedIndex = 0;
+        }
+
         public void RefreshPanel()
         {
-            
         }
 
         private void UpdatePlayPauseButton(bool isPlaying)
@@ -188,6 +200,29 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             List<Song> songs = (List<Song>)controller.GetCollection<Song>();
 
+            switch (selectedSort)
+            {
+                case Sort.Recently_Added:
+                    songs = songs.OrderBy(i => i.Id).ToList();
+                break;
+                case Sort.Title_Ascending:
+                    songs = songs.OrderBy(i => i.Title).ToList();
+                break;
+                case Sort.Title_Descending:
+                    songs = songs.OrderByDescending(i => i.Title).ToList();
+                    break;
+                case Sort.Artist_Ascending:
+                    songs = songs.OrderBy(i => i.Artist.Display_Name).ToList();
+                    break;
+                case Sort.Artist_Descending:
+                    songs = songs.OrderByDescending(i => i.Artist.Display_Name).ToList();
+                    break;
+            }
+
+            if(selectedArtist != null)
+            {
+                songs = songs.Where(s => s.Artist == selectedArtist).ToList();
+            }
             foreach (Song song in songs)
             {
                 AllSongsPanel.Invoke(new Action(() =>
@@ -301,6 +336,23 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             Helper.Events.AddToQueue(sender,e);
             SongsMenu.Visible = false;
+        }
+
+        private void Dropdown_Artist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedArtist = null;
+            if(Dropdown_Artist.SelectedIndex != 0)
+            {
+                selectedArtist = (Artist)Dropdown_Artist.SelectedItem;
+            }
+            loadSongs();
+        }
+
+        private void Dropdown_Sort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(Dropdown_Sort.SelectedIndex != 0)
+                selectedSort = (Sort)Dropdown_Sort.SelectedIndex;
+            loadSongs();
         }
     }
 }

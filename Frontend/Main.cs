@@ -27,7 +27,7 @@ namespace NIMBUS__MUSIC_PLAYER_
     public partial class Nimbus : Form
     {
         static DashboardNavigation dashboardNavigation;
-
+        NimbusMiniplayer miniplayer;
         private WindowsMediaPlayer player;
         private HorizontalSongs currentSongControl;
         
@@ -40,7 +40,7 @@ namespace NIMBUS__MUSIC_PLAYER_
             InitializeComponent();
             Initialize_Navigation_Controls();
             InitializeFavoriteButton();
-
+            miniplayer = new NimbusMiniplayer();
             var horizontalSongs = new HorizontalSongs(this);
             this.Controls.Add(horizontalSongs);
 
@@ -54,8 +54,8 @@ namespace NIMBUS__MUSIC_PLAYER_
             VolumeBar.Visible = false;
             lblVolumePercent.Visible = false;
             btnFavorite_Pressed.Visible = false;
-            
-            Pausebtn.Visible = false;
+            Playbtn.Visible = !PlayerState.IsPlaying;
+            Pausebtn.Visible =  PlayerState.IsPlaying;
 
             PlayerState.OnStateChanged += UpdatePlayPauseButton;
 
@@ -78,14 +78,10 @@ namespace NIMBUS__MUSIC_PLAYER_
             // Subscribe to the PlayerState's OnStateChanged event
             PlayerState.OnStateChanged += PlayerState_OnStateChanged;
 
-            // Initialize button states
-            Playbtn.Visible = true;
-            Pausebtn.Visible = false;
             #endregion
 
             #region Change .text/value of Artist and Song Title
             // Subscribe to PlayerState's OnStateChanged event
-            PlayerState.OnStateChanged += PlayerState_OnStateChanged1;
 
             TitleSonglbl.Text = "-";
             Artistlbl.Text = "-";
@@ -109,18 +105,18 @@ namespace NIMBUS__MUSIC_PLAYER_
             if (InvokeRequired)
             {
                 // Ensure the UI update happens on the main thread
-                Invoke(new Action(() => UpdateButtonVisibility(isPlaying)));
+                Invoke(new Action(() => UpdateButtonVisibility()));
             }
             else
             {
-                UpdateButtonVisibility(isPlaying);
+                UpdateButtonVisibility();
             }
         }
 
-        private void UpdateButtonVisibility(bool isPlaying)
+        private void UpdateButtonVisibility()
         {
-            Playbtn.Visible = !isPlaying; // Play button is visible when not playing
-            Pausebtn.Visible = isPlaying; // Pause button is visible when playing
+            Playbtn.Visible = PlayerState.IsPlaying; // Play button is visible when not playing
+            Pausebtn.Visible = !PlayerState.IsPlaying; // Pause button is visible when playing
         }
         #endregion
 
@@ -192,7 +188,10 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             TitleSonglbl.Text = CurrentSong.Title;
             Artistlbl.Text = CurrentSong.Artist.Display_Name;
-            
+            Playbtn.Visible = PlayerState.IsPlaying;
+            Pausebtn.Visible = !PlayerState.IsPlaying;
+            UpdateSongDetails();
+
         }
         #endregion
 
@@ -1004,17 +1003,16 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void Playbtn_Click(object sender, EventArgs e)
         {
-            Playbtn.Visible = false;
-            Pausebtn.Visible = true;
+            PlayerState.IsPlaying = false;
+            Helper.Events.UpdateMainUI();
             PlayerState.player.controls.play();
         }
 
         private void Pausebtn_Click(object sender, EventArgs e)
         {
-            Playbtn.Visible = true;
-            Pausebtn.Visible = false;
-            PlayerState.player.controls.pause();
-            
+            PlayerState.IsPlaying = true;
+            Helper.Events.UpdateMainUI();
+            PlayerState.player.controls.pause(); 
         }
 
         private void VolumeBar_Scroll(object sender, ScrollEventArgs e)
@@ -1110,7 +1108,6 @@ namespace NIMBUS__MUSIC_PLAYER_
         private void Miniplayerbtn_Click(object sender, EventArgs e)
         {
             
-            NimbusMiniplayer miniplayer = new NimbusMiniplayer();
             miniplayer.Show();
             this.Hide();
         }

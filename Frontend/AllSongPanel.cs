@@ -258,5 +258,24 @@ namespace NIMBUS__MUSIC_PLAYER_
             AllSongsPanel.Controls.Clear();
             loadSongs();
         }
+
+        private void Menu_AddQueue_Click(object sender, EventArgs e)
+        {
+            HorizontalSongs Ssong = (HorizontalSongs)selectedSong;
+            Song song = Ssong.Song;
+
+            if (NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.Contains(song))
+            {
+                MessageBox.Show($"'{song.Title}' is already in Queue!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.AddLast(song);
+            MessageBox.Show($"'{song.Title}' is now in Queue!", "Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            Helper.Events.AddToQueue(sender,e);
+            SongsMenu.Visible = false;
+        }
     }
 }

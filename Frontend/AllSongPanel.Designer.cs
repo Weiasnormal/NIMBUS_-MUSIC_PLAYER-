@@ -73,12 +73,12 @@
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(53)))));
             this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
             this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(45, 73);
-            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(34, 59);
+            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
             this.guna2GradientButton2.PressedColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Size = new System.Drawing.Size(51, 50);
+            this.guna2GradientButton2.Size = new System.Drawing.Size(38, 41);
             this.guna2GradientButton2.TabIndex = 35;
             this.guna2GradientButton2.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -89,11 +89,11 @@
             this.MenuTab.Controls.Add(this.guna2GradientButton1);
             this.MenuTab.Controls.Add(this.guna2GradientButton4);
             this.MenuTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.MenuTab.Location = new System.Drawing.Point(269, 6);
-            this.MenuTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MenuTab.Location = new System.Drawing.Point(202, 5);
+            this.MenuTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MenuTab.Name = "MenuTab";
             this.MenuTab.ShadowDecoration.Parent = this.MenuTab;
-            this.MenuTab.Size = new System.Drawing.Size(239, 114);
+            this.MenuTab.Size = new System.Drawing.Size(179, 93);
             this.MenuTab.TabIndex = 34;
             this.MenuTab.UseTransparentBackground = true;
             // 
@@ -119,12 +119,12 @@
             this.guna2GradientButton1.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_RemovePlaylist;
             this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton1.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2GradientButton1.Location = new System.Drawing.Point(9, 62);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(7, 50);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(220, 46);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(165, 37);
             this.guna2GradientButton1.TabIndex = 23;
             this.guna2GradientButton1.Text = "Delete playlist";
             this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -152,12 +152,12 @@
             this.guna2GradientButton4.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoQueue;
             this.guna2GradientButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton4.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2GradientButton4.Location = new System.Drawing.Point(9, 10);
-            this.guna2GradientButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(7, 8);
+            this.guna2GradientButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
             this.guna2GradientButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Size = new System.Drawing.Size(220, 46);
+            this.guna2GradientButton4.Size = new System.Drawing.Size(165, 37);
             this.guna2GradientButton4.TabIndex = 22;
             this.guna2GradientButton4.Text = "Add to Queue";
             this.guna2GradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -168,9 +168,10 @@
             this.lblAllSongsPanel.AutoSize = true;
             this.lblAllSongsPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAllSongsPanel.ForeColor = System.Drawing.Color.White;
-            this.lblAllSongsPanel.Location = new System.Drawing.Point(33, 6);
+            this.lblAllSongsPanel.Location = new System.Drawing.Point(25, 5);
+            this.lblAllSongsPanel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllSongsPanel.Name = "lblAllSongsPanel";
-            this.lblAllSongsPanel.Size = new System.Drawing.Size(199, 46);
+            this.lblAllSongsPanel.Size = new System.Drawing.Size(162, 37);
             this.lblAllSongsPanel.TabIndex = 28;
             this.lblAllSongsPanel.Text = "All Songs";
             // 
@@ -209,11 +210,11 @@
             this.Dropdown_Sort.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
             this.Dropdown_Sort.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Sort.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_Sort.Location = new System.Drawing.Point(1041, 81);
-            this.Dropdown_Sort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Dropdown_Sort.Location = new System.Drawing.Point(781, 66);
+            this.Dropdown_Sort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dropdown_Sort.Name = "Dropdown_Sort";
             this.Dropdown_Sort.ShadowDecoration.Parent = this.Dropdown_Sort;
-            this.Dropdown_Sort.Size = new System.Drawing.Size(200, 36);
+            this.Dropdown_Sort.Size = new System.Drawing.Size(151, 36);
             this.Dropdown_Sort.StartIndex = 0;
             this.Dropdown_Sort.TabIndex = 33;
             // 
@@ -247,11 +248,11 @@
             this.Dropdown_Album.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
             this.Dropdown_Album.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Album.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_Album.Location = new System.Drawing.Point(829, 81);
-            this.Dropdown_Album.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Dropdown_Album.Location = new System.Drawing.Point(622, 66);
+            this.Dropdown_Album.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dropdown_Album.Name = "Dropdown_Album";
             this.Dropdown_Album.ShadowDecoration.Parent = this.Dropdown_Album;
-            this.Dropdown_Album.Size = new System.Drawing.Size(200, 36);
+            this.Dropdown_Album.Size = new System.Drawing.Size(151, 36);
             this.Dropdown_Album.StartIndex = 0;
             this.Dropdown_Album.TabIndex = 32;
             // 
@@ -266,10 +267,10 @@
             this.DetailPanel.Controls.Add(this.lblNumber);
             this.DetailPanel.Controls.Add(this.lblArtist);
             this.DetailPanel.Controls.Add(this.lblAlbum);
-            this.DetailPanel.Location = new System.Drawing.Point(43, 135);
-            this.DetailPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DetailPanel.Location = new System.Drawing.Point(32, 110);
+            this.DetailPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DetailPanel.Name = "DetailPanel";
-            this.DetailPanel.Size = new System.Drawing.Size(1197, 50);
+            this.DetailPanel.Size = new System.Drawing.Size(898, 41);
             this.DetailPanel.TabIndex = 27;
             this.DetailPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DetailPanel_Paint);
             // 
@@ -278,9 +279,10 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(71, 14);
+            this.lblTitle.Location = new System.Drawing.Point(53, 11);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(50, 22);
+            this.lblTitle.Size = new System.Drawing.Size(40, 18);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Title";
             // 
@@ -290,9 +292,10 @@
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuration.ForeColor = System.Drawing.Color.White;
-            this.lblDuration.Location = new System.Drawing.Point(984, 14);
+            this.lblDuration.Location = new System.Drawing.Point(738, 11);
+            this.lblDuration.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(86, 22);
+            this.lblDuration.Size = new System.Drawing.Size(72, 18);
             this.lblDuration.TabIndex = 2;
             this.lblDuration.Text = "Duration";
             // 
@@ -301,9 +304,10 @@
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber.ForeColor = System.Drawing.Color.White;
-            this.lblNumber.Location = new System.Drawing.Point(17, 14);
+            this.lblNumber.Location = new System.Drawing.Point(13, 11);
+            this.lblNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(21, 22);
+            this.lblNumber.Size = new System.Drawing.Size(17, 18);
             this.lblNumber.TabIndex = 0;
             this.lblNumber.Text = "#";
             // 
@@ -313,9 +317,10 @@
             this.lblArtist.AutoSize = true;
             this.lblArtist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArtist.ForeColor = System.Drawing.Color.White;
-            this.lblArtist.Location = new System.Drawing.Point(355, 14);
+            this.lblArtist.Location = new System.Drawing.Point(266, 11);
+            this.lblArtist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArtist.Name = "lblArtist";
-            this.lblArtist.Size = new System.Drawing.Size(57, 22);
+            this.lblArtist.Size = new System.Drawing.Size(47, 18);
             this.lblArtist.TabIndex = 3;
             this.lblArtist.Text = "Artist";
             // 
@@ -325,9 +330,10 @@
             this.lblAlbum.AutoSize = true;
             this.lblAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlbum.ForeColor = System.Drawing.Color.White;
-            this.lblAlbum.Location = new System.Drawing.Point(676, 14);
+            this.lblAlbum.Location = new System.Drawing.Point(507, 11);
+            this.lblAlbum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAlbum.Name = "lblAlbum";
-            this.lblAlbum.Size = new System.Drawing.Size(65, 22);
+            this.lblAlbum.Size = new System.Drawing.Size(54, 18);
             this.lblAlbum.TabIndex = 1;
             this.lblAlbum.Text = "Album";
             // 
@@ -361,11 +367,11 @@
             this.Dropdown_Artist.ItemsAppearance.SelectedBackColor = System.Drawing.Color.DimGray;
             this.Dropdown_Artist.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dropdown_Artist.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.Dropdown_Artist.Location = new System.Drawing.Point(617, 81);
-            this.Dropdown_Artist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Dropdown_Artist.Location = new System.Drawing.Point(463, 66);
+            this.Dropdown_Artist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dropdown_Artist.Name = "Dropdown_Artist";
             this.Dropdown_Artist.ShadowDecoration.Parent = this.Dropdown_Artist;
-            this.Dropdown_Artist.Size = new System.Drawing.Size(200, 36);
+            this.Dropdown_Artist.Size = new System.Drawing.Size(151, 36);
             this.Dropdown_Artist.StartIndex = 0;
             this.Dropdown_Artist.TabIndex = 31;
             // 
@@ -375,10 +381,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AllSongsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.AllSongsPanel.Location = new System.Drawing.Point(43, 191);
-            this.AllSongsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AllSongsPanel.Location = new System.Drawing.Point(32, 155);
+            this.AllSongsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AllSongsPanel.Name = "AllSongsPanel";
-            this.AllSongsPanel.Size = new System.Drawing.Size(1196, 496);
+            this.AllSongsPanel.Size = new System.Drawing.Size(897, 403);
             this.AllSongsPanel.TabIndex = 30;
             this.AllSongsPanel.WrapContents = false;
             // 
@@ -392,11 +398,11 @@
             this.SongsMenu.Controls.Add(this.Menu_AddFvorites);
             this.SongsMenu.Controls.Add(this.Menu_AddPlaylist);
             this.SongsMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.SongsMenu.Location = new System.Drawing.Point(931, 0);
-            this.SongsMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SongsMenu.Location = new System.Drawing.Point(698, 0);
+            this.SongsMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SongsMenu.Name = "SongsMenu";
             this.SongsMenu.ShadowDecoration.Parent = this.SongsMenu;
-            this.SongsMenu.Size = new System.Drawing.Size(249, 215);
+            this.SongsMenu.Size = new System.Drawing.Size(187, 175);
             this.SongsMenu.TabIndex = 39;
             this.SongsMenu.UseTransparentBackground = true;
             this.SongsMenu.Click += new System.EventHandler(this.Menu_AddPlaylist_Click);
@@ -424,12 +430,12 @@
             this.Menu_DeleteSong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Menu_DeleteSong.ImageOffset = new System.Drawing.Point(11, 0);
             this.Menu_DeleteSong.ImageSize = new System.Drawing.Size(18, 20);
-            this.Menu_DeleteSong.Location = new System.Drawing.Point(9, 160);
-            this.Menu_DeleteSong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Menu_DeleteSong.Location = new System.Drawing.Point(7, 130);
+            this.Menu_DeleteSong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Menu_DeleteSong.Name = "Menu_DeleteSong";
             this.Menu_DeleteSong.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.Menu_DeleteSong.ShadowDecoration.Parent = this.Menu_DeleteSong;
-            this.Menu_DeleteSong.Size = new System.Drawing.Size(229, 46);
+            this.Menu_DeleteSong.Size = new System.Drawing.Size(172, 37);
             this.Menu_DeleteSong.TabIndex = 25;
             this.Menu_DeleteSong.Text = "Delete Song";
             this.Menu_DeleteSong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -458,16 +464,17 @@
             this.Menu_AddQueue.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoQueue;
             this.Menu_AddQueue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Menu_AddQueue.ImageOffset = new System.Drawing.Point(10, 0);
-            this.Menu_AddQueue.Location = new System.Drawing.Point(9, 110);
-            this.Menu_AddQueue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Menu_AddQueue.Location = new System.Drawing.Point(7, 89);
+            this.Menu_AddQueue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Menu_AddQueue.Name = "Menu_AddQueue";
             this.Menu_AddQueue.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.Menu_AddQueue.ShadowDecoration.Parent = this.Menu_AddQueue;
-            this.Menu_AddQueue.Size = new System.Drawing.Size(229, 46);
+            this.Menu_AddQueue.Size = new System.Drawing.Size(172, 37);
             this.Menu_AddQueue.TabIndex = 24;
             this.Menu_AddQueue.Text = "Add to Queue";
             this.Menu_AddQueue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Menu_AddQueue.TextOffset = new System.Drawing.Point(20, 0);
+            this.Menu_AddQueue.Click += new System.EventHandler(this.Menu_AddQueue_Click);
             // 
             // Menu_AddFvorites
             // 
@@ -491,12 +498,12 @@
             this.Menu_AddFvorites.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoFavorites;
             this.Menu_AddFvorites.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Menu_AddFvorites.ImageOffset = new System.Drawing.Point(10, 0);
-            this.Menu_AddFvorites.Location = new System.Drawing.Point(9, 62);
-            this.Menu_AddFvorites.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Menu_AddFvorites.Location = new System.Drawing.Point(7, 50);
+            this.Menu_AddFvorites.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Menu_AddFvorites.Name = "Menu_AddFvorites";
             this.Menu_AddFvorites.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.Menu_AddFvorites.ShadowDecoration.Parent = this.Menu_AddFvorites;
-            this.Menu_AddFvorites.Size = new System.Drawing.Size(229, 46);
+            this.Menu_AddFvorites.Size = new System.Drawing.Size(172, 37);
             this.Menu_AddFvorites.TabIndex = 23;
             this.Menu_AddFvorites.Text = "Add to favorites";
             this.Menu_AddFvorites.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -526,12 +533,12 @@
             this.Menu_AddPlaylist.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Icon_Menu_AddtoPlaylist;
             this.Menu_AddPlaylist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Menu_AddPlaylist.ImageOffset = new System.Drawing.Point(10, 0);
-            this.Menu_AddPlaylist.Location = new System.Drawing.Point(9, 10);
-            this.Menu_AddPlaylist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Menu_AddPlaylist.Location = new System.Drawing.Point(7, 8);
+            this.Menu_AddPlaylist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Menu_AddPlaylist.Name = "Menu_AddPlaylist";
             this.Menu_AddPlaylist.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.Menu_AddPlaylist.ShadowDecoration.Parent = this.Menu_AddPlaylist;
-            this.Menu_AddPlaylist.Size = new System.Drawing.Size(229, 46);
+            this.Menu_AddPlaylist.Size = new System.Drawing.Size(172, 37);
             this.Menu_AddPlaylist.TabIndex = 22;
             this.Menu_AddPlaylist.Text = "Add to playlist";
             this.Menu_AddPlaylist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -545,11 +552,11 @@
             this.Menubtn.HoverState.Parent = this.Menubtn;
             this.Menubtn.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Menu;
             this.Menubtn.ImageSize = new System.Drawing.Size(25, 25);
-            this.Menubtn.Location = new System.Drawing.Point(165, 81);
-            this.Menubtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Menubtn.Location = new System.Drawing.Point(124, 66);
+            this.Menubtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Menubtn.Name = "Menubtn";
             this.Menubtn.PressedState.Parent = this.Menubtn;
-            this.Menubtn.Size = new System.Drawing.Size(51, 33);
+            this.Menubtn.Size = new System.Drawing.Size(38, 27);
             this.Menubtn.TabIndex = 29;
             this.Menubtn.Visible = false;
             this.Menubtn.Click += new System.EventHandler(this.Menubtn_Click);
@@ -561,33 +568,33 @@
             this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Image = global::NIMBUS__MUSIC_PLAYER_.Properties.Resources.Group__3_;
             this.guna2ImageButton2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(107, 82);
-            this.guna2ImageButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(80, 67);
+            this.guna2ImageButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
             this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(51, 33);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(38, 27);
             this.guna2ImageButton2.TabIndex = 26;
             // 
             // AllSongsScrollbar
             // 
             this.AllSongsScrollbar.AutoRoundedCorners = true;
-            this.AllSongsScrollbar.BorderRadius = 4;
+            this.AllSongsScrollbar.BorderRadius = 3;
             this.AllSongsScrollbar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.AllSongsScrollbar.HoverState.Parent = null;
             this.AllSongsScrollbar.LargeChange = 10;
-            this.AllSongsScrollbar.Location = new System.Drawing.Point(1260, 135);
-            this.AllSongsScrollbar.Margin = new System.Windows.Forms.Padding(5);
+            this.AllSongsScrollbar.Location = new System.Drawing.Point(945, 110);
+            this.AllSongsScrollbar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AllSongsScrollbar.MouseWheelBarPartitions = 10;
             this.AllSongsScrollbar.Name = "AllSongsScrollbar";
             this.AllSongsScrollbar.PressedState.Parent = this.AllSongsScrollbar;
-            this.AllSongsScrollbar.ScrollbarSize = 11;
-            this.AllSongsScrollbar.Size = new System.Drawing.Size(11, 542);
+            this.AllSongsScrollbar.ScrollbarSize = 8;
+            this.AllSongsScrollbar.Size = new System.Drawing.Size(8, 440);
             this.AllSongsScrollbar.TabIndex = 1;
             this.AllSongsScrollbar.ThumbColor = System.Drawing.Color.White;
             // 
             // AllSongPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.SongsMenu);
@@ -603,9 +610,9 @@
             this.Controls.Add(this.AllSongsPanel);
             this.Controls.Add(this.guna2ImageButton2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AllSongPanel";
-            this.Size = new System.Drawing.Size(1275, 687);
+            this.Size = new System.Drawing.Size(956, 558);
             this.MenuTab.ResumeLayout(false);
             this.DetailPanel.ResumeLayout(false);
             this.DetailPanel.PerformLayout();

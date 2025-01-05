@@ -212,37 +212,31 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void btnSidebar_Songs_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
             dashboardNavigation.Display(0);
         }
 
         private void btnSidebar_Favorites_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
             dashboardNavigation.Display(1);
         }
 
         private void btnSidebar_Albums_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
             dashboardNavigation.Display(2);
         }
 
         private void btnSidebar_Artists_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
             dashboardNavigation.Display(3);
         }
 
         private void btnSidebar_Queue_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
             dashboardNavigation.Display(4);
         }
 
         private void btnSidebar_Playlist_Click(object sender, EventArgs e)
         {
-            Initialize_Navigation_Controls();
             PlaylistList.Visible = !PlaylistList.Visible;
             if (PlaylistList.Visible)
                 dashboardNavigation.Display(5);

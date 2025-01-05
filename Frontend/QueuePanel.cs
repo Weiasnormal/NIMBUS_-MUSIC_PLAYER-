@@ -119,14 +119,14 @@ namespace NIMBUS__MUSIC_PLAYER_
         {
             int songnum = 1;
 
+            flowpanelQueue.Controls.Clear();
             foreach (Song song in NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song)
             {
-                flowpanelQueue.Invoke(new Action(() =>
-                {   // created for the horizontal song control
-                    var songControl = new HorizontalSongs(SongsMenu, songnum, song);
-                    songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
-                    flowpanelQueue.Controls.Add(songControl);
-                }));
+             // created for the horizontal song control
+                var songControl = new HorizontalSongs(SongsMenu, songnum, song);
+                songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
+                flowpanelQueue.Controls.Add(songControl);
+
                 songnum++;
             }
         }

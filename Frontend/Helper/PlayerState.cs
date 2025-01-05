@@ -13,13 +13,15 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
 {
     public static class PlayerState
     {
+
+        public static Exception EmptyQueue = new Exception("Insufficient songs on queue");
         public static LinkedListNode<Song> CurrentSong
         {
             get 
             {
                 if (NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.Count > 0)
                     return NimbusClassLibrary.Helpers.GlobalLibraries.Playing_Song.First;
-                throw new Exception("No Songs on Queue BULOK!");
+                throw new Exception("Error on next", EmptyQueue);
             }
         }
 
@@ -30,7 +32,7 @@ namespace NIMBUS__MUSIC_PLAYER_.Helper
 
                 if (NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Count > 0)
                     return NimbusClassLibrary.Helpers.GlobalLibraries.Previous_Songs.Pop();
-                throw new Exception("No Previous Songs");
+                throw new Exception("Error on previous", EmptyQueue);
 
             }
         }

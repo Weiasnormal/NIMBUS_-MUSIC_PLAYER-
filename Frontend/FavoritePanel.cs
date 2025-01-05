@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using NIMBUS__MUSIC_PLAYER_.Interface;
 using NimbusClassLibrary.Controller;
 using NimbusClassLibrary.Model;
 using System;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
-    public partial class FavoritePanel : UserControl
+    public partial class FavoritePanel : UserControl, IRefresh
     {
         #region FrontEnd
         public Panel DetailsPanel
@@ -131,9 +132,15 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             // then update the form
             flowFavorites.PerformLayout();
-            
+
+            RefreshPanel();
+
         }
 
+        public void RefreshPanel()
+        {
+            AddtoFavorite();
+        }
         #region Frontend
         private void AllSongPanel_Resize(object sender, EventArgs e)
         {
@@ -241,7 +248,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
                 MessageBox.Show($"'{songTobeRemove.Title}' has been removed from Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //_nimbus.RefreshFavoriteButton();
-
+                RefreshPanel();
                 // Refresh the Favorites view
                 flowFavorites.Controls.Clear();
                 AddtoFavorite();
@@ -263,7 +270,11 @@ namespace NIMBUS__MUSIC_PLAYER_
             MessageBox.Show($"'{songTobeDeleted.Title}' has been Deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             flowFavorites.Controls.Clear();
-            AddtoFavorite(); 
+            AddtoFavorite();
+
+            Nimbus nimbus = new Nimbus();
+            nimbus.UpdateSongDetails();
+
         }
     }
 }

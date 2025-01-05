@@ -140,6 +140,7 @@
     <Compile Include="HorizontalSongs.Designer.cs">
       <DependentUpon>HorizontalSongs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IRefresh.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

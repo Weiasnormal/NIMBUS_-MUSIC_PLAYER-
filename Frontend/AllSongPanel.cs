@@ -14,10 +14,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static NIMBUS__MUSIC_PLAYER_.HorizontalSongs;
+using NIMBUS__MUSIC_PLAYER_.Interface;
 
 namespace NIMBUS__MUSIC_PLAYER_
 {
-    public partial class AllSongPanel : UserControl
+    public partial class AllSongPanel : UserControl, IRefresh
     {
         private Size originalFormSize; // Store the original size of the form
         private object selectedSong;
@@ -74,7 +75,11 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             Menu_AddPlaylist.Click += Menu_AddPlaylist_Click;
 
-
+            //AllSongsPanel.Refresh();
+        }
+        public void RefreshPanel()
+        {
+            
         }
 
         private void UpdatePlayPauseButton(bool isPlaying)
@@ -171,19 +176,31 @@ namespace NIMBUS__MUSIC_PLAYER_
         private Form _addToPlaylistForm;
         public void loadSongs()
         {
+            if (!AllSongsPanel.IsHandleCreated)
+            {
+                AllSongsPanel.HandleCreated += (s, e) => loadSongs();
+                return;
+            }
+
+            AllSongsPanel.Controls.Clear();
+
             int songnum = 1;
 
-            
             List<Song> songs = (List<Song>)controller.GetCollection<Song>();
 
-            //Form addToPlaylistForm = new AddtoPlaylist();
-
-            foreach (Song song in songs) 
+            foreach (Song song in songs)
             {
-                var songControl = new HorizontalSongs(SongsMenu, songnum, song);
-                songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
-                AllSongsPanel.Controls.Add(songControl);
+                AllSongsPanel.Invoke(new Action(() =>
+                {
+                    // Create an instance of HorizontalSongs
+                    var songControl = new HorizontalSongs(SongsMenu, songnum, song);
 
+                    // Subscribe to the MenuButtonClicked event
+                    songControl.MenuButtonClicked += SongControl_MenuButtonClicked;
+
+                    // Add the song control to the AllSongsPanel
+                    AllSongsPanel.Controls.Add(songControl);
+                }));
                 songnum++;
             }
 
@@ -235,15 +252,23 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             if (success)
             {
+                var nimbus = this.FindForm() as Nimbus;
+
+                if (nimbus != null)
+                {
+                    nimbus.InitializeFavoriteButton();
+                }
                 Helper.Events.AddToFavorites();
                 MessageBox.Show($"'{songTobeChanged.Title}' added to Favorites!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // IRefresh refresh = this.FindForm() as IRefresh;
             }
             else
             {
                 MessageBox.Show($"Failed to add '{songTobeChanged.Title}' to Favorites.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            SongsMenu.Visible = false;
+                SongsMenu.Visible = false;
+            
         }
 
         private void Menu_DeleteSong_Click(object sender, EventArgs e)

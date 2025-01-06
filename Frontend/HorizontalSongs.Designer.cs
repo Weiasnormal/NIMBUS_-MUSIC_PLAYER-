@@ -54,11 +54,11 @@
             // Titlelbl
             // 
             this.Titlelbl.AutoSize = true;
-            this.Titlelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlelbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titlelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Titlelbl.Location = new System.Drawing.Point(51, 14);
             this.Titlelbl.Name = "Titlelbl";
-            this.Titlelbl.Size = new System.Drawing.Size(64, 18);
+            this.Titlelbl.Size = new System.Drawing.Size(68, 21);
             this.Titlelbl.TabIndex = 1;
             this.Titlelbl.Text = "Havana";
             // 
@@ -85,11 +85,11 @@
             // 
             this.Artistlbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Artistlbl.AutoSize = true;
-            this.Artistlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Artistlbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artistlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Artistlbl.Location = new System.Drawing.Point(347, 17);
             this.Artistlbl.Name = "Artistlbl";
-            this.Artistlbl.Size = new System.Drawing.Size(122, 18);
+            this.Artistlbl.Size = new System.Drawing.Size(128, 21);
             this.Artistlbl.TabIndex = 3;
             this.Artistlbl.Text = "Camila Cabello";
             // 
@@ -97,11 +97,11 @@
             // 
             this.Albumlbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Albumlbl.AutoSize = true;
-            this.Albumlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Albumlbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Albumlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Albumlbl.Location = new System.Drawing.Point(661, 17);
             this.Albumlbl.Name = "Albumlbl";
-            this.Albumlbl.Size = new System.Drawing.Size(67, 18);
+            this.Albumlbl.Size = new System.Drawing.Size(71, 21);
             this.Albumlbl.TabIndex = 4;
             this.Albumlbl.Text = "No Title";
             // 
@@ -109,11 +109,11 @@
             // 
             this.TotalTimelbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TotalTimelbl.AutoSize = true;
-            this.TotalTimelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTimelbl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalTimelbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TotalTimelbl.Location = new System.Drawing.Point(984, 17);
             this.TotalTimelbl.Name = "TotalTimelbl";
-            this.TotalTimelbl.Size = new System.Drawing.Size(40, 18);
+            this.TotalTimelbl.Size = new System.Drawing.Size(42, 21);
             this.TotalTimelbl.TabIndex = 5;
             this.TotalTimelbl.Text = "3:30";
             // 

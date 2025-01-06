@@ -24,6 +24,7 @@ namespace NIMBUS__MUSIC_PLAYER_
         private object selectedSong;
         private Artist selectedArtist;
         private Sort selectedSort;
+        
         SongController<Song> controller = new SongController<Song>();
         ArtistController ArtistController = new ArtistController();
         public AllSongPanel()
@@ -41,7 +42,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             // Capture the original size of the form
             originalFormSize = this.Size;
-
+            Helper.Events.LoadSongs += loadSongs;
             // Attach the Resize event handler
             this.Resize += AllSongPanel_Resize;
 
@@ -287,6 +288,7 @@ namespace NIMBUS__MUSIC_PLAYER_
 
             if (success)
             {
+
                 var nimbus = this.FindForm() as Nimbus;
 
                 if (nimbus != null)

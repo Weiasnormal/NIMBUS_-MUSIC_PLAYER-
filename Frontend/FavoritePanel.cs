@@ -272,8 +272,6 @@ namespace NIMBUS__MUSIC_PLAYER_
             flowFavorites.Controls.Clear();
             AddtoFavorite();
 
-            Nimbus nimbus = new Nimbus();
-            nimbus.UpdateSongDetails();
 
         }
 

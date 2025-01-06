@@ -262,6 +262,9 @@ namespace NIMBUS__MUSIC_PLAYER_
 
         private void btnSidebar_Songs_Click(object sender, EventArgs e)
         {
+           
+            //Helper.Events.LoadSongs();
+            Initialize_Navigation_Controls();
             dashboardNavigation.Display(0);
         }
 

@@ -148,12 +148,6 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeaderMusicPlayer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HeaderMusicPlayer.Designer.cs">
-      <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
-    </Compile>
     <Compile Include="NimbusMiniplayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,9 +206,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HeaderMusicPlayer.resx">
-      <DependentUpon>HeaderMusicPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NimbusMiniplayer.resx">
       <DependentUpon>NimbusMiniplayer.cs</DependentUpon>
